@@ -1,0 +1,33 @@
+[Server]
+hostname|localhost
+username|root
+password|
+dbname|kopkardb
+
+[WebPage]
+Title|KBR V.2.0
+subtitle| KOPERASI KARYA BHAKTI RAHARJA
+
+[Path]
+z_menu|asset/bin/zetro_menu.dll
+z_config|asset/bin/zetro_config.dll
+z_table|asset/bin/zetro_table.cfg
+z_form|asset/bin/form.cfg
+localhost|http://localhost/kbr
+
+[InfoCo]
+Name|KOPERASI KBR
+subtitle| KOPERASI KARYA BHAKTI RAHARJA
+Address|Jl. Lurah Kawi-Jatiluhur
+Kota|Purwakarta 41152
+Propinsi| Jawa Barat
+Telp|Telp :0264 8223311/201972 Ext. 258
+Fax |Fax : 0264 201971
+BH|Badan Hukum: 180/BH/PAD/KDK/-10.10/V/2000
+NPWP|NPWP  :
+NPPKP|NPPKP:
+
+
+[SHU Kode]
+1|35|SHU Tahun Lalu
+2|36|SHU Tahun Berjalan

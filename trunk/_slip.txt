@@ -1,0 +1,13 @@
+select j.ID_Bulan,j.Tahun,j.Nomor,j.Keterangan,sum(kredit),sum(debet)
+from jurnal as j
+left join transaksi as t
+on t.ID_Jurnal=j.ID
+left join perkiraan as p
+on p.ID=t.ID_Perkiraan
+where ID_Bulan<='1' and Tahun='2004' and p.ID_Simpanan='4'
+group by ID_Bulan
+
+
+
+
+
