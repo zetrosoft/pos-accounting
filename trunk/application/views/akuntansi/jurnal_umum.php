@@ -35,7 +35,7 @@ addText(array('Filter By',"<span id='fltby'></span>",'Unit','',''),
 			   ));
 echo "</form>";			   
 		$zlb->section('jurnal');
-		$zlb->aksi(false);
+		$zlb->aksi(true);
 		$zlb->Header('100%');
 		$zlb->icon();
 		echo "</tbody></table>";
@@ -45,7 +45,7 @@ echo "</form>";
 panel_multi_end();
 panel_multi('addjurnal','none',false);
 if($all_addjurnal!=''){
-addText(array('New Jurnal','Add Jurnal Content','No Jurnal'),
+addText(array('Jurnal Baru','Transaksi','No Jurnal'),
 		array('<input type="radio" name="pilih" id="new" checked="checked">',
 				'<input type="radio" name="pilih" id="addcontent">',
 				'<input type="text" id="NoJurnal" value="" class="cari">'));

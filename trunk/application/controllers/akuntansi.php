@@ -352,7 +352,7 @@ class Akuntansi extends CI_Controller{
  }
  function get_list_jurnal(){ //list jurnal
 	 $data=array();$n=0;
-	 $filter	=$_POST['filter'];
+	 $filter	=empty($_POST['filter'])?'':$_POST['filter'];
 	 $daritgl	=empty($_POST['daritgl'])?'':tgltoSql($_POST['daritgl']);
 	 $smptgl	=empty($_POST['smptgl'])?'':tgltoSql($_POST['smptgl']);
 	 $bln		=$_POST['Bln'];
@@ -360,32 +360,38 @@ class Akuntansi extends CI_Controller{
 	 $unit		=$_POST['ID_Unit'];
 	 switch($filter){ //pilih filter yang aktif
 		case 'all':
-		($unit=='all')? $where='':$where ="where ID_Unit='$unit'";
+		($unit=='all')? $where='':$where ="where j.ID_Unit='$unit'";
 		break;
 		case 'tgl':
-		($unit=='all')? $where="where Tanggal between '$daritgl' and '$smptgl'":$where ="where Tanggal between '$daritgl' and '$smptgl' and ID_Unit='$unit'";
+		($unit=='all')? $where="where j.Tanggal between '$daritgl' and '$smptgl'":$where ="where j.Tanggal between '$daritgl' and '$smptgl' and j.ID_Unit='$unit'";
 		break;
 		case 'bln':
-		($unit=='all')? $where="where ID_Bulan='$bln' and Tahun='$thn'":$where="where ID_Bulan='$bln' and Tahun='$thn' and ID_Unit='$unit'";
+		($unit=='all')? $where="where j.ID_Bulan='$bln' and j.Tahun='$thn'":$where="where j.ID_Bulan='$bln' and j.Tahun='$thn' and j.ID_Unit='$unit'";
 		break;
 	 }
-	 $auth=$this->zetro_auth->cek_oto('v','listjurnalumum');
+	 $auth_v=$this->zetro_auth->cek_oto('v','listjurnalumum');
+	 $auth_e=$this->zetro_auth->cek_oto('e','listjurnalumum');
+	 $auth_p=$this->zetro_auth->cek_oto('p','listjurnalumum');
 	 $data=$this->akun_model->get_jurnal($where);
 	 if(count($data)){
 		 foreach($data as $row){
 		 $n++;
-	 	 ($auth!='')? $oto="onClick=\"show_jurnal_detail('".$row->ID_Jurnal."');\" title='Click for detail jurnal'":"";
+	 	 ($auth_v!='')? $oto="onClick=\"show_jurnal_detail('".$row->Nomor."');\" title='Click for detail jurnal'":"";
 		 (($row->Debet-$row->Kredit)!=0)? $class='list_genap':$class='';
-			echo "<tr class='xx $class' id='".$row->ID_Jurnal."' align='center' $oto >
+			echo "<tr class='xx $class' id='".$row->Nomor."' align='center' $oto >
 				  <td class='kotak'>$n</td>
 				  <td class='kotak'>".tglfromSql($row->Tanggal)."</td>
 				  <td class='kotak'>".rdb('unit_jurnal','unit','unit',"where ID='".$row->ID_Unit."'")."</td>
 				  <td class='kotak'>".$row->Nomor."</td>
-				  <td class='kotak' align='left'>".$row->Ket."</td>
+				  <td class='kotak' align='left'>".$row->Keterangan."</td>
 				  <td class='kotak' align='right'>".number_format($row->Debet,2)."</td>
 				  <td class='kotak' align='right'>".number_format($row->Kredit,2)."</td>
 				  <td class='kotak' align='right'>". number_format(($row->Debet-$row->Kredit),2)."</td>
-				  </tr>\n";
+				  <td class='kotak' align='center'>";
+				  ($auth_e!='')?
+				  img_aksi($row->Nomor,true):
+				  img_aksi($row->Nomor,true,'del');
+			echo "</td></tr>\n";
 		 }
 	 }else{
 		 echo "<tr><td class='kotak' colspan='8'>Data not found....</td></tr>";

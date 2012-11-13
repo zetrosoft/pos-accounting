@@ -151,6 +151,23 @@ $(document).ready(function(e) {
 			},function(result){
 				$('#frm1 :reset').click();
 				tglNow('#Tanggal')
+				//kembali ke tampilan daftar jurnal
+			/*	$('#listjurnalumum').removeClass('tab_button');
+				$('#listjurnalumum').addClass('tab_select');
+				$('#addjurnal').removeClass('tab_select');
+				$('#addjurnal').addClass('tab_button');
+				$('span#v_jurnalumum').show();
+				$('span:not(#v_jurnalumum)').hide();
+				$('table#panel tr td.plt').show()
+				if($('#fby').val()==''){
+					$('#fby').val('tgl').select();
+					$('#daritgl')
+						.show()
+						.val($('#Tanggal').val());
+				}
+				$('#process').click();
+			*/
+
 			})
 		})
 	//print to pdf

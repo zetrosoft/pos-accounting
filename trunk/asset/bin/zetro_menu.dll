@@ -13,7 +13,7 @@
 6|Help|||
 
 	[Help]
-	1|About|admin/about|
+	1|About|admin/about||
 	2|<hr>|x||
 	3|Ganti Password|controlpanel/change_password||
 	4|Log Out|admin/logout||
@@ -43,16 +43,16 @@
 	1|Jenis Barang|jenisbarang|y|zcev|
 	
 	[Satuan Barang]
-	1|Satuan Barang|satuanbarang|y|zcev
+	1|Satuan Barang|satuanbarang|y|zcev|
 	
 	[Tambah Barang]
-	1|Tambah Barang|tambahbarang|y|zce
+	1|Tambah Barang|tambahbarang|y|zce|
 	
 	[Daftar Barang]
-	1|List Barang|list|y|zevp
+	1|List Barang|list|y|zevp|
 	
 	[Konversi Satuan]
-	1|Konversi Satuan|konversisatuan|y|zcev
+	1|Konversi Satuan|konversisatuan|y|zcev|
 	
 	[Anggota.]
 	1|Pinjaman Barang|pinjamanbarang|y|zev|
@@ -72,62 +72,62 @@
 1|Tambah Barang|gudang/index||
 2|Daftar Barang|gudang/list_barang||
 3|<hr>|x||
-4|Pemakaian|gudang/pemakaian|y|zcev
+4|Pemakaian|gudang/pemakaian|y|zcev|
 5|Rusak/Hilang|gudang/rusak|||
 	
 	[Pemakaian]
-	1|Add Pemakaian|addpemaikaian|y|zcev
-	2|List Pemakaian|listpemakaian|y|zev
+	1|Add Pemakaian|addpemaikaian|y|zcev|
+	2|List Pemakaian|listpemakaian|y|zev|
 	
 	[Rusak/Hilang]
-	1|Add Barang Rusak|addbarangrusak|y|zcev
-	2|List Barang Rusak|listbarangrusak|y|zev
+	1|Add Barang Rusak|addbarangrusak|y|zcev|
+	2|List Barang Rusak|listbarangrusak|y|zev|
 	
 [Transaksi]
 1|Pembelian Barang|pembelian/index||
-2|<hr>|x|
-3|Penjualan|penjualan/index|y|zce
-4|<hr>|x|
+2|<hr>|x||
+3|Penjualan|penjualan/index|y|zce|
+4|<hr>|x||
 5|Return Konsinyasi|pembelian/return_beli||
 6|Return Penjualan|penjualan/return_jual||
 
 		[Pembelian Barang]
-		1|Input Pembelian|pembelian/index|y|zce
-		2|List pembelian|pembelian/list_beli|y|zce
+		1|Input Pembelian|pembelian/index|y|zce|
+		2|List pembelian|pembelian/list_beli|y|zce|
 		
 		[Return Konsinyasi]
-		1|Return pembelian|returnpembelian|y|zce
+		1|Return pembelian|returnpembelian|y|zce|
 
 		[Return Penjualan]
-		1|Return Jual|returnjual|y|zce
+		1|Return Jual|returnjual|y|zce|
 		
 [Laporan]
 1|Rekap Pembelian|report/beli|||
-2|<hr>|x|
+2|<hr>|x||
 3|Rekap Penjualan Tunai|report/penjualan|||
 4|Rekap Penjualan Kredit|report/penjualan_kredit|||
 5|Rekap Barang Kredit|report/barang_kredit|||
-6|<hr>|x|
+6|<hr>|x||
 7|Persediaan|stock/stock_barang||
 ;8|Kartu Stock|||
 	
 	[Rekap Pembelian]
-	1|Rekap Pembelian|rekappembelian|y|zvp
+	1|Rekap Pembelian|rekappembelian|y|zvp|
 	
 	[Rekap Penjualan Tunai]
-	1|Rekap Penjualan Tunai|rekappenjualantunai|y|zvp
+	1|Rekap Penjualan Tunai|rekappenjualantunai|y|zvp|
 	
 	[Rekap Penjualan Kredit]
-	1|Rekap Penjualan Kredit|rekappenjualankredit|y|zvp
+	1|Rekap Penjualan Kredit|rekappenjualankredit|y|zvp|
 	
 	[Rekap Barang Kredit]
-	1|Rekap Barang Kredit|rekapbarangkredit|y|zvp
+	1|Rekap Barang Kredit|rekapbarangkredit|y|zvp|
 	
 	[Persediaan]
-	1|List Stock|liststock|y|zvp
+	1|List Stock|liststock|y|zvp|
 	
 	[Kartu Stock]
-	1|Stock Overview|stockoverview|y|zvp
+	1|Stock Overview|stockoverview|y|zvp|
 
 
 	
@@ -137,9 +137,9 @@
 	1|User Account|controlpanel/userlist||
 		
 		[User Account]
-		1|Add User|adduser|y|zce
-		2|List User|listuser|y|zev
-		3|Authorisation|authorisation|y|zcv
+		1|Add User|adduser|y|zce|
+		2|List User|listuser|y|zev|
+		3|Authorisation|authorisation|y|zcv|
 
 ;===end of admin menu
 ;Acounting Menu ===================================================
@@ -157,11 +157,11 @@
 [File.]
 1|Klasifikasi|akuntansi/klass_akun|y|zcev
 2|Sub Klasifikasi|akuntansi/sub_klasifikasi||
-3|<hr>|x|
+3|<hr>|x||
 4|Departemen|akuntansi/departemen|||
 5|Perkiraan|akuntansi/perkiraan|||
-6|<hr>|x|
-7|Home|admin/index|
+6|<hr>|x||
+7|Home|admin/index|||
 
 	[Jurnal]
 	1|Jurnal Umum|akuntansi/jurnal|||
@@ -176,8 +176,8 @@
 	2|Perkiraan|perkiraan|y|zevp|
 	
 	[Jurnal Umum]
-	1|Add Jurnal|addjurnal|y|zce|
-	2|List Jurnal Umum|listjurnalumum|y|zvp|
+	1|Add Jurnal|addjurnal|y|zcev|
+	2|List Jurnal Umum|listjurnalumum|y|zevp|
 	
 	[Buku Besar]
 	1|Buku Besar|bukubesar|y|zcevp|
@@ -189,33 +189,33 @@
 	4|User Account|controlpanel/userlist||
 	
 	[Setting SHU]
-	1|Komponen SHU|komponenshu|y|zcev
+	1|Komponen SHU|komponenshu|y|zcev|
 	
 	[Departemen]
 	1|Departemen|departement|y|zcev|
 
 [Rekapitulasi]
 1|Buku Besar|akuntansi/buku_besar_rekap|||
-2|<hr>|x|
+2|<hr>|x||
 3|Simpanan Anggota|neraca/rekap_simpanan|y|zvp|
 4|Simpanan/Pinjaman/Piutang|neraca/rekap_simpanan_dept||
 ;5|Departemen|neraca/rekap_departemen||
 	
 	[Simpanan/Pinjaman/Piutang]
-	1|Rekap Piutang Barang|rekappiutangbarang|y|zvp
+	1|Rekap Piutang Barang|rekappiutangbarang|y|zvp|
 	
 	[Departemen.]
-	1|Rekap Departemen|rekapdepartemen|y|zvp
+	1|Rekap Departemen|rekapdepartemen|y|zvp|
 	
 ;Keanggotaan ======================================================
 	[Keanggotaan]
 	1|Registrasi|member/index||
-	2|Daftar Anggota|member/member_list|y|cevp
+	2|Daftar Anggota|member/member_list|y|cevp|
 	;3|Simpanan Anggota|member/member_saving||
 	
 		[Registrasi]
-		1|Anggota Baru|anggotabaru|y|zce
-		2|Upload Photo|auploadphoto|y|zce
+		1|Anggota Baru|anggotabaru|y|zce|
+		2|Upload Photo|auploadphoto|y|zce|
 			
 			[Member Detail]
 			1|Member Data|memberdata|y|
@@ -243,7 +243,7 @@
 		
 ;Inventory =====================================================	
 	[Inventory]
-	1|List Barang|gudang/list_barang|y|zev
+	1|List Barang|gudang/list_barang|y|zev|
 	2|<hr>|x|
 	3|Rekap Pembelian|report/beli||
 	4|<hr>|x|
@@ -254,13 +254,13 @@
 	;9|Pembayaran Kredit|||
 	
 		[Tagihan Kredit]
-		1|Tagihan Kredit|tagihankredit|y|zvp
+		1|Tagihan Kredit|tagihankredit|y|zvp|
 		
 		[Pembayaran Kredit]
-		1|Pembayaran Kredit|pembayarankredit|y|zvp
+		1|Pembayaran Kredit|pembayarankredit|y|zvp|
 		
 		[Tagihan Kredit]
-		1|Tagihan Kredit|tagihankredit|y|zvp
+		1|Tagihan Kredit|tagihankredit|y|zvp|
 		
 ;Transaksi =====================================================	
 	[Transaksi.]
@@ -270,16 +270,16 @@
 	4|List Transaksi|simpanan/list_transaksi||
 	
 		[Transaksi Anggota]
-		1|Simpanan|simpanan|y|zvp
-		2|Pinjaman|pinjaman|y|zvp
-		3|SHU|shu|y|zvp
+		1|Simpanan|simpanan|y|zvp|
+		2|Pinjaman|pinjaman|y|zvp|
+		3|SHU|shu|y|zvp|
 
 	[Simpanan]
-	1|Transaksi Simpanan|transaksisimpanan|y|zce
+	1|Transaksi Simpanan|transaksisimpanan|y|zce|
 	
 	[Pinjaman]
-	1|Pinjaman|pinjaman|y|zce
-	2|setoran Pinjaman|setoranpinjaman|y|zce
+	1|Pinjaman|pinjaman|y|zce|
+	2|setoran Pinjaman|setoranpinjaman|y|zce|
 	
 	[List Transaksi]
 	1|List Transaksi|listransaksi|y|zevp|
@@ -287,38 +287,38 @@
 	
 ;Toko ==================================================================	
 	[Toko]
-	1|Penjualan|penjualan/index|y|zce
-	;2|Pembuatan Resep|penjualan/resep_std||zce
-	2|Return Penjualan|penjualan/return_jual||zce
+	1|Penjualan|penjualan/index|y|zce|
+	;2|Pembuatan Resep|penjualan/resep_std||zce|
+	2|Return Penjualan|penjualan/return_jual||zce|
 	3|<hr>|x||
 	4|Kas Harian Toko|master/kas_harian||
-	5|Print Faktur Penjualan|laporan/faktur||zp
+	5|Print Faktur Penjualan|laporan/faktur||zp|
 	6|<hr>|x||
 	7|Pembelian Barang|pembelian/index||
 	8|Return Pembelian|pembelian/retur||
 	
 		[Kas Harian Toko]
-		1|Setup Saldo Kas|kas_harian|y|zce
-		2|Operasional Toko|kas_keluar|y|zce
+		1|Setup Saldo Kas|kas_harian|y|zce|
+		2|Operasional Toko|kas_keluar|y|zce|
 		
 		[Print Faktur]
-		1|Print Faktur Penjualan|faktur|y|zp
+		1|Print Faktur Penjualan|faktur|y|zp|
 		
 		[Pembelian]
-		1|Input Pembelian|pembelian/index|y|zce
-		2|List pembelian|pembelian/list_beli|y|zce
+		1|Input Pembelian|pembelian/index|y|zce|
+		2|List pembelian|pembelian/list_beli|y|zce|
 		3|List Pemasok|pembelian/vendor||
 	
 	
 		
 		[Print Preview]
-		1|Print Preview|pp|y
+		1|Print Preview|pp|y|
 	
 	[Stock Opname]
-	1|Count Sheet|countsheet|y|zvp
-	;2|Record Count|record|n
-	;3|Stock Balance|balance|n
-	2|Stock Adjustment|adjust|y|zce
+	1|Count Sheet|countsheet|y|zvp|
+	;2|Record Count|record|n|
+	;3|Stock Balance|balance|n|
+	2|Stock Adjustment|adjust|y|zce|
 	
 	
 	

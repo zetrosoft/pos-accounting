@@ -87,11 +87,18 @@ class Akun_model extends CI_Model {
 		return $data->result();
 	}
 	function get_jurnal($where){
-		$sql="select left(Tanggal,10) as Tanggal,ID_Unit,Nomor,Ket,sum(Debet) as Debet,
+/*		$sql="select left(Tanggal,10) as Tanggal,ID_Unit,Nomor,Ket,sum(Debet) as Debet,
 				sum(Kredit) as Kredit,ID_Perkiraan,ID_Jurnal
 				from transaksi_new 
 				$where
 				group by ID_Jurnal";
+*/		$sql="select j.Tanggal,j.ID_Unit,j.Nomor,t.Ket,j.Keterangan,
+				sum(t.Debet) as Debet, sum(t.Kredit) as Kredit,t.ID_Perkiraan,t.ID_Jurnal
+				from jurnal as j
+				left join transaksi_new as t
+				on j.ID=t.ID_Jurnal
+				$where
+				group by j.ID";
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
