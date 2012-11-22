@@ -16,11 +16,21 @@ if($all_rekappenjualankredit!=''){
 		  "<input type='text' id='sampai_tgl' name='sampai_tgl' value=''>",
 		  "<select id='departemen' name='departemen'></select>",
 		  "<select id='cicilan' name='cicilan'></select>",
-		  "<input type='button' value='OK' id='okelah'/>
+		  ($this->session->userdata('menus')=='SW52TWVudQ==')?
+		  "<input type='button' value='OK' id='okelah'/>":
+		  "<input type='button' value='OK' id='view'/>.
+		   <input type='button' value='Print' id='okelah'/>".nbs(2).
+		  "<input type='button' value='Posting' id='posting'/>
 		  <input type='hidden' value='2' id='jenis_beli' name='jenis_beli'/>"));
 	echo "</form>";
 	echo "</tbody></table>";
 	echo "<table id='xx' width='100%'><tbody><tr><td>&nbsp;</td></tr></tbody></table>";
+		$zlb->section('rekapjualkredit');
+		$zlb->aksi(false);
+		$zlb->Header('80%');
+		$zlb->icon();
+		echo "</tbody></table>";
+
 }else{
 	no_auth();
 }

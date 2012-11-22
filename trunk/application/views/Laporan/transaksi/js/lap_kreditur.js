@@ -42,8 +42,53 @@ $(document).ready(function(e) {
 				$('#frm1 #nm_produsen').focus().select();
 			}
 		})
+	$('#view').click(function(){
+		show_indicator('ListTable',6);
+			$.post('lap_tagihan_print',{
+				'dari_tgl'	:$('#dari_tgl').val(),
+				'sampai_tgl':$('#sampai_tgl').val(),
+				'departemen':$('#departemen').val(),
+				'cicilan'	:$('#cicilan').val()},
+				function(result){
+					$('table#ListTable tbody').html(result)
+					
+				})
+	})
 	$('#okelah').click(function(){
 		$('#frm1').attr('action','lap_kreditur');
 		document.frm1.submit();
+	})
+	
+	$('#posting').click(function(){
+		var today =new Date();
+		if(confirm('Periode posting di setting \nDari        :'+$('#dari_tgl').val()+'\nSampai :'+$('#sampai_tgl').val()+'\nYakin akan diposting')){
+		  show_indicator('xx',1);
+		  $('table#xx tbody tr td').append('...membuat nomor jurnal');
+		  $.post(path+'akuntansi/get_last_jurnal',{'ID_Unit':'1'},
+		  	function(res){
+				//simpan nomor jurnal ke dalam table jurnal
+				var r=res.split('-')
+				$.post(path+'akuntansi/set_jurnal',{
+					'Tgl'		:'01/'+$('#dari_tgl').val().substr(3,8),
+					'ID_Unit'	:'1',
+					'nomor'		:'GJ-'+$.trim(r[0]),
+					'Keterangan':'Piutang barang '+ nBulan(parseInt($('#dari_tgl').val().substr(3,2))-1)+' '+nYear(''),
+					'ID'		:r[1]
+				},function(rst){
+					show_indicator('xx',1);
+					$('table#xx tbody tr td').append(' ....Proses jurnal no GJ-'+$.trim(res)+' ')
+					$.post('jual_kredit_posting',{
+						'dari_tgl'	:$('#dari_tgl').val(),
+						'sampai_tgl':$('#sampai_tgl').val(),
+						'departemen':$('#departemen').val(),
+						'id_jurnal' :'GJ-'+$.trim(r[0])},
+						function(result){
+							$('table#xx tbody tr td').html('posting berhasil');
+							$('#view').click();
+							$('table#xx tbody tr td').html('');
+						})
+				})
+			})
+		}
 	})
 })

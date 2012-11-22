@@ -92,13 +92,14 @@ class Akun_model extends CI_Model {
 				from transaksi_new 
 				$where
 				group by ID_Jurnal";
-*/		$sql="select j.Tanggal,j.ID_Unit,j.Nomor,t.Ket,j.Keterangan,
+*/		$sql="select j.ID,j.Tanggal,j.ID_Unit,j.Nomor,/*t.Keterangan as Ket,*/j.Keterangan,
 				sum(t.Debet) as Debet, sum(t.Kredit) as Kredit,t.ID_Perkiraan,t.ID_Jurnal
-				from jurnal as j
-				left join transaksi_new as t
+				from transaksi as t
+				left join jurnal as j
 				on j.ID=t.ID_Jurnal
 				$where
 				group by j.ID";
+		///echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
@@ -123,14 +124,27 @@ class Akun_model extends CI_Model {
 	}
 	function get_total_KD($ID){
 		$data=array();
-		$sql="select nomor,Ket,ID_Unit,Tanggal,sum(debet) as Debet,sum(kredit) as Kredit,Keterangan from transaksi_new as t where t.ID_Jurnal='$ID' group by id_jurnal";	
+/*		$sql="select j.Nomor,t.nomor,Ket,j.ID_Unit,j.Tanggal,sum(debet) as Debet,sum(kredit) as Kredit,j.Keterangan 
+			 from transaksi_new as t 
+			 left join jurnal as j
+			 on j.ID=t.ID_Jurnal
+			 where t.ID_Jurnal='$ID' group by id_jurnal";
+*/		$sql="select j.ID,j.ID_Unit,j.ID_Tipe,j.Tanggal,
+			j.Nomor,j.Keterangan,sum(Debet) as Debet,sum(Kredit) as Kredit
+			from jurnal as j
+			left join transaksi_new as t
+			on t.ID_Jurnal=j.ID
+			where j.id='$ID'
+			group by j.ID";	
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
 	function get_last_jurnal($ID){
-		$sl=mysql_query("select NoUrut from jurnal order by ID desc limit 1") or die(mysql_error());
+		$data='';$IDn='';
+		$sl=mysql_query("select NoUrut,ID from jurnal order by ID desc limit 1") or die(mysql_error());
 		while($rw=mysql_fetch_object($sl)){
-			$data=$rw->NoUrut;	
+			$data=$rw->NoUrut;
+			$IDn=$rw->ID;
 		}
 		if(strlen($data)==0){
 			$data='000001';
@@ -147,7 +161,7 @@ class Akun_model extends CI_Model {
 		}else if(strlen($data)=='6'){
 			$data=($data+1);
 		}
-		return $data;
+		return $data.'-'.$IDn;
 	}
 	
 	function detail_jurnal($ID){
@@ -168,8 +182,10 @@ class Akun_model extends CI_Model {
 		on s.ID=p.ID_Klas
 		left join Sub_Klasifikasi as sk
 		on sk.ID=p.ID_SubKlas
-		where t.ID_Jurnal='$ID' order by Kode";
-		
+		left join jurnal as j
+		on j.ID=t.ID_Jurnal
+		where t.ID_Jurnal='$ID' order by t.urutan,Kode";
+		//echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
@@ -207,8 +223,12 @@ class Akun_model extends CI_Model {
 		return $data->result();
 	}
 	function kode_akun($ID_Unit,$ID_dept='1',$ID_Simpanan=" not in('1','2','3','4','5')"){
+		$dpt=($ID_dept=='1')? "p.ID_Dept='$ID_dept'":" a.ID_Jenis='1'";
+		$ord=($ID_dept=='1')?'order by p.ID_Klas,p.ID_SubKlas, p.NoUrut':'order by a.Nama,s.ID';
+		$idut=($ID_Unit=='')?'': "p.ID_Unit='".$ID_Unit."' and ";
 		$sql="select 
-			if(p.Kode!='',concat(k.Kode,sk.Kode,uj.Kode,d.Kode,p.Kode),concat(k.Kode,sk.Kode,uj.Kode,d.Kode)) as Kode,p.Perkiraan,p.ID
+			if(p.Kode!='',concat(k.Kode,sk.Kode,uj.Kode,d.Kode,p.Kode),concat(k.Kode,sk.Kode,uj.Kode,d.Kode,a.No_Perkiraan)) as Kode,
+			if(p.Kode!='',p.Perkiraan,concat(a.Nama,' [',d.Title,'] - ',s.Jenis)) as Perkiraan,p.ID
 			from perkiraan as p
 			left join Klasifikasi as k
 			on k.id=p.ID_Klas
@@ -218,9 +238,14 @@ class Akun_model extends CI_Model {
 			on uj.id=p.ID_Unit
 			left join mst_departemen as d
 			on d.ID=p.ID_Dept
-			where p.ID_Unit='$ID_Unit' and p.ID_Dept='$ID_dept'
+			left join mst_anggota as a
+			on a.ID=p.ID_Agt
+			left join jenis_simpanan as s
+			on s.ID=p.ID_Simpanan
+			where $idut $dpt
 			and p.ID_Simpanan $ID_Simpanan
-			order by p.ID_Klas,p.ID_SubKlas, p.NoUrut";
+			$ord";
+			//echo $sql;
 			$data=$this->db->query($sql);
 			return $data->result();
 	}
@@ -262,6 +287,18 @@ class Akun_model extends CI_Model {
 	
 	function get_saldo_awal($perkiraan){
 		$sql="select saldoawal from perkiraan where ID='$perkiraan'";	
+		//echo $sql;
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
+	function get_saldo_akhir($perkiraan,$endDate){
+		$sql="select sum(debet) as Debet, sum(kredit) as Kredit
+			  from jurnal as j
+			  left join transaksi as t
+			  on t.ID_Jurnal=j.ID
+			  where t.ID_Perkiraan='$perkiraan' $endDate
+			  group by t.ID_Perkiraan";
+		//echo $sql;  
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
@@ -285,8 +322,14 @@ class Akun_model extends CI_Model {
 	$sql="select (sum(kredit) - sum(debet)) as saldoawal
 		  from transaksi_new where ID_Perkiraan='$perkiraan' and tahun < '$tahun'
 		  group by ID_Perkiraan";
-		  
-			$data=$this->db->query($sql);
+	/*$sql="select (sum(kredit)-sum(debet)+SaldoAwal) as SA
+			from jurnal as j
+			left join transaksi as t
+			on t.ID_Jurnal=j.ID
+			right join perkiraan as p
+			on p.ID=t.ID_Perkiraan
+			where t.ID_Perkiraan='3139' and j.Tahun <'2001'";
+	*/		$data=$this->db->query($sql);
 			return $data->result();
 	}
 	function get_agt_kode($ID_Dept,$ID_SubKlas){

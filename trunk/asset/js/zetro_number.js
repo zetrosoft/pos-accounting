@@ -360,6 +360,17 @@
 			
 		}
 	}
+	function nMonth(tgl){
+	 var tgle=(tgl=='')? new Date():tgl
+	 	nMonths=nBulan(tgle.getMonth());
+		return nMonths
+	}
+	
+	function nYear(tgl){
+	  tgly=(tgl=='')? new Date():tgl;
+		 nYear=tgly.getFullYear()
+		 return nYear;
+	}
 	function nBulan(d){
 		var month=new Array();
 		month[0]="January";
@@ -374,7 +385,7 @@
 		month[9]="October";
 		month[10]="November";
 		month[11]="December";
-		return month[d.getMonth()];
+		return month[d];
 	}
 	function kekata(field){
 		$(field).terbilang({'output_div':'terbilang'})//menampikan data terbilang 

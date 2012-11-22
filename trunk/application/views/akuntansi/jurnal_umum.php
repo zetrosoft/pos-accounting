@@ -45,10 +45,10 @@ echo "</form>";
 panel_multi_end();
 panel_multi('addjurnal','none',false);
 if($all_addjurnal!=''){
-addText(array('Jurnal Baru','Transaksi','No Jurnal'),
+addText(array('Jurnal Baru','Transaksi',''),
 		array('<input type="radio" name="pilih" id="new" checked="checked">',
 				'<input type="radio" name="pilih" id="addcontent">',
-				'<input type="text" id="NoJurnal" value="" class="cari">'));
+				'<!--input type="text" id="NoJurnal" value="" class="cari"-->'));
 echo "<div id='addnew' style='display:'>";
 	$zfm->AddBarisKosong(true,'bottom');
 	$zfm->Start_form(true,'frm1');
@@ -62,11 +62,11 @@ echo "<div id='jdet'>\n
 		$zlb->Header('100%','j_content');
 		$zlb->icon('deleted');
 		echo "\n</tbody></table>\n<hr>
-		<div>\n<table width='100%' id='bwh' style='border-collapse:collapse'>
+		<div style='display:none'>\n<table width='100%' id='bwh' style='border-collapse:collapse'>
 			<tr><td width='60%'>&nbsp;</td>
 			<td align='right' style='padding-right:20px'>
 			<!--input type='button' id='reklawan_adc' onclick=\"balance_show();\" value='Create Balance' title='tambah perkiraan pembanding'>&nbsp;
-			--><input type='button' id='addtrans' value='Add Transaksi'>&nbsp;
+			<input type='button' id='addtrans' value='Add Transaksi'>&nbsp;-->
 			<input type='button' id='pdf' value='Cetak'>
 			<input type='hidden' id='thn' value='".date('Y')."'></td></tr>\n
 			</table></div>" ;
@@ -84,33 +84,27 @@ echo "<div id='jdete'>\n
 		$zlb->icon('deleted');
 		echo "\n</tbody></table>\n<hr>
 		<div>\n<table width='100%' id='bwhe' style='border-collapse:collapse'>
-			<tr><td width='60%'>&nbsp;</td>
+			<tr><td width='60%'>
+			<table id='shiip' width='100%'><tbody><tr><td>&nbsp;</td></tr></tbody></table></td>
 			<td align='right' style='padding-right:20px'>
 			<!--input type='button' id='reklawan' value='Create Balance' title='tambah perkiraan pembanding'>&nbsp;
-			--><input type='button' id='pdf' value='Cetak' title='cetak laporan'>&nbsp;
+			--><input type='button' id='addtrans' value='Add Transaksi'>&nbsp;
+			<input type='button' id='pdf' value='Cetak' title='cetak laporan'>&nbsp;
 			<input type='button' id='batal' value='Keluar' title='tutup popup'>
 			</td></tr>\n
 			</table></div>\n" ;
 popup_end();
-popup_start('ad_content',"Add Transaksi to Jurnal Umum",500,500);
-//
+popup_start('ad_content',"Add Transaksi to Jurnal Umum",250,500);
+// form add transaksi to jurnal
 echo "<font color='#0000CC' style='font-size:normal'>Pilih Perkiraan :</font>
 	 <hr>
 		<table style='border-collapse:collapse' id='pilihan'>
 		</table>
 	  <hr>
-	<div style='height:330px'>  
-	  <div id='simp' style='display:none'>";
-		$zlb->section('addcontent');
-		$zlb->aksi(false);
-		$zlb->Header('100%','add_trans');
-		$zlb->icon('deleted');
-		echo "\n</tbody></table>\n
-			</div>\n
-	 <div id='unt' style='display:'>" ;
+	<div style='height:250px'> ";
 	$zfm->AddBarisKosong(true,'bottom');
 	$zfm->Start_form(true,'frm3');
-	$zfm->BuildForm('balance',false,'80%');
+	$zfm->BuildForm('balance',false,'100%');
 	//$zfm->BuildFormButton('Simpan','lawan');
 	echo "</div>\n</div><hr>
 		<div>\n<table width='100%' id='bwht' style='border-collapse:collapse'>
@@ -126,3 +120,5 @@ loading_ajax();
 terbilang();
 echo '<span id="ttd"></span>';
 ?>
+<input type='hidden' id='j_akun' value='1' />
+<input type='hidden' id='jSimp' value='1' />

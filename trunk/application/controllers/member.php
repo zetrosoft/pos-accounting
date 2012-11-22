@@ -9,6 +9,7 @@ class Member extends CI_Controller{
 		$this->load->model("member_model");
 		$this->load->model('inv_model');	
 		$this->load->library("zetro_auth");
+		$this->load->helper("print_report");
 		$this->userid=$this->session->userdata('idlevel');
 	}
 	function Header(){
@@ -42,7 +43,7 @@ class Member extends CI_Controller{
 	function filter_by(){
 		$datax=array();$n=0;
 		(empty($_POST['id_dept'])||$_POST['id_dept']=='all')?$where="where id_jenis='1'":$where="where ID_Jenis='1' and ID_Dept='".$_POST['id_dept']."'";
-		(empty($_POST['ordby']) || $_POST['ordby']=='undefined')? $ordby='order by noUrut':$ordby='order by '.$_POST['ordby'];
+		(empty($_POST['ordby']) || $_POST['ordby']=='undefined')? $ordby='order by Nama':$ordby='order by '.str_replace('-',',',$_POST['ordby']);
 		(empty($_POST['stat'])||$_POST['stat']=='all')? $where .='':
 					 $where .=" and id_Aktif='".$_POST['stat']."'";
 		 empty($_POST['searchby'])? $where .='':$where .=" and Nama like '%".$_POST['searchby']."%'";
@@ -51,9 +52,8 @@ class Member extends CI_Controller{
 		//print_r($datax);
 		if(count($datax)>0){
 			foreach($datax as $row){
-			$n++;
-			echo "<tr onclick='' class='xx' title='Double click for detail view'
-				 ondblclick=\"show_member_detail('".$row->ID."');\">
+			$n++;//title='Double click for detail view' ondblclick=\"show_member_detail('".$row->ID."');\
+			echo "<tr onclick='' class='xx'>
 				 <td width='5%' class='kotak' align='center'>$n</td>
 				 <td width='10%' class='kotak' align='center'>".$row->No_Agt."</td>
 				 <td width='15%' class='kotak' nowrap>".rdb('mst_departemen','Departemen','',"where ID='".$row->ID_Dept."'")."</td>
@@ -61,6 +61,7 @@ class Member extends CI_Controller{
 				 <td width='40%' class='kotak'>".$row->Nama."</td>
 				 <td width='10%' class='kotak' >".substr($this->zetro_manager->rContent("Sex",$row->ID_Kelamin,"asset/bin/zetro_member.frm"),2,10)."</td>
 				 <td width='8%' class='kotak'>".rdb('Keaktifan','Keaktifan','Keaktifan',"where ID='".$row->ID_Aktif."'")."</td>
+				 <td width='8%' class='kotak' align='center'>".img_aksi($row->ID)."</td>
 				</tr>";
 			}
 		}else{
@@ -181,10 +182,15 @@ class Member extends CI_Controller{
 	$this->load->view('member/member_detail',$data);
 	}
 	function member_detail_trans(){
-		$n=0;$total_debet=0;$total_kredit=0;
+		$n=0;$total_debet=0;$total_kredit=0;$saldoAwal=0;
 		$ID_Agt		=$_POST['ID_Agt'];
 		$ID_Jenis	=$_POST['ID_Jenis'];
+		$saldoAwal	=rdb('perkiraan','SaldoAwal','SaldoAwal',"Where ID_Agt='".$ID_Agt."' and ID_Simpanan='".$ID_Jenis."'");
 		$data=$this->member_model->detail_member_data($ID_Agt,$ID_Jenis);
+		echo  "<tr class='xx list_genap'>
+			  <td class='kotak'>&nbsp;</td>
+			  <td class='kotak' colspan='4'>Saldo Awal</td>
+			  <td class='kotak' align='right'>".number_format($saldoAwal,2)."</td></tr>";
 		foreach($data->result() as $trn){
 			$n++;
 			echo "<tr class='xx' align='center'>
@@ -201,7 +207,7 @@ class Member extends CI_Controller{
 		echo "<tr class='xx'>
 			  <td class='kotak list_genap' colspan='4' align='right'>TOTAL &nbsp;&nbsp;</td>
 			  <td class='kotak list_genap' align='right'><b>".number_format($total_debet,2)."</b></td>
-			  <td class='kotak list_genap' align='right'><b>".number_format($total_kredit,2)."</b></td>
+			  <td class='kotak list_genap' align='right'><b>".number_format(($total_kredit+$saldoAwal),2)."</b></td>
 			  </tr>";
 	}
 	function member_biodata(){
@@ -212,6 +218,19 @@ class Member extends CI_Controller{
 			$datax=$rr;
 		}
 		echo json_encode($datax);
+	}
+	function member_print(){
+		$data=array();
+		$n=0;$total_debet=0;$total_kredit=0;
+		$ID_Agt		=$_POST['ID_Agt'];
+		$ID_Jenis	=$_POST['ID_Jenis'];
+		$data['temp_rec']=$this->member_model->detail_member_data($ID_Agt,$ID_Jenis);
+		$data['nama']=$_POST['nm_angg'];
+		$data['dept']=$_POST['nm_dept'];
+		$data['jsimp']=rdb('jenis_simpanan','jenis','jenis',"where ID='".$ID_Jenis."'");
+		$this->zetro_auth->menu_id(array('trans_beli'));
+		$this->list_data($data);
+		$this->View("member/member_print");
 	}
 	//simpanan anggota
 	

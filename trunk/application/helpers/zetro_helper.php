@@ -325,12 +325,24 @@
 		$data= fread($find,1024);	
 		return $data;
 	}
-	function img_aksi($id='',$del=false){
-		return ($del==false)? 
-				"<img src='".base_url()."asset/images/editor.png' id='simpan' onclick=\"images_click('".$id."','edit');\" class='simpan' title='Click to Edit stock'>":
-				"<img src='".base_url()."asset/images/editor.png' id='simpan' onclick=\"images_click('".$id."','edit');\" class='simpan' title='Click to Edit stock'>
-			    &nbsp;<img src='".base_url()."asset/images/no.png' id='hapus' onclick=\"images_click('".$id."','del');\" class='hapus' title='Click to Edit stock'>";
+	function img_aksi($id='',$del=false,$only=''){
+		$data='';
+		 if($del==false){ 
+		   $data="<img src='".base_url()."asset/images/editor.png' id='simpan' onclick=\"images_click('".$id."','edit');\" class='simpan' title='Click to Edit'>";
+		 }else if ($del==true && $only=='del'){
+		   $data="<img src='".base_url()."asset/images/no.png' id='simpan' onclick=\"images_click('".$id."','del');\" class='simpan' title='Click to delete'>";
+		 }else if($del==true && $only==''){
+		   $data="<img src='".base_url()."asset/images/editor.png' id='simpan' onclick=\"images_click('".$id."','edit');\" class='simpan' title='Click to Edit '>
+			    &nbsp;<img src='".base_url()."asset/images/no.png' id='hapus' onclick=\"images_click('".$id."','del');\" class='hapus' title='Click to Delete'>";
+		 }
+		 return $data;
 	}
+	function capital($text,$besar=false){
+		($besar==false)?
+		ucwords(strtolower($text)):
+		strtoupper($text);	
+	}
+
 	
 	function width_kol_pdf($section,$file){
 	$data='10';//array();

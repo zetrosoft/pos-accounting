@@ -29,19 +29,22 @@ class Kasir_model extends CI_Model {
 		return $data->result();
 	}
 	function rekap_trans_jual($where,$group='',$order='order by p.Tanggal'){
-		$sql="select dt.ID_Barang,sum(Jumlah) as Jumlah,dt.Harga from inv_penjualan as p
+		$sql="select p.ID,b.Kode,b.Nama_Barang,dt.ID_Barang,sum(Jumlah) as Jumlah,dt.Harga,s.Satuan,p.ID_Post
+		     from inv_penjualan as p
 		     left join inv_penjualan_detail as dt
 			 on dt.ID_Jual=p.ID
 			 right join inv_barang as b
 			 on b.ID=dt.ID_Barang
+			 left join inv_barang_satuan as s
+			 on s.ID=b.ID_Satuan
 			 $where $group $order";
 		//echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
 	function rekap_kreditur($where,$group='',$order=''){
-		$sql="select a.Nama,a.ID_Dept,dt.ID_Barang,sum(Jumlah),dt.Harga,
-			 sum(Jumlah*harga) as Total,p.Cicilan
+		$sql="select p.ID,p.ID_Anggota,a.Nama,a.ID_Dept,dt.ID_Barang,sum(Jumlah),dt.Harga,
+			 sum(Jumlah*harga) as Total,p.Cicilan,p.ID_Post,p.ID_Jenis,p.Deskripsi,p.Nomor
 			 from inv_penjualan as p
 		     left join inv_penjualan_detail as dt
 			 on dt.ID_Jual=p.ID

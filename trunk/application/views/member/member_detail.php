@@ -4,7 +4,7 @@ $zlb=new zetro_buildlist();
 $zlb->config_file('asset/bin/zetro_member.frm');
 link_js('jquery.fixedheader.js,zetro_number.js','asset/js,asset/js');
 tab_head('Member Detail',"style='background:#333'");
-panel_multi('memberdata');
+panel_multi('memberdata','none',false);
 echo "<table width='100%' border='0'>
 	<tr valign='top'><td width='45%'>";
 		$zfm->AddBarisKosong(false);
@@ -29,7 +29,7 @@ panel_multi('membertrans','block',false);
 addText(array('No. Anggota','Nama Lengkap','Department'),
 		array("<input type='text' id='no_anggota' readonly value='$no_anggota'>",
 			  "<input type='text' id='nm_anggota' readonly value='$nm_anggota'>",
-			  "<input type='text' id='id_department' readonly value='$id_department' size='40'>"));
+			  "<input type='text' id='id_department' readonly value='$id_department' size='30'>"));
 		$zlb->section('detail');
 		$zlb->aksi(false);
 		$zlb->Header('90%','detail_tbl');
@@ -59,14 +59,19 @@ addText(array('No. Anggota','Nama Lengkap','Department'),
 		echo "</tbody></table></div>
 		<hr>
 		<div id='btn' style='width:90%; border:0px outset #FFF;padding:5px; padding-right:20px' align='right'>
+		<span id='loading' style='display:none'><img src='".base_url()."asset/images/indicator.gif'>Data being process... please wait!</span> &nbsp;&nbsp;
 		<input type='button' id='cetak' value='Cetak'>
 		<input type='button' id='keluar' value='Tutup'>
 		<input type='hidden' id='kunci' value='$kunci' />
 		<input type='hidden' id='kunci_cetak' value='' /></div>";
 panel_multi_end();
 tab_head_end();
+popup_start('preview',"Print Preview",800);
 
+popup_end();
 ?>
+
+<input type='hidden' id='id_jenis' value='' />
 <script language="javascript">
 $(document).ready(function(e) {
 	$('#mm_detail table#tab tr td:not(#kosong)').click(function(){
@@ -117,7 +122,22 @@ $(document).ready(function(e) {
 	$('#detail_tbl').fixedHeader({width:(screen.width-50),height:150})
 
 	$('#cetak').click(function(){
+		$('span#loading').css('display','');
 		var id=$('#kunci_cetak').val();
+		var jn=$('#kunci').val();
+		$.post('member_print',{
+			'ID_Agt':jn,
+			'ID_Jenis':id,
+			'nm_angg':$('#nm_anggota').val(),
+			'nm_dept':$('#id_department').val()},
+		function(result){
+			$('#pp-preview').css({'left':'10%','top':'5%','max-height':'550px'})
+			$('#tbl-preview').css({'height':'500px'});
+			$('#tbl-preview').html('<iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_saldo_personal.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>')
+			$('#pp-preview').show();
+			$('#lock-preview').show()
+			$('span#loading').css('display','none');
+		})
 	})
 	$('#keluar').click(function(){
 		$('#mm_lock').hide();	
@@ -127,7 +147,6 @@ $(document).ready(function(e) {
 		$('#mm_lock').hide();	
 		$('#mm_detail').hide();
 	})
-
 });
 
 function get_detail_trans(id){
@@ -138,11 +157,12 @@ function get_detail_trans(id){
 		})
 	$('#kunci_cetak').val(id);
 	$('#loading').show();
+	$('#id_jenis').val(id);
 	var k=$('#kunci').val();
 	$.post('member_detail_trans',{
 		'ID_Jenis'	:id,
 		'ID_Agt'	:k
-	},
+		},
 		function(result){
 			$('table#trans_tbl tbody').html(result);
 			$('#trans_tbl').fixedHeader({width:(screen.width-150),height:195})

@@ -13,7 +13,7 @@ $stat="<select id='stat' name='stat'>
 		<option Value='3'>Keluar</option>
 		</select>";
 link_css('style.css','asset/js');
-link_js('jquery.fcbkcomplete.js','asset/js');
+//link_js('jquery.fcbkcomplete.js','asset/js');
 link_js('jquery.fixedheader.js,member_list.js','asset/js,'.$path.'/js');
 panel_begin('Keanggotaan','','Department :,'.$dept.', &nbsp;&nbsp;Keaktifan :'.$stat,",Total Data : <span id='td'></span>");
 panel_multi('daftaranggota','block');
@@ -21,11 +21,11 @@ if($all_daftaranggota!=''){
 addText(array('Susun Urutan ','','Cari Berdasarkan Nama :'),
 		array(
 			  "<select id='urutan'>
-				<option value='no_Agt' selected='selected'>No Anggota</option>
 				<option value='Nama'>Nama Anggota</option>
-				<option value='NIP'>NIP Anggota</option>
-				<option value='id_Dept'>Department</option>
-				<option value='status_anggota'>Keaktifan</option>
+				<option value='no_Agt-Nama'>No Anggota, Nama Anggota</option>
+				<option value='NIP-Nama'>NIP Anggota Nama, Anggota</option>
+				<option value='id_Dept-Nama'>Department, Nama Anggota</option>
+				<option value='ID_Aktif-Nama'>Keaktifan, Nama Anggota</option>
 				</select>",
 			  "<input type='button' value='Go' id='gon'>",
 			  "<div style='border:1px solid #DDD; background:#FFF'>
@@ -33,7 +33,7 @@ addText(array('Susun Urutan ','','Cari Berdasarkan Nama :'),
 			  <img src='".base_url()."asset/img/Icon_210.ico' id='cari' style='cursor:pointer'></div>"));
 	$n=0;
 		$zlb->section($section);
-		$zlb->aksi(false);
+		$zlb->aksi(true);
 		$zlb->Header('100%');
 		$zlb->icon();
 		echo "</tbody></table>";
@@ -51,6 +51,7 @@ popup_full();
 	$(document).ready(function(e) {
 		$('#dept').html("<option value='all'>Semua</option>");
         $('#dept').append("<? dropdown('mst_departemen','id','departemen',"order by Kode");?>")
-		$('#dept').val('').select();
+		$('#dept').val('20').select();
+		_show_data();
     });
 </script>

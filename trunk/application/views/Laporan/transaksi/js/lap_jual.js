@@ -118,11 +118,49 @@ $(document).ready(function(e) {
 				$('#frm3 #nm_produsen').focus().select();
 			}
 		})
+	$('#view').click(function(){
+		show_indicator('ListTable',7);
+			$.post('lap_penjualan_show',{
+				'dari_tgl'	:$('#dari_tgl').val(),
+				'sampai_tgl':$('#sampai_tgl').val(),
+				//'departemen':$('#departemen').val(),
+				'cicilan'	:$('#cicilan').val()},
+				function(result){
+					$('table#ListTable tbody').html(result)
+					
+				})
+	})
 	$('#okelah').click(function(){
+		show_indicator('xx',1);
 		$('#frm1').attr('action','lap_penjualan');
 		document.frm1.submit();
 	})
-
+	$('#posting').click(function(){
+		if(confirm('Periode Posting :\nDari Tanggal : '+$('#dari_tgl').val()+'\nSampai Tanggal : '+$('#sampai_tgl').val()+'\nYakin data akan di posting?')){
+			show_indicator('ListTable',7);
+			  $.post(path+'akuntansi/get_last_jurnal',{'ID_Unit':'1'},
+				function(res){
+					//simpan nomor jurnal ke dalam table jurnal
+					var r=res.split('-')
+					$.post(path+'akuntansi/set_jurnal',{
+						'Tgl'		:'01/'+$('#dari_tgl').val().substr(3,8),
+						'ID_Unit'	:'1',
+						'nomor'		:'GJ-'+$.trim(r[0]),
+						'Keterangan':'Penjualan barang Tunai '+ nBulan(parseInt($('#dari_tgl').val().substr(3,2))-1)+' '+nYear(''),
+						'ID'		:r[1],
+						'ID_Dept'	:'0'
+					},function(rst){
+							$.post('lap_jual_posting',{
+								'dari_tgl'	:$('#dari_tgl').val(),
+								'sampai_tgl':$('#sampai_tgl').val(),
+								'id_jurnal'	:'GJ-'+$.trim(r[0])
+							},function(result){
+								$('#view').click();
+							})
+					})
+			})
+		}
+	})
 	$(':button')
 		.click(function(){
 			var id=$(this).attr('id');

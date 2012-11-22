@@ -15,18 +15,19 @@
 5|Total Harga,,,,,,10%,,,30
 
 [rekapjualtunai]
-1|Nama Barang,,,,,,8%,,,60
-2|Kode Barang,,,,,,8%,,,30
-3|Jumlah,,,,,,8%,,,20
-4|Satuan,,,,,,8%,,,18
-5|Harga,,,,,,8%,,,25
-6|Total Harga,,,,,,8%,,,25
+1|Nama Barang,,,,,,30%,,,60
+2|Kode Barang,,,,,,15%,,,30
+3|Jumlah,,,,,,10%,,,20
+4|Satuan,,,,,,10%,,,18
+5|Harga,,,,,,15%,,,25
+6|Total Harga,,,,,,15%,,,25
 
 [rekapjualkredit]
-1|Nama Anggota,,,,,,8%,,,70
-2|Departemen,,,,,,8%,,,60
-3|Cicilan,,,,,,8%,,,15
-4|Total,,,,,,8%,,,30
+1|Nama Anggota,,,,,,20%,,,70
+2|Departemen,,,,,,15%,,,60
+3|Cicilan,,,,,,5%,,,15
+4|Total,,,,,,15%,,,30
+5|Status,,,,,,10%,,,15
 
 [stocklist]
 1|Kode Barang,input,text n,Kode,w50,,15%,,,28,

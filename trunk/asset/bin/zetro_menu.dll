@@ -147,12 +147,12 @@
 1|File.||y|
 2|Keanggotaan||y|
 3|Jurnal||y|
-4|Transaksi.||y|
-5|Rekapitulasi||y|
-6|Inventory||y|
-7|Laporan.||y|
-8|Tools||y|
-9|Help||n|
+;4|Transaksi.||y|
+4|Rekapitulasi||y|
+5|Inventory||y|
+6|Laporan.||y|
+7|Tools||y|
+8|Help||n|
 
 [File.]
 1|Klasifikasi|akuntansi/klass_akun|y|zcev

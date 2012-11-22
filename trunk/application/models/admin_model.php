@@ -206,7 +206,7 @@ class Admin_model extends CI_Model
 	
 	function upd_data($table,$field,$where){
 		$q="update $table $field $where";
-		//echo $q;
+		//echo $q.'<br>';
 			mysql_query($q) or die(mysql_error());
 	}
 	function hps_data($table,$where=''){

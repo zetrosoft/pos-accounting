@@ -121,11 +121,12 @@ function cek_attr(){
 }
 function _show_data(jenis){
 	//menampiklan data buku besar berdasarkab kriteria / filter yang di pilih
-	var akun=$('#ID_Klas').val()+
+ 	var akun=$('#ID_Klas').val()+
  			 $('#ID_SubKlas').val()+
 			 $('#ID_Dept').val()+
 			 $('#ID_Agt').val()
 	if(jenis=='tgl'){		 
+		show_indicator('ListTable',7);
 		$.post('get_buku_besar',{
 			'Akun'	:akun,
 			'ID_SubKlas':$('#ID_SubKlas').val(),
@@ -138,6 +139,7 @@ function _show_data(jenis){
 		})
 	}
 	if(jenis=='tahun'){
+		show_indicator('bbTahunan',5);
 		$.post('get_bukubesar_tahunan',{
 			'ID_SubKlas':$('#ID_SubKlas').val(),
 			'ID_P'	:$('#ID_Agt').val(),

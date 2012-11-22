@@ -297,13 +297,14 @@ class Akuntansi extends CI_Controller{
 	 $data['Tanggal']	=tgltoSql($_POST['Tgl']);//.'00:00:00';
 	 $data['ID_Unit']	=$_POST['ID_Unit'];
 	 $data['Nomor']		=$_POST['nomor'];
-	 $data['Keterangan']=$_POST['Keterangan'];
+	 $data['Keterangan']=addslashes($_POST['Keterangan']);
 	 $data['ID_Tipe']	='1';
 	 $data['ID_Bulan']	=substr($_POST['Tgl'],3,2);
 	 $data['Tahun']		=substr($_POST['Tgl'],6,4);
 	 $data['ID_Mark']	='0';
 	 $data['NoUrut']	=substr($_POST['nomor'],3,(strlen($_POST['nomor'])-3));
-	 echo $this->Admin_model->replace_data('jurnal',$data);
+	 $this->Admin_model->replace_data('jurnal',$data);
+	 echo rdb('jurnal','ID','ID',"order by ID Desc limit 1").'-'.substr($_POST['Tgl'],6,4);
 	 
  }
  function get_no_jurnal(){
@@ -325,8 +326,8 @@ class Akuntansi extends CI_Controller{
 			$debet	=number_format($row->Debet,2);
 			$kredit	=number_format($row->Kredit,2);
 		}
- echo "<form id='frm23' name='frm23' method='post' action=''>
-	   <input type='hidden' name='ID_Jurnal' value='$ID_jurnal' id='ID_Jurnal'></form>
+ echo "<form id='frm23' name='frm23' method='post' action=''>\n\r
+	   <input type='hidden' name='ID_Jurnal' value='$ID_jurnal' id='ID_Jurnal'>\n\r</form>
 	   <table style='border-collapse:collapse' width='99%' id='j_det'>
 		<tr><td width='10%'>Tanggal</td>
 			<td width='10%'><input type='text' id='Tgl' readonly value='$Tanggal' class='w90 carix'></td>
@@ -376,9 +377,9 @@ class Akuntansi extends CI_Controller{
 	 if(count($data)){
 		 foreach($data as $row){
 		 $n++;
-	 	 ($auth_v!='')? $oto="onClick=\"show_jurnal_detail('".$row->Nomor."');\" title='Click for detail jurnal'":"";
+	 	 ($auth_v!='')? $oto="onClick=\"show_jurnal_detail('".$row->ID."');\" title='Click for detail jurnal'":"";
 		 (($row->Debet-$row->Kredit)!=0)? $class='list_genap':$class='';
-			echo "<tr class='xx $class' id='".$row->Nomor."' align='center' $oto >
+			echo "<tr class='xx $class' id='".$row->Nomor."' align='center' >
 				  <td class='kotak'>$n</td>
 				  <td class='kotak'>".tglfromSql($row->Tanggal)."</td>
 				  <td class='kotak'>".rdb('unit_jurnal','unit','unit',"where ID='".$row->ID_Unit."'")."</td>
@@ -388,9 +389,10 @@ class Akuntansi extends CI_Controller{
 				  <td class='kotak' align='right'>".number_format($row->Kredit,2)."</td>
 				  <td class='kotak' align='right'>". number_format(($row->Debet-$row->Kredit),2)."</td>
 				  <td class='kotak' align='center'>";
-				  ($auth_e!='')?
-				  img_aksi($row->Nomor,true):
-				  img_aksi($row->Nomor,true,'del');
+				  echo ($auth_e!='')?
+				  ($row->Debet==0 || $row->Kredit==0)?
+				  img_aksi($row->ID.'-'.substr($row->Tanggal,0,4),true):img_aksi($row->ID.'-'.substr($row->Tanggal,0,4)):
+				  img_aksi($row->ID.'-'.substr($row->Tanggal,0,4),true,'del');
 			echo "</td></tr>\n";
 		 }
 	 }else{
@@ -416,8 +418,10 @@ class Akuntansi extends CI_Controller{
 			  <table style='border-collapse:collapse' width='100%'>
 			  <tr valign='middle'><td width='95%'>".$row->Keterangan."</td>
 			  <td align='right'>";
+		echo ($n==1)?'': "<img src='".base_url()."asset/images/3.png' title='Naikan posisi' onclick=\"naikan_posisi('".$row->IDT."','".$ID."');\">";
 		echo ($Tahun == date('Y'))?
-			 " <img src='".base_url()."asset/images/no.png' title='Hapus transaksi dari jurnal ini' onclick=\"hapus_content('".$row->IDT."');\">":"";
+			 "<img src='".base_url()."asset/images/editor.png' title='Edit data jurnal ini' onclick=\"edit_content('".$row->IDT."');\">
+			  <img src='".base_url()."asset/images/no.png' title='Hapus transaksi dari jurnal ini' onclick=\"hapus_content('".$row->IDT."');\">":"";
 		echo "</td></tr></table></td>";
 		echo "</tr>\n";
 		$t_Debet	=($t_Debet+$row->Debet);
@@ -464,27 +468,52 @@ class Akuntansi extends CI_Controller{
 	$data['ID_Perkiraan']	=rdb('transaksi_temp','ID_Perkiraan','ID_Perkiraan',"where ID='$ID'");
 	$data['Debet']			=rdb('transaksi_temp','Debet','Debet',"where ID='$ID'");
 	$data['Kredit']			=rdb('transaksi_temp','Kredit','Kredit',"where ID='$ID'");
-	$data['Keterangan']		=rdb('transaksi_temp','Keterangan','Keterangan',"where ID='$ID'");
+	$data['Keterangan']		=addslashes(rdb('transaksi_temp','Keterangan','Keterangan',"where ID='$ID'"));
 	 echo $this->Admin_model->replace_data('transaksi',$data);
 	 $this->Admin_model->upd_data('transaksi_temp',"set ID_Stat='1'","where ID='$ID'");
  }
  function add_balance_jurnal(){
-	 $data='';
+	 $data=array();$jml_data=0;
+	$jml_data=$this->Admin_model->total_data("transaksi",$_POST['ID_Jurnal'],"ID_Jurnal");
 	$data['ID_Jurnal']		=$_POST['ID_Jurnal'];
 	$data['ID_Perkiraan']	=$_POST['ID_Perkiraan'];
 	$data['Debet']			=($_POST['ID_Jenis']=='1')? $_POST['Jml']:'0';
 	$data['Kredit']			=($_POST['ID_Jenis']=='2')? $_POST['Jml']:'0';
-	$data['Keterangan']		=$_POST['Keterangan'];
+	$data['Keterangan']		=addslashes($_POST['Keterangan']);
+	$data['urutan']			=($jml_data+1);
 	$datax=$this->Admin_model->replace_data('transaksi',$data);
 	echo ($datax=='1')? "Data berhasil di simpan":"Gagal mohon di check lagi data yang diinput";
+ }
+ function hapus_jurnal(){
+	$ID=$_POST['ID'];
+	$this->Admin_model->hps_data("jurnal","where ID='$ID'"); 
  }
  function hapus_transaksi(){
 	$ID=$_POST['ID'];
 	$this->Admin_model->hps_data("transaksi","where ID='$ID'"); 
-	//$this->Admin_model->upd_data('transaksi_temp',"set ID_Stat='0'","where ID='$ID'");
+	//$this->Admin_model->upd_data('inv_penjualan',"set ID_Post='0'","where ID='$ID'");
+ }
+ function update_transaksi(){
+	$ID		=$_POST['ID'];
+	$debet	=$_POST['Debet'];
+	$kredit	=$_POST['Kredit'];
+	$debet	=($debet==0)?0:$_POST['hasil'];
+	$kredit =($kredit==0)?0:$_POST['hasil'];
+	$this->Admin_model->upd_data("transaksi","set Debet='".$debet."', Kredit='".$kredit."'","where ID='$ID'"); 
+ }
+ function update_posisi(){
+	$ID		=$_POST['ID'];
+	$urutan	=$_POST['urutan'];
+	$jml_data=$this->Admin_model->total_data("transaksi",$_POST['ID_Jurnal'],"ID_Jurnal");
+	for($i=$urutan;$i<=$jml_data;$i++){
+		$id_j='';
+		$id_j=rdb('transaksi','ID','ID',"where urutan='$i' order by urutan");
+		$this->Admin_model->upd_data("transaksi","set Urutan='".$urutan."'","where ID='$id_j'"); 
+	}
+	$this->Admin_model->upd_data("transaksi","set Urutan='".$urutan."'","where ID='$ID'"); 
  }
  function header_perkiraan(){
-	 $data=array();
+	 $data=array();$n=0;
 	 $data=$this->akun_model->get_simpanan_name('order by id');
 	 echo "<tr valign='middle'>
 	 	   <td width='10px' align='right'>
@@ -492,10 +521,12 @@ class Akuntansi extends CI_Controller{
 		   <td width='100px' >KBR</td>
 	 	   <td width='10px' align='right'>
 		   <input style='cursor:pointer' type='radio' name='akun_pilihan' id='ID_USP' onclick=\"process('ID_USP');\"></td>
-		   <td width='100px' >USP</td>";
+		   <td width='100px' >USP</td></tr><tr>";
 	 foreach($data->result() as $r){
+		 $n++;
 		echo"<td width='10px' align='right'><input style='cursor:pointer' type='radio' name='akun_pilihan' id='p-".$r->ID."' onclick=\"process('".$r->ID."');\"></td>
-		   <td width='100px' >".$r->Jenis."</td>";
+		   <td width='100px' id='ck-".$r->ID."' >".$r->Jenis."</td>";
+		   echo($n==3)?'</tr><tr>':'';
 	 }
 	 echo "</tr>\n";
  }
@@ -513,10 +544,10 @@ class Akuntansi extends CI_Controller{
 		($unit=='all')? $where='':$where ="where ID_Unit='$unit'";
 		break;
 		case 'tgl':
-		($unit=='all')? $where="where Tanggal between '$daritgl' and '$smptgl'":$where ="where Tanggal between '$daritgl' and '$smptgl' and ID_Unit='$unit'";
+		($unit=='all')? $where="where j.Tanggal between '$daritgl' and '$smptgl'":$where ="where j.Tanggal between '$daritgl' and '$smptgl' and j.ID_Unit='$unit'";
 		break;
 		case 'bln':
-		($unit=='all')? $where="where ID_Bulan='$bln' and Tahun='$thn'":$where="where ID_Bulan='$bln' and Tahun='$thn' and ID_Unit='$unit'";
+		($unit=='all')? $where="where j.ID_Bulan='$bln' and j.Tahun='$thn'":$where="where j.ID_Bulan='$bln' and j.Tahun='$thn' and j.ID_Unit='$unit'";
 		break;
 	 }
 		$data['tanggal']=($this->input->post('daritgl')=='')? nBulan($this->input->post('Bln')).' '.$this->input->post('Thn'):$this->input->post('daritgl').' s/d '.$this->input->post('smptgl');
@@ -536,9 +567,9 @@ class Akuntansi extends CI_Controller{
 		$Tanggal='';$NoJurnal='';$ID_Unit='';$Keterangan='';
 		foreach($data as $row){
 			$Tanggal	=tglfromSql(substr($row->Tanggal,0,10));
-			$NoJurnal	=$row->nomor;
+			$NoJurnal	=$row->Nomor;
 			$ID_Unit	=rdb("unit_jurnal",'unit','unit',"where ID='".$row->ID_Unit."'");
-			$Keterangan	=$row->Ket;
+			$Keterangan	=$row->Keterangan;
 			$debet		=number_format($row->Debet,2);
 			$kredit		=number_format($row->Kredit,2);
 		}
@@ -571,9 +602,9 @@ class Akuntansi extends CI_Controller{
 		$Tanggal='';$NoJurnal='';$ID_Unit='';$Keterangan='';
 		foreach($datax as $row){
 			$data['Tanggal']	=tglfromSql(substr($row->Tanggal,0,10));
-			$data['NoJurnal']	=$row->nomor;
+			$data['NoJurnal']	=$row->Nomor;
 			$data['ID_Unit']	=rdb("unit_jurnal",'unit','unit',"where ID='".$row->ID_Unit."'");
-			$data['Keterangan']	=$row->Ket;
+			$data['Keterangan']	=$row->Keterangan;
 			$data['debet']		=number_format($row->Debet,2);
 			$data['kredit']		=number_format($row->Kredit,2);
 		}
@@ -591,8 +622,10 @@ class Akuntansi extends CI_Controller{
  
  	function get_SubJenis(){
 		$data	=array();
-		$ID		=$_POST['ID'];
-		$data	=$this->akun_model->kode_akun($ID);
+		$ID		=empty($_POST['ID'])?'':$_POST['ID'];
+		$ID_Dept=empty($_POST['ID_Dept'])?'0':$_POST['ID_Dept'];
+		$ID_Simp=empty($_POST['ID_Simp'])?"not in('1','2','3','4','5')":$_POST['ID_Simp'];
+		$data	=$this->akun_model->kode_akun($ID,$ID_Dept,$ID_Simp);
 		echo "<option value=''>&nbsp;</option>";
 		foreach($data as $rw){
 			echo "<option value='".$rw->ID."'>".$rw->Kode ." - ". $rw->Perkiraan."</option>";	
@@ -630,7 +663,7 @@ class Akuntansi extends CI_Controller{
 		$datax	=array(); $saldo_awal=0;
 		$data	=array(); $n=0;$saldo=0;
 		$t_kredit=0;$t_debet=0;$ip_temp='';
-		$id_Calc='';$saldo_akhir=0;
+		$id_Calc='';$saldo_akhir=0;$saldoAwal=0;
 		$akun	=$_POST['Akun'];
 		$ID_Simp=$_POST['ID_SubKlas'];
 		$perkiraan=$_POST['ID_P'];
@@ -657,6 +690,11 @@ class Akuntansi extends CI_Controller{
 		foreach($datax as $sa){
 			$saldo_awal=$sa->saldoawal;
 		}
+		$datane=$this->akun_model->get_saldo_akhir($ip_temp," and Tanggal < '".$mulai."'");
+		foreach ($datane as $d){
+			$saldoAwal=($id_Calc==1)? ($d->Debet-$d->Kredit):($d->Kredit-$d->Debet);	
+		}
+		$saldo_awal=($saldo_awal+$saldoAwal);
 		echo "<tr class='xx list_genap'>
 			  <td class='kotak' align='center'>&bull;&bull;&bull;</td>
 			  <td class='kotak' colspan='3'>Saldo Awal</td>
@@ -701,8 +739,8 @@ class Akuntansi extends CI_Controller{
 	}
 	function get_bukubesar_tahunan(){
 		$data=array(); $n=0;$saldo=0;$toAkun='';
-		$saldo_awal=0;
-		$t_kredit=0;$t_debet=0;$ip_temp='';
+		$saldo_awal=0;$datane=array();$saldoAwal=0;
+		$t_kredit=0;$t_debet=0;$ip_temp='';$datanex=array();
 		$akun	=$_POST['ID_P'];
 		$ID_Simp=$_POST['ID_SubKlas'];
 		$tahun	=$_POST['Tahun'];
@@ -730,6 +768,16 @@ class Akuntansi extends CI_Controller{
 		foreach($datax as $sa){
 			$saldo_awal=$sa->saldoawal;
 		}
+		$datanex=$this->akun_model->get_saldo_awal($ip_temp);
+		foreach($datanex as $dx){
+			$saldo_awal=($saldo_awal+$dx->saldoawal);
+		}
+		$datane=$this->akun_model->get_saldo_akhir($ip_temp," and tahun < '".$tahun."'");
+		foreach ($datane as $d){
+			$saldoAwal=($id_Calc==1)? ($d->Debet-$d->Kredit):($d->Kredit-$d->Debet);	
+		}
+		$saldo_awal=($saldo_awal+$saldoAwal);
+		
 		echo "<tr class='xx list_genap'>
 			  <td class='kotak' align='center'>&bull;&bull;&bull;</td>
 			  <td class='kotak' colspan='3'>Saldo Awal</td>
@@ -755,7 +803,9 @@ class Akuntansi extends CI_Controller{
 			if($n>=1){
 				echo "<tr class='list_genap'>
 					  <td class='kotak'>&bull;&bull;&bull;</td>
-					  <td class='kotak' colspan='3'><b>Saldo Akhir</b>
+					  <td class='kotak' colspan='1'><b>Saldo Akhir</b>
+					  <td class='kotak' align='right'><b>".number_format($t_debet,2)."</b></td>	
+					  <td class='kotak' align='right'><b>".number_format($t_kredit,2)."</b></td>	
 					  <td class='kotak' align='right'><b>".number_format($saldo_akhir,2)."</b></td>
 					  </tr>";
 			}
@@ -782,6 +832,23 @@ class Akuntansi extends CI_Controller{
 		echo "<option value=''></option>";
 		foreach($data as $rs){
 			echo "<option value='".$rs->ID."'>".$rs->Kode."-".$rs->Nama."</option>";	
+		}
+	}
+	//function for update urutan in transaksi table, only one time run
+	function run_once(){
+		$x=0;
+		$sql="select * from jurnal where /*id between '707' and '1000' and*/ tahun='2002' order by id limit 400,500";
+		$rs=mysql_query($sql) or die(mysql_error());
+		while($rw=mysql_fetch_object($rs)){
+		$n=0;$x++;
+			//$n=$this->Admin_model->total_data('transaksi',$rw->ID_Jurnal,'ID_Jurnal');
+			$sql2="select * from transaksi where ID_Jurnal='".$rw->ID."' order by ID";
+			$rs1=mysql_query($sql2) or die(mysql_error());
+			while($rw2=mysql_fetch_object($rs1)){
+				$n++;
+				$this->Admin_model->upd_data('transaksi',"set urutan='$n'","where ID='".$rw2->ID."'");
+			}
+		echo $x.'--> ID :'.$rw->ID.'-->Tahun :'.$rw->Tahun.'<br>';
 		}
 	}
 }

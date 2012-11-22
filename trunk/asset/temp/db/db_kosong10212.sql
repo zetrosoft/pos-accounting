@@ -1,16 +1,24 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.5.25a - MySQL Community Server (GPL)
+-- Server version:               5.5.8 - MySQL Community Server (GPL)
 -- Server OS:                    Win32
--- HeidiSQL version:             7.0.0.4140
--- Date/time:                    2012-10-16 12:49:13
+-- HeidiSQL version:             7.0.0.4220
+-- Date/time:                    2012-11-22 12:19:47
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
-/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Dumping database structure for kopkardb
+DROP DATABASE IF EXISTS `kopkardb`;
+CREATE DATABASE IF NOT EXISTS `kopkardb` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `kopkardb`;
+
 
 -- Dumping structure for table kopkardb.bayar_transaksi
+DROP TABLE IF EXISTS `bayar_transaksi`;
 CREATE TABLE IF NOT EXISTS `bayar_transaksi` (
   `no_transaksi` varchar(50) NOT NULL DEFAULT '',
   `total_belanja` double DEFAULT '0',
@@ -28,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `bayar_transaksi` (
 
 
 -- Dumping structure for table kopkardb.buku_besar
+DROP TABLE IF EXISTS `buku_besar`;
 CREATE TABLE IF NOT EXISTS `buku_besar` (
   `ID` int(11) DEFAULT NULL,
   `Tanggal` datetime DEFAULT NULL,
@@ -42,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `buku_besar` (
 
 
 -- Dumping structure for table kopkardb.detail_transaksi
+DROP TABLE IF EXISTS `detail_transaksi`;
 CREATE TABLE IF NOT EXISTS `detail_transaksi` (
   `id_transaksi` int(11) NOT NULL AUTO_INCREMENT,
   `no_transaksi` varchar(50) DEFAULT NULL,
@@ -66,6 +76,7 @@ CREATE TABLE IF NOT EXISTS `detail_transaksi` (
 
 
 -- Dumping structure for table kopkardb.inv_barang
+DROP TABLE IF EXISTS `inv_barang`;
 CREATE TABLE IF NOT EXISTS `inv_barang` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Kode` varchar(15) DEFAULT NULL,
@@ -86,6 +97,7 @@ CREATE TABLE IF NOT EXISTS `inv_barang` (
 
 
 -- Dumping structure for table kopkardb.inv_barang_jenis
+DROP TABLE IF EXISTS `inv_barang_jenis`;
 CREATE TABLE IF NOT EXISTS `inv_barang_jenis` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `JenisBarang` varchar(10) NOT NULL DEFAULT '',
@@ -97,6 +109,7 @@ CREATE TABLE IF NOT EXISTS `inv_barang_jenis` (
 
 
 -- Dumping structure for table kopkardb.inv_barang_kategori
+DROP TABLE IF EXISTS `inv_barang_kategori`;
 CREATE TABLE IF NOT EXISTS `inv_barang_kategori` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Kategori` varchar(20) NOT NULL DEFAULT '',
@@ -108,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `inv_barang_kategori` (
 
 
 -- Dumping structure for table kopkardb.inv_barang_satuan
+DROP TABLE IF EXISTS `inv_barang_satuan`;
 CREATE TABLE IF NOT EXISTS `inv_barang_satuan` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Satuan` varchar(10) NOT NULL DEFAULT '',
@@ -119,6 +133,7 @@ CREATE TABLE IF NOT EXISTS `inv_barang_satuan` (
 
 
 -- Dumping structure for table kopkardb.inv_blacklist
+DROP TABLE IF EXISTS `inv_blacklist`;
 CREATE TABLE IF NOT EXISTS `inv_blacklist` (
   `ID` int(11) DEFAULT NULL,
   `ID_Agt` int(11) NOT NULL DEFAULT '0',
@@ -130,6 +145,7 @@ CREATE TABLE IF NOT EXISTS `inv_blacklist` (
 
 
 -- Dumping structure for table kopkardb.inv_golongan
+DROP TABLE IF EXISTS `inv_golongan`;
 CREATE TABLE IF NOT EXISTS `inv_golongan` (
   `nm_golongan` varchar(225) NOT NULL DEFAULT '',
   `doc_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -141,6 +157,7 @@ CREATE TABLE IF NOT EXISTS `inv_golongan` (
 
 
 -- Dumping structure for table kopkardb.inv_konversi
+DROP TABLE IF EXISTS `inv_konversi`;
 CREATE TABLE IF NOT EXISTS `inv_konversi` (
   `id_barang` varchar(50) NOT NULL DEFAULT '',
   `nm_barang` varchar(225) NOT NULL DEFAULT '',
@@ -156,6 +173,7 @@ CREATE TABLE IF NOT EXISTS `inv_konversi` (
 
 
 -- Dumping structure for table kopkardb.inv_material_count
+DROP TABLE IF EXISTS `inv_material_count`;
 CREATE TABLE IF NOT EXISTS `inv_material_count` (
   `nm_barang` varchar(125) NOT NULL DEFAULT '',
   `nm_satuan` varchar(50) DEFAULT NULL,
@@ -171,6 +189,7 @@ CREATE TABLE IF NOT EXISTS `inv_material_count` (
 
 
 -- Dumping structure for table kopkardb.inv_material_stok
+DROP TABLE IF EXISTS `inv_material_stok`;
 CREATE TABLE IF NOT EXISTS `inv_material_stok` (
   `id_barang` int(50) NOT NULL DEFAULT '0',
   `nm_barang` varchar(125) NOT NULL DEFAULT '',
@@ -189,6 +208,7 @@ CREATE TABLE IF NOT EXISTS `inv_material_stok` (
 
 
 -- Dumping structure for table kopkardb.inv_pemasok
+DROP TABLE IF EXISTS `inv_pemasok`;
 CREATE TABLE IF NOT EXISTS `inv_pemasok` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Pemasok` varchar(30) DEFAULT NULL,
@@ -205,6 +225,7 @@ CREATE TABLE IF NOT EXISTS `inv_pemasok` (
 
 
 -- Dumping structure for table kopkardb.inv_pembayaran
+DROP TABLE IF EXISTS `inv_pembayaran`;
 CREATE TABLE IF NOT EXISTS `inv_pembayaran` (
   `no_transaksi` varchar(50) NOT NULL DEFAULT '0',
   `total_belanja` double DEFAULT '0',
@@ -221,6 +242,7 @@ CREATE TABLE IF NOT EXISTS `inv_pembayaran` (
 
 
 -- Dumping structure for table kopkardb.inv_pembelian
+DROP TABLE IF EXISTS `inv_pembelian`;
 CREATE TABLE IF NOT EXISTS `inv_pembelian` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Jenis` tinyint(4) DEFAULT NULL,
@@ -240,6 +262,7 @@ CREATE TABLE IF NOT EXISTS `inv_pembelian` (
 
 
 -- Dumping structure for table kopkardb.inv_pembelian_detail
+DROP TABLE IF EXISTS `inv_pembelian_detail`;
 CREATE TABLE IF NOT EXISTS `inv_pembelian_detail` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Tanggal` datetime DEFAULT NULL,
@@ -260,6 +283,7 @@ CREATE TABLE IF NOT EXISTS `inv_pembelian_detail` (
 
 
 -- Dumping structure for table kopkardb.inv_pembelian_jenis
+DROP TABLE IF EXISTS `inv_pembelian_jenis`;
 CREATE TABLE IF NOT EXISTS `inv_pembelian_jenis` (
   `ID` int(11) DEFAULT NULL,
   `Jenis_Beli` varchar(10) DEFAULT NULL
@@ -269,6 +293,7 @@ CREATE TABLE IF NOT EXISTS `inv_pembelian_jenis` (
 
 
 -- Dumping structure for table kopkardb.inv_pembelian_rekap
+DROP TABLE IF EXISTS `inv_pembelian_rekap`;
 CREATE TABLE IF NOT EXISTS `inv_pembelian_rekap` (
   `ID` int(11) DEFAULT NULL,
   `Tanggal` datetime DEFAULT NULL,
@@ -288,6 +313,7 @@ CREATE TABLE IF NOT EXISTS `inv_pembelian_rekap` (
 
 
 -- Dumping structure for table kopkardb.inv_pembelian_status
+DROP TABLE IF EXISTS `inv_pembelian_status`;
 CREATE TABLE IF NOT EXISTS `inv_pembelian_status` (
   `ID` int(11) DEFAULT NULL,
   `Status` varchar(12) DEFAULT NULL
@@ -297,6 +323,7 @@ CREATE TABLE IF NOT EXISTS `inv_pembelian_status` (
 
 
 -- Dumping structure for table kopkardb.inv_penjualan
+DROP TABLE IF EXISTS `inv_penjualan`;
 CREATE TABLE IF NOT EXISTS `inv_penjualan` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Jenis` tinyint(4) DEFAULT NULL,
@@ -319,6 +346,7 @@ CREATE TABLE IF NOT EXISTS `inv_penjualan` (
 
 
 -- Dumping structure for table kopkardb.inv_penjualan_bayar
+DROP TABLE IF EXISTS `inv_penjualan_bayar`;
 CREATE TABLE IF NOT EXISTS `inv_penjualan_bayar` (
   `ID` int(11) DEFAULT NULL,
   `ID_Jual` int(11) DEFAULT NULL,
@@ -331,6 +359,7 @@ CREATE TABLE IF NOT EXISTS `inv_penjualan_bayar` (
 
 
 -- Dumping structure for table kopkardb.inv_penjualan_detail
+DROP TABLE IF EXISTS `inv_penjualan_detail`;
 CREATE TABLE IF NOT EXISTS `inv_penjualan_detail` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Jenis` tinyint(4) DEFAULT NULL,
@@ -352,6 +381,7 @@ CREATE TABLE IF NOT EXISTS `inv_penjualan_detail` (
 
 
 -- Dumping structure for table kopkardb.inv_penjualan_jenis
+DROP TABLE IF EXISTS `inv_penjualan_jenis`;
 CREATE TABLE IF NOT EXISTS `inv_penjualan_jenis` (
   `ID` int(11) DEFAULT NULL,
   `Jenis_Jual` varchar(20) DEFAULT NULL
@@ -361,6 +391,7 @@ CREATE TABLE IF NOT EXISTS `inv_penjualan_jenis` (
 
 
 -- Dumping structure for table kopkardb.inv_penjualan_rekap
+DROP TABLE IF EXISTS `inv_penjualan_rekap`;
 CREATE TABLE IF NOT EXISTS `inv_penjualan_rekap` (
   `ID` int(11) DEFAULT NULL,
   `ID_Jenis` tinyint(4) DEFAULT NULL,
@@ -380,6 +411,7 @@ CREATE TABLE IF NOT EXISTS `inv_penjualan_rekap` (
 
 
 -- Dumping structure for table kopkardb.inv_penjualan_status
+DROP TABLE IF EXISTS `inv_penjualan_status`;
 CREATE TABLE IF NOT EXISTS `inv_penjualan_status` (
   `ID` int(11) DEFAULT NULL,
   `Status_Jual` varchar(6) DEFAULT NULL
@@ -389,6 +421,7 @@ CREATE TABLE IF NOT EXISTS `inv_penjualan_status` (
 
 
 -- Dumping structure for table kopkardb.inv_posting_date
+DROP TABLE IF EXISTS `inv_posting_date`;
 CREATE TABLE IF NOT EXISTS `inv_posting_date` (
   `ID` int(11) DEFAULT NULL,
   `PostingDate` datetime DEFAULT NULL
@@ -398,6 +431,7 @@ CREATE TABLE IF NOT EXISTS `inv_posting_date` (
 
 
 -- Dumping structure for table kopkardb.inv_posting_status
+DROP TABLE IF EXISTS `inv_posting_status`;
 CREATE TABLE IF NOT EXISTS `inv_posting_status` (
   `ID` int(11) DEFAULT NULL,
   `PostStatus` varchar(8) DEFAULT NULL
@@ -407,6 +441,7 @@ CREATE TABLE IF NOT EXISTS `inv_posting_status` (
 
 
 -- Dumping structure for table kopkardb.inv_tagihan
+DROP TABLE IF EXISTS `inv_tagihan`;
 CREATE TABLE IF NOT EXISTS `inv_tagihan` (
   `ID` int(11) DEFAULT NULL,
   `ID_Jual` int(11) DEFAULT NULL
@@ -416,6 +451,7 @@ CREATE TABLE IF NOT EXISTS `inv_tagihan` (
 
 
 -- Dumping structure for table kopkardb.jenis_simpanan
+DROP TABLE IF EXISTS `jenis_simpanan`;
 CREATE TABLE IF NOT EXISTS `jenis_simpanan` (
   `ID` int(11) DEFAULT NULL,
   `Jenis` varchar(12) DEFAULT NULL,
@@ -431,25 +467,27 @@ CREATE TABLE IF NOT EXISTS `jenis_simpanan` (
 
 
 -- Dumping structure for table kopkardb.jurnal
+DROP TABLE IF EXISTS `jurnal`;
 CREATE TABLE IF NOT EXISTS `jurnal` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `ID_Unit` int(11) DEFAULT NULL,
+  `ID_Unit` int(11),
   `ID_Tipe` int(11) DEFAULT NULL,
-  `ID_Dept` int(11) DEFAULT NULL,
+  `ID_Dept` int(11) DEFAULT '0',
   `Tanggal` date DEFAULT NULL,
-  `ID_Bulan` smallint(6) DEFAULT NULL,
-  `Tahun` smallint(6) DEFAULT NULL,
-  `NoUrut` int(11) DEFAULT NULL,
-  `Nomor` varchar(10) DEFAULT NULL,
+  `ID_Bulan` smallint(6),
+  `Tahun` smallint(6),
+  `NoUrut` int(11),
+  `Nomor` varchar(10),
   `Keterangan` varchar(60) DEFAULT NULL,
   `ID_Mark` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+  KEY `ID` (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
 
 -- Dumping structure for table kopkardb.keaktifan
+DROP TABLE IF EXISTS `keaktifan`;
 CREATE TABLE IF NOT EXISTS `keaktifan` (
   `ID` int(11) DEFAULT NULL,
   `Keaktifan` varchar(10) DEFAULT NULL
@@ -459,6 +497,7 @@ CREATE TABLE IF NOT EXISTS `keaktifan` (
 
 
 -- Dumping structure for table kopkardb.klasifikasi
+DROP TABLE IF EXISTS `klasifikasi`;
 CREATE TABLE IF NOT EXISTS `klasifikasi` (
   `ID` int(11) DEFAULT NULL,
   `Kode` varchar(2) DEFAULT NULL,
@@ -469,6 +508,7 @@ CREATE TABLE IF NOT EXISTS `klasifikasi` (
 
 
 -- Dumping structure for table kopkardb.laba_rugi
+DROP TABLE IF EXISTS `laba_rugi`;
 CREATE TABLE IF NOT EXISTS `laba_rugi` (
   `ID` int(11) DEFAULT NULL,
   `Jenis` varchar(20) DEFAULT NULL
@@ -478,6 +518,7 @@ CREATE TABLE IF NOT EXISTS `laba_rugi` (
 
 
 -- Dumping structure for table kopkardb.laporan
+DROP TABLE IF EXISTS `laporan`;
 CREATE TABLE IF NOT EXISTS `laporan` (
   `ID` int(11) DEFAULT NULL,
   `JenisLaporan` varchar(15) DEFAULT NULL
@@ -487,6 +528,7 @@ CREATE TABLE IF NOT EXISTS `laporan` (
 
 
 -- Dumping structure for table kopkardb.lap_head
+DROP TABLE IF EXISTS `lap_head`;
 CREATE TABLE IF NOT EXISTS `lap_head` (
   `ID` int(11) DEFAULT NULL,
   `Header1` varchar(11) DEFAULT NULL,
@@ -502,6 +544,7 @@ CREATE TABLE IF NOT EXISTS `lap_head` (
 
 
 -- Dumping structure for table kopkardb.lap_jenis
+DROP TABLE IF EXISTS `lap_jenis`;
 CREATE TABLE IF NOT EXISTS `lap_jenis` (
   `ID` int(11) DEFAULT NULL,
   `ID_Head` int(11) DEFAULT NULL,
@@ -516,6 +559,7 @@ CREATE TABLE IF NOT EXISTS `lap_jenis` (
 
 
 -- Dumping structure for table kopkardb.lap_neraca_detail
+DROP TABLE IF EXISTS `lap_neraca_detail`;
 CREATE TABLE IF NOT EXISTS `lap_neraca_detail` (
   `ID` int(11) DEFAULT NULL,
   `ID_Head` int(11) DEFAULT NULL,
@@ -533,6 +577,7 @@ CREATE TABLE IF NOT EXISTS `lap_neraca_detail` (
 
 
 -- Dumping structure for table kopkardb.lap_neraca_head
+DROP TABLE IF EXISTS `lap_neraca_head`;
 CREATE TABLE IF NOT EXISTS `lap_neraca_head` (
   `ID` int(11) DEFAULT NULL,
   `ID_Ledger` int(11) DEFAULT NULL,
@@ -549,6 +594,7 @@ CREATE TABLE IF NOT EXISTS `lap_neraca_head` (
 
 
 -- Dumping structure for table kopkardb.lap_neraca_ledger
+DROP TABLE IF EXISTS `lap_neraca_ledger`;
 CREATE TABLE IF NOT EXISTS `lap_neraca_ledger` (
   `ID` int(11) DEFAULT NULL,
   `ID_Ledger` int(11) DEFAULT NULL,
@@ -565,6 +611,7 @@ CREATE TABLE IF NOT EXISTS `lap_neraca_ledger` (
 
 
 -- Dumping structure for table kopkardb.lap_shu_detail
+DROP TABLE IF EXISTS `lap_shu_detail`;
 CREATE TABLE IF NOT EXISTS `lap_shu_detail` (
   `ID` int(11) DEFAULT NULL,
   `ID_Head` int(11) DEFAULT NULL,
@@ -582,6 +629,7 @@ CREATE TABLE IF NOT EXISTS `lap_shu_detail` (
 
 
 -- Dumping structure for table kopkardb.lap_shu_head
+DROP TABLE IF EXISTS `lap_shu_head`;
 CREATE TABLE IF NOT EXISTS `lap_shu_head` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Head` int(11) DEFAULT NULL,
@@ -598,6 +646,7 @@ CREATE TABLE IF NOT EXISTS `lap_shu_head` (
 
 
 -- Dumping structure for table kopkardb.lap_subjenis
+DROP TABLE IF EXISTS `lap_subjenis`;
 CREATE TABLE IF NOT EXISTS `lap_subjenis` (
   `ID` int(11) DEFAULT NULL,
   `NoUrut` int(11) DEFAULT NULL,
@@ -614,6 +663,7 @@ CREATE TABLE IF NOT EXISTS `lap_subjenis` (
 
 
 -- Dumping structure for table kopkardb.mst_anggota
+DROP TABLE IF EXISTS `mst_anggota`;
 CREATE TABLE IF NOT EXISTS `mst_anggota` (
   `ID` int(11) NOT NULL DEFAULT '0',
   `ID_Jenis` tinyint(4) DEFAULT NULL,
@@ -643,6 +693,7 @@ CREATE TABLE IF NOT EXISTS `mst_anggota` (
 
 
 -- Dumping structure for table kopkardb.mst_anggota_copy
+DROP TABLE IF EXISTS `mst_anggota_copy`;
 CREATE TABLE IF NOT EXISTS `mst_anggota_copy` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Jenis` tinyint(4) DEFAULT NULL,
@@ -672,6 +723,7 @@ CREATE TABLE IF NOT EXISTS `mst_anggota_copy` (
 
 
 -- Dumping structure for table kopkardb.mst_bulan
+DROP TABLE IF EXISTS `mst_bulan`;
 CREATE TABLE IF NOT EXISTS `mst_bulan` (
   `ID` int(11) NOT NULL DEFAULT '0',
   `Bulan` varchar(9) DEFAULT NULL,
@@ -682,6 +734,7 @@ CREATE TABLE IF NOT EXISTS `mst_bulan` (
 
 
 -- Dumping structure for table kopkardb.mst_departemen
+DROP TABLE IF EXISTS `mst_departemen`;
 CREATE TABLE IF NOT EXISTS `mst_departemen` (
   `ID` int(11) NOT NULL DEFAULT '0',
   `Kode` varchar(2) DEFAULT NULL,
@@ -694,6 +747,7 @@ CREATE TABLE IF NOT EXISTS `mst_departemen` (
 
 
 -- Dumping structure for table kopkardb.mst_kas
+DROP TABLE IF EXISTS `mst_kas`;
 CREATE TABLE IF NOT EXISTS `mst_kas` (
   `id_kas` varchar(100) NOT NULL DEFAULT '',
   `nm_kas` varchar(225) DEFAULT '',
@@ -708,6 +762,7 @@ CREATE TABLE IF NOT EXISTS `mst_kas` (
 
 
 -- Dumping structure for table kopkardb.mst_kas_harian
+DROP TABLE IF EXISTS `mst_kas_harian`;
 CREATE TABLE IF NOT EXISTS `mst_kas_harian` (
   `tgl_kas` date NOT NULL DEFAULT '0000-00-00',
   `id_kas` varchar(50) NOT NULL DEFAULT '',
@@ -722,6 +777,7 @@ CREATE TABLE IF NOT EXISTS `mst_kas_harian` (
 
 
 -- Dumping structure for table kopkardb.mst_kota
+DROP TABLE IF EXISTS `mst_kota`;
 CREATE TABLE IF NOT EXISTS `mst_kota` (
   `kota_anggota` varchar(150) NOT NULL DEFAULT '',
   `created_by` varchar(150) NOT NULL DEFAULT '',
@@ -733,6 +789,7 @@ CREATE TABLE IF NOT EXISTS `mst_kota` (
 
 
 -- Dumping structure for table kopkardb.mst_pelanggan
+DROP TABLE IF EXISTS `mst_pelanggan`;
 CREATE TABLE IF NOT EXISTS `mst_pelanggan` (
   `nm_pelanggan` varchar(125) NOT NULL DEFAULT '',
   `alm_pelanggan` text,
@@ -747,6 +804,7 @@ CREATE TABLE IF NOT EXISTS `mst_pelanggan` (
 
 
 -- Dumping structure for table kopkardb.mst_produsen
+DROP TABLE IF EXISTS `mst_produsen`;
 CREATE TABLE IF NOT EXISTS `mst_produsen` (
   `nm_produsen` varchar(125) NOT NULL DEFAULT '',
   ` alm_produsen` text,
@@ -761,6 +819,7 @@ CREATE TABLE IF NOT EXISTS `mst_produsen` (
 
 
 -- Dumping structure for table kopkardb.mst_propinsi
+DROP TABLE IF EXISTS `mst_propinsi`;
 CREATE TABLE IF NOT EXISTS `mst_propinsi` (
   `prop_anggota` varchar(100) NOT NULL DEFAULT '',
   `doc_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -771,6 +830,7 @@ CREATE TABLE IF NOT EXISTS `mst_propinsi` (
 
 
 -- Dumping structure for table kopkardb.mst_status
+DROP TABLE IF EXISTS `mst_status`;
 CREATE TABLE IF NOT EXISTS `mst_status` (
   `nm_status` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`nm_status`)
@@ -780,6 +840,7 @@ CREATE TABLE IF NOT EXISTS `mst_status` (
 
 
 -- Dumping structure for table kopkardb.nomor_transaksi
+DROP TABLE IF EXISTS `nomor_transaksi`;
 CREATE TABLE IF NOT EXISTS `nomor_transaksi` (
   `nomor` varchar(50) NOT NULL DEFAULT '',
   `jenis_transaksi` varchar(50) DEFAULT NULL,
@@ -792,6 +853,7 @@ CREATE TABLE IF NOT EXISTS `nomor_transaksi` (
 
 
 -- Dumping structure for table kopkardb.perkiraan
+DROP TABLE IF EXISTS `perkiraan`;
 CREATE TABLE IF NOT EXISTS `perkiraan` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Klas` int(11) DEFAULT NULL,
@@ -814,6 +876,7 @@ CREATE TABLE IF NOT EXISTS `perkiraan` (
 
 
 -- Dumping structure for table kopkardb.pinjaman
+DROP TABLE IF EXISTS `pinjaman`;
 CREATE TABLE IF NOT EXISTS `pinjaman` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `ID_Unit` int(10) NOT NULL DEFAULT '0',
@@ -838,6 +901,7 @@ CREATE TABLE IF NOT EXISTS `pinjaman` (
 
 
 -- Dumping structure for table kopkardb.pinjaman_bayar
+DROP TABLE IF EXISTS `pinjaman_bayar`;
 CREATE TABLE IF NOT EXISTS `pinjaman_bayar` (
   `ID_pinjaman` int(10) NOT NULL DEFAULT '0',
   `ID_Agt` int(10) NOT NULL DEFAULT '0',
@@ -847,15 +911,17 @@ CREATE TABLE IF NOT EXISTS `pinjaman_bayar` (
   `Kredit` double DEFAULT '0',
   `saldo` double DEFAULT '0',
   `keterangan` text,
+  `angs_ke` double NOT NULL DEFAULT '0',
   `doc_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `created_by` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`ID_Agt`,`ID_Bulan`,`Tahun`)
+  PRIMARY KEY (`ID_Agt`,`ID_Bulan`,`Tahun`,`angs_ke`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='table transaksi pembayaran pinjaman';
 
 -- Data exporting was unselected.
 
 
 -- Dumping structure for table kopkardb.pinjaman_limit
+DROP TABLE IF EXISTS `pinjaman_limit`;
 CREATE TABLE IF NOT EXISTS `pinjaman_limit` (
   `ID_Ang` int(10) NOT NULL DEFAULT '0',
   `Tahun` int(10) NOT NULL DEFAULT '0',
@@ -869,6 +935,7 @@ CREATE TABLE IF NOT EXISTS `pinjaman_limit` (
 
 
 -- Dumping structure for table kopkardb.setup_simpanan
+DROP TABLE IF EXISTS `setup_simpanan`;
 CREATE TABLE IF NOT EXISTS `setup_simpanan` (
   `id_simpanan` int(10) NOT NULL DEFAULT '0',
   `nm_simpanan` varchar(50) DEFAULT NULL,
@@ -881,6 +948,7 @@ CREATE TABLE IF NOT EXISTS `setup_simpanan` (
 
 
 -- Dumping structure for table kopkardb.set_simpanan_log
+DROP TABLE IF EXISTS `set_simpanan_log`;
 CREATE TABLE IF NOT EXISTS `set_simpanan_log` (
   `id_simpanan` int(10) NOT NULL DEFAULT '0',
   `nm_simpanan` varchar(50) DEFAULT NULL,
@@ -892,6 +960,7 @@ CREATE TABLE IF NOT EXISTS `set_simpanan_log` (
 
 
 -- Dumping structure for table kopkardb.status
+DROP TABLE IF EXISTS `status`;
 CREATE TABLE IF NOT EXISTS `status` (
   `ID` int(11) DEFAULT NULL,
   `Status1` varchar(10) DEFAULT NULL
@@ -901,6 +970,7 @@ CREATE TABLE IF NOT EXISTS `status` (
 
 
 -- Dumping structure for table kopkardb.sub_klasifikasi
+DROP TABLE IF EXISTS `sub_klasifikasi`;
 CREATE TABLE IF NOT EXISTS `sub_klasifikasi` (
   `ID` int(11) DEFAULT NULL,
   `ID_Klasifikasi` int(11) DEFAULT NULL,
@@ -913,6 +983,7 @@ CREATE TABLE IF NOT EXISTS `sub_klasifikasi` (
 
 
 -- Dumping structure for procedure kopkardb.s_total_pinjaman
+DROP PROCEDURE IF EXISTS `s_total_pinjaman`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `s_total_pinjaman`(IN `ID_Pi` INT)
 BEGIN
@@ -922,6 +993,7 @@ DELIMITER ;
 
 
 -- Dumping structure for procedure kopkardb.s_total_pinjaman_bayar
+DROP PROCEDURE IF EXISTS `s_total_pinjaman_bayar`;
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `s_total_pinjaman_bayar`(IN `ID_Pinjaman` INT)
 BEGIN
@@ -931,6 +1003,7 @@ DELIMITER ;
 
 
 -- Dumping structure for table kopkardb.tipe_jurnal
+DROP TABLE IF EXISTS `tipe_jurnal`;
 CREATE TABLE IF NOT EXISTS `tipe_jurnal` (
   `ID` int(11) DEFAULT NULL,
   `Jenis` varchar(30) DEFAULT NULL,
@@ -941,6 +1014,7 @@ CREATE TABLE IF NOT EXISTS `tipe_jurnal` (
 
 
 -- Dumping structure for table kopkardb.tipe_transaksi
+DROP TABLE IF EXISTS `tipe_transaksi`;
 CREATE TABLE IF NOT EXISTS `tipe_transaksi` (
   `ID` int(11) DEFAULT NULL,
   `Tipe` varchar(6) DEFAULT NULL
@@ -950,6 +1024,7 @@ CREATE TABLE IF NOT EXISTS `tipe_transaksi` (
 
 
 -- Dumping structure for table kopkardb.tmp_kasir_transaksi_rekap
+DROP TABLE IF EXISTS `tmp_kasir_transaksi_rekap`;
 CREATE TABLE IF NOT EXISTS `tmp_kasir_transaksi_rekap` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Jurnal` int(11) DEFAULT NULL,
@@ -990,6 +1065,7 @@ CREATE TABLE IF NOT EXISTS `tmp_kasir_transaksi_rekap` (
 
 
 -- Dumping structure for table kopkardb.tmp_superuser_neraca_balance
+DROP TABLE IF EXISTS `tmp_superuser_neraca_balance`;
 CREATE TABLE IF NOT EXISTS `tmp_superuser_neraca_balance` (
   `unit` int(10) NOT NULL DEFAULT '0',
   `periode` date NOT NULL DEFAULT '0000-00-00',
@@ -1004,6 +1080,7 @@ CREATE TABLE IF NOT EXISTS `tmp_superuser_neraca_balance` (
 
 
 -- Dumping structure for table kopkardb.tmp_superuser_total_shu
+DROP TABLE IF EXISTS `tmp_superuser_total_shu`;
 CREATE TABLE IF NOT EXISTS `tmp_superuser_total_shu` (
   `tglAwal` date DEFAULT NULL,
   `tglAkhir` date DEFAULT NULL,
@@ -1017,6 +1094,7 @@ CREATE TABLE IF NOT EXISTS `tmp_superuser_total_shu` (
 
 
 -- Dumping structure for table kopkardb.tmp_superuser_transaksi_rekap
+DROP TABLE IF EXISTS `tmp_superuser_transaksi_rekap`;
 CREATE TABLE IF NOT EXISTS `tmp_superuser_transaksi_rekap` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Jurnal` int(11) DEFAULT NULL,
@@ -1056,74 +1134,8 @@ CREATE TABLE IF NOT EXISTS `tmp_superuser_transaksi_rekap` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table kopkardb.tmp__neraca_balance
-CREATE TABLE IF NOT EXISTS `tmp__neraca_balance` (
-  `unit` int(10) NOT NULL DEFAULT '0',
-  `periode` date NOT NULL DEFAULT '0000-00-00',
-  `Aktiva` double DEFAULT '0',
-  `Aktiva2` double DEFAULT '0',
-  `Pasiva` double DEFAULT '0',
-  `Pasiva2` double DEFAULT '0',
-  PRIMARY KEY (`periode`,`unit`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- Data exporting was unselected.
-
-
--- Dumping structure for table kopkardb.tmp__total_shu
-CREATE TABLE IF NOT EXISTS `tmp__total_shu` (
-  `tglAwal` date DEFAULT NULL,
-  `tglAkhir` date DEFAULT NULL,
-  `saldo` double DEFAULT '0',
-  `saldo2` double DEFAULT '0',
-  `unit` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`unit`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- Data exporting was unselected.
-
-
--- Dumping structure for table kopkardb.tmp__transaksi_rekap
-CREATE TABLE IF NOT EXISTS `tmp__transaksi_rekap` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `ID_Jurnal` int(11) DEFAULT NULL,
-  `ID_Perkiraan` int(11) DEFAULT NULL,
-  `ID_Dept_T` int(11) DEFAULT NULL,
-  `Debet` double DEFAULT NULL,
-  `Kredit` double DEFAULT NULL,
-  `Keterangan` varchar(100) DEFAULT NULL,
-  `ID_P` int(11) DEFAULT NULL,
-  `ID_Klas` int(11) DEFAULT NULL,
-  `ID_SubKlas` int(11) DEFAULT NULL,
-  `ID_Dept` int(11) DEFAULT NULL,
-  `ID_Unit` int(11) DEFAULT NULL,
-  `ID_Laporan` int(11) DEFAULT NULL,
-  `ID_LapDetail` int(11) DEFAULT NULL,
-  `ID_Agt` int(11) DEFAULT NULL,
-  `ID_Calc` int(11) DEFAULT NULL,
-  `ID_Simpanan` int(11) DEFAULT NULL,
-  `NoUrut_P` int(11) DEFAULT NULL,
-  `Kode` varchar(4) DEFAULT NULL,
-  `Perkiraan` varchar(50) DEFAULT NULL,
-  `SaldoAwal` double DEFAULT NULL,
-  `ID_J` int(11) DEFAULT NULL,
-  `ID_Unit_J` int(11) DEFAULT NULL,
-  `ID_Tipe` int(11) DEFAULT NULL,
-  `ID_Dept_J` int(11) DEFAULT NULL,
-  `Tanggal` date DEFAULT NULL,
-  `ID_Bulan` smallint(6) DEFAULT NULL,
-  `Tahun` smallint(6) DEFAULT NULL,
-  `NoUrut` int(11) DEFAULT NULL,
-  `Nomor` varchar(10) DEFAULT NULL,
-  `Keterangan_J` varchar(60) DEFAULT NULL,
-  `ID_Mark` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- Data exporting was unselected.
-
-
 -- Dumping structure for table kopkardb.transaksi
+DROP TABLE IF EXISTS `transaksi`;
 CREATE TABLE IF NOT EXISTS `transaksi` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ID_Jurnal` int(11) DEFAULT NULL,
@@ -1132,6 +1144,7 @@ CREATE TABLE IF NOT EXISTS `transaksi` (
   `Debet` double DEFAULT NULL,
   `Kredit` double DEFAULT NULL,
   `Keterangan` varchar(100) DEFAULT NULL,
+  `urutan` double DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -1139,6 +1152,7 @@ CREATE TABLE IF NOT EXISTS `transaksi` (
 
 
 -- Dumping structure for table kopkardb.transaksi_del
+DROP TABLE IF EXISTS `transaksi_del`;
 CREATE TABLE IF NOT EXISTS `transaksi_del` (
   `ID` int(11) DEFAULT NULL,
   `ID_Jurnal` int(11) DEFAULT NULL,
@@ -1162,6 +1176,7 @@ CREATE TABLE IF NOT EXISTS `transaksi_del` (
 
 
 -- Dumping structure for table kopkardb.transaksi_log
+DROP TABLE IF EXISTS `transaksi_log`;
 CREATE TABLE IF NOT EXISTS `transaksi_log` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `ID_Trans` varchar(50) DEFAULT NULL,
@@ -1177,8 +1192,9 @@ CREATE TABLE IF NOT EXISTS `transaksi_log` (
 
 
 -- Dumping structure for table kopkardb.transaksi_new
+DROP TABLE IF EXISTS `transaksi_new`;
 CREATE TABLE IF NOT EXISTS `transaksi_new` (
-  `ID` int(11) DEFAULT NULL,
+  `ID` int(11) NOT NULL,
   `ID_Jurnal` int(11) DEFAULT NULL,
   `ID_Perkiraan` int(11) DEFAULT NULL,
   `ID_Dept` int(11) DEFAULT NULL,
@@ -1193,13 +1209,15 @@ CREATE TABLE IF NOT EXISTS `transaksi_new` (
   `NoUrut` int(11) DEFAULT NULL,
   `Nomor` varchar(10) DEFAULT NULL,
   `Ket` varchar(60) DEFAULT NULL,
-  `ID_Mark` tinyint(4) DEFAULT NULL
+  `ID_Mark` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 
 
 -- Dumping structure for table kopkardb.transaksi_rekap
+DROP TABLE IF EXISTS `transaksi_rekap`;
 CREATE TABLE IF NOT EXISTS `transaksi_rekap` (
   `ID` int(11) NOT NULL,
   `ID_Jurnal` int(11) DEFAULT NULL,
@@ -1240,6 +1258,7 @@ CREATE TABLE IF NOT EXISTS `transaksi_rekap` (
 
 
 -- Dumping structure for table kopkardb.transaksi_temp
+DROP TABLE IF EXISTS `transaksi_temp`;
 CREATE TABLE IF NOT EXISTS `transaksi_temp` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `ID_Unit` int(10) DEFAULT NULL,
@@ -1263,6 +1282,7 @@ CREATE TABLE IF NOT EXISTS `transaksi_temp` (
 
 
 -- Dumping structure for table kopkardb.unit_jurnal
+DROP TABLE IF EXISTS `unit_jurnal`;
 CREATE TABLE IF NOT EXISTS `unit_jurnal` (
   `ID` int(11) DEFAULT NULL,
   `Kode` varchar(2) DEFAULT NULL,
@@ -1273,6 +1293,7 @@ CREATE TABLE IF NOT EXISTS `unit_jurnal` (
 
 
 -- Dumping structure for table kopkardb.useroto
+DROP TABLE IF EXISTS `useroto`;
 CREATE TABLE IF NOT EXISTS `useroto` (
   `userid` varchar(50) NOT NULL DEFAULT '',
   `idmenu` varchar(50) NOT NULL DEFAULT '',
@@ -1288,6 +1309,7 @@ CREATE TABLE IF NOT EXISTS `useroto` (
 
 
 -- Dumping structure for table kopkardb.users
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `userid` varchar(50) NOT NULL DEFAULT '',
   `username` varchar(200) DEFAULT NULL,
@@ -1302,6 +1324,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 
 -- Dumping structure for table kopkardb.user_level
+DROP TABLE IF EXISTS `user_level`;
 CREATE TABLE IF NOT EXISTS `user_level` (
   `idlevel` int(50) NOT NULL AUTO_INCREMENT,
   `nmlevel` varchar(150) DEFAULT NULL,
@@ -1312,6 +1335,7 @@ CREATE TABLE IF NOT EXISTS `user_level` (
 
 
 -- Dumping structure for table kopkardb.v_dept_trans
+DROP TABLE IF EXISTS `v_dept_trans`;
 CREATE TABLE IF NOT EXISTS `v_dept_trans` (
   `ID_Dept` int(10) NOT NULL DEFAULT '0',
   `ID_Klas` int(10) DEFAULT NULL,
@@ -1329,6 +1353,7 @@ CREATE TABLE IF NOT EXISTS `v_dept_trans` (
 
 
 -- Dumping structure for table kopkardb.v_neraca
+DROP TABLE IF EXISTS `v_neraca`;
 CREATE TABLE IF NOT EXISTS `v_neraca` (
   `ID_Head` int(10) DEFAULT NULL,
   `ID_Jenis` int(10) DEFAULT NULL,
@@ -1348,6 +1373,7 @@ CREATE TABLE IF NOT EXISTS `v_neraca` (
 
 
 -- Dumping structure for table kopkardb.v_neraca_lajur
+DROP TABLE IF EXISTS `v_neraca_lajur`;
 CREATE TABLE IF NOT EXISTS `v_neraca_lajur` (
   `ID_Dept` varchar(250) NOT NULL DEFAULT '',
   `SaldoAwal` double DEFAULT '0',
@@ -1364,6 +1390,7 @@ CREATE TABLE IF NOT EXISTS `v_neraca_lajur` (
 
 
 -- Dumping structure for table kopkardb.v_superuser_neraca_lajur
+DROP TABLE IF EXISTS `v_superuser_neraca_lajur`;
 CREATE TABLE IF NOT EXISTS `v_superuser_neraca_lajur` (
   `ID_Dept` varchar(250) NOT NULL DEFAULT '',
   `SaldoAwal` double DEFAULT '0',
@@ -1380,6 +1407,7 @@ CREATE TABLE IF NOT EXISTS `v_superuser_neraca_lajur` (
 
 
 -- Dumping structure for table kopkardb.z_inv_konversi
+DROP TABLE IF EXISTS `z_inv_konversi`;
 CREATE TABLE IF NOT EXISTS `z_inv_konversi` (
   `ID` int(11) DEFAULT NULL,
   `Tanggal` datetime DEFAULT NULL,
@@ -1394,6 +1422,7 @@ CREATE TABLE IF NOT EXISTS `z_inv_konversi` (
 
 
 -- Dumping structure for table kopkardb.z_inv_pemakaian
+DROP TABLE IF EXISTS `z_inv_pemakaian`;
 CREATE TABLE IF NOT EXISTS `z_inv_pemakaian` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Tanggal` datetime DEFAULT NULL,
@@ -1411,6 +1440,7 @@ CREATE TABLE IF NOT EXISTS `z_inv_pemakaian` (
 
 
 -- Dumping structure for table kopkardb.z_inv_pemakaian_jenis
+DROP TABLE IF EXISTS `z_inv_pemakaian_jenis`;
 CREATE TABLE IF NOT EXISTS `z_inv_pemakaian_jenis` (
   `ID` int(11) DEFAULT NULL,
   `JenisPakai` varchar(10) DEFAULT NULL
@@ -1420,6 +1450,7 @@ CREATE TABLE IF NOT EXISTS `z_inv_pemakaian_jenis` (
 
 
 -- Dumping structure for table kopkardb.z_t_inv_konversi
+DROP TABLE IF EXISTS `z_t_inv_konversi`;
 CREATE TABLE IF NOT EXISTS `z_t_inv_konversi` (
   `ID` int(11) DEFAULT NULL,
   `ID_Source` int(11) DEFAULT NULL,
@@ -1430,8 +1461,25 @@ CREATE TABLE IF NOT EXISTS `z_t_inv_konversi` (
 -- Data exporting was unselected.
 
 
+-- Dumping structure for table kopkardb._transaksi
+DROP TABLE IF EXISTS `_transaksi`;
+CREATE TABLE IF NOT EXISTS `_transaksi` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_Jurnal` int(11) DEFAULT NULL,
+  `ID_Perkiraan` int(11) DEFAULT NULL,
+  `ID_Dept` int(11) DEFAULT NULL,
+  `Debet` double DEFAULT NULL,
+  `Kredit` double DEFAULT NULL,
+  `Keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- Data exporting was unselected.
+
+
 -- Dumping structure for trigger kopkardb.pembelian_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `pembelian_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `pembelian_del` AFTER DELETE ON `inv_pembelian_detail` FOR EACH ROW BEGIN
 	delete from inv_pembelian_rekap where ID=OLD.ID;
@@ -1439,21 +1487,23 @@ CREATE TRIGGER `pembelian_del` AFTER DELETE ON `inv_pembelian_detail` FOR EACH R
 	ID=OLD.ID_Beli;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.pembelian_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `pembelian_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `pembelian_new` AFTER INSERT ON `inv_pembelian_detail` FOR EACH ROW BEGIN
 	insert into inv_pembelian_rekap select * from inv_pembelian_detail where ID=New.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.pembelian_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `pembelian_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `pembelian_upd` AFTER UPDATE ON `inv_pembelian_detail` FOR EACH ROW BEGIN
 	update inv_pembelian_rekap set jml_faktur=new.jml_faktur,jumlah=new.jumlah,
@@ -1467,42 +1517,46 @@ CREATE TRIGGER `pembelian_upd` AFTER UPDATE ON `inv_pembelian_detail` FOR EACH R
 
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.pembelian_upd_bfr
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `pembelian_upd_bfr`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `pembelian_upd_bfr` BEFORE UPDATE ON `inv_pembelian_detail` FOR EACH ROW BEGIN
  UPDATE inv_pembelian set ID_Bayar=(ID_Bayar-OLD.Jumlah)
  WHERE ID=OLD.ID_Beli;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.penjualan_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `penjualan_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `penjualan_del` AFTER DELETE ON `inv_penjualan_detail` FOR EACH ROW BEGIN
 	delete from inv_penjualan_rekap where ID=OLD.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.penjualan_del_header
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `penjualan_del_header`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `penjualan_del_header` AFTER DELETE ON `inv_penjualan` FOR EACH ROW BEGIN
 	delete from inv_penjualan_detail where ID_Jual=OLD.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.penjualan_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `penjualan_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `penjualan_new` AFTER INSERT ON `inv_penjualan_detail` FOR EACH ROW BEGIN
 	insert into inv_penjualan_rekap
@@ -1524,33 +1578,36 @@ CREATE TRIGGER `penjualan_new` AFTER INSERT ON `inv_penjualan_detail` FOR EACH R
 
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.penjualan_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `penjualan_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `penjualan_upd` AFTER UPDATE ON `inv_penjualan_detail` FOR EACH ROW BEGIN
 update inv_penjualan_rekap set jumlah=new.jumlah,ID_Jenis=NEW.ID_Jenis
 where id=NEW.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.penjualan_upd_header
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `penjualan_upd_header`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `penjualan_upd_header` AFTER UPDATE ON `inv_penjualan` FOR EACH ROW BEGIN
 	update inv_penjualan_detail set ID_Jenis=NEW.ID_Jenis
 	where ID_Jual=NEW.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.transaksi_tmp_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `transaksi_tmp_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `transaksi_tmp_del` AFTER DELETE ON `transaksi_temp` FOR EACH ROW BEGIN
 /* data yang di delete akan di simpan secara otomatis ke table transaksi log*/
@@ -1561,11 +1618,12 @@ CREATE TRIGGER `transaksi_tmp_del` AFTER DELETE ON `transaksi_temp` FOR EACH ROW
 
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.transaksi_tmp_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `transaksi_tmp_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `transaksi_tmp_upd` AFTER UPDATE ON `transaksi_temp` FOR EACH ROW BEGIN
 /* data yang di update akan di simpan secara otomatis ke table transaksi log*/
@@ -1576,11 +1634,12 @@ CREATE TRIGGER `transaksi_tmp_upd` AFTER UPDATE ON `transaksi_temp` FOR EACH ROW
 
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_alamat_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_alamat_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_alamat_new` AFTER INSERT ON `mst_anggota` FOR EACH ROW BEGIN
 	replace into mst_kota(kota_anggota) values(New.Kota);
@@ -1663,43 +1722,47 @@ CREATE TRIGGER `t_alamat_new` AFTER INSERT ON `mst_anggota` FOR EACH ROW BEGIN
 
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_alamat_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_alamat_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_alamat_upd` AFTER UPDATE ON `mst_anggota` FOR EACH ROW BEGIN
 	update mst_kota set kota_anggota=New.Kota where kota_anggota=OLD.Kota;
-	update mst_propinsi set prop_anggota=NEW.Propinsi where porp_anggota=OLD.Propinsi;
+	update mst_propinsi set prop_anggota=NEW.Propinsi where prop_anggota=OLD.Propinsi;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_barang_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_barang_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_barang_del` AFTER DELETE ON `inv_barang` FOR EACH ROW BEGIN
 	delete from inv_konversi where id_barang=old.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_barang_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_barang_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_barang_new` AFTER INSERT ON `inv_barang` FOR EACH ROW BEGIN
  insert into inv_konversi (id_barang,nm_barang,nm_satuan,sat_beli,isi_konversi) 
  values(NEW.ID,NEW.Nama_Barang,NEW.ID_Satuan,NEW.ID_Satuan,'1');
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_barang_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_barang_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_barang_upd` AFTER UPDATE ON `inv_barang` FOR EACH ROW BEGIN
 	update inv_konversi set nm_barang=New.Nama_Barang,nm_satuan=New.ID_Satuan,
@@ -1708,21 +1771,23 @@ CREATE TRIGGER `t_barang_upd` AFTER UPDATE ON `inv_barang` FOR EACH ROW BEGIN
 	sat_beli=OLD.ID_Satuan;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_pinjaman_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_pinjaman_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_pinjaman_del` AFTER DELETE ON `pinjaman` FOR EACH ROW BEGIN
 	delete from pinjaman_bayar where ID_pinjaman=OLD.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_pinjaman_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_pinjaman_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_pinjaman_new` AFTER INSERT ON `pinjaman` FOR EACH ROW BEGIN
 insert into pinjaman_bayar (
@@ -1731,11 +1796,12 @@ insert into pinjaman_bayar (
 	from pinjaman where ID=NEW.ID);
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_pinjaman_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_pinjaman_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_pinjaman_upd` AFTER UPDATE ON `pinjaman` FOR EACH ROW BEGIN
 	replace into pinjaman_bayar (
@@ -1745,31 +1811,34 @@ CREATE TRIGGER `t_pinjaman_upd` AFTER UPDATE ON `pinjaman` FOR EACH ROW BEGIN
 
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_setup_simpanan_log
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_setup_simpanan_log`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_setup_simpanan_log` AFTER UPDATE ON `setup_simpanan` FOR EACH ROW BEGIN
 insert into set_simpanan_log  select * from setup_simpanan where id_simpanan=OLD.id_simpanan;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_SimpSumDept_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_SimpSumDept_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_SimpSumDept_new` AFTER INSERT ON `transaksi_new` FOR EACH ROW begin
 	/*update table v_dept_trans (rekap transaksi per departemen)*/
 end//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_transaksi_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_transaksi_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_transaksi_del` AFTER DELETE ON `transaksi` FOR EACH ROW begin
 /* 
@@ -1781,11 +1850,12 @@ insert into transaksi_log (ID_trans,Keterangan,old_val,new_val) values(OLD.ID_Ju
 update transaksi_temp set ID_stat='0' where ID_Perkiraan=OLD.ID_Perkiraan;
 end//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_transaksi_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_transaksi_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_transaksi_new` AFTER INSERT ON `transaksi` FOR EACH ROW begin
 /* jika ada data baru di tabel transaksi akan tersimpan juga di table traksaksi new
@@ -1810,11 +1880,12 @@ INSERT into transaksi_new
 	
 end//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_transaksi_new_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_transaksi_new_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_transaksi_new_del` AFTER DELETE ON `transaksi_new` FOR EACH ROW BEGIN
 /* data yang di delete akan di simpan secara otomatis ke table transaksi_del
@@ -1823,11 +1894,12 @@ untuk keperluan restore jika diperlukan
 insert into transaksi_del select * from transaksi_new where ID=OLD.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_transaksi_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_transaksi_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_transaksi_upd` AFTER UPDATE ON `transaksi` FOR EACH ROW begin
 /* 
@@ -1853,31 +1925,34 @@ replace into transaksi_new
 insert into transaksi_log (ID_trans,Keterangan,old_val,new_val) values(OLD.ID_Jurnal,'Hapus',OLD.Debet,OLD.Kredit);	
 end//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_update_stat_pinjaman
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_update_stat_pinjaman`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_update_stat_pinjaman` AFTER INSERT ON `pinjaman_bayar` FOR EACH ROW BEGIN
 
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_v_neraca_del
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_v_neraca_del`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_v_neraca_del` AFTER DELETE ON `lap_subjenis` FOR EACH ROW BEGIN
 	delete from v_neraca where ID=OLD.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_v_neraca_new
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_v_neraca_new`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_v_neraca_new` AFTER INSERT ON `lap_subjenis` FOR EACH ROW BEGIN
 	replace into v_neraca (ID_Head,ID_Jenis,ID_SubJenis,SubJenis,ID_Calc,ID_KBR,ID_USP) 
@@ -1885,11 +1960,12 @@ CREATE TRIGGER `t_v_neraca_new` AFTER INSERT ON `lap_subjenis` FOR EACH ROW BEGI
 	from lap_subjenis where ID=new.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 
 
 -- Dumping structure for trigger kopkardb.t_v_neraca_upd
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+DROP TRIGGER IF EXISTS `t_v_neraca_upd`;
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DELIMITER //
 CREATE TRIGGER `t_v_neraca_upd` AFTER UPDATE ON `lap_subjenis` FOR EACH ROW BEGIN
 	replace into v_neraca (ID_Head,ID_Jenis,ID_SubJenis,SubJenis,ID_Calc,ID_KBR,ID_USP) 
@@ -1897,6 +1973,7 @@ CREATE TRIGGER `t_v_neraca_upd` AFTER UPDATE ON `lap_subjenis` FOR EACH ROW BEGI
 	from lap_subjenis where ID=new.ID;
 END//
 DELIMITER ;
-SET SQL_MODE=@OLD_SQL_MODE;
-/*!40014 SET FOREIGN_KEY_CHECKS=1 */;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

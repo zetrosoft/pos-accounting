@@ -24,25 +24,27 @@ echo "
         <td style='border-right:2px dotted #FFF' width='15px'></td>
         <td width='10px'>&nbsp;</td>
         <td width='80px'>Klasifikasi</td>
-        <td width='170px'><select id='ID_Klas' class='S100'>";
+        <td width='100px'><select id='ID_Klas' class='S100'>";
 		dropdown("klasifikasi",'ID','Klasifikasi');
 	echo "</select></td>
         <td width='5px'>&nbsp;</td>
-        <td width='90px'>Sub Klasifikasi</td>
-        <td width='250px'><select id='ID_SubKlas' class='S70'></select></td>
+        <td >Departemen</td>
+        <td ><select id='ID_Dept' class='S100'>";
+		dropdown("mst_departemen",'ID','Departemen');
+	echo "</select></td>
     </tr>
 	<tr><td>&nbsp;</td>
     	<td><input type='radio' name='periode' id='pertahun' /></td>
         <td>Per Tahun</td>
         <td><select id='tahun'></select></td>
         <td>&nbsp;</td>
-        <td><input type='button' id='oke' value='OK'></td>
-        <td style='border-right:2px dotted #FFF' width='15px'></td>
+        <td><input type='button' id='oke' value='OK'>
+		    <input type='button' id='print' class='' value='Print' alt='Print'>
+			<!--input type='button' id='excel' class='' value='Export xls' alt='Print'--></td>
+        <td style='border-right:2px dotted #FFF' width='15px'></div></td>
         <td >&nbsp;</td>
-        <td >Departemen</td>
-        <td ><select id='ID_Dept' class='S100'>";
-		dropdown("mst_departemen",'ID','Departemen');
-	echo "</select></td>
+        <td width='90px'>Sub Klasifikasi</td>
+        <td width='100px'><select id='ID_SubKlas' class='S70'></select></td>
         <td >&nbsp;</td>
         <td >Perkiraan</td>
         <td ><select id='ID_Agt' class='S100' style='float:left'></select></td>

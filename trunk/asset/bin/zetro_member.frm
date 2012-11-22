@@ -48,11 +48,11 @@
 6|Saldo Akhir,,,,,,15%,
 
 [DetailTrans]
-1|Tanggal,,,,,,10%,
-2|No. Jurnal,,,,,,10%,
-3|Keterangan,,,,,,40%,
-4|Debet,,,,,,12%,
-5|Kredit,,,,,,12%,
+1|Tanggal,,,,,,10%,,,20
+2|No. Jurnal,,,,,,10%,,,22
+3|Keterangan,,,,,,40%,,,72
+4|Debet,,,,,,12%,,,28
+5|Kredit,,,,,,12%,,,28
 
 [CaraBayar]
 1|Tunai,Tunai

@@ -2,13 +2,14 @@
 $(document).ready(function(e) {
 	$('#v_listjurnalumum #ListTable').hide();
 	$(':radio#new').attr('checked','checked');
+	$(':radio#addcontent').attr('disabled','disabled');
 	$('div#addnew').show();
 	$('div#addcontent').hide();
 	var prs=$('#prs').val();
 		$('#listjurnalumum').removeClass('tab_button');
 		$('#listjurnalumum').addClass('tab_select');
 		$('.plt').hide();
-		lock('#process');
+		lock('#process,#cetak');
 	$('table#panel tr td:not(.flt,.plt,#kosong)').click(function(){
 		var id=$(this).attr('id');
 				$('#'+id).removeClass('tab_button');
@@ -25,7 +26,7 @@ $(document).ready(function(e) {
 	})
 	$('#fby').val('').select()
 	$('#fby').change(function(){
-		unlock('#process')
+		unlock('#process,#cetak')
 		$('span#fltby').html($('#fby option:selected').text()+' :');
 		switch($(this).val()){
 			case 'tgl':
@@ -59,7 +60,7 @@ $(document).ready(function(e) {
 	//OK button click
 	$('#process').click(function(){
 		var path=$('#path').val().replace('index.php/','');
-		var ajax="<tr><td class='kotak' colspan='8'>Data being processed, please wait...<img src='"+path+"asset/img/indicator.gif'></td></tr>";
+		var ajax="<tr><td class='kotak' colspan='9'>Data being processed, please wait...<img src='"+path+"asset/img/indicator.gif'></td></tr>";
 		$('#v_listjurnalumum #ListTable').show();
 		$('#v_listjurnalumum #ListTable tbody').html(ajax)
 		$.post('get_list_jurnal',{
@@ -103,7 +104,8 @@ $(document).ready(function(e) {
 	$('#frm1 #ID_Unit').change(function(){
 		$.post('get_last_jurnal',{'ID_Unit':$(this).val()},
 			function(result){
-					$('#noUrut').val('GJ-'+result);
+				var rst=result.split('-')
+					$('#noUrut').val('GJ-'+rst[0]);
 					$('#Keterangan').focus();
 			})
 	})
@@ -149,25 +151,12 @@ $(document).ready(function(e) {
 				'nomor'		:$('#frm1 #noUrut').val(),
 				'Keterangan':$('#frm1 #Keterangan').val()
 			},function(result){
-				$('#frm1 :reset').click();
+				var has=result.split('-');
+				var today=new Date();
 				tglNow('#Tanggal')
-				//kembali ke tampilan daftar jurnal
-			/*	$('#listjurnalumum').removeClass('tab_button');
-				$('#listjurnalumum').addClass('tab_select');
-				$('#addjurnal').removeClass('tab_select');
-				$('#addjurnal').addClass('tab_button');
-				$('span#v_jurnalumum').show();
-				$('span:not(#v_jurnalumum)').hide();
-				$('table#panel tr td.plt').show()
-				if($('#fby').val()==''){
-					$('#fby').val('tgl').select();
-					$('#daritgl')
-						.show()
-						.val($('#Tanggal').val());
-				}
-				$('#process').click();
-			*/
-
+				//show add transaksi jurnal
+				show_jurnal_detail($.trim(has[0]),today.getFullYear());
+				$('#frm1 :reset').click();
 			})
 		})
 	//print to pdf
@@ -197,10 +186,10 @@ $(document).ready(function(e) {
 			})
 		$.post('add_jurnal_content',{'ID':$('#nj').val(),'Tahun':'','ID_Akun':''},
 		function(hasil){
-			$('#pp-ad_content').css({'top':'10%','left':'5%','width':(screen.width-150),'height':(screen.height-50)});
+			$('#pp-ad_content').css({'top':'10%','left':'25%','width':(screen.width-500),'height':(screen.height-50)});
 			$('table#add_trans tbody').html(hasil);	
 			$('#pp-ad_content').show();
-			$('table#bwht').fixedHeader({width:(screen.width-200),height:30})
+			$('table#bwht').fixedHeader({width:(screen.width-500),height:30})
 			ajax_stop();
 			$('#lock').show();
 		})
@@ -211,10 +200,13 @@ $(document).ready(function(e) {
 			$.post('total_perjurnal',{'ID_jurnal':$('#ID_Jurnal').val()},
 			function(result){
 				var hsl=$.parseJSON(result);
-				/*($('#ID_Jenis').val()==1)?
-				$('#jml_bayar').val(hsl.kredit):*/
-				$('#jml_bayar').val(hsl.balance);
-				$('#Kete').val('Setoran '+hsl.ket);
+				if($('#j_akun').val()!='1'){
+					$('#jml_bayar').val('')
+					$('#Kete').val($('#jSimp').val());
+				}else{
+					$('#jml_bayar').val(hsl.balance);
+					$('#Kete').val('Setoran '+hsl.ket);
+				}
 			})
 		})
 		.keyup(function(){
@@ -225,26 +217,43 @@ $(document).ready(function(e) {
            $('#terbilang').hide();
         });
 })
-
-function show_jurnal_detail(id){
+function images_click(id,aksi){
+	var idd=id.split('-');
+	switch (aksi){
+		case 'edit':
+			show_jurnal_detail(idd[0],idd[1]);
+		break;
+		case 'del':
+		if(confirm('Yakin data ini akan dihapus?')){
+			$.post('hapus_jurnal',{'ID':idd[0]},
+			function(result){
+				$('#process').click();
+			})
+		}
+		break;	
+	}
+}
+function show_jurnal_detail(id,thn){
 	ajax_start()
+	var today = new Date();
 	$.post('header_popup',{
 	'ID_jurnal'	:id,
 	},function (data){
+		$('div#jdete').html('');
 		$('div#jdete').html(data);
-	})
-	$.post('get_detail_jurnal',{'ID':id,'Tahun':''},
-	function(hasil){
-		var w=$('#pp-j_detail').width();
-		var h=$('#pp-j_detail').height();
-		$('#pp-j_detail').css({'top':'15%','left':'8%','width':(screen.width-150),'height':(screen.height-50)});
-		$('table#sj_content tbody').html(hasil);	
-		$('#pp-j_detail').show();
-		$('table#j_dete').fixedHeader({width:(screen.width-186),height:60})
-		$('table#sj_content').fixedHeader({width:(screen.width-186),height:(screen.height-450)})
-		$('table#bwhe').fixedHeader({width:(screen.width-186),height:30})
-			ajax_stop();
-			$('#lock').show();
+	$.post('get_detail_jurnal',{'ID':id,'Tahun':thn},
+		function(hasil){
+			var w=$('#pp-j_detail').width();
+			var h=$('#pp-j_detail').height();
+			$('#pp-j_detail').css({'top':'15%','left':'8%','width':(screen.width-150),'height':(screen.height-50)});
+			$('table#sj_content tbody').html(hasil);	
+			$('#pp-j_detail').show();
+			$('table#j_dete').fixedHeader({width:(screen.width-186),height:60})
+			$('table#sj_content').fixedHeader({width:(screen.width-186),height:(screen.height-450)})
+			$('table#bwhe').fixedHeader({width:(screen.width-186),height:30})
+				ajax_stop();
+				$('#lock').show();
+		})
 	})
 }
 function addtojurnal(id,nj,ids){
@@ -258,29 +267,51 @@ function addtojurnal(id,nj,ids){
 		total_KD(nj);
 			$.post('get_detail_jurnal',{'ID':nj,'Tahun':today.getFullYear()},
 					function(result){
-						$('table#j_content tbody').html(result);
+						$('table#sj_content tbody').html(result);
 						//$('div#addcontent').show();	
-						$('table#j_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
+						//$('table#sj_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
 					})
 		
 		})
 	})
 }
 function hapus_content(id){
-	var thn=$('#Tgl').val().split('/');
-	$.post('hapus_transaksi',{'ID':id},
-		function(result){
-			total_KD($('#nj').val());
-			$.post('get_detail_jurnal',{'ID':$('#nj').val(),'Tahun':thn[2]},
-					function(hasil){
-						$('table#j_content tbody').html(hasil);
-						$('div#addcontent').show();	
-						$('table#j_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
-						$('table#bwh').fixedHeader({width:(screen.width-125),height:30})
-			});
-		})
+	if(confirm('Yakin data dalam jurnal ini akan di hapus?')){
+		var thn=$('#Tgl').val().split('/');
+		$.post('hapus_transaksi',{'ID':id},
+			function(result){
+				total_KD($('#nj').val());
+				$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':thn[2]},
+						function(hasil){
+							$('table#sj_content tbody').html(hasil);
+							$('div#addcontent').show();	
+							//$('table#sj_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
+							//$('table#bwh').fixedHeader({width:(screen.width-125),height:30})
+				$('#process').click();
+				});
+			})
+	}
 }
-
+function edit_content(id){
+	var thn		=$('#Tgl').val().split('/');
+	var akun	='Kode Akun :'+$('table#sj_content tbody tr#r-'+id+' td:nth-child(2)').html();
+	    akun 	+=' - '+$('table#sj_content tbody tr#r-'+id+' td:nth-child(3)').html();
+	var jml1	=to_number($('table#sj_content tbody tr#r-'+id+' td:nth-child(4)').html())
+	var jml2	=to_number($('table#sj_content tbody tr#r-'+id+' td:nth-child(5)').html())
+	var edit=prompt('Masukan Jumlah untuk \n'+akun,(parseInt(jml1)==0)?jml2:jml1)
+		if(edit){
+			$.post('update_transaksi',{'ID':id,'Debet':jml1,'Kredit':jml2,'hasil':edit},
+			function(result){
+				total_KD($('#nj').val());
+				$.post('get_detail_jurnal',{'ID':$('#nj').val(),'Tahun':thn[2]},
+						function(hasil){
+							$('table#sj_content tbody').html(hasil);
+							$('div#addcontent').show();	
+							$('#process').click();
+						})
+			})
+		}
+}
 function balance_show(){ //show popup balance
 	$('#pp-ad_balance').css({'left':'10%','top':'15%','width':(screen.width-250),'height':(screen.height-50)});
 	$('#pp-ad_balance').show();
@@ -294,73 +325,48 @@ function process(id){
 			$('#ID_Jurnale')
 				.val($('#NoJ').val())
 				.attr('readonly','readonly')
-			$.post('get_SubJenis',{'ID':'1'},
+			$.post('get_SubJenis',{'ID':'1','ID_Dept':'1'},
 				function(result){
 					$('#ID_Perkiraan').html(result);
 				})
 			$('div#unt').show();
 			$('div#simp').hide();
 			$('input[name="simpan_x"]').show();
+			$('#j_akun').val('1')
+			$('#jSimp').val('')
 		break;	
 		case 'ID_USP':
 			$('#frm3 input:reset').click();
 			$('#ID_Jurnale')
 				.val($('#NoJ').val())
 				.attr('readonly','readonly')
-			$.post('get_SubJenis',{'ID':'2'},
+			$.post('get_SubJenis',{'ID':'2','ID_Dept':'1'},
 				function(result){
 					$('#ID_Perkiraan').html(result);
 				})
 			$('div#unt').show();
 			$('div#simp').hide();
 			$('input[name="simpan_x"]').show();
+			$('#j_akun').val('1')
+			$('#jSimp').val('')
 		break;	
-		case '1':
-			$('div#unt').hide();
-			$('div#simp').show();
-			$.post('add_jurnal_content',{'ID':$('#nj').val(),'ID_Akun':id},
+		default :
+		//alert(id)
+			$('#frm3 input:reset').click();
+			$('#ID_Jurnale')
+				.val($('#NoJ').val())
+				.attr('readonly','readonly')
+			$.post('get_SubJenis',{'ID_Dept':'','ID_Simp':"='"+id+"'"},
 				function(result){
-				 $('#simp table#add_trans tbody').html(result);	
+					$('#ID_Perkiraan').html(result);
 				})
-			$('input[name="simpan_x"]').hide();
-		break;	
-		case '2':
-			$('div#unt').hide();
-			$('div#simp').show();
-			$.post('add_jurnal_content',{'ID':$('#nj').val(),'ID_Akun':'2'},
-				function(result){
-				 $('#simp table#add_trans tbody').html(result);	
-				 $('#simp table#add_trans').fixedHeader({width:(screen.width-200),height:(screen.height-435)})
-				})
-			$('input[name="simpan_x"]').hide();
-		break;	
-		case '3':
-			$('div#unt').hide();
-			$('div#simp').show();
-			$.post('add_jurnal_content',{'ID':$('#nj').val(),'ID_Akun':'3'},
-				function(result){
-				 $('#simp table#add_trans tbody').html(result);	
-				})
-			$('input[name="simpan_x"]').hide();
-		break;	
-		case '4':
-			$('div#unt').hide();
-			$('div#simp').show();
-			$.post('add_jurnal_content',{'ID':$('#nj').val(),'ID_Akun':'4'},
-				function(result){
-				 $('#simp table#add_trans tbody').html(result);	
-				})
-			$('input[name="simpan_x"]').hide();
-		break;	
-		case '5':
-			$('div#unt').hide();
-			$('div#simp').show();
-			$.post('add_jurnal_content',{'ID':$('#nj').val(),'ID_Akun':'5'},
-				function(result){
-				 $('#simp table#add_trans tbody').html(result);	
-				})
-			$('input[name="simpan_x"]').hide();
-		break;	
+			$('div#unt').show();
+			$('div#simp').hide();
+			$('input[name="simpan_x"]').show();
+			$('#j_akun').val('2')
+			$('#jSimp').val($('table tr td#ck-'+id).html())
+			//alert($('table tr td#ck-'+id).html());
+		break;
 	}
 }
 function simpan_ad_content(){
@@ -378,9 +384,10 @@ function simpan_ad_content(){
 		total_KD($('#ID_Jurnal').val());
 			$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':today.getFullYear()},
 					function(hasil){
-						$('table#j_content tbody').html(hasil);
+						$('table#sj_content tbody').html(hasil);
 						//$('div#addcontent').show();	
-						$('table#j_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
+						//$('table#sj_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
+						if($('#fby').val()!=''){$('#process').click();}
 					})
 	})
 	
@@ -394,8 +401,25 @@ function total_KD(id){
 		'Keterangan':$('#Ket').val(),
 		'ID_Unit'	:$('#unit').val()},
 		function (data){
-			$('div#jdet').html(data);
-			$('table#j_det').fixedHeader({width:(screen.width-125),height:60})
+			$('div#jdete').html(data);
+			//$('table#j_dete').fixedHeader({width:(screen.width-125),height:60})
 		})
 }
-	
+
+function naikan_posisi(id,id_jurnal){
+	var urutan=prompt('Akan ditempatkan diurutan ke',$('table#sj_content tbody tr#r-'+id+' td:nth-child(1)').html());
+		if(urutan){
+			show_indicator('shiip',1);
+			$.post('update_posisi',{'ID':id,'urutan':urutan,'ID_Jurnal':id_jurnal},
+			function(result){
+				total_KD($('#ID_Jurnal').val());
+				$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':$('#Tgl').val().substr(6,4)},
+						function(hasil){
+							$('table#sj_content tbody').html(hasil);
+							$('div#addcontent').show();	
+							//$('#process').click();
+							$('table#shiip tbody').html('');
+						})
+			})
+		}
+}

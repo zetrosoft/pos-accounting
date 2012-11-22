@@ -307,3 +307,13 @@ td.menux:hover {cursor:pointer;
 		 -moz-border-radius:5px;
 		 
 }
+.buttone {
+    border: none;
+    background: url('../images/Print.png') no-repeat top center;
+	cursor:pointer
+}
+.buttonxls {
+    border: none;
+    background: url('../images/excel.png') no-repeat top center;
+	cursor:pointer
+}

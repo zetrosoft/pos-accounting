@@ -15,9 +15,9 @@
 		  $a->SetFont('Arial','',10);
 		  //echo $a->getColWidth();
 		  // set lebar tiap kolom tabel transaksi
-		  $a->SetWidths(array(10,70,60,15,30));
+		  $a->SetWidths(array(10,70,60,15,30,25));
 		  // set align tiap kolom tabel transaksi
-		  $a->SetAligns(array("C","L","L","C","R"));
+		  $a->SetAligns(array("C","L","L","C","R","L"));
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFont('Arial','',9);
 		  //$rec = $temp_rec->result();
@@ -26,7 +26,8 @@
 		  {
 			$n++;
 			$a->Row(array($n,$r->Nama,rdb('mst_departemen','Departemen','Departemen',"where ID='".$r->ID_Dept."'"),
-						  $r->Cicilan,number_format(($r->Total),2)
+						  $r->Cicilan,number_format(($r->Total),2),
+						  rdb('inv_posting_status','PostStatus','PostStatus',"where ID='".$r->ID_Post,'center'."'")
 						  ));
 			//sub tlot
 			$harga	=($harga+($r->Total));

@@ -1,6 +1,9 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Admin extends CI_Controller {
-  public $tc; public $zn;public $zc;public $zm;
+  public $tc;
+  public $zn;
+  public $zc;
+  public $zm;
     function  __construct() {
         parent::__construct();
         $this->load->model('Admin_model');

@@ -490,7 +490,7 @@ class Penjualan extends CI_Controller{
 		$datax['ID_Dept']		=rdb('mst_anggota','ID_Dept','ID_Dept',"where ID='".$ID_Agt."'");
 		$datax['ID_Simpanan']	=$ID_Simpanan;
 		$datax['ID_Agt']		=$ID_Agt;
-		$datax['ID_Calc']		=rdb('jenis_simpanan','ID_Calc','ID_Unit',"where ID='4'");
+		$datax['ID_Calc']		=rdb('jenis_simpanan','ID_Calc','ID_Calc',"where ID='4'");
 		$datax['ID_Laporan']	=rdb('jenis_simpanan','ID_Laporan','ID_Laporan',"where ID='4'");
 		$datax['ID_LapDetail']	=rdb('jenis_simpanan','ID_LapDetail','ID_LapDetail',"where ID='4'");
 		echo $this->Admin_model->replace_data('perkiraan',$datax);
