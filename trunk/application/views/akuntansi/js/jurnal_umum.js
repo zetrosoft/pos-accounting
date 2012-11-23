@@ -184,7 +184,7 @@ $(document).ready(function(e) {
 				$('table#pilihan').html(result)
 				process('ID_KBR');
 			})
-		$.post('add_jurnal_content',{'ID':$('#nj').val(),'Tahun':'','ID_Akun':''},
+		$.post('add_jurnal_content',{'ID':$('#ID_Jurnal').val(),'Tahun':'','ID_Akun':''},
 		function(hasil){
 			$('#pp-ad_content').css({'top':'10%','left':'25%','width':(screen.width-500),'height':(screen.height-50)});
 			$('table#add_trans tbody').html(hasil);	
@@ -260,9 +260,9 @@ function addtojurnal(id,nj,ids){
 	var today = new Date();
 	$.post('add_to_jurnal',{'id':id,'ID_Jurnal':nj},
 	function(result){
-		$.post('add_jurnal_content',{'ID':$('#nj').val(),'Tahun':'','ID_Akun':ids},
+		$.post('add_jurnal_content',{'ID':$('#ID_Jurnal').val(),'Tahun':'','ID_Akun':ids},
 		function(hasil){
-		$('#simp table#add_trans tbody').html(hasil);
+		//$('#simp table#add_trans tbody').html(hasil);
 		//update tampilan detail jurnal
 		total_KD(nj);
 			$.post('get_detail_jurnal',{'ID':nj,'Tahun':today.getFullYear()},
@@ -379,7 +379,10 @@ function simpan_ad_content(){
 	},function(result){
 		var today = new Date();
 		alert($.trim(result));//tampilkan status process
-		$(':reset').click();//kosongkan field
+		//kosongkan field
+		$('#frm3 input:not(#ID_Jurnale)').val('');
+		$('#frm3 select').val('').select();
+		$('#frm3 textarea').text('');
 		//update list detail jurnal parent windows
 		total_KD($('#ID_Jurnal').val());
 			$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':today.getFullYear()},
