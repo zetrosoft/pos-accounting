@@ -48,7 +48,8 @@ $(document).ready(function(e) {
 			onSelected		:function(result){
 				$('#id_pemasoke').val(result.id_pemasok);
 				$('#po_pembelian').focus().select();
-				_show_list();
+				_generate_nomor('GR','#frm1 input#no_transaksi');
+				//_show_list();
 				$('#frm2').show();
 			}
 		})
@@ -188,7 +189,7 @@ function _simpan_header_pembelian(){
 		'id_pemasok':$('#id_pemasoke').val(),
 		'total'		:$('#total_beli').val()
 	},function(result){
-		
+		_simpan_detail_pembelian();
 	})
 }
 /*
@@ -243,7 +244,6 @@ function image_click(id,cl){
 	switch(cl){
 		case 'simpan':
 		_simpan_header_pembelian();
-		_simpan_detail_pembelian();
 		//_update_stock('');
 		//_kosongkan_field();
 		
@@ -288,6 +288,7 @@ function _show_list(){
 			'jtran'			:'GR',
 			'tanggal'		:$('#tgl_transaksi').val()},			
 				function(result){
+					$('#frm2 table#ListTable tbody').html('');
 					$('#frm2 table#ListTable tbody').html(result);
 					//lock tanggal jika user bukan level adminstrator /superuser
 					//lock('#no_transaksi,#tgl_transaksi');
@@ -311,6 +312,6 @@ function _generate_nomor(tipe,field){
 	function(result){
 		$(field).val(result);
 		$('#trans_new').val('add');	
-		//_show_list();
+		_show_list();
 	})
 }

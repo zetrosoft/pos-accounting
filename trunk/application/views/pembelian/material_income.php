@@ -35,9 +35,10 @@ if($all_pembelian__list_beli!=''){
 addText(array('Periode Dari','Sampai',''),
 		array("<input type='text' id='dari_tanggal' value='' class='w100'>",
 			  "<input type='text' id='smp_tanggal' value='' class='w100'>",
-			  "<input type='button' id='okelah' value='OK'>"));
+			  "<input type='button' id='okelah' value='OK'>
+			  <input type='button' id='print' value='Print' disabled='disabled'>"));
 		$zlb->section('lappembelian');
-		$zlb->aksi(false);
+		$zlb->aksi(true);
 		$zlb->Header('100%','newTable');
 		echo "</tbody></table>";
 }else{

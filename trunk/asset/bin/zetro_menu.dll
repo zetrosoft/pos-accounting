@@ -72,11 +72,14 @@
 1|Tambah Barang|gudang/index||
 2|Daftar Barang|gudang/list_barang||
 3|<hr>|x||
-4|Pemakaian|gudang/pemakaian|y|zcev|
-5|Rusak/Hilang|gudang/rusak|||
+4|Stock on hand|stock/stock_barang|y|zevp||
+5|Stock History|gudang/stock_hist|y|zvp|
+6|<hr>|x||
+7|Pemakaian|gudang/pemakaian|y|zcev|
+8|Rusak/Hilang|gudang/rusak|||
 	
 	[Pemakaian]
-	1|Add Pemakaian|addpemaikaian|y|zcev|
+	1|Add Pemakaian|addpemakaian|y|zcev|
 	2|List Pemakaian|listpemakaian|y|zev|
 	
 	[Rusak/Hilang]
@@ -93,13 +96,13 @@
 
 		[Pembelian Barang]
 		1|Input Pembelian|pembelian/index|y|zce|
-		2|List pembelian|pembelian/list_beli|y|zce|
+		2|List pembelian|pembelian/list_beli|y|zcevp|
 		
 		[Return Konsinyasi]
-		1|Return pembelian|returnpembelian|y|zce|
+		1|Return pembelian|returnpembelian|y|zcev|
 
 		[Return Penjualan]
-		1|Return Jual|returnjual|y|zce|
+		1|Return Jual|returnjual|y|zcev|
 		
 [Laporan]
 1|Rekap Pembelian|report/beli|||

@@ -8,7 +8,7 @@ link_js('material_stocklist.js',$path.'/js');
 calender();
 panel_begin('Persediaan');
 panel_multi('liststock','block',false);
-if($all_liststock!=''){
+if($all_stock__stock_barang!=''){
 	echo "<form id='frm1' name='frm1' method='post' action=''>";
 	addText(array('Kategori','Status','',''),
 			array("<select id='Kategori' name='Kategori'></select>",
@@ -16,6 +16,7 @@ if($all_liststock!=''){
 					  <option value=''>Semua</option>
 					  <option value='Continue'>Continue</option>
 					  <option value='Discontinue'>Discontinue</option>
+					  <option value='stoked'>Without Zero stock</option>
 				  </select>",
 				  "<input type='button' value='OK' id='okelah'/>",
 				  "<input type='button' value='Print' id='prt'/>"));

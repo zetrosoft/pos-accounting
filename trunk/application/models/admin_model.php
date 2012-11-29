@@ -161,7 +161,7 @@ class Admin_model extends CI_Model
 		return $q;
 	}
 	function show_list($tabel,$where='',$field='*'){
-		//echo "select $field from $tabel $where";
+		//echo "select $field from $tabel $where<br>";
 		$q=$this->db->query("select $field from $tabel $where");
 		return $q->result();	
 	}

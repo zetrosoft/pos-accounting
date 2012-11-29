@@ -26,7 +26,7 @@
 3|Nama Barang,input,text n,nm_barang,w100 upper,,25%
 4|Satuan,select,text n,nm_satuan,S100 upper,,8%
 5|Jumlah,input,text d,jml_transaksi,w100 angka,,8%
-6|Harga Beli,input,text d,harga_beli,100 angka,,15%
+6|Harga Beli,input,text d,harga_beli,100 angka,,12%
 7|Sub Total,input,text n,ket_transaksi,w100,,12%
 
 [jualan]

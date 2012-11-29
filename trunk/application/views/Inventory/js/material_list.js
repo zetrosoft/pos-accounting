@@ -591,7 +591,7 @@ function _show_first(id){
 		$.post(path+'inventory/show_list',{
 			'id'		:id,
 			'id_jenis'	:'',
-			'stat'		:'all',
+			'stat'		:$('#plh_stat').val(),
 			'cari'		:''
 		},
 		function(result){

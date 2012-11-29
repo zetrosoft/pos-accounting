@@ -102,3 +102,12 @@
 1|Tanggal Transaksi,,,,,
 2|&nbsp;&nbsp;&nbsp;Dari Tanggal,input,text t,dari_tgl,w35,,
 3|&nbsp;&nbsp;&nbsp;Sampai Tanggal,input,text t,sampai_tgl,w35,,
+
+[laphistory]
+1|Kode Barang,,,,,,10%,,,30
+2|Nama Barang,,,,,,30%,,,110
+3|Satuan,,,,,,10%,,,22
+4|Stock Awal,,,,,,12%,,,25
+5|Masuk,,,,,,12%,,,25
+6|keluar,,,,,,12%,,,25
+7|Stock Akhir,,,,,,12%,,,25

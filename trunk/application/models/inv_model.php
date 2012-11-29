@@ -177,7 +177,7 @@ class Inv_model extends CI_Model {
 	function list_barang($where){
 		$data=array();
 		$sql="select b.ID,bj.JenisBarang,bk.Kategori,b.Kode,b.Nama_Barang,
-				b.Harga_Beli,b.Harga_Jual,bs.Satuan,b.Status,b.minstok
+				b.Harga_Beli,b.Harga_Jual,bs.Satuan,b.Status,b.minstok,sum(s.stock) as stock
 				from inv_barang as b
 				left join inv_barang_jenis as bj
 				on bj.ID=b.ID_Jenis
@@ -185,6 +185,8 @@ class Inv_model extends CI_Model {
 				on bk.ID=b.ID_Kategori
 				left join inv_barang_satuan as bs
 				on bs.ID=b.ID_Satuan
+				left join inv_material_stok as s
+				on s.id_barang=b.ID
 				$where ";
 		//echo $sql;
 		$data=$this->db->query($sql);
@@ -264,6 +266,72 @@ class Inv_model extends CI_Model {
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
+	//stock awal penerimaan barang
+	function incoming($ID_Barang,$dari_tgl,$sampai_tgl=''){
+		$masuk=0;$keluar=0;
+		$sql=($sampai_tgl=='')?
+		"select pb.ID_Barang,p.ID_Jenis,if(p.ID_Jenis='1',sum(pb.Jumlah),0) as inco,
+				if(p.ID_Jenis='3',sum(pb.Jumlah),0) as ote
+				from inv_pembelian as p
+				left join inv_pembelian_detail as pb
+				on pb.ID_Beli=p.ID
+				where pb.ID_Barang='$ID_Barang' and p.Tanggal <'".tglToSql($dari_tgl)."'
+				group by pb.ID_Barang":
+		"select pb.ID_Barang,p.ID_Jenis,if(p.ID_Jenis='1',sum(pb.Jumlah),0) as inco,
+				if(p.ID_Jenis='3',sum(pb.Jumlah),0) as ote
+				from inv_pembelian as p
+				left join inv_pembelian_detail as pb
+				on pb.ID_Beli=p.ID
+				where pb.ID_Barang='$ID_Barang' and p.Tanggal between'".tglToSql($dari_tgl)."'
+				and '".tglToSql($sampai_tgl)."'
+				group by pb.ID_Barang";
+		//echo $sql;
+		$rs=mysql_query($sql) or die(mysql_error());
+		while($rw=mysql_fetch_object($rs)){;
+			$masuk=$rw->inco;
+			$keluar=$rw->ote;
+		}
+		return ($masuk-$keluar);
+	}
+	
+	function outgoing($ID_Barang,$dari_tgl,$sampai_tgl=''){
+		$masuk=0;$keluar=0;
+		$sql=($sampai_tgl=='')?
+		"select pb.ID_Barang,p.ID_Jenis,if(p.ID_Jenis<>'3',sum(pb.Jumlah),0) as inco,
+				if(p.ID_Jenis='3',sum(pb.Jumlah),0) as ote
+				from inv_penjualan as p
+				left join inv_penjualan_detail as pb
+				on pb.ID_Jual=p.ID
+				where pb.ID_Barang='$ID_Barang' and p.Tanggal <'".tglToSql($dari_tgl)."'
+				group by pb.ID_Barang":
+		"select pb.ID_Barang,p.ID_Jenis,if(p.ID_Jenis<>'3',sum(pb.Jumlah),0) as inco,
+				if(p.ID_Jenis='3',sum(pb.Jumlah),0) as ote
+				from inv_penjualan as p
+				left join inv_penjualan_detail as pb
+				on pb.ID_Jual=p.ID
+				where pb.ID_Barang='$ID_Barang' and p.Tanggal between'".tglToSql($dari_tgl)."'
+				and '".tglToSql($sampai_tgl)."'
+				group by pb.ID_Barang";
+				
+		$rs=mysql_query($sql) or die(mysql_error());
+		while($rw=mysql_fetch_object($rs)){;
+			$masuk=$rw->inco;
+			$keluar=$rw->ote;
+		}
+		return ($masuk-$keluar);
+	}
+	function trans_pemasok($where){
+		$sql="select a.Nama as Pemasok ,p.ID
+			  from inv_pembelian as p
+			  right join mst_anggota as a
+			  on a.ID=p.ID_Pemasok and p.ID_Pemasok<>'0'
+			  $where
+			  group by p.ID_Pemasok";
+			// echo $sql; 
+			$data=$this->db->query($sql);
+			return $data->result();
+	}
+	
 	function auto_data(){
 	//membuat jenis pembelian
 	 $sql="CREATE TABLE IF NOT EXISTS `inv_pembelian_jenis` (

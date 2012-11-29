@@ -9,7 +9,8 @@ $jenis="<select id='plh_jenis' name='plh_jenis' class='s100'></select>";
 $stats="<select id='plh_stat' name='plh_stat' class='s100'>
 		<option value='all'>Semua</option>
 		<option value='Continue'>Continue</option>
-		<option value='Discontinue'>Discontinue</option></select>";
+		<option value='Discontinue'>Discontinue</option>
+		<option value='stock'>With Stock</option></select>";
 $cari="<input id='plh_cari' name='plh_cari' class='w100 cari'>";
 link_css('jquery.coolautosuggest.css','asset/css');
 link_js('jquery.coolautosuggest.js,jquery_terbilang.js','asset/js,asset/js');
@@ -74,7 +75,7 @@ echo "<input type='hidden' value='".date('d/m/Y')."' id='today'>";
 <script language="javascript">
 	$(document).ready(function(e) {
         $('#plh').html("<? dropdown('inv_barang_kategori','ID','Kategori','order by Kategori','9');?>");
-		$('#plh_jenis').html("<? dropdown('inv_barang_jenis','ID','JenisBarang','order by JenisBarang');?>");
+		$('#plh_jenis').html("<option value=''>Semua</option><? dropdown('inv_barang_jenis','ID','JenisBarang','order by JenisBarang');?>");
 		//$('#v_listobat table#ListTable').fixedHeader({width:900,height:400})
 	_show_first('9');
     });

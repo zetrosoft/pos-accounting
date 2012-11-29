@@ -37,7 +37,7 @@ class Stock extends CI_Controller{
 		$this->View('inventory/material_stock');
 	}
 	function stock_barang(){
-		$this->zetro_auth->menu_id(array('liststock'));
+		$this->zetro_auth->menu_id(array('stock__stock_barang'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('warehouse/material_stocklist');
 	}
@@ -150,7 +150,8 @@ class Stock extends CI_Controller{
 	function get_stock(){
 		$data=array();$n=0;
 		$where=empty($_POST['kategori'])?'':"where im.ID_Kategori='".$_POST['kategori']."'";
-		$where.=empty($_POST['stat'])?'':" and Status='".$_POST['stat']."'";
+		$where.=(empty($_POST['stat']) || $_POST['stat']=='stoked')?'':" and Status='".$_POST['stat']."'";
+		$where.=($_POST['stat']=='stoked')?" and ms.Stock <>'0'":'';
 				
 		$data=$this->report_model->stock_list($where,'stock');
 		foreach($data as $r){
@@ -170,10 +171,11 @@ class Stock extends CI_Controller{
 	function print_stock(){
 		$data=array();$n=0;
 		$where=($this->input->post('Kategori')=='')?'':"where im.ID_Kategori='".$this->input->post('Kategori')."'";
-		$where.=($this->input->post('Stat')=='')?'':" and Status='".$this->input->post('Stat')."'";
+		$where.=($this->input->post('Stat')=='' || $this->input->post('Stat')=='stoked')?'':" and Status='".$this->input->post('Stat')."'";
+		$where.=($this->input->post('Stat')=='stoked')?" and ms.Stock <>'0'":'';
 				
 		$data['kategori']=rdb('inv_barang_kategori','Kategori','Kategori',"where ID='".$this->input->post('Kategori')."'");
-		$data['status']	=$this->input->post('Stat');
+		$data['status']	 =$this->input->post('Stat');
 		$data['temp_rec']=$this->report_model->stock_list($where,'stock');
 			$this->zetro_auth->menu_id(array('trans_beli'));
 			$this->list_data($data);

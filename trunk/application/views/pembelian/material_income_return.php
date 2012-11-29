@@ -34,7 +34,7 @@ terbilang();
 <div id='kekata' style="display:none;padding:8px; background:#003; border:5px solid #F60;width:80%; height:50px; font-size:x-large;left:9%;top: 82%;color:#FFF; position:fixed; z-index:9997">
 	<!--terbilang jumlah yang harus di bayar-->
 </div>
-<input type="text" id='id_sat' value='' />
+<input type="hidden" id='id_sat' value='' />
 <input type="hidden" id='id_brg' value='' />
 <input type="hidden" id='total_beli' value='0' />
 <input type="hidden" id='trans_new' value='' />

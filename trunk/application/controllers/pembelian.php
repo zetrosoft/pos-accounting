@@ -117,13 +117,23 @@ class Pembelian extends CI_Controller{
 	  //jika transaksi di batalkan
 	  $data=array();
 	  $ID=$_POST['ID'];
-	  $this->Admin_model->hps_data('inv_pembelian_detail',"where ID='$ID'");	
+	  $ID_B=rdb('inv_pembelian_detail','ID_Beli','ID_Beli',"where ID='$ID'");
+	  $this->Admin_model->hps_data('inv_pembelian_detail',"where ID='$ID'");
+	  echo $ID_B;	
 	}
 	function get_detail_trans(){
 		$data=array();
 		$ID=$_POST['id'];
 		$data=$this->inv_model->get_detail_trans($ID);
 		echo json_encode($data[0]);
+	}
+	function hapus_header(){
+		$datax=array();
+		$ID=$_POST['ID'];
+		$get_ID_Beli=$_POST['id_beli'];
+		$datax=$this->Admin_model->show_list('inv_pembelian_detail',"where ID_Beli='$get_ID_Beli' order by ID");
+		echo count($datax);
+		(count($datax)==0)?$this->Admin_model->hps_data('inv_pembelian',"where ID='$get_ID_Beli'"):'';
 	}
 	function update_stock(){
 		$data=array();$hasil_konv=1;
@@ -180,16 +190,20 @@ class Pembelian extends CI_Controller{
 	empty($_POST['smp_tanggal'])?
 		$where="where Tanggal='".tgltoSql($_POST['dari_tanggal'])."'":
 		$where="where (Tanggal between '".tgltoSql($_POST['dari_tanggal'])."' and '".tgltoSql($_POST['smp_tanggal'])."')"; 
-		//echo $where;
+		$authe=$this->zetro_auth->cek_oto('e','pembelian__list_beli');
 		$data=$this->Admin_model->show_list('inv_pembelian',$where." order by NoUrut");
 		foreach($data as $r){
-			$n++;$x=0;
+			$x=0;
+			$datax=$this->Admin_model->show_list('inv_pembelian_detail',"where ID_Beli='".$r->ID."'");
+			if(count($datax)!=0){
+			$n++;
 			echo tr('xx list_genap').td($n.nbs(3),'center').td($r->Nomor,'center').td(tglfromSql($r->Tanggal),'center').
-					  td(strtoupper(rdb('inv_pemasok','Pemasok','Pemasok',"where ID='".$r->ID_Pemasok."'")),'left\' colspan=\'3\'').
+					  td('Pemasok : '.strtoupper(rdb('mst_anggota','Nama','Nama',"where ID='".$r->ID_Pemasok."'")),'left\' colspan=\'3\'').
 					  td(rdb('inv_pembelian_jenis','Jenis_Beli','Jenis_Beli',"where ID='".$r->ID_Jenis."'")).
 					  td('<b>'.number_format($r->ID_Bayar,2).'</b>','right').
-				 _tr();	
-			$datax=$this->Admin_model->show_list('inv_pembelian_detail',"where ID_Beli='".$r->ID."'");
+					  td(($authe!='')?(count($datax)!=0)?'':img_aksi($r->ID,true,'del'):'','center').
+				 _tr();
+			}
 			foreach($datax as $row){
 				$x++;
 				echo tr().td(nbs(2).$x,'center').
@@ -199,6 +213,7 @@ class Pembelian extends CI_Controller{
 						  td(number_format($row->Jml_Faktur,2),'right').
 						  td(number_format($row->Harga_Beli,2),'right').
 						  td(number_format(($row->Jml_Faktur*$row->Harga_Beli),2),'right').
+						  td(($authe!='')?img_aksi($row->ID,true,'del'):'','center').
 					 _tr();	
 			}
 		}
