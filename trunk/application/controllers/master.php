@@ -14,6 +14,9 @@ class Master extends CI_Controller {
 		$this->load->model("akun_model");
 		$this->load->model("purch_model");
 		$this->load->library("zetro_auth");
+		$this->load->helper('directory');
+		$this->load->helper('file');
+		$this->load->helper('date');
 		$this->userid=$this->session->userdata('idlevel');
 	}
 	
@@ -34,14 +37,14 @@ class Master extends CI_Controller {
 		$this->Footer();
 	}
 	function tools(){
-		$datax=$this->akun_model->get_neraca_head("='0'");
+		$datax=$this->akun_model->get_neraca_head("='0' order by ID_Head");
 		$data=$this->akun_model->get_neraca_head();
 		$this->zetro_auth->menu_id(array('settingshu','settingneraca'));
 		$this->list_data($this->zetro_auth->auth(array('head','shu'),array($data,$datax)));
 		$this->View('master/master_tools');
 	}
 	function shu(){
-		$datax=$this->akun_model->get_neraca_head("='0'");
+		$datax=$this->akun_model->get_neraca_head("='0' order by ID");
 		$data=$this->akun_model->get_neraca_head();
 		$this->zetro_auth->menu_id(array('komponenshu'));
 		$this->list_data($this->zetro_auth->auth(array('head','shu'),array($data,$datax)));
@@ -193,12 +196,55 @@ class Master extends CI_Controller {
 				 <td class='kotak' align='left'>".$row->ID_Calc."</td>
 				 <td class='kotak'>".$row->ID_KBR."</td>
 				 <td class='kotak'>".$row->ID_USP."</td>
+				 <td class='kotak' align='center'>".img_aksi('S-'.$row->ID.'-'.$ID,true)."</td>
 				 </tr>\n";
 		}
 		
 	}
+	function set_head_shu(){
+		$data=array();
+		$data['ID']		=empty($_POST['ID'])?'':$_POST['ID'];
+		$data['ID_Calc']=$_POST['ID_Calc'];
+		$data['ID_KBR']	=$_POST['ID_KBR'];
+		$data['ID_USP']	=$_POST['ID_USP'];
+		$data['Jenis']	=strtoupper($_POST['jenis']);
+		$data['Jenis1']	=$_POST['jenis'];
+		$data['ID_Head']=$_POST['ID_Head'];
+		$this->Admin_model->replace_data('lap_jenis',$data);
+	}
+	function del_head_shu(){
+		$ID=$_POST['ID'];
+		$this->Admin_model->hps_data('lap_jenis',"where ID='$ID'");
+	}
 	function get_head_shu(){
-		echo $data;	
+		$data=array();
+		$ID=$_POST['ID'];
+		$data=$this->akun_model->get_lap_jenis($ID);
+		echo json_encode($data[0]);
+	}
+	function set_sub_shu(){
+		$data=array();
+		$data['ID']		=empty($_POST['ID'])?'':$_POST['ID'];
+		$data['ID_Calc']=$_POST['ID_Calc'];
+		$data['ID_KBR']	=$_POST['ID_KBR'];
+		$data['ID_USP']	=$_POST['ID_USP'];
+		$data['SubJenis']=$_POST['jenis'];
+		$data['ID_Jenis']=$_POST['ID_Jenis'];
+		$data['ID_Lap']	=$_POST['ID_Lap'];
+		$data['ID_Post']='0';
+		$data['NoUrut'] ='1';
+		$this->Admin_model->replace_data('lap_subjenis',$data);
+		echo $_POST['ID_Jenis'];
+	}
+	function del_sub_shu(){
+		$ID=$_POST['ID'];
+		$this->Admin_model->hps_data('lap_subjenis',"where ID='$ID'");
+	}
+	function get_subjenis_shu(){
+		$data=array();
+		$ID=$_POST['ID'];
+		$data=$this->akun_model->get_lap_subjenis($ID);
+		echo json_encode($data[0]);
 	}
 //vendor transaction
 	function get_next_id(){
@@ -262,4 +308,132 @@ class Master extends CI_Controller {
 		}
 		echo tr().td('<b>Total</b>','right\' colspan=\'6','kotak list_genap').td('<b>'.number_format($total,2).'</b>','right')._tr();
 	}
+	
+	function backup(){
+		$this->zetro_auth->menu_id(array('master__backup'));
+		$this->list_data($this->zetro_auth->auth());
+		$this->View('master/master_backup');
+	}
+	
+  
+  function back_up_db(){
+  $ccyymmdd = date("Ymd");
+  $tabel=$_POST['Tabel'];
+  $bln=$_POST['bln'];
+  $end_bln=empty($_POST['s_bln'])?$_POST['bln']:$_POST['s_bln'];
+  $thn=$_POST['thn'];
+  $jenis=$_POST['jenis'];
+  if ($jenis=='acc'){
+  $file = fopen("asset/backup_db/accounting_".nBulan($bln).'_'.nBulan($end_bln).'_'.$thn.".sql.dll","w+");
+	$where="where (ID_Bulan between '".$bln."' and '".$end_bln."') and Tahun='".$thn."'";
+ 	$line_count = $this->create_backup_sql($file,'jurnal',$where);
+	$line_count = $this->backup_akun($file,'transaksi',$where);
+  }else{
+	  $where="where (month(Tanggal) between '".$bln."' and '".$end_bln."') and year(Tanggal)='".$thn."'";
+	  $file = fopen("asset/backup_db/inventory_".nBulan($bln).'_'.nBulan($end_bln).'_'.$thn.".sql.dll","w+");
+	  	$line_count = $this->create_backup_sql($file,'inv_pembelian',$where);
+		$line_count = $this->backup_akun($file,'inv_pembelian_detail',$where);
+	  	$line_count = $this->create_backup_sql($file,'inv_penjualan',$where);
+		$line_count = $this->backup_akun($file,'inv_penjualan_detail',$where);
+  }
+  fclose($file);
+  echo " : [<i>Backup table $tabel berhasil total data : ".number_format($line_count,0)."</i>]";
+
+  }
+  function create_backup_sql($file,$tabel,$where='') {
+    $line_count = 0;
+    $sql_string = NULL;
+      $table_name = $tabel;
+      $table_query = mysql_query("SELECT * FROM `$table_name` $where");
+      $num_fields = mysql_num_fields($table_query);
+      while ($fetch_row = mysql_fetch_array($table_query)) {
+        $sql_string .= "REPLACE INTO $table_name VALUES(";
+        $first = TRUE;
+        for ($field_count=1;$field_count<=$num_fields;$field_count++){
+          if (TRUE == $first) {
+            $sql_string .= "'".mysql_real_escape_string($fetch_row[($field_count - 1)])."'";
+            $first = FALSE;            
+          } else {
+            $sql_string .= ", '".mysql_real_escape_string($fetch_row[($field_count - 1)])."'";
+          }
+        }
+        $sql_string .= ");\n\r";
+        if ($sql_string != ""){
+          $line_count = $this->write_backup_sql($file,$sql_string,$line_count);        
+        }
+        $sql_string = NULL;
+      }    
+//    }
+    return $line_count;
+  }
+ function backup_akun($file,$tabel,$where){
+    $line_count = 0;$fld='';$tabel2='';
+    $sql_string = NULL;
+	if($tabel=='transaksi'){
+		$fld='ID_Jurnal';
+		$tabel2='jurnal';
+	}else if($tabel=='inv_pembelian_detail'){
+		$fld='ID_Beli';
+		$tabel2='inv_pembelian';
+	}else if($tabel=='inv_penjualan_detail'){
+		$fld='ID_Jual';
+		$tabel2='inv_penjualan';
+	}
+	 $sql="select ID from $tabel2 $where";
+	 $rs=mysql_query($sql) or die(mysql_error());
+	 while ($r=mysql_fetch_object($rs)){
+		  $table_query = mysql_query("SELECT * FROM $tabel where $fld='".$r->ID."'");
+		  $num_fields = mysql_num_fields($table_query);
+		  while ($fetch_row = mysql_fetch_array($table_query)) {
+			$sql_string .= "REPLACE INTO $tabel VALUES(";
+			$first = TRUE;
+			for ($field_count=1;$field_count<=$num_fields;$field_count++){
+			  if (TRUE == $first) {
+				$sql_string .= "'".mysql_real_escape_string($fetch_row[($field_count - 1)])."'";
+				$first = FALSE;            
+			  } else {
+				$sql_string .= ", '".mysql_real_escape_string($fetch_row[($field_count - 1)])."'";
+			  }
+			}
+			$sql_string .= ");";
+			if ($sql_string != ""){
+			  $line_count = $this->write_backup_sql($file,$sql_string,$line_count);        
+			}
+			$sql_string = NULL;
+		  }    
+    }
+    return $line_count;
+ }
+
+  function write_backup_sql($file, $string_in, $line_count) { 
+    fwrite($file, $string_in);
+    return ++$line_count;
+  }
+  
+  function read_dir(){
+	$map= directory_map("./asset/backup_db",false,true);
+	$x=0;$tgl=array();
+	foreach($map as $index=> $n){
+		$x++;
+		$ukuran=filesize("asset/backup_db/".$n);
+		$sise=($ukuran < 10240)?number_format(($ukuran/1024),2)." Kb":number_format(($ukuran/(1024*1000)),2)." Mb";
+		$tgl=get_file_info("asset/backup_db/".$n);
+		echo tr().td($x,'center').td($n."</a>").td($sise,'right').
+				  td(date('d-m-Y H:i:s',($tgl['date'])),'center').
+				  td("<a href='".base_url()."asset/backup_db/".$n."'>
+				  		<img src='".base_url()."asset/images/6.png' title='Download file backup'></a>")._tr();
+		clearstatcache();
+	}
+  }
+  function download_file(){
+	 $fname=$_POST['fname'];
+	header("Content-Type: application");
+	header("Content-Disposition: attachment; filename=\"$fname\"");
+	header('Pragma: no-cache');
+	echo "<script language='javascript'>
+		document.location.reload()
+		</scrip>";
+	//echo file_get_contents("asset/backup_db/".$fname);
+  
+  }
 }

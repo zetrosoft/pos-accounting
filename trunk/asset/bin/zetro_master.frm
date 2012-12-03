@@ -58,8 +58,31 @@
 2|Jenis,,,Jenis1,,,60%
 
 [shu]
-1|Jenis,,,,,,60%
-2|Kalkulasi,,,,,,20%
+1|Jenis,input,text,jenis,w90,,60%
+2|Kalkulasi,select,text,ID_Calc,S50,,20%
+
+[shuhead]
+1|Kelompok,select,text,ID_Head,S50,,,RD,lap_head-ID-Header1-
+2|KBR *),input,text,ID_KBR,w15,1,
+3|USP *),input,text,ID_USP,w15,1,
+4|Deskripsi,input,text,jenis,w90,,
+;5|Kalkulasi,select,text,ID_Calc,s50,,,RD,lap_head-ID-Header2-
+
+[subshu]
+1|Jenis Laporan,select,text,ID_Lap,s50,,,RD,laporan-ID-JenisLaporan-
+2|Kelompok,select,text,ID_Jenis,s70,,,RD,lap_jenis-ID-Jenis1-where ID_head='0'
+3|Kalkukasi,select,text,ID_Calc,s50,,,RD,lap_head-ID-Header2-
+4|KBR *),input,text,ID_KBR,w15,0,
+5|USP *),input,text,ID_USP,w15,0,
+6|Deskripsi,input,text,SubJenis,w90,,
+
+[subsubneraca]
+1|Jenis Laporan,select,text,ID_Lap,s50,,,RD,laporan-ID-JenisLaporan-
+2|Kelompok,select,text,ID_Jenis,s70,,,RD,lap_jenis-ID-Jenis1-where ID_head!='0'
+3|Kalkukasi,select,text,ID_Calc,s50,,,RD,lap_head-ID-Header2-
+4|KBR *),input,text,ID_KBR,w15,0,
+5|USP *),input,text,ID_USP,w15,0,
+6|Deskripsi,input,text,SubJenis,w90,,
 
 [subneraca]
 1|Sub Jenis,,,,,,40%

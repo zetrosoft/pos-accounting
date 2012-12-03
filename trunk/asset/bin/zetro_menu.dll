@@ -14,13 +14,17 @@
 
 	[Help]
 	1|About|admin/about||
-	2|<hr>|x||
-	3|Ganti Password|controlpanel/change_password||
-	4|Log Out|admin/logout||
+	2|Back Up Database|master/backup||
+	3|<hr>|x||
+	4|Ganti Password|controlpanel/change_password||
+	5|Log Out|admin/logout||
 	;5|TODO|admin/todo|y|
 	
 		[Ganti Password]
 		1|Change Password|changepassword|y|
+		
+		[Back Up Database]
+		1|Backup Database|backupdatabase|y|
 
 ;Inv menu ========================================================
 [File]

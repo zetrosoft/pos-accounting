@@ -63,19 +63,28 @@ class Akun_model extends CI_Model {
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
-	function get_neraca_head($where="!='0'"){
-		$sql="select lj.ID,lh.Header2,lj.Jenis1
+	function get_lap_jenis($ID){
+		$sql="select * from lap_jenis where ID='$ID'";
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
+	function get_lap_subjenis($ID){
+		$sql="select * from lap_subjenis where ID='$ID'";
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
+	function get_neraca_head($where="!='0' order by lj.ID"){
+		$sql="select lj.ID,lh.Header2,lj.Jenis1,lj.ID_Calc
 				from lap_jenis as lj
 				left join lap_head as lh
 				on lj.ID_Calc=lh.ID
-				where lj.ID_Head $where
-				order by lj.ID";
-		
+				where lj.ID_Head $where";
+		//echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
 	function get_neraca_sub($id){
-		$sql="SELECT ls.SubJenis,lh.Header2,ls.ID_KBR,ls.ID_USP,lh.Header2 as ID_Calc
+		$sql="SELECT ls.ID,ls.SubJenis,lh.Header2,ls.ID_KBR,ls.ID_USP,lh.Header2 as ID_Calc
 				FROM lap_subjenis AS ls
 				LEFT JOIN lap_head AS lh
 				ON lh.ID=ls.ID_Calc

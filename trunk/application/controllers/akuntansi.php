@@ -278,7 +278,8 @@ class Akuntansi extends CI_Controller{
 	echo ($data=='')? "hapus":"dipakai";
    }
    function get_bulan(){
-	dropdown('mst_bulan','ID','Bulan',"order by ID",date('m'));   
+	$pos=empty($_POST['id'])?'0':$_POST['id'];
+	dropdown('mst_bulan','ID','Bulan',"order by ID",(date('m')-$pos));   
    }
    function get_tahun(){
 	   dropdown("jurnal","distinct(Tahun) as Tahun","Tahun","where Tahun >0 order by Tahun",date('Y'));
