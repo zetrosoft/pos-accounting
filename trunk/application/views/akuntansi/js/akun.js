@@ -43,7 +43,7 @@ $(document).ready(function(e) {
 		$('#subklas').change();
 	})
 	$('#frm2 :reset').click(function(){
-		keluar();
+		keluar_akun();
 	})
 	$('#frm1 :reset').click(function(){
 		$('#frm1 #addData').html('');

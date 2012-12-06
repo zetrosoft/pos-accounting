@@ -1,250 +1,0 @@
-REPLACE INTO jurnal VALUES('14867', '1', '0', '0', '2012-01-03', '1', '2012', '96979', 'GJ-096979', 'Koreksi Barang Bln.Januari 2012', '0');
-REPLACE INTO jurnal VALUES('14868', '1', '3', '0', '2012-01-03', '1', '2012', '96980', 'GJ-096980', 'Piutang Barang January 12', '0');
-REPLACE INTO jurnal VALUES('14869', '1', '0', '0', '2012-01-01', '1', '2012', '96981', 'GJ-096981', 'Penyesuaian Pajak dibayar dimuka', '0');
-REPLACE INTO jurnal VALUES('14870', '1', '0', '0', '2012-01-04', '1', '2012', '96982', 'GJ-096982', 'Set.Simpanan Bln.Jan\'12 DIV.Bendungan', '0');
-REPLACE INTO jurnal VALUES('14871', '1', '0', '0', '2012-01-04', '1', '2012', '96983', 'GJ-096983', 'Set.Simpanan Bln.Jan\'12 Sie.Purwakarta', '0');
-REPLACE INTO jurnal VALUES('14872', '1', '0', '0', '2012-01-04', '1', '2012', '96984', 'GJ-096984', 'Set.Simpanan Bln.Jan\'12 DIV.I', '0');
-REPLACE INTO jurnal VALUES('14873', '1', '0', '0', '2012-01-04', '1', '2012', '96985', 'GJ-096985', 'Set.Simpanan Bln.Jan\'12 Sie.Rg.Dengklok', '0');
-REPLACE INTO jurnal VALUES('14874', '1', '0', '0', '2012-01-04', '1', '2012', '96986', 'GJ-096986', 'Set.Simpanan Bln.Jan\'12 Sie.Talagasari', '0');
-REPLACE INTO jurnal VALUES('14875', '1', '0', '0', '2012-01-04', '1', '2012', '96987', 'GJ-096987', 'Set.Simpanan Bln.Jan\'12 DIV.PLTA', '0');
-REPLACE INTO jurnal VALUES('14876', '1', '0', '0', '2012-01-04', '1', '2012', '96988', 'GJ-096988', 'Set.Simpanan Bln.Jan\'12 Sie.Tarum', '0');
-REPLACE INTO jurnal VALUES('14877', '1', '0', '0', '2012-01-04', '1', '2012', '96989', 'GJ-096989', 'Set.Simpanan Bln.Jan\'12 DIV.II', '0');
-REPLACE INTO jurnal VALUES('14878', '1', '0', '0', '2012-01-04', '1', '2012', '96990', 'GJ-096990', 'Set.Simpanan Bln.Jan\'12 Dapen', '0');
-REPLACE INTO jurnal VALUES('14879', '1', '0', '0', '2012-01-04', '1', '2012', '96991', 'GJ-096991', 'Set.Simpanan Bln.Jan\'12 DIV.III', '0');
-REPLACE INTO jurnal VALUES('14880', '1', '0', '0', '2012-01-04', '1', '2012', '96992', 'GJ-096992', 'Set.Simpanan Bln.Jan\'12 DIV.Jasum', '0');
-REPLACE INTO jurnal VALUES('14881', '1', '0', '0', '2012-01-25', '1', '2012', '96993', 'GJ-096993', 'Pengembalian Simpanan', '0');
-REPLACE INTO jurnal VALUES('14884', '1', '0', '0', '2012-01-03', '1', '2012', '96996', 'GJ-096996', 'koreksi simpanan Bln.Januari 2012', '0');
-REPLACE INTO jurnal VALUES('14885', '1', '0', '0', '2012-01-31', '1', '2012', '96997', 'GJ-096997', 'Tagh Kebersihan  Ukep Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14886', '1', '0', '0', '2012-01-31', '1', '2012', '96998', 'GJ-096998', 'Tagh Sewa Msn Foto Copy K Pst Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14887', '1', '3', '0', '2012-02-01', '2', '2012', '96999', 'GJ-096999', 'Piutang Barang February 12', '0');
-REPLACE INTO jurnal VALUES('14889', '1', '0', '0', '2012-02-02', '2', '2012', '97001', 'GJ-097001', 'Set.Simpanan Bln.Feb\'12 Sie.Rg.Dengklok', '0');
-REPLACE INTO jurnal VALUES('14890', '1', '0', '0', '2012-02-02', '2', '2012', '97002', 'GJ-097002', 'Set.Simpanan Bln.Feb\'12 DIV.II', '0');
-REPLACE INTO jurnal VALUES('14891', '1', '0', '0', '2012-02-02', '2', '2012', '97003', 'GJ-097003', 'Setoran Simp Bln.Feb\'12 Sie Talagasari', '0');
-REPLACE INTO jurnal VALUES('14892', '1', '0', '0', '2012-02-02', '2', '2012', '97004', 'GJ-097004', 'Setoran Simp Bln.Feb\'12 DIV.PLTA', '0');
-REPLACE INTO jurnal VALUES('14893', '1', '0', '0', '2012-02-02', '2', '2012', '97005', 'GJ-097005', 'Setoran Simp Bln.Feb\'12 Sie.Tarum', '0');
-REPLACE INTO jurnal VALUES('14894', '1', '0', '0', '2012-02-02', '2', '2012', '97006', 'GJ-097006', 'Setoran Simp Bln.Feb\'12 Div.Bendungan', '0');
-REPLACE INTO jurnal VALUES('14895', '1', '0', '0', '2012-02-02', '2', '2012', '97007', 'GJ-097007', 'Setoran Simp. Bln.Feb\'12 Sie.Purwakarta', '0');
-REPLACE INTO jurnal VALUES('14896', '1', '0', '0', '2012-02-02', '2', '2012', '97008', 'GJ-097008', 'Setoran Simp. Bln.Feb\'12 DIV.Jasum', '0');
-REPLACE INTO jurnal VALUES('14897', '1', '0', '0', '2012-01-31', '1', '2012', '97009', 'GJ-097009', 'Mutasi Bank Jabar banten Bln Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14898', '2', '0', '0', '2012-01-31', '1', '2012', '97010', 'GJ-097010', 'Mutasi BJB Syariah Bln.Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14900', '2', '0', '0', '2012-01-02', '1', '2012', '97012', 'GJ-097012', 'Angs. Pinj. + Pinj-Barang Bln Jan\'12 Div. Bendungan', '0');
-REPLACE INTO jurnal VALUES('14901', '2', '0', '0', '2012-01-02', '1', '2012', '97013', 'GJ-097013', 'Angs. Pinj. Bln Jan\'12 Sie. Purwakarta', '0');
-REPLACE INTO jurnal VALUES('14902', '2', '0', '0', '2012-01-03', '1', '2012', '97014', 'GJ-097014', 'Angs. Pinj. + Pinj-Barang Bln Jan\'12 Div. I', '0');
-REPLACE INTO jurnal VALUES('14903', '2', '0', '0', '2012-01-03', '1', '2012', '97015', 'GJ-097015', 'Angs. Pinj. + Pinj-Barang Bln Jan\'12 Sie. Rengasdengklok', '0');
-REPLACE INTO jurnal VALUES('14904', '2', '0', '0', '2012-01-04', '1', '2012', '97016', 'GJ-097016', 'Angs. Pinj. + Pinj-Barang Bln Jan\'12 Sie. Talagasari', '0');
-REPLACE INTO jurnal VALUES('14905', '2', '0', '0', '2012-01-04', '1', '2012', '97017', 'GJ-097017', 'Angs. Pinj. + Pinj-Barang Bln Jan\'12 Div. PLTA', '0');
-REPLACE INTO jurnal VALUES('14906', '2', '0', '0', '2012-01-05', '1', '2012', '97018', 'GJ-097018', 'Angs. Pinj. Bln Jan\'12 Sie. Tarum', '0');
-REPLACE INTO jurnal VALUES('14907', '2', '0', '0', '2012-01-05', '1', '2012', '97019', 'GJ-097019', 'Angs. Pinj. + Pinj-Barang Bln Jan\'12 Div. II', '0');
-REPLACE INTO jurnal VALUES('14908', '2', '0', '0', '2012-01-06', '1', '2012', '97020', 'GJ-097020', 'Pelunasan Pinj-Barang Jan\'12 ', '0');
-REPLACE INTO jurnal VALUES('14909', '2', '0', '0', '2012-01-06', '1', '2012', '97021', 'GJ-097021', 'Pemby. U/M Pinj-Barang Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14910', '2', '0', '0', '2012-01-06', '1', '2012', '97022', 'GJ-097022', 'Pinj-Barang Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14911', '2', '0', '0', '2012-01-09', '1', '2012', '97023', 'GJ-097023', 'Pinjaman dr Kas KBR Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14912', '2', '0', '0', '2012-01-10', '1', '2012', '97024', 'GJ-097024', 'Pemby. Pelunasan Pinj dr Daperta a.n Alm. Saman', '0');
-REPLACE INTO jurnal VALUES('14913', '2', '0', '0', '2012-01-10', '1', '2012', '97025', 'GJ-097025', 'Pelunasan Pinj  dr Daperta a.n Alm Saman', '0');
-REPLACE INTO jurnal VALUES('14914', '2', '0', '0', '2012-01-10', '1', '2012', '97026', 'GJ-097026', 'Daperta Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14915', '2', '0', '0', '2012-01-11', '1', '2012', '97027', 'GJ-097027', 'Angs. Pinj bln Jan\'12 Dapen', '0');
-REPLACE INTO jurnal VALUES('14916', '2', '0', '0', '2012-01-12', '1', '2012', '97028', 'GJ-097028', 'Setor ke BJB Syariah bln Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14917', '2', '0', '0', '2012-01-13', '1', '2012', '97029', 'GJ-097029', 'Setor ke BRI Syariah bln Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14918', '2', '0', '0', '2012-01-16', '1', '2012', '97030', 'GJ-097030', 'Angs. Pinj + Pinj-Barang bln Jan\'12 Div. Jasum', '0');
-REPLACE INTO jurnal VALUES('14919', '2', '0', '0', '2012-01-16', '1', '2012', '97031', 'GJ-097031', 'Angs. Pinj + Pinj-Barang bln Jan\'12 Div. III', '0');
-REPLACE INTO jurnal VALUES('14920', '2', '0', '0', '2012-01-17', '1', '2012', '97032', 'GJ-097032', 'Angs. Pinj tgl 1 s/d 17 Jan\'12 Tunai', '0');
-REPLACE INTO jurnal VALUES('14921', '2', '0', '0', '2012-01-18', '1', '2012', '97033', 'GJ-097033', 'Pemby. Pelunasan pinj dr Daperta a.n Munadjat', '0');
-REPLACE INTO jurnal VALUES('14922', '2', '0', '0', '2012-01-18', '1', '2012', '97034', 'GJ-097034', 'Penerimaan Pelunasan Pinj dr Daperta a.n Munadjat', '0');
-REPLACE INTO jurnal VALUES('14923', '2', '0', '0', '2012-01-18', '1', '2012', '97035', 'GJ-097035', 'Daperta Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14924', '2', '0', '0', '2012-01-19', '1', '2012', '97036', 'GJ-097036', 'Pemby. Pelunsan Pinj dr Daperta a.n Maryono. P', '0');
-REPLACE INTO jurnal VALUES('14925', '2', '0', '0', '2012-01-19', '1', '2012', '97037', 'GJ-097037', 'Penerimaan Pelunasan Pinj dr Daperta a.n Maryono P', '0');
-REPLACE INTO jurnal VALUES('14926', '2', '0', '0', '2012-01-19', '1', '2012', '97038', 'GJ-097038', 'Daperta Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14927', '2', '0', '0', '2012-01-20', '1', '2012', '97039', 'GJ-097039', 'Pelunasan Pinj-Barang a.n Alm Saman Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14928', '2', '0', '0', '2012-01-24', '1', '2012', '97040', 'GJ-097040', 'Daperta Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14929', '2', '0', '0', '2012-01-25', '1', '2012', '97041', 'GJ-097041', 'Pemby. Pengembalian Pinj ke Kas KBR', '0');
-REPLACE INTO jurnal VALUES('14930', '2', '0', '0', '2012-01-26', '1', '2012', '97042', 'GJ-097042', 'Angs. Pinj + Pinj-Barang bln Jan\'12 Koperasi', '0');
-REPLACE INTO jurnal VALUES('14931', '2', '0', '0', '2012-01-27', '1', '2012', '97043', 'GJ-097043', 'Pemby. Pengembalian Pinj ke Kas KBR Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14932', '2', '0', '0', '2012-01-27', '1', '2012', '97044', 'GJ-097044', 'Pelunasan Pinj-Barang a.n Feni F.', '0');
-REPLACE INTO jurnal VALUES('14933', '2', '0', '0', '2012-01-30', '1', '2012', '97045', 'GJ-097045', 'Provisi Pinjaman Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14934', '2', '0', '0', '2012-01-30', '1', '2012', '97046', 'GJ-097046', 'Pelunasan Pinj Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14935', '2', '0', '0', '2012-01-30', '1', '2012', '97047', 'GJ-097047', 'Beban Pokok Pinjaman Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14936', '2', '0', '0', '2012-01-30', '1', '2012', '97048', 'GJ-097048', 'Pinjaman Jan\'12', '0');
-REPLACE INTO jurnal VALUES('14937', '2', '0', '0', '2012-02-01', '2', '2012', '97049', 'GJ-097049', 'Angs. Pinj bln Feb\'12 K. Pusat', '0');
-REPLACE INTO jurnal VALUES('14938', '2', '0', '0', '2012-02-02', '2', '2012', '97050', 'GJ-097050', 'Angs. Pinj + Pinj-Barang bln Feb\'12 Sie. Rengasdengklok', '0');
-REPLACE INTO jurnal VALUES('14939', '2', '0', '0', '2012-02-02', '2', '2012', '97051', 'GJ-097051', 'Angs. Pinj + Pinj-Barang bln Feb\'12 Div. II', '0');
-REPLACE INTO jurnal VALUES('14940', '2', '0', '0', '2012-02-03', '2', '2012', '97052', 'GJ-097052', 'Kelebihan Potongan Pinj a.n Endang Sie. Purwakarta', '0');
-REPLACE INTO jurnal VALUES('14941', '2', '0', '0', '2012-02-06', '2', '2012', '97053', 'GJ-097053', 'Angs. Pinj + Pinj-Barang bln Feb\'12 Div. Bendungan', '0');
-REPLACE INTO jurnal VALUES('14942', '2', '0', '0', '2012-02-07', '2', '2012', '97054', 'GJ-097054', 'Angs. Pinj tgl 19 s/d 31 Jan\'12 Tunai', '0');
-REPLACE INTO jurnal VALUES('14943', '2', '0', '0', '2012-02-08', '2', '2012', '97055', 'GJ-097055', 'Daperta Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14944', '2', '0', '0', '2012-02-09', '2', '2012', '97056', 'GJ-097056', 'Angs. Pinj + Pinj-Barang bln Feb\'12 Sie. Talagasari', '0');
-REPLACE INTO jurnal VALUES('14945', '2', '0', '0', '2012-02-09', '2', '2012', '97057', 'GJ-097057', 'Angs. Pinj  bln Feb\'12 Sie. Tarum', '0');
-REPLACE INTO jurnal VALUES('14946', '2', '0', '0', '2012-02-10', '2', '2012', '97058', 'GJ-097058', 'Angs. Pinj  bln Feb\'12 Sie. Purwakarta', '0');
-REPLACE INTO jurnal VALUES('14947', '2', '0', '0', '2012-02-10', '2', '2012', '97059', 'GJ-097059', 'Angs. Pinj + Pinj-Barang bln Feb\'12 Div. Jasum', '0');
-REPLACE INTO jurnal VALUES('14948', '2', '0', '0', '2012-02-13', '2', '2012', '97060', 'GJ-097060', 'Angs. Pinj + Pinj-Barang bln Feb\'12 Div. PLTA', '0');
-REPLACE INTO jurnal VALUES('14949', '2', '0', '0', '2012-02-14', '2', '2012', '97061', 'GJ-097061', 'Pelunasan Pinj-Barang Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14950', '2', '0', '0', '2012-02-14', '2', '2012', '97062', 'GJ-097062', 'Pemby. U/M Pinj-Barang Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14951', '2', '0', '0', '2012-02-14', '2', '2012', '97063', 'GJ-097063', 'Pinj-Barang Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14952', '2', '0', '0', '2012-02-15', '2', '2012', '97064', 'GJ-097064', 'Penerimaan Pinj dr Kas KBR Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14953', '2', '0', '0', '2012-02-16', '2', '2012', '97065', 'GJ-097065', 'Setor ke BJB Syariah bln Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14954', '2', '0', '0', '2012-02-16', '2', '2012', '97066', 'GJ-097066', 'Setor ke BRI Syariah bln Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14955', '2', '0', '0', '2012-02-17', '2', '2012', '97067', 'GJ-097067', 'Angs. Pinj + Pinj-Barang bln Feb\'12 Div. III', '0');
-REPLACE INTO jurnal VALUES('14956', '2', '0', '0', '2012-02-20', '2', '2012', '97068', 'GJ-097068', 'Angs. Pinj-Barang bln Feb\'12 K. Pusat', '0');
-REPLACE INTO jurnal VALUES('14957', '2', '0', '0', '2012-02-21', '2', '2012', '97069', 'GJ-097069', 'Angs. Pinj tgl 1 s/d 15 Feb\'12 Tunai', '0');
-REPLACE INTO jurnal VALUES('14958', '2', '0', '0', '2012-02-21', '2', '2012', '97070', 'GJ-097070', 'Angs. Pinj bln Feb\'12 Dapen', '0');
-REPLACE INTO jurnal VALUES('14959', '2', '0', '0', '2012-02-22', '2', '2012', '97071', 'GJ-097071', 'Kesulitan Uang Receh/Kecil', '0');
-REPLACE INTO jurnal VALUES('14960', '1', '0', '0', '2012-01-16', '1', '2012', '97072', 'GJ-097072', 'Penerimaan Kas', '0');
-REPLACE INTO jurnal VALUES('14961', '1', '0', '0', '2012-02-20', '2', '2012', '97073', 'GJ-097073', 'Penerimaan Kas', '0');
-REPLACE INTO jurnal VALUES('14962', '1', '0', '0', '2012-02-29', '2', '2012', '97074', 'GJ-097074', 'Pengembalian Simpanan', '0');
-REPLACE INTO jurnal VALUES('14963', '1', '0', '0', '2012-02-02', '2', '2012', '97075', 'GJ-097075', 'Setoran Simp Bln.Feb\'12 Kntr Pusat', '0');
-REPLACE INTO jurnal VALUES('14964', '1', '0', '0', '2012-02-02', '2', '2012', '97076', 'GJ-097076', 'Set.Simpanan Bln.Feb\'12 DIV.III', '0');
-REPLACE INTO jurnal VALUES('14965', '1', '0', '0', '2012-02-02', '2', '2012', '97077', 'GJ-097077', 'Set.Simpanan Bln.Feb\'12 Dapen', '0');
-REPLACE INTO jurnal VALUES('14966', '1', '0', '0', '2012-02-02', '2', '2012', '97078', 'GJ-097078', 'Set.Simpanan Bln.Feb\'12 Div.I', '0');
-REPLACE INTO jurnal VALUES('14967', '1', '0', '0', '2012-02-02', '2', '2012', '97079', 'GJ-097079', 'Set.Simpanan Bln.Feb\'12 Koperasi', '0');
-REPLACE INTO jurnal VALUES('14968', '1', '0', '0', '2012-01-04', '1', '2012', '97080', 'GJ-097080', 'Set.Simpanan Bln.Jan\'12 Koperasi', '0');
-REPLACE INTO jurnal VALUES('14969', '1', '0', '0', '2012-03-26', '3', '2012', '97081', 'GJ-097081', 'Pengembalian Simpanan', '0');
-REPLACE INTO jurnal VALUES('14970', '1', '3', '0', '2012-03-01', '3', '2012', '97082', 'GJ-097082', 'Piutang Barang March 12', '0');
-REPLACE INTO jurnal VALUES('14971', '2', '0', '0', '2012-02-23', '2', '2012', '97083', 'GJ-097083', 'Angs. Pinj + Pinj-Barang Bln. Feb\'12 Div. I', '0');
-REPLACE INTO jurnal VALUES('14973', '2', '0', '0', '2012-02-23', '2', '2012', '97084', 'GJ-097084', 'Angs Pinj-Barang Bln. Feb\'12 Tunai', '0');
-REPLACE INTO jurnal VALUES('14974', '2', '0', '0', '2012-02-24', '2', '2012', '97085', 'GJ-097085', 'Pelunasan Pinj a/n Marullah bln Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14975', '2', '0', '0', '2012-02-24', '2', '2012', '97086', 'GJ-097086', 'Angs. Pinj + Pinj-Barang Bln. Feb\'12 Koperasi', '0');
-REPLACE INTO jurnal VALUES('14976', '2', '0', '0', '2012-02-27', '2', '2012', '97087', 'GJ-097087', 'Pemby. Pinj ke Kas KBR dr Kas USP Bln Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14977', '2', '0', '0', '2012-02-27', '2', '2012', '97088', 'GJ-097088', 'Daperta Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14978', '1', '0', '0', '2012-01-16', '1', '2012', '97089', 'GJ-097089', 'Pengeluaran Kas', '0');
-REPLACE INTO jurnal VALUES('14979', '2', '0', '0', '2012-02-28', '2', '2012', '97090', 'GJ-097090', 'Provisi Pinjaman Bln Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14980', '2', '0', '0', '2012-02-28', '2', '2012', '97091', 'GJ-097091', 'Pelunasan Pinjaman Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14981', '2', '0', '0', '2012-02-28', '2', '2012', '97092', 'GJ-097092', 'Beban Pokok Pinjaman Bln Feb\'12', '0');
-REPLACE INTO jurnal VALUES('14982', '1', '0', '0', '2012-01-04', '1', '2012', '97093', 'GJ-097093', 'Angs.Barang Jan\'12 Div. Bend.', '0');
-REPLACE INTO jurnal VALUES('14983', '1', '0', '0', '2012-01-05', '1', '2012', '97094', 'GJ-097094', 'Angs.Barang Jan\'12 Seksi Pwk', '0');
-REPLACE INTO jurnal VALUES('14984', '1', '0', '0', '2012-01-05', '1', '2012', '97095', 'GJ-097095', 'Angs.Barang Jan\'12 Div. I', '0');
-REPLACE INTO jurnal VALUES('14985', '1', '0', '0', '2012-01-06', '1', '2012', '97096', 'GJ-097096', 'Angs.Barang Jan\'12 Rengasdengklok', '0');
-REPLACE INTO jurnal VALUES('14986', '1', '0', '0', '2012-01-09', '1', '2012', '97097', 'GJ-097097', 'Angs.Barang Jan\'12 Talagasari', '0');
-REPLACE INTO jurnal VALUES('14987', '1', '0', '0', '2012-01-10', '1', '2012', '97098', 'GJ-097098', 'Angs.Barang Jan\'12 Div. PLTA', '0');
-REPLACE INTO jurnal VALUES('14988', '1', '0', '0', '2012-01-11', '1', '2012', '97099', 'GJ-097099', 'Angs.Barang Jan\'12 Seksi Tarum', '0');
-REPLACE INTO jurnal VALUES('14989', '1', '0', '0', '2012-01-11', '1', '2012', '97100', 'GJ-097100', 'Angs.Barang Jan\'12 Div. II', '0');
-REPLACE INTO jurnal VALUES('14990', '1', '0', '0', '2012-01-12', '1', '2012', '97101', 'GJ-097101', 'Angs.Barang Jan\'12 Pensiun', '0');
-REPLACE INTO jurnal VALUES('14991', '1', '0', '0', '2012-01-12', '1', '2012', '97102', 'GJ-097102', 'Angs.Barang Jan\'12 Div.III', '0');
-REPLACE INTO jurnal VALUES('14992', '1', '0', '0', '2012-01-13', '1', '2012', '97103', 'GJ-097103', 'Angs.Barang Jan\'12 Div.Jasum', '0');
-REPLACE INTO jurnal VALUES('14993', '1', '0', '0', '2012-04-23', '4', '2012', '97104', 'GJ-097104', 'Pengembalian Simpanan', '0');
-REPLACE INTO jurnal VALUES('14994', '1', '0', '0', '2012-01-23', '1', '2012', '97105', 'GJ-097105', 'Angs.Barang Jan\'12 Koperasi', '0');
-REPLACE INTO jurnal VALUES('14995', '1', '0', '0', '2012-03-05', '3', '2012', '97106', 'GJ-097106', 'Setoran Simp Bln.Maret\'12 Kntr Pusat', '0');
-REPLACE INTO jurnal VALUES('14996', '1', '0', '0', '2012-03-05', '3', '2012', '97107', 'GJ-097107', 'Setoran Simp Bln.Maret\'12 Seksi Tarum', '0');
-REPLACE INTO jurnal VALUES('14997', '1', '0', '0', '2012-03-05', '3', '2012', '97108', 'GJ-097108', 'Setoran Simp Bln.Maret\'12 Seksi Rg.Dengklok', '0');
-REPLACE INTO jurnal VALUES('14998', '1', '0', '0', '2012-03-05', '3', '2012', '97109', 'GJ-097109', 'Setoran Simp Bln.Maret\'12 Divisi I', '0');
-REPLACE INTO jurnal VALUES('14999', '1', '0', '0', '2012-03-05', '3', '2012', '97110', 'GJ-097110', 'Setoran Simp Bln.Maret\'12 Divisi II', '0');
-REPLACE INTO jurnal VALUES('15000', '1', '0', '0', '2012-03-05', '3', '2012', '97111', 'GJ-097111', 'Setoran Simp Bln.Maret\'12 Divisi III', '0');
-REPLACE INTO jurnal VALUES('15001', '1', '0', '0', '2012-03-05', '3', '2012', '97112', 'GJ-097112', 'Setoran Simp Bln.Maret\'12 Divisi Bendungan', '0');
-REPLACE INTO jurnal VALUES('15002', '1', '0', '0', '2012-03-05', '3', '2012', '97113', 'GJ-097113', 'Setoran Simp Bln.Maret\'12 Seks Talagasari', '0');
-REPLACE INTO jurnal VALUES('15003', '1', '0', '0', '2012-03-05', '3', '2012', '97114', 'GJ-097114', 'Setoran Simp Bln.Maret\'12 Div.Jasum', '0');
-REPLACE INTO jurnal VALUES('15004', '1', '0', '0', '2012-03-05', '3', '2012', '97115', 'GJ-097115', 'Setoran Simp Bln.Maret\'12 Div.PLTA', '0');
-REPLACE INTO jurnal VALUES('15005', '1', '0', '0', '2012-03-05', '3', '2012', '97116', 'GJ-097116', 'Setoran Simp Bln.Maret\'12 Seksi.Purwakarta', '0');
-REPLACE INTO jurnal VALUES('15006', '1', '0', '0', '2012-03-05', '3', '2012', '97117', 'GJ-097117', 'Setoran Simp Bln.Maret\'12 Dapen', '0');
-REPLACE INTO jurnal VALUES('15007', '1', '0', '0', '2012-03-05', '3', '2012', '97118', 'GJ-097118', 'Setoran Simp Bln.Maret\'12 Koperasi', '0');
-REPLACE INTO jurnal VALUES('15008', '1', '0', '0', '2012-02-29', '2', '2012', '97119', 'GJ-097119', 'Mutasi Bank Jabar Banten Bln.Feb\'12', '0');
-REPLACE INTO jurnal VALUES('15009', '2', '0', '0', '2012-01-31', '1', '2012', '97120', 'GJ-097120', 'Mutasi BRI Syariah Bln.Jan\'12', '0');
-REPLACE INTO jurnal VALUES('15010', '2', '0', '0', '2012-02-29', '2', '2012', '97121', 'GJ-097121', 'Mutasi BJB Syariah Bln.Feb\'12', '0');
-REPLACE INTO jurnal VALUES('15011', '2', '0', '0', '2012-02-29', '2', '2012', '97122', 'GJ-097122', 'Mutasi BRI Syariah Bln.Feb\'12', '0');
-REPLACE INTO jurnal VALUES('15012', '1', '3', '0', '2012-04-01', '4', '2012', '97123', 'GJ-097123', 'Piutang Barang April 12', '0');
-REPLACE INTO jurnal VALUES('15013', '1', '0', '0', '2012-01-31', '1', '2012', '97124', 'GJ-097124', 'Tagh Kebersihan STB Jan\'12', '0');
-REPLACE INTO jurnal VALUES('15014', '1', '0', '0', '2012-01-31', '1', '2012', '97125', 'GJ-097125', 'Tagh Kebersihan Sie PAB Jan\'12', '0');
-REPLACE INTO jurnal VALUES('15015', '1', '0', '0', '2012-01-31', '1', '2012', '97126', 'GJ-097126', 'Tagh Sewa Msn Foto Copy Div III', '0');
-REPLACE INTO jurnal VALUES('15016', '1', '0', '0', '2012-01-31', '1', '2012', '97127', 'GJ-097127', 'Tagh Sewa Msn Foto Copy PLTA Jan\'12', '0');
-REPLACE INTO jurnal VALUES('15017', '1', '0', '0', '2012-01-31', '1', '2012', '97128', 'GJ-097128', 'Tagh Sewa Msn Foto Copy Jasum Jan\'12', '0');
-REPLACE INTO jurnal VALUES('15018', '1', '0', '0', '2012-01-31', '1', '2012', '97129', 'GJ-097129', 'Tagh Perbaikan Kendaraan Jan\'12', '0');
-REPLACE INTO jurnal VALUES('15019', '1', '0', '0', '2012-02-20', '2', '2012', '97130', 'GJ-097130', 'Pengeluaran Kas', '0');
-REPLACE INTO jurnal VALUES('15020', '1', '0', '0', '2012-03-30', '3', '2012', '97131', 'GJ-097131', 'Mutasi Bank Jabar Bln.Maret\'2012', '0');
-REPLACE INTO jurnal VALUES('15021', '2', '0', '0', '2012-03-30', '3', '2012', '97132', 'GJ-097132', 'Mutasi BJB Syariah Bln.Maret\'2012', '0');
-REPLACE INTO jurnal VALUES('15022', '2', '0', '0', '2012-03-30', '3', '2012', '97133', 'GJ-097133', 'Mutasi BRI Syariah Bln.Maret\'2012', '0');
-REPLACE INTO jurnal VALUES('15023', '2', '0', '0', '2012-02-28', '2', '2012', '97134', 'GJ-097134', 'Pinjaman Feb\'12', '0');
-REPLACE INTO jurnal VALUES('15024', '1', '0', '0', '2012-02-03', '2', '2012', '97135', 'GJ-097135', 'Angs.Barang Feb\'12 Rengasdengklok', '0');
-REPLACE INTO jurnal VALUES('15025', '1', '0', '0', '2012-02-06', '2', '2012', '97136', 'GJ-097136', 'Angs.Barang Feb\'12 Div. II', '0');
-REPLACE INTO jurnal VALUES('15026', '1', '0', '0', '2012-02-07', '2', '2012', '97137', 'GJ-097137', 'Angs.Barang Feb\'12 Div. Bend.', '0');
-REPLACE INTO jurnal VALUES('15027', '1', '0', '0', '2012-02-08', '2', '2012', '97138', 'GJ-097138', 'Angs.Barang Feb\'12 Talagasari', '0');
-REPLACE INTO jurnal VALUES('15028', '1', '0', '0', '2012-02-09', '2', '2012', '97139', 'GJ-097139', 'Angs.Barang Feb\'12 Seksi Tarum', '0');
-REPLACE INTO jurnal VALUES('15029', '1', '0', '0', '2012-02-10', '2', '2012', '97140', 'GJ-097140', 'Angs.Barang Feb\'12 Seksi Pwk', '0');
-REPLACE INTO jurnal VALUES('15030', '1', '0', '0', '2012-02-13', '2', '2012', '97141', 'GJ-097141', 'Angs.Barang Feb\'12 Div. Jasum', '0');
-REPLACE INTO jurnal VALUES('15031', '1', '0', '0', '2012-02-14', '2', '2012', '97142', 'GJ-097142', 'Angs.Barang Feb\'12 Div. PLTA', '0');
-REPLACE INTO jurnal VALUES('15032', '1', '0', '0', '2012-02-21', '2', '2012', '97143', 'GJ-097143', 'Piutang Barang Feb\'12', '0');
-REPLACE INTO jurnal VALUES('15033', '1', '0', '0', '2012-02-15', '2', '2012', '97144', 'GJ-097144', 'Angs.Barang Feb\'12 Div. III', '0');
-REPLACE INTO jurnal VALUES('15034', '1', '0', '0', '2012-02-16', '2', '2012', '97145', 'GJ-097145', 'Angs.Barang Feb\'12 K.Pusat', '0');
-REPLACE INTO jurnal VALUES('15035', '1', '0', '0', '2012-02-17', '2', '2012', '97146', 'GJ-097146', 'Angs.Barang Feb\'12 Pensiun', '0');
-REPLACE INTO jurnal VALUES('15036', '1', '0', '0', '2012-02-17', '2', '2012', '97147', 'GJ-097147', 'Angs.Barang Feb\'12 Div. I', '0');
-REPLACE INTO jurnal VALUES('15037', '1', '0', '0', '2012-05-02', '5', '2012', '97148', 'GJ-097148', 'Pengembalian Simpanan', '0');
-REPLACE INTO jurnal VALUES('15038', '1', '0', '0', '2012-02-29', '2', '2012', '97149', 'GJ-097149', 'Tagh Kebersihan Ukep Pebr\'12', '0');
-REPLACE INTO jurnal VALUES('15039', '1', '0', '0', '2012-02-29', '2', '2012', '97150', 'GJ-097150', 'Tagh Kebersihan Sie STB Pebr\'12', '0');
-REPLACE INTO jurnal VALUES('15040', '1', '0', '0', '2012-02-29', '2', '2012', '97151', 'GJ-097151', 'Tagh Kebersihan Sie PAB Pebr\'12', '0');
-REPLACE INTO jurnal VALUES('15041', '1', '0', '0', '2012-02-29', '2', '2012', '97152', 'GJ-097152', 'Tagh Sewa  Foto Copy K Pusat Peb\'12', '0');
-REPLACE INTO jurnal VALUES('15042', '1', '0', '0', '2012-02-29', '2', '2012', '97153', 'GJ-097153', 'Tagh Sewa Foto Copy Div III Pebr\'12', '0');
-REPLACE INTO jurnal VALUES('15043', '1', '0', '0', '2012-02-29', '2', '2012', '97154', 'GJ-097154', 'Tagh Sewa Foto Copy Div PLTA Peb\'12', '0');
-REPLACE INTO jurnal VALUES('15044', '1', '0', '0', '2012-02-29', '2', '2012', '97155', 'GJ-097155', 'Tagh Sewa Foto Copy Div Jasum Pebr\'12', '0');
-REPLACE INTO jurnal VALUES('15045', '1', '0', '0', '2012-02-29', '2', '2012', '97156', 'GJ-097156', 'Tagh Perbaikan Kendaraan Pebr\'12', '0');
-REPLACE INTO jurnal VALUES('15046', '1', '0', '0', '2012-02-22', '2', '2012', '97157', 'GJ-097157', 'Angs.Barang Feb\'12 Koperasi', '0');
-REPLACE INTO jurnal VALUES('15048', '1', '3', '0', '2012-05-01', '5', '2012', '97159', 'GJ-097159', 'Piutang Barang May 12', '0');
-REPLACE INTO jurnal VALUES('15049', '1', '0', '0', '2012-03-30', '3', '2012', '97160', 'GJ-097160', 'Tagh Kebersihan Ukep Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15050', '1', '0', '0', '2012-03-30', '3', '2012', '97161', 'GJ-097161', 'Tagh Kebersihan Bend Sie STB Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15051', '1', '0', '0', '2012-03-30', '3', '2012', '97162', 'GJ-097162', 'Tagh Kebersihan Sie PAB Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15052', '1', '0', '0', '2012-03-30', '3', '2012', '97163', 'GJ-097163', 'Tagh Angkat Sampah Sie PAB Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15053', '1', '0', '0', '2012-03-30', '3', '2012', '97164', 'GJ-097164', 'Tagh Js Tenaga Kerja K Pusat Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15054', '1', '0', '0', '2012-03-30', '3', '2012', '97165', 'GJ-097165', 'Tagh Perbaikan Komputer Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15055', '1', '0', '0', '2012-03-30', '3', '2012', '97166', 'GJ-097166', 'Tagh Sewa Foto Copy K Pusat Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15056', '1', '0', '0', '2012-03-30', '3', '2012', '97167', 'GJ-097167', 'Tagh Sewa Foto Copy Div III Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15057', '1', '0', '0', '2012-03-30', '3', '2012', '97168', 'GJ-097168', 'Tagh Sewa Foto Copy Div PLTA Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15058', '1', '0', '0', '2012-03-30', '3', '2012', '97169', 'GJ-097169', 'Tagh Sw Foto Copy Div Jasum Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15059', '1', '0', '0', '2012-03-30', '3', '2012', '97170', 'GJ-097170', 'Tagh Babad Jatiluhur Kota Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15060', '1', '0', '0', '2012-03-30', '3', '2012', '97171', 'GJ-097171', 'Tagh Babat diTanggul Ubrug Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15061', '1', '0', '0', '2012-03-30', '3', '2012', '97172', 'GJ-097172', 'Tagh Cabutan diTanggul Ubrug Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15062', '1', '0', '0', '2012-03-30', '3', '2012', '97173', 'GJ-097173', 'Tagh Perbaikan Kendaraan Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15063', '1', '0', '0', '2012-03-30', '3', '2012', '97174', 'GJ-097174', 'Tagh Perbaikan Kendaraan Maret\'12 ', '0');
-REPLACE INTO jurnal VALUES('15064', '1', '0', '0', '2012-02-29', '2', '2012', '97175', 'GJ-097175', 'Tagh Js Tenaga Kerja K Pusat Jan-Peb\'12', '0');
-REPLACE INTO jurnal VALUES('15065', '1', '0', '0', '2012-04-30', '4', '2012', '97176', 'GJ-097176', 'Tagh Kebersihan Ukep April\'12', '0');
-REPLACE INTO jurnal VALUES('15066', '1', '0', '0', '2012-04-30', '4', '2012', '97177', 'GJ-097177', 'Tagh Js Tenaga Kerja K Pusat Apr\'12', '0');
-REPLACE INTO jurnal VALUES('15067', '1', '0', '0', '2012-04-30', '4', '2012', '97178', 'GJ-097178', 'Tagh Sewa Foto Copy K Pusat April\'12', '0');
-REPLACE INTO jurnal VALUES('15068', '1', '0', '0', '2012-04-30', '4', '2012', '97179', 'GJ-097179', 'Tagh Sewa Foto Copy Div Jasum Apr\'12', '0');
-REPLACE INTO jurnal VALUES('15069', '1', '0', '0', '2012-04-30', '4', '2012', '97180', 'GJ-097180', 'Tagh Sewa Foto Copy Div III Apr\'12', '0');
-REPLACE INTO jurnal VALUES('15070', '1', '0', '0', '2012-04-30', '4', '2012', '97181', 'GJ-097181', 'Tagh Sewa Foto Copy Div PLTA April\'12', '0');
-REPLACE INTO jurnal VALUES('15071', '1', '0', '0', '2012-04-30', '4', '2012', '97182', 'GJ-097182', 'Tagh Perbaikan Kendaraan April `12', '0');
-REPLACE INTO jurnal VALUES('15072', '2', '0', '0', '2012-03-30', '3', '2012', '97183', 'GJ-097183', 'Pinjaman Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15073', '1', '0', '0', '2012-03-19', '3', '2012', '97184', 'GJ-097184', 'Penerimaan Kas', '0');
-REPLACE INTO jurnal VALUES('15074', '1', '0', '0', '2012-03-19', '3', '2012', '97185', 'GJ-097185', 'Pengeluaran Kas', '0');
-REPLACE INTO jurnal VALUES('15075', '1', '0', '0', '2012-05-31', '5', '2012', '97186', 'GJ-097186', 'Tagh Kebersihan Ukep Mei\'12', '0');
-REPLACE INTO jurnal VALUES('15076', '1', '0', '0', '2012-05-31', '5', '2012', '97187', 'GJ-097187', 'Tagh Jasa Tenaga Kerja K Pusat Mei\'12', '0');
-REPLACE INTO jurnal VALUES('15077', '1', '0', '0', '2012-03-06', '3', '2012', '97188', 'GJ-097188', 'Angs.Barang Maret\'12 Seksi Tarum', '0');
-REPLACE INTO jurnal VALUES('15078', '1', '0', '0', '2012-03-07', '3', '2012', '97189', 'GJ-097189', 'Angs.Barang Maret\'12 Rengasdengklok', '0');
-REPLACE INTO jurnal VALUES('15079', '1', '0', '0', '2012-03-08', '3', '2012', '97190', 'GJ-097190', 'Angs.Barang Maret\'12 Div.I', '0');
-REPLACE INTO jurnal VALUES('15080', '1', '0', '0', '2012-03-09', '3', '2012', '97191', 'GJ-097191', 'Angs.Barang Maret\'12 Div.II', '0');
-REPLACE INTO jurnal VALUES('15081', '1', '0', '0', '2012-03-09', '3', '2012', '97192', 'GJ-097192', 'Angs.Barang Maret\'12 Div.III', '0');
-REPLACE INTO jurnal VALUES('15082', '1', '0', '0', '2012-03-12', '3', '2012', '97193', 'GJ-097193', 'Angs.Barang Maret\'12 Div.Bend.', '0');
-REPLACE INTO jurnal VALUES('15083', '1', '0', '0', '2012-03-13', '3', '2012', '97194', 'GJ-097194', 'Angs.Barang Maret\'12 Talagasari', '0');
-REPLACE INTO jurnal VALUES('15084', '1', '0', '0', '2012-03-14', '3', '2012', '97195', 'GJ-097195', 'Angs.Barang Maret\'12 Div.Jasum', '0');
-REPLACE INTO jurnal VALUES('15085', '1', '0', '0', '2012-03-15', '3', '2012', '97196', 'GJ-097196', 'Angs.Barang Maret\'12 Div.PLTA', '0');
-REPLACE INTO jurnal VALUES('15086', '1', '0', '0', '2012-03-15', '3', '2012', '97197', 'GJ-097197', 'Angs.Barang Maret\'12 Seksi Pwk', '0');
-REPLACE INTO jurnal VALUES('15087', '1', '0', '0', '2012-03-16', '3', '2012', '97198', 'GJ-097198', 'Angs.Barang Maret\'12 Pensiun', '0');
-REPLACE INTO jurnal VALUES('15088', '2', '0', '0', '2012-03-01', '3', '2012', '97199', 'GJ-097199', 'Angs. Pinj K. Pusat Bln Maret\'12', '0');
-REPLACE INTO jurnal VALUES('15089', '1', '0', '0', '2012-04-05', '4', '2012', '97200', 'GJ-097200', 'Setoran Simp. Bln.April\'2012 Div.Bendungan', '0');
-REPLACE INTO jurnal VALUES('15090', '1', '0', '0', '2012-04-05', '4', '2012', '97201', 'GJ-097201', 'Setoran Simp. Bln.April\'2012 Seksi Tarum', '0');
-REPLACE INTO jurnal VALUES('15091', '1', '0', '0', '2012-04-05', '4', '2012', '97202', 'GJ-097202', 'Setoran Simp. Bln.April\'2012 Seksi Rg.Dengklok', '0');
-REPLACE INTO jurnal VALUES('15092', '1', '0', '0', '2012-04-05', '4', '2012', '97203', 'GJ-097203', 'Setoran Simp. Bln.April\'2012 Div.II', '0');
-REPLACE INTO jurnal VALUES('15093', '1', '0', '0', '2012-04-05', '4', '2012', '97204', 'GJ-097204', 'Setoran Simp. Bln.April\'2012 Sie.Talagasari', '0');
-REPLACE INTO jurnal VALUES('15094', '1', '0', '0', '2012-04-05', '4', '2012', '97205', 'GJ-097205', 'Setoran Simp. Bln.April\'2012 Div.PLTA', '0');
-REPLACE INTO jurnal VALUES('15095', '1', '0', '0', '2012-04-05', '4', '2012', '97206', 'GJ-097206', 'Setoran Simp. Bln.April\'2012 Div.I', '0');
-REPLACE INTO jurnal VALUES('15096', '1', '0', '0', '2012-04-05', '4', '2012', '97207', 'GJ-097207', 'Setoran Simp. Bln.April\'2012 Div.Jasum', '0');
-REPLACE INTO jurnal VALUES('15097', '1', '0', '0', '2012-04-05', '4', '2012', '97208', 'GJ-097208', 'Setoran Simp. Bln.April\'2012 Div.III', '0');
-REPLACE INTO jurnal VALUES('15098', '1', '0', '0', '2012-04-05', '4', '2012', '97209', 'GJ-097209', 'Setoran Simp. Bln.April\'2012 Dapen', '0');
-REPLACE INTO jurnal VALUES('15100', '1', '0', '0', '2012-03-20', '3', '2012', '97211', 'GJ-097211', 'Angs.Barang Maret\'12 K.Pusat', '0');
-REPLACE INTO jurnal VALUES('15101', '1', '0', '0', '2012-04-05', '4', '2012', '97212', 'GJ-097212', 'Setoran Simp. Bln.April\'2012 Koperasi', '0');
-REPLACE INTO jurnal VALUES('15102', '1', '0', '0', '2012-04-05', '4', '2012', '97213', 'GJ-097213', 'Setoran Simp. Bln.April\'2012 Sie.purwakarta', '0');
-REPLACE INTO jurnal VALUES('15103', '1', '0', '0', '2012-05-03', '5', '2012', '97214', 'GJ-097214', 'Setoran Simp. Bln.Mei\'2012 Div.bendungan', '0');
-REPLACE INTO jurnal VALUES('15104', '1', '0', '0', '2012-05-03', '5', '2012', '97215', 'GJ-097215', 'Setoran Simp. Bln.Mei\'2012 Div.PLTA', '0');
-REPLACE INTO jurnal VALUES('15105', '1', '0', '0', '2012-05-03', '5', '2012', '97216', 'GJ-097216', 'Setoran Simp. Bln.Mei\'2012 Sie.Rg.dengklok', '0');
-REPLACE INTO jurnal VALUES('15106', '1', '0', '0', '2012-05-03', '5', '2012', '97217', 'GJ-097217', 'Setoran Simp. Bln.Mei\'2012 Div.Jasum', '0');
-REPLACE INTO jurnal VALUES('15107', '1', '0', '0', '2012-05-03', '5', '2012', '97218', 'GJ-097218', 'Setoran Simp. Bln.Mei\'2012 Sie.Tarum', '0');
-REPLACE INTO jurnal VALUES('15108', '1', '0', '0', '2012-05-03', '5', '2012', '97219', 'GJ-097219', 'Setoran Simp. Bln.Mei\'2012 Div.III', '0');
-REPLACE INTO jurnal VALUES('15109', '1', '0', '0', '2012-05-03', '5', '2012', '97220', 'GJ-097220', 'Setoran Simp. Bln.Mei\'2012 Sie.Talagasari', '0');
-REPLACE INTO jurnal VALUES('15110', '1', '0', '0', '2012-05-03', '5', '2012', '97221', 'GJ-097221', 'Setoran Simp. Bln.Mei\'2012 Div.II', '0');
-REPLACE INTO jurnal VALUES('15111', '1', '0', '0', '2012-05-03', '5', '2012', '97222', 'GJ-097222', 'Setoran Simp. Bln.Mei\'2012 Sie.Purwakarta', '0');
-REPLACE INTO jurnal VALUES('15112', '1', '0', '0', '2012-05-03', '5', '2012', '97223', 'GJ-097223', 'Setoran Simp. Bln.Mei\'2012 Dapen', '0');
-REPLACE INTO jurnal VALUES('15113', '1', '0', '0', '2012-05-03', '5', '2012', '97224', 'GJ-097224', 'Setoran Simp. Bln.Mei\'2012 Div.I', '0');
-REPLACE INTO jurnal VALUES('15114', '1', '0', '0', '2012-05-03', '5', '2012', '97225', 'GJ-097225', 'Setoran Simp. Bln.Mei\'2012 Koperasi', '0');
-REPLACE INTO jurnal VALUES('15140', '1', '1', '0', '2012-11-22', '11', '2012', '97236', 'GJ-097236', 'teststtst', '0');
-REPLACE INTO jurnal VALUES('15139', '1', '1', '0', '2012-11-20', '11', '2012', '97235', 'GJ-097235', 'test', '0');
-REPLACE INTO jurnal VALUES('15138', '1', '1', '0', '2012-11-20', '11', '2012', '97234', 'GJ-097234', 'Terjurnal lagi', '0');
-REPLACE INTO jurnal VALUES('15132', '1', '1', '', '2012-11-01', '11', '2012', '97228', 'GJ-097228', 'Piutang barang November 2012', '0');
-REPLACE INTO jurnal VALUES('15136', '1', '1', '', '2012-11-01', '11', '2012', '97232', 'GJ-097232', 'Penjualan barang TunaiNovember 2012', '0');
-REPLACE INTO jurnal VALUES('15141', '1', '1', '0', '2012-11-22', '11', '2012', '97237', 'GJ-097237', 'tettetetete', '0');
-REPLACE INTO jurnal VALUES('15142', '1', '1', '0', '2012-11-23', '11', '2012', '97238', 'GJ-097238', 'teststst', '0');
-REPLACE INTO jurnal VALUES('15143', '1', '1', '0', '2012-11-26', '11', '2012', '97239', 'GJ-097239', 'ttttt', '0');
-REPLACE INTO transaksi VALUES('463549', '15142', '2', '', '1000000', '0', 'Setoran teststst', '1');REPLACE INTO transaksi VALUES('463552', '15142', '5698', '', '0', '500000', 'Pembelian Barang xxx', '2');REPLACE INTO transaksi VALUES('463553', '15142', '8069', '', '0', '45000', 'Barang jjj', '2');REPLACE INTO transaksi VALUES('463554', '15142', '5698', '', '0', '300000', 'Barang klkk', '2');

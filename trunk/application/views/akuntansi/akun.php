@@ -6,7 +6,7 @@ $zlb->config_file('asset/bin/zetro_akun.frm');
 $path='application/views/akuntansi';
 link_js('jquery.fixedheader.js,akun.js,jquery_terbilang.js','asset/js,'.$path.'/js,asset/js');
 panel_begin('Perkiraan');
-panel_multi('addperkiraan');
+panel_multi('addperkiraan','none',false);
 if($all_addperkiraan!=''){
 	$zfm->AddBarisKosong(true,'b');
 	$zfm->Start_form(true,'frm1');
@@ -16,7 +16,7 @@ if($all_addperkiraan!=''){
 	no_auth();
 }
 panel_multi_end();
-panel_multi('perkiraan','block');
+panel_multi('perkiraan','block',false);
 if($all_perkiraan!=''){
 $klas='';
 addText(array('Klasifikasi','Sub Klasifikasi','Unit'),

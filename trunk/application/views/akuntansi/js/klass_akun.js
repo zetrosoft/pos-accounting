@@ -41,7 +41,7 @@ function _show_data(){
 		function(result){
 			$('table#ListTable tbody').html(result);
 			$('#ID').val('');$('#Klasifikasi').val('')
-			$('table#ListTable').fixedHeader({width:(screen.width-150),height:(screen.height-450)})
+			$('table#ListTable').fixedHeader({width:(screen.width-350),height:(screen.height-450)})
 		})
 }
 

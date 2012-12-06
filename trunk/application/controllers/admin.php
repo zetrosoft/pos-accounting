@@ -14,8 +14,10 @@ class Admin extends CI_Controller {
 		$this->cek_db_user();
 	}
 	function about(){
+		$data['serial']=(no_ser()==addCopy())? 
+		  substr(chunk_split(strtoupper(md5(hash('sha1',no_ser()))),4,'-'),0,-1):"Demo Version";
 			$this->load->view('admin/header');
-			$this->load->view('admin/about');
+			$this->load->view('admin/about',$data);
 			$this->load->view('admin/footer');
 	}
 	function todo(){

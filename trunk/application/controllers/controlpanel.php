@@ -32,13 +32,13 @@ class Controlpanel extends CI_Controller {
 		$this->Footer();
 	}
 	function userlist(){
-		$this->zetro_auth->menu_id(array('adduser','listuser','authorisation'));
+		$this->zetro_auth->menu_id(array('adduser','listuser','authorization'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('controlpanel/userlist');
 
 	}
 	function change_password(){
-		$this->zetro_auth->menu_id(array('adduser','listuser','authorisation'));
+		$this->zetro_auth->menu_id(array('adduser','listuser','authorization'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('controlpanel/change_password');
 	}

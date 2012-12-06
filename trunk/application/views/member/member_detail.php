@@ -113,6 +113,9 @@ $(document).ready(function(e) {
 								})
 								.attr('src','<?=base_url();?>uploads/member/'+obj.PhotoLink)
 						})
+						lock('#cetak');
+				}else{
+					unlock('#cetak');
 				}
 					
 	})

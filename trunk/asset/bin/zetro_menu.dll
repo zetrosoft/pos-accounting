@@ -76,8 +76,8 @@
 1|Tambah Barang|gudang/index||
 2|Daftar Barang|gudang/list_barang||
 3|<hr>|x||
-4|Stock on hand|stock/stock_barang|y|zevp||
-5|Stock History|gudang/stock_hist|y|zvp|
+4|Persediaan|stock/stock_barang|y|zevp||
+5|Mutasi Stock|gudang/stock_hist|y|zvp|
 6|<hr>|x||
 7|Pemakaian|gudang/pemakaian|y|zcev|
 8|Rusak/Hilang|gudang/rusak|||
@@ -116,7 +116,11 @@
 5|Rekap Barang Kredit|report/barang_kredit|||
 6|<hr>|x||
 7|Persediaan|stock/stock_barang||
-;8|Kartu Stock|||
+8|<hr>|x||
+	9|Detail Penjualan|report/penjualan_detail||
+	10|Penjualan by Anggota|report/penjualan_kon||
+	11|<hr>|x|
+	12|Grafik Penjualan|report/penjualan_graph||
 	
 	[Rekap Pembelian]
 	1|Rekap Pembelian|rekappembelian|y|zvp|
@@ -136,6 +140,21 @@
 	[Kartu Stock]
 	1|Stock Overview|stockoverview|y|zvp|
 
+		[Rekap Penjualan]
+		1|Rekap Penjualan|rekappenjualan|y|zvp
+		
+		[Detail Penjualan]
+		1|Detail Penjualan|detailpenjualan|y|zvp
+		
+		[Penjualan by Anggota]
+		1|Penjualan by Anggota|penjualanbyanggota|y|zvp
+		
+		[Top Penjualan]
+		1|Top Barang Terjual|topbarangterjual|y|zvp
+		
+		[Grafik Penjualan]
+		1|Grafik Penjualan|grafikpenjualan|y|zvp
+
 
 	
 ;====end inventory=================================================	
@@ -146,7 +165,7 @@
 		[User Account]
 		1|Add User|adduser|y|zce|
 		2|List User|listuser|y|zev|
-		3|Authorisation|authorisation|y|zcv|
+		3|Authorization|authorization|y|zcv|
 
 ;===end of admin menu
 ;Acounting Menu ===================================================

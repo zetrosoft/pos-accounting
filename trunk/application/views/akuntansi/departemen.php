@@ -9,7 +9,7 @@ panel_multi('departemen','block',false);
 if($all_departement!=''){
 $fld="<input type='hidden' id='ID_A' name='ID_A' value=''>";
 	$zfm->Addinput($fld);
-	$zfm->AddBarisKosong(true);
+	$zfm->AddBarisKosong(false);
 	$zfm->Start_form(true,'frm1');
 	$zfm->BuildForm('Departemen',true,'50%');
 	$zfm->BuildFormButton('Simpan','klasifikasi');

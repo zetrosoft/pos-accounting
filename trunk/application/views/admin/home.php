@@ -52,6 +52,7 @@
 		function kliked(id){
 			var path=$('#path').val();
 			document.location.href=path+'admin/masuk?id='+id;
+			
 		}
      function logout(){
 			var path=$('#path').val();

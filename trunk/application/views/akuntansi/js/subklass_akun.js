@@ -36,7 +36,7 @@ $(document).ready(function(e) {
 				$('table#ListTable tbody').html(result);
 				//$('#ID_Klasifikasi').val($(this).val()).select();
 				$('#Kode').val('');$('#SubKlasifikasi').val('')
-				$('table#ListTable').fixedHeader({width:(screen.width-150),height:(screen.height-420)})
+				$('table#ListTable').fixedHeader({width:(screen.width-350),height:(screen.height-420)})
 			})
 	})
 });
@@ -56,7 +56,7 @@ function _show_data(wh){
 			$('table#ListTable tbody').html(result);
 			$('#ID_Klasifikasi').val('').select();
 			$('#Kode').val('');$('#SubKlasifikasi').val('')
-			$('table#ListTable').fixedHeader({width:(screen.width-150),height:(screen.height-420)})
+			$('table#ListTable').fixedHeader({width:(screen.width-350),height:(screen.height-420)})
 		})
 }
 

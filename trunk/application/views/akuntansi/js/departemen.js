@@ -43,7 +43,7 @@ function _show_data(){
 		function(result){
 			$('table#ListTable tbody').html(result);
 			$('#ID').val('');$('#Departemen').val('')
-			$('table#ListTable').fixedHeader({width:(screen.width-150),height:(screen.height-460)})
+			$('table#ListTable').fixedHeader({width:(screen.width-150),height:(screen.height-400)})
 		})
 }
 

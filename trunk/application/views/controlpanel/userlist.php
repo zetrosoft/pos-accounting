@@ -33,9 +33,9 @@ if($v_listuser!=''){
 }else{no_auth();}
 panel_multi_end();
 //tab user autorisation
-panel_multi('authorisation','none',false);
+panel_multi('authorization','none',false);
 //form select group
-if($all_authorisation!=''){
+if($all_authorization!=''){
 	$zfm->AddBarisKosong(false);
 	$zfm->Start_form(true,'frm2');
 	$zfm->BuildForm('usergroup',false,'40%');
@@ -72,7 +72,7 @@ popup_start('edituser','Edit User profile');
 	$zfm->BuildForm('userlist',$btn,'90%');
 	if($btn==true) $zfm->BuildFormButton('Simpan','edited');
 popup_end();
-($c_authorisation=='' && $this->session->userdata('idlevel')!='1')? $view='disabled':$view='';
+($c_authorization=='' && $this->session->userdata('idlevel')!='1')? $view='disabled':$view='';
 ?>
 <input type='hidden' id='otor' value='<?=$view;?>' />
 <input type='hidden' id='uea' value='<?=$this->session->userdata('idlevel');?>' />

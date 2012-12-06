@@ -1,0 +1,1145 @@
+REPLACE INTO jurnal VALUES('707', '1', '1', '', '2002-01-10', '1', '2002', '1593', 'GJ-001593', 'Setoran Simpanan Bln. Jan 02 Direksi', '');
+REPLACE INTO jurnal VALUES('708', '1', '1', '', '2002-01-10', '1', '2002', '1594', 'GJ-001594', 'Setoran Simpanan Bln. Jan  02 B.SPI', '');
+REPLACE INTO jurnal VALUES('709', '1', '1', '', '2002-01-10', '1', '2002', '1595', 'GJ-001595', 'Setoran Simpanan Jan  02 Tenaga Prof TK I', '');
+REPLACE INTO jurnal VALUES('710', '1', '1', '', '2002-01-10', '1', '2002', '1596', 'GJ-001596', 'Setoran Simpanan Jan  02 Program & Litbang', '');
+REPLACE INTO jurnal VALUES('711', '1', '1', '', '2002-01-10', '1', '2002', '1597', 'GJ-001597', 'Setoran Simpanan Jan  02 B. Bangha', '');
+REPLACE INTO jurnal VALUES('712', '1', '1', '', '2002-01-10', '1', '2002', '1598', 'GJ-001598', 'Setoran Simpanan Jan  02 PUKK', '');
+REPLACE INTO jurnal VALUES('713', '1', '1', '', '2002-01-10', '1', '2002', '1599', 'GJ-001599', 'Setoran Simpanan Jan  02 B. SDM', '');
+REPLACE INTO jurnal VALUES('714', '1', '1', '', '2002-01-10', '1', '2002', '1600', 'GJ-001600', 'Setoran Simpanan Jan  02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('715', '1', '1', '', '2002-01-10', '1', '2002', '1601', 'GJ-001601', 'Setoran Simpanan Jan  02 B.Umum', '');
+REPLACE INTO jurnal VALUES('716', '1', '1', '', '2002-01-10', '1', '2002', '1602', 'GJ-001602', 'Setoran Simpanan Jan \'02 Divisi I', '');
+REPLACE INTO jurnal VALUES('717', '1', '1', '', '2002-01-10', '1', '2002', '1603', 'GJ-001603', 'Setoran Simpanan Jan  02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('718', '1', '1', '', '2002-01-01', '1', '2002', '1570', 'GJ-001570', 'Setoran Simpanan Jan\' 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('719', '1', '1', '', '2002-01-10', '1', '2002', '1604', 'GJ-001604', 'Setoran Simpanan Jan  02 Divisi II', '');
+REPLACE INTO jurnal VALUES('720', '1', '1', '', '2002-01-10', '1', '2002', '1605', 'GJ-001605', 'Setoran Simpanan Jan\' 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('721', '1', '1', '', '2002-01-10', '1', '2002', '1606', 'GJ-001606', 'Setoran Simpanan Des \'02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('722', '1', '1', '', '2002-01-10', '1', '2002', '1607', 'GJ-001607', 'Setoran Simpanan Jan \'02 Divisi III', '');
+REPLACE INTO jurnal VALUES('723', '1', '1', '', '2002-01-10', '1', '2002', '1608', 'GJ-001608', 'Setoran Simpanan Jan  02 PLTA', '');
+REPLACE INTO jurnal VALUES('724', '1', '1', '', '2002-01-10', '1', '2002', '1609', 'GJ-001609', 'Setoran Simpanan Jan  02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('725', '1', '1', '', '2002-01-10', '1', '2002', '1610', 'GJ-001610', 'Setoran Simpanan Jan \'02 Dapen', '');
+REPLACE INTO jurnal VALUES('727', '1', '1', '', '2002-01-10', '1', '2002', '1612', 'GJ-001612', 'Setoran Simpanan Jan \'02 UPUK', '');
+REPLACE INTO jurnal VALUES('728', '1', '1', '', '2002-01-10', '1', '2002', '1613', 'GJ-001613', 'Setoran Simpanan Jan \'02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('729', '1', '1', '', '2002-01-10', '1', '2002', '1614', 'GJ-001614', 'Setoran Simpanan Jan  02 UMM', '');
+REPLACE INTO jurnal VALUES('730', '1', '1', '', '2002-01-10', '1', '2002', '1615', 'GJ-001615', 'Setoran Simpanan Jan \'02 Bintek', '');
+REPLACE INTO jurnal VALUES('731', '1', '1', '', '2002-01-15', '1', '2002', '1629', 'GJ-001629', 'Setoran Angs Barang Jan ;02 B.Umum', '');
+REPLACE INTO jurnal VALUES('732', '1', '1', '', '2002-01-15', '1', '2002', '1630', 'GJ-001630', 'Setoran Angs. Barang Jan  02 Keuangan', '');
+REPLACE INTO jurnal VALUES('733', '1', '1', '', '2002-01-15', '1', '2002', '1631', 'GJ-001631', 'Setoran Angs. Barang Jan \'02 B. Proglit', '');
+REPLACE INTO jurnal VALUES('734', '1', '1', '', '2002-01-15', '1', '2002', '1632', 'GJ-001632', 'Setoran Angs. Barang Jan \'02 B. SDM', '');
+REPLACE INTO jurnal VALUES('735', '1', '1', '', '2002-01-15', '1', '2002', '1633', 'GJ-001633', 'Setoran Angs. Barang Jan \'02 B. SPI', '');
+REPLACE INTO jurnal VALUES('736', '1', '1', '', '2002-01-15', '1', '2002', '1634', 'GJ-001634', 'Setoran Angs. Barang Jan \'02 PUKK', '');
+REPLACE INTO jurnal VALUES('737', '1', '1', '', '2002-01-15', '1', '2002', '1635', 'GJ-001635', 'Setoran Angs. Barang Jan  02 Bintek', '');
+REPLACE INTO jurnal VALUES('738', '1', '1', '', '2002-01-15', '1', '2002', '1636', 'GJ-001636', 'Setoran Angs. Barang Jan \'02 Bangha', '');
+REPLACE INTO jurnal VALUES('739', '1', '1', '', '2002-01-15', '1', '2002', '1637', 'GJ-001637', 'Setoran Angs. Barang Jan \'02 UMM', '');
+REPLACE INTO jurnal VALUES('740', '1', '1', '', '2002-01-15', '1', '2002', '1638', 'GJ-001638', 'Setoran Angs. Barang Jan \'02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('741', '1', '1', '', '2002-01-15', '1', '2002', '1639', 'GJ-001639', 'Setoran Angs. Barang Jan \"02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('742', '1', '1', '', '2002-01-15', '1', '2002', '1640', 'GJ-001640', 'Setoran Angs. Barang Jan \'02 PLTA', '');
+REPLACE INTO jurnal VALUES('743', '1', '1', '', '2002-01-15', '1', '2002', '1641', 'GJ-001641', 'Setoran Angs. Barang Jan \'02 Divisi III', '');
+REPLACE INTO jurnal VALUES('744', '1', '1', '', '2002-01-15', '1', '2002', '1642', 'GJ-001642', 'Setoran Angs. Barang Jan \'02 Divisi I', '');
+REPLACE INTO jurnal VALUES('745', '1', '1', '', '2002-01-15', '1', '2002', '1643', 'GJ-001643', 'Setoran Angs. Barang Jan \'02 Divisi II', '');
+REPLACE INTO jurnal VALUES('746', '1', '1', '', '2002-01-15', '1', '2002', '1644', 'GJ-001644', 'Setoran Angs. Barang Jan\" 02Via Rohimah', '');
+REPLACE INTO jurnal VALUES('747', '1', '1', '', '2002-01-15', '1', '2002', '1645', 'GJ-001645', 'Setoran Angs. Barang Jan \'02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('748', '1', '1', '', '2002-01-15', '1', '2002', '1646', 'GJ-001646', 'Setoran Simpanan Jan \'02 Koperasi', '');
+REPLACE INTO jurnal VALUES('749', '1', '1', '', '2002-01-15', '1', '2002', '1647', 'GJ-001647', 'Setoran Angs. Barang Jan  02 Koperasi', '');
+REPLACE INTO jurnal VALUES('750', '1', '1', '', '2002-01-15', '1', '2002', '1648', 'GJ-001648', 'Penerimaan Kas KBR Jan  02', '');
+REPLACE INTO jurnal VALUES('752', '1', '1', '', '2002-01-15', '1', '2002', '1649', 'GJ-001649', 'Penerimaan Kas KBR Jan  02(Set. Brg Via Rochimah)', '');
+REPLACE INTO jurnal VALUES('753', '1', '1', '', '2002-01-15', '1', '2002', '1650', 'GJ-001650', 'Penerimaan Kas KBR', '');
+REPLACE INTO jurnal VALUES('754', '1', '1', '', '2002-01-15', '1', '2002', '1651', 'GJ-001651', 'Pengeluaran Kas KBR Jan  02', '');
+REPLACE INTO jurnal VALUES('755', '1', '1', '', '2002-01-21', '1', '2002', '1653', 'GJ-001653', 'Penjualan Barang Jan  02', '');
+REPLACE INTO jurnal VALUES('756', '1', '1', '', '2002-02-05', '2', '2002', '1677', 'GJ-001677', 'Setoran Simpanan Peb \'02 Direksi', '');
+REPLACE INTO jurnal VALUES('757', '1', '1', '', '2002-02-05', '2', '2002', '1678', 'GJ-001678', 'Setoran Simpana Peb \'02 UMM', '');
+REPLACE INTO jurnal VALUES('758', '1', '1', '', '2002-02-05', '2', '2002', '1679', 'GJ-001679', 'Setoran Simpanan Peb \'02 B. SPI', '');
+REPLACE INTO jurnal VALUES('759', '1', '1', '', '2002-02-05', '2', '2002', '1680', 'GJ-001680', 'Setoran Simpanan Peb  02  TP. TK I', '');
+REPLACE INTO jurnal VALUES('760', '1', '1', '', '2002-02-05', '2', '2002', '1681', 'GJ-001681', 'Setoran Simpanan Peb  02 B. Program', '');
+REPLACE INTO jurnal VALUES('761', '1', '1', '', '2002-02-05', '2', '2002', '1682', 'GJ-001682', 'Setoran Simpanan Peb  02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('762', '1', '1', '', '2002-02-05', '2', '2002', '1683', 'GJ-001683', 'Setoran Simpanan Peb \'02 PUKK', '');
+REPLACE INTO jurnal VALUES('763', '1', '1', '', '2002-02-05', '2', '2002', '1684', 'GJ-001684', 'Setoran Simpanan Peb \'02 B. SDM', '');
+REPLACE INTO jurnal VALUES('764', '1', '1', '', '2002-02-05', '2', '2002', '1685', 'GJ-001685', 'Setoran Simpanan Peb \'02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('765', '1', '1', '', '2002-02-05', '2', '2002', '1686', 'GJ-001686', 'Setoran Simpanan Peb  02 B. Umum', '');
+REPLACE INTO jurnal VALUES('766', '1', '1', '', '2002-02-05', '2', '2002', '1687', 'GJ-001687', 'Setoran Simpanan Peb \'02 B. EPL', '');
+REPLACE INTO jurnal VALUES('767', '1', '1', '', '2002-01-22', '1', '2002', '1654', 'GJ-001654', 'Tagihan Catering Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('768', '1', '1', '', '2002-01-22', '1', '2002', '1655', 'GJ-001655', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('769', '1', '1', '', '2002-01-22', '1', '2002', '1656', 'GJ-001656', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('770', '1', '1', '', '2002-01-22', '1', '2002', '1657', 'GJ-001657', 'Tagihan Jasa Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('771', '1', '1', '', '2002-01-22', '1', '2002', '1658', 'GJ-001658', 'Tagihan Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('772', '1', '1', '', '2002-02-05', '2', '2002', '1688', 'GJ-001688', 'Setoran Simpanan Peb  02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('773', '1', '1', '', '2002-02-05', '2', '2002', '1689', 'GJ-001689', 'Setoran Simpanan Peb \'02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('774', '1', '1', '', '2002-02-05', '2', '2002', '1690', 'GJ-001690', 'Setoran Simpanan Peb  02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('775', '1', '1', '', '2002-02-05', '2', '2002', '1691', 'GJ-001691', 'Setoran Simpanan Peb  02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('776', '1', '1', '', '2002-02-05', '2', '2002', '1692', 'GJ-001692', 'Setoran Simpanan Peb \'02 Divisi III', '');
+REPLACE INTO jurnal VALUES('777', '1', '1', '', '2002-02-05', '2', '2002', '1693', 'GJ-001693', 'Setoran Simpanan Peb \'02 Divisi II', '');
+REPLACE INTO jurnal VALUES('778', '1', '1', '', '2002-02-05', '2', '2002', '1694', 'GJ-001694', 'Setoran Simpanan Peb \'02 Talagasari', '');
+REPLACE INTO jurnal VALUES('779', '1', '1', '', '2002-02-05', '2', '2002', '1695', 'GJ-001695', 'Setoran Simpanan Peb \'02 UPUK', '');
+REPLACE INTO jurnal VALUES('780', '1', '1', '', '2002-02-05', '2', '2002', '1696', 'GJ-001696', 'Setoran Simpanan Peb \'02 Koperasi/ CS', '');
+REPLACE INTO jurnal VALUES('781', '1', '1', '', '2002-02-05', '2', '2002', '1697', 'GJ-001697', 'Setoran Simpanan Peb  02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('782', '1', '1', '', '2002-02-05', '2', '2002', '1698', 'GJ-001698', 'Setoran. Angs Barang Pebruari 02 B. SPI', '');
+REPLACE INTO jurnal VALUES('783', '1', '1', '', '2002-07-05', '7', '2002', '2125', 'GJ-002125', 'Setoran Simpanan Juli 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('784', '1', '1', '', '2002-02-17', '2', '2002', '1728', 'GJ-001728', 'Setoran Barang Peb 02 PUKK', '');
+REPLACE INTO jurnal VALUES('785', '1', '1', '', '2002-02-05', '2', '2002', '1699', 'GJ-001699', 'Setoran Angs.Barang Peb 02 B.Bintek', '');
+REPLACE INTO jurnal VALUES('786', '1', '1', '', '2002-02-15', '2', '2002', '1718', 'GJ-001718', 'Setoran Angs.Barang Peb 02 B.Program', '');
+REPLACE INTO jurnal VALUES('787', '1', '1', '', '2002-02-18', '2', '2002', '1729', 'GJ-001729', 'Setoran Angs. Barang Peb 02 UMM', '');
+REPLACE INTO jurnal VALUES('788', '1', '1', '', '2002-02-15', '2', '2002', '1719', 'GJ-001719', 'Setoran Angs.Barang Peb 02 UMM', '');
+REPLACE INTO jurnal VALUES('789', '1', '1', '', '2002-02-15', '2', '2002', '1720', 'GJ-001720', 'Setoran Angs.BArang Peb 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('790', '1', '1', '', '2002-02-15', '2', '2002', '1721', 'GJ-001721', 'Setoran Angs.Barang Peb 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('791', '1', '1', '', '2002-02-15', '2', '2002', '1722', 'GJ-001722', 'Setoran Angs.Barang Peb 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('792', '1', '1', '', '2002-02-18', '2', '2002', '1730', 'GJ-001730', 'Setoran Angs. Barang Peb 02 UPUK', '');
+REPLACE INTO jurnal VALUES('793', '1', '1', '', '2002-02-18', '2', '2002', '1731', 'GJ-001731', 'Setoran Angs.Barang Peb 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('794', '1', '1', '', '2002-02-18', '2', '2002', '1732', 'GJ-001732', 'Setoran Angs.Barang Peb 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('795', '1', '1', '', '2002-02-19', '2', '2002', '1733', 'GJ-001733', 'Setoran Angs.Barang Peb 02 Via Bu Yeyet', '');
+REPLACE INTO jurnal VALUES('796', '1', '1', '', '2002-02-19', '2', '2002', '1734', 'GJ-001734', 'Setoran Angs.Barang Peb 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('797', '1', '1', '', '2002-02-15', '2', '2002', '1723', 'GJ-001723', 'Setoran Barang Via Rohimah', '');
+REPLACE INTO jurnal VALUES('798', '1', '1', '', '2002-02-15', '2', '2002', '1724', 'GJ-001724', 'Setoran Angs.Barang Peb 02 Rohimah', '');
+REPLACE INTO jurnal VALUES('799', '1', '1', '', '2002-02-15', '2', '2002', '1725', 'GJ-001725', 'Setoran Angs.Barang Peb 02 Koperasi', '');
+REPLACE INTO jurnal VALUES('800', '1', '1', '', '2002-02-15', '2', '2002', '1726', 'GJ-001726', 'Setoran Angs.Barang Peb 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('801', '1', '1', '', '2002-02-20', '2', '2002', '1735', 'GJ-001735', 'Penerimaan Kas KBR Peb 02', '');
+REPLACE INTO jurnal VALUES('802', '1', '1', '', '2002-02-20', '2', '2002', '1736', 'GJ-001736', 'Pengeluaran Kas KBR', '');
+REPLACE INTO jurnal VALUES('803', '1', '1', '', '2002-02-20', '2', '2002', '1737', 'GJ-001737', 'Penerimaan Simp. Peb 02 via Rohimah ( Angg. Baru )', '');
+REPLACE INTO jurnal VALUES('804', '1', '1', '', '2002-01-15', '1', '2002', '1652', 'GJ-001652', 'Setoran Angs.Barang Jan 02 Dapen', '');
+REPLACE INTO jurnal VALUES('805', '1', '1', '', '2002-01-07', '1', '2002', '1585', 'GJ-001585', 'Setoran Angs.Barang Jan 02 UPUK', '');
+REPLACE INTO jurnal VALUES('806', '1', '1', '', '2002-02-20', '2', '2002', '1738', 'GJ-001738', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('807', '1', '1', '', '2002-02-20', '2', '2002', '1739', 'GJ-001739', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('808', '1', '1', '', '2002-02-20', '2', '2002', '1740', 'GJ-001740', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('809', '1', '1', '', '2002-02-20', '2', '2002', '1741', 'GJ-001741', 'Tagihan Jasa Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('810', '1', '1', '', '2002-02-20', '2', '2002', '1742', 'GJ-001742', 'Tagihan Jasa Computer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('811', '1', '1', '', '2002-01-25', '1', '2002', '1659', 'GJ-001659', 'Setoran Simpanan bln. Jan 02 via Rohimah', '');
+REPLACE INTO jurnal VALUES('812', '1', '1', '', '2002-02-24', '2', '2002', '1743', 'GJ-001743', 'Piutang Barang Pebruari 02', '');
+REPLACE INTO jurnal VALUES('813', '1', '1', '', '2002-03-05', '3', '2002', '1760', 'GJ-001760', 'Setoran Simpanan Maret 02 Direksi', '');
+REPLACE INTO jurnal VALUES('814', '1', '1', '', '2002-03-05', '3', '2002', '1761', 'GJ-001761', 'Setoran Simpanan Maret 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('815', '1', '1', '', '2002-03-05', '3', '2002', '1762', 'GJ-001762', 'Setoran Simpanan Maret 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('816', '1', '1', '', '2002-03-05', '3', '2002', '1763', 'GJ-001763', 'Setoran Simpanan Maret 02 UMM', '');
+REPLACE INTO jurnal VALUES('817', '1', '1', '', '2002-03-05', '3', '2002', '1764', 'GJ-001764', 'Setoran Simpanan Maret 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('818', '1', '1', '', '2002-03-05', '3', '2002', '1765', 'GJ-001765', 'Setoran Simpanan Maret 02 Program', '');
+REPLACE INTO jurnal VALUES('819', '1', '1', '', '2002-03-05', '3', '2002', '1766', 'GJ-001766', 'Setoran Simpanan Maret 02 Litbang', '');
+REPLACE INTO jurnal VALUES('820', '1', '1', '', '2002-03-05', '3', '2002', '1767', 'GJ-001767', 'Setoran Simpanan maret 02 PUKK', '');
+REPLACE INTO jurnal VALUES('821', '1', '1', '', '2002-03-05', '3', '2002', '1768', 'GJ-001768', 'Setoran Simpanan Maret 02 B. SDM ', '');
+REPLACE INTO jurnal VALUES('822', '1', '1', '', '2002-03-05', '3', '2002', '1769', 'GJ-001769', 'Setoran Simpanan Maret 02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('823', '1', '1', '', '2002-03-05', '3', '2002', '1770', 'GJ-001770', 'Setoran Simpanan Maret 02 Biro Umum', '');
+REPLACE INTO jurnal VALUES('824', '1', '1', '', '2002-03-05', '3', '2002', '1771', 'GJ-001771', 'Setoran Simpanan Maret 02 Capeg', '');
+REPLACE INTO jurnal VALUES('825', '1', '1', '', '2002-03-05', '3', '2002', '1772', 'GJ-001772', 'Setoran Simpanan Maret 02 UPUK', '');
+REPLACE INTO jurnal VALUES('826', '1', '1', '', '2002-03-05', '3', '2002', '1773', 'GJ-001773', 'Setoran Simpanan Maret 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('827', '1', '1', '', '2002-03-05', '3', '2002', '1774', 'GJ-001774', 'Setoran Simpanan Maret 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('828', '1', '1', '', '2002-04-04', '4', '2002', '1830', 'GJ-001830', 'Setoran Simpanan April 02 Direksi', '');
+REPLACE INTO jurnal VALUES('829', '1', '1', '', '2002-04-04', '4', '2002', '1831', 'GJ-001831', 'Setoran Simpanan April 02 DPB', '');
+REPLACE INTO jurnal VALUES('830', '1', '1', '', '2002-04-04', '4', '2002', '1832', 'GJ-001832', 'Setoran Simpanan April 02 SPI', '');
+REPLACE INTO jurnal VALUES('831', '1', '1', '', '2002-03-05', '3', '2002', '1775', 'GJ-001775', 'Setoran Simpanan Maret 02 Asa Curug ', '');
+REPLACE INTO jurnal VALUES('832', '1', '1', '', '2002-04-04', '4', '2002', '1833', 'GJ-001833', 'Setoran Simpanan April 02 UMM', '');
+REPLACE INTO jurnal VALUES('833', '1', '1', '', '2002-04-04', '4', '2002', '1834', 'GJ-001834', 'Setoran Simpanan April 02 B Program', '');
+REPLACE INTO jurnal VALUES('834', '1', '1', '', '2002-04-04', '4', '2002', '1835', 'GJ-001835', 'Setoran Simpanan April 02 B EPL', '');
+REPLACE INTO jurnal VALUES('835', '1', '1', '', '2002-03-05', '3', '2002', '1776', 'GJ-001776', 'Setoran Simpanan Maret 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('836', '1', '1', '', '2002-04-04', '4', '2002', '1836', 'GJ-001836', 'Setoran Simpanan April 02 B Litbang', '');
+REPLACE INTO jurnal VALUES('837', '1', '1', '', '2002-03-05', '3', '2002', '1777', 'GJ-001777', 'Setoran Simpanan Maret 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('838', '1', '1', '', '2002-03-05', '3', '2002', '1778', 'GJ-001778', 'Setoran Simpanan Maret 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('839', '1', '1', '', '2002-03-05', '3', '2002', '1779', 'GJ-001779', 'Setoran Simpanan Maret 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('840', '1', '1', '', '2002-04-04', '4', '2002', '1837', 'GJ-001837', 'Setoran Simpanan April 02 PUKK', '');
+REPLACE INTO jurnal VALUES('841', '1', '1', '', '2002-04-04', '4', '2002', '1838', 'GJ-001838', 'Setoran Simpanan April 02 B SDM', '');
+REPLACE INTO jurnal VALUES('842', '1', '1', '', '2002-03-05', '3', '2002', '1780', 'GJ-001780', 'Setoran Simpanan Maret 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('843', '1', '1', '', '2002-03-05', '3', '2002', '1781', 'GJ-001781', 'Setoran Simpanan Maret 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('844', '1', '1', '', '2002-04-04', '4', '2002', '1839', 'GJ-001839', 'Setoran Simpanan April 02 B Keuangan', '');
+REPLACE INTO jurnal VALUES('845', '1', '1', '', '2002-03-12', '3', '2002', '1796', 'GJ-001796', 'Setoran Angs.Barang Maret 02 biro Umum', '');
+REPLACE INTO jurnal VALUES('846', '1', '1', '', '2002-04-04', '4', '2002', '1840', 'GJ-001840', 'Setoran Simpanan April 02 B Umum', '');
+REPLACE INTO jurnal VALUES('847', '1', '1', '', '2002-03-12', '3', '2002', '1797', 'GJ-001797', 'Setoran Angs.Barang Maret 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('848', '1', '1', '', '2002-03-12', '3', '2002', '1798', 'GJ-001798', 'Setoran Angs.Barang Maret 02 B. Program', '');
+REPLACE INTO jurnal VALUES('849', '1', '1', '', '2002-03-12', '3', '2002', '1799', 'GJ-001799', 'Setoran Angs.Barang Maret 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('850', '1', '1', '', '2002-07-05', '7', '2002', '2126', 'GJ-002126', 'Setoran Simpanan Juni 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('851', '1', '1', '', '2002-03-12', '3', '2002', '1800', 'GJ-001800', 'Setoran Angs.Barang Maret 02 B. SPI', '');
+REPLACE INTO jurnal VALUES('852', '1', '1', '', '2002-04-04', '4', '2002', '1841', 'GJ-001841', 'Setoran Simpanan April 02 CAPEG', '');
+REPLACE INTO jurnal VALUES('853', '1', '1', '', '2002-03-12', '3', '2002', '1801', 'GJ-001801', 'Setoran Angs.Barang Maret 02 PUKK', '');
+REPLACE INTO jurnal VALUES('854', '1', '1', '', '2002-03-12', '3', '2002', '1802', 'GJ-001802', 'Setoran. Angs Barang Maret 02 EPL', '');
+REPLACE INTO jurnal VALUES('855', '1', '1', '', '2002-03-12', '3', '2002', '1803', 'GJ-001803', 'Setoran angs. Barang Maret 02 Litbang', '');
+REPLACE INTO jurnal VALUES('856', '1', '1', '', '2002-03-12', '3', '2002', '1804', 'GJ-001804', 'Setoran Angs. Barang Maret 02 UMM', '');
+REPLACE INTO jurnal VALUES('857', '1', '1', '', '2002-03-12', '3', '2002', '1805', 'GJ-001805', 'Setoran Angs.Barang Maret 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('858', '1', '1', '', '2002-04-05', '4', '2002', '1853', 'GJ-001853', 'Setoran Simpanan Maret 02 KOP KBR', '');
+REPLACE INTO jurnal VALUES('859', '1', '1', '', '2002-03-12', '3', '2002', '1806', 'GJ-001806', 'Setoran Angs.Barang Maret 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('860', '1', '1', '', '2002-03-12', '3', '2002', '1807', 'GJ-001807', 'Setoran Angs.Barang Maret 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('861', '1', '1', '', '2002-03-12', '3', '2002', '1808', 'GJ-001808', 'Setoran Angs.Barang Maret 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('862', '1', '1', '', '2002-03-12', '3', '2002', '1809', 'GJ-001809', 'Setoran Angs.Barang Maret 02 Via Pak Odang', '');
+REPLACE INTO jurnal VALUES('863', '1', '1', '', '2002-04-08', '4', '2002', '1855', 'GJ-001855', 'Setoran Simpanan April 02 UPUK', '');
+REPLACE INTO jurnal VALUES('864', '1', '1', '', '2002-03-05', '3', '2002', '1782', 'GJ-001782', 'Setoran Simpanan Maret 02 Koperasi/ CSKantor Pusat', '');
+REPLACE INTO jurnal VALUES('865', '1', '1', '', '2002-04-08', '4', '2002', '1856', 'GJ-001856', 'Setoran Simpanan Maret 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('866', '1', '1', '', '2002-03-12', '3', '2002', '1810', 'GJ-001810', 'Setoran Angs.Barang Maret 02 Koperasi/CS', '');
+REPLACE INTO jurnal VALUES('867', '1', '1', '', '2002-03-20', '3', '2002', '1814', 'GJ-001814', 'Penerimaan Kas KBR Maret 02 ', '');
+REPLACE INTO jurnal VALUES('868', '1', '1', '', '2002-03-20', '3', '2002', '1815', 'GJ-001815', 'Pengeluaran Kas KBR Maret 02', '');
+REPLACE INTO jurnal VALUES('869', '1', '1', '', '2002-04-09', '4', '2002', '1864', 'GJ-001864', 'Setoran Simpanan April 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('870', '1', '1', '', '2002-04-10', '4', '2002', '1866', 'GJ-001866', 'Setoran Simpanan April 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('871', '1', '1', '', '2002-03-25', '3', '2002', '1816', 'GJ-001816', 'Tagihan Jasa Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('872', '1', '1', '', '2002-03-25', '3', '2002', '1817', 'GJ-001817', 'Tagihan Jasa Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('873', '1', '1', '', '2002-03-25', '3', '2002', '1818', 'GJ-001818', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('874', '1', '1', '', '2002-03-25', '3', '2002', '1819', 'GJ-001819', 'Tagihan Jasa Cleaning Service Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('875', '1', '1', '', '2002-03-25', '3', '2002', '1820', 'GJ-001820', 'Tagihan Jasa Perbaikan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('876', '1', '1', '', '2002-03-25', '3', '2002', '1821', 'GJ-001821', 'Tagihan Jasa Perawatan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('877', '1', '1', '', '2002-05-06', '5', '2002', '1919', 'GJ-001919', 'Setoran Simpanan Mei 02 Direksi', '');
+REPLACE INTO jurnal VALUES('878', '1', '1', '', '2002-05-06', '5', '2002', '1920', 'GJ-001920', 'Setoran Simpanan Mei 02 Biro SPI', '');
+REPLACE INTO jurnal VALUES('879', '1', '1', '', '2002-05-06', '5', '2002', '1921', 'GJ-001921', 'Setoran Simpanan Mei 02 B. Program', '');
+REPLACE INTO jurnal VALUES('880', '1', '1', '', '2002-05-06', '5', '2002', '1922', 'GJ-001922', 'Setoran Simpanan Mei 02 Biro EPL', '');
+REPLACE INTO jurnal VALUES('881', '1', '1', '', '2002-04-11', '4', '2002', '1868', 'GJ-001868', 'Setoran Simpanan April 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('882', '1', '1', '', '2002-04-11', '4', '2002', '1869', 'GJ-001869', 'Setoran Simpanan April 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('883', '1', '1', '', '2002-05-06', '5', '2002', '1923', 'GJ-001923', 'Setoran Simpanan Mei 02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('884', '1', '1', '', '2002-05-06', '5', '2002', '1924', 'GJ-001924', 'Setoran Simpanan Mei 02 PUKK', '');
+REPLACE INTO jurnal VALUES('885', '1', '1', '', '2002-05-06', '5', '2002', '1925', 'GJ-001925', 'Setoran Simpanan Mei 02 Biro SDM', '');
+REPLACE INTO jurnal VALUES('886', '1', '1', '', '2002-05-06', '5', '2002', '1926', 'GJ-001926', 'Setoran Simpanan Mei 02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('887', '1', '1', '', '2002-05-06', '5', '2002', '1927', 'GJ-001927', 'Setoran Simpanan Mei 02 Biro Umum', '');
+REPLACE INTO jurnal VALUES('888', '1', '1', '', '2002-04-11', '4', '2002', '1870', 'GJ-001870', 'Setoran Simpanan April 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('889', '1', '1', '', '2002-05-06', '5', '2002', '1928', 'GJ-001928', 'Setoran Simpanan Mei 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('890', '1', '1', '', '2002-05-06', '5', '2002', '1929', 'GJ-001929', 'Setoran Simpanan Mei 02 UMM', '');
+REPLACE INTO jurnal VALUES('891', '1', '1', '', '2002-05-06', '5', '2002', '1930', 'GJ-001930', 'Setoran Simpanan Mei 02 Capeg', '');
+REPLACE INTO jurnal VALUES('892', '1', '1', '', '2002-05-06', '5', '2002', '1931', 'GJ-001931', 'Setoran Simpanan Mei 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('893', '1', '1', '', '2002-05-05', '5', '2002', '1918', 'GJ-001918', 'Setoran Simpanan Mei 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('894', '1', '1', '', '2002-04-11', '4', '2002', '1871', 'GJ-001871', 'Setoran Simpanan April 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('895', '1', '1', '', '2002-04-12', '4', '2002', '1873', 'GJ-001873', 'Setoran Simpanan April 02 Div Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('896', '1', '1', '', '2002-05-06', '5', '2002', '1932', 'GJ-001932', 'Setoran Simpanan Mei 02 Dapen', '');
+REPLACE INTO jurnal VALUES('897', '1', '1', '', '2002-04-12', '4', '2002', '1874', 'GJ-001874', 'Setoran Simpanan April 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('898', '1', '1', '', '2002-04-12', '4', '2002', '1875', 'GJ-001875', 'Setoran Simpanan April 02 Asa Talagasari', '');
+REPLACE INTO jurnal VALUES('899', '1', '1', '', '2002-04-12', '4', '2002', '1876', 'GJ-001876', 'Setoran Simpanan April 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('900', '1', '1', '', '2002-04-12', '4', '2002', '1877', 'GJ-001877', 'Setoran Simpanan April 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('901', '1', '1', '', '2002-04-08', '4', '2002', '1857', 'GJ-001857', 'Setoran Simpanan April 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('902', '1', '1', '', '2002-05-06', '5', '2002', '1933', 'GJ-001933', 'Setoran Simpanan Mei 02 Asa tarum', '');
+REPLACE INTO jurnal VALUES('903', '1', '1', '', '2002-05-06', '5', '2002', '1934', 'GJ-001934', 'Setoran Simpanan Mei 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('904', '1', '1', '', '2002-05-06', '5', '2002', '1935', 'GJ-001935', 'Setoran Simpanan Mei 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('905', '1', '1', '', '2002-04-15', '4', '2002', '1880', 'GJ-001880', 'Setoran barang Maret 02 KOP KBR', '');
+REPLACE INTO jurnal VALUES('906', '1', '1', '', '2002-05-06', '5', '2002', '1936', 'GJ-001936', 'Setoran Simpanan Mei 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('907', '1', '1', '', '2002-05-06', '5', '2002', '1937', 'GJ-001937', 'Setoran Simpanan Mei 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('908', '1', '1', '', '2002-04-15', '4', '2002', '1881', 'GJ-001881', 'Setoran barang April 02 UPUK', '');
+REPLACE INTO jurnal VALUES('909', '1', '1', '', '2002-04-15', '4', '2002', '1882', 'GJ-001882', 'Setoran barang Maret 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('910', '1', '1', '', '2002-04-15', '4', '2002', '1883', 'GJ-001883', 'Setoran barang Maret 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('911', '1', '1', '', '2002-04-15', '4', '2002', '1884', 'GJ-001884', 'Setoran barang Maret 02 UPUK', '');
+REPLACE INTO jurnal VALUES('912', '1', '1', '', '2002-04-16', '4', '2002', '1886', 'GJ-001886', 'Setoran angs barang April 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('913', '1', '1', '', '2002-05-06', '5', '2002', '1938', 'GJ-001938', 'Setoran Simpanan Mei 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('914', '1', '1', '', '2002-04-17', '4', '2002', '1895', 'GJ-001895', 'Setoran angs barang April 02 B Umum', '');
+REPLACE INTO jurnal VALUES('915', '1', '1', '', '2002-05-06', '5', '2002', '1939', 'GJ-001939', 'Setoran Simpanan Mei 02 UPUK', '');
+REPLACE INTO jurnal VALUES('916', '1', '1', '', '2002-05-06', '5', '2002', '1940', 'GJ-001940', 'Setoran Simpanan Mei 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('917', '1', '1', '', '2002-08-10', '8', '2002', '2232', 'GJ-002232', 'Setoran angs barang April 02 B Umum', '');
+REPLACE INTO jurnal VALUES('918', '1', '1', '', '2002-05-06', '5', '2002', '1941', 'GJ-001941', 'Setoran Simpanan Mei 02 Koperasi / CS', '');
+REPLACE INTO jurnal VALUES('919', '1', '1', '', '2002-04-16', '4', '2002', '1887', 'GJ-001887', 'Setoran angs barang April 02 B Keuangan', '');
+REPLACE INTO jurnal VALUES('920', '1', '1', '', '2002-05-06', '5', '2002', '1942', 'GJ-001942', 'Setoran Angs. Barang Mei 02 Koperasi / CS', '');
+REPLACE INTO jurnal VALUES('921', '1', '1', '', '2002-04-16', '4', '2002', '1888', 'GJ-001888', 'Setoran angs barang April 02 B SPI', '');
+REPLACE INTO jurnal VALUES('922', '1', '1', '', '2002-04-16', '4', '2002', '1889', 'GJ-001889', 'Setoran angs barang April 02 PUKK', '');
+REPLACE INTO jurnal VALUES('923', '1', '1', '', '2002-04-16', '4', '2002', '1890', 'GJ-001890', 'Setoran angs barang April 02 B EP&L', '');
+REPLACE INTO jurnal VALUES('924', '1', '1', '', '2002-05-06', '5', '2002', '1943', 'GJ-001943', 'Setoran Angs. Barang Mei 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('925', '1', '1', '', '2002-04-16', '4', '2002', '1891', 'GJ-001891', 'Setoran angs barang April 02 B Litbang', '');
+REPLACE INTO jurnal VALUES('926', '1', '1', '', '2002-05-06', '5', '2002', '1944', 'GJ-001944', 'Setoran Angs. Barang Mei 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('927', '1', '1', '', '2002-04-16', '4', '2002', '1892', 'GJ-001892', 'Setoran angs barang April 02 B Program', '');
+REPLACE INTO jurnal VALUES('928', '1', '1', '', '2002-04-16', '4', '2002', '1893', 'GJ-001893', 'Setoran angs barang April 02 B SDM', '');
+REPLACE INTO jurnal VALUES('929', '1', '1', '', '2002-04-16', '4', '2002', '1894', 'GJ-001894', 'Setoran angs.barang April 02 UMM', '');
+REPLACE INTO jurnal VALUES('930', '1', '1', '', '2002-05-06', '5', '2002', '1945', 'GJ-001945', 'Setoran Angs. Barang Mei 02 Biro SDM', '');
+REPLACE INTO jurnal VALUES('931', '1', '1', '', '2002-04-17', '4', '2002', '1896', 'GJ-001896', 'Setoran angs.barang April 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('932', '1', '1', '', '2002-05-06', '5', '2002', '1946', 'GJ-001946', 'Setoran Angs. Barang Mei 02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('933', '1', '1', '', '2002-05-06', '5', '2002', '1947', 'GJ-001947', 'Setoran Angs. Barang Mei 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('934', '1', '1', '', '2002-05-06', '5', '2002', '1948', 'GJ-001948', 'Setoran Angs. Barang Mei 02 B. Umum', '');
+REPLACE INTO jurnal VALUES('935', '1', '1', '', '2002-05-06', '5', '2002', '1949', 'GJ-001949', 'Setoran Angs. Barang Mei 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('936', '1', '1', '', '2002-05-06', '5', '2002', '1950', 'GJ-001950', 'Setoran Angs. Barang Mei 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('937', '1', '1', '', '2002-05-06', '5', '2002', '1951', 'GJ-001951', 'Setoran Angs. Barang Mei 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('938', '1', '1', '', '2002-05-06', '5', '2002', '1952', 'GJ-001952', 'Setoran Angs. Barang Mei 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('939', '1', '1', '', '2002-04-18', '4', '2002', '1897', 'GJ-001897', 'Setoran angs.barang April 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('940', '1', '1', '', '2002-08-13', '8', '2002', '2248', 'GJ-002248', 'Koreksi', '');
+REPLACE INTO jurnal VALUES('941', '1', '1', '', '2002-05-06', '5', '2002', '1953', 'GJ-001953', 'Setoran Angs. Barang Mei 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('942', '1', '1', '', '2002-05-06', '5', '2002', '1954', 'GJ-001954', 'Setoran Angs. Barang Mei 02 Dapen', '');
+REPLACE INTO jurnal VALUES('943', '1', '1', '', '2002-05-06', '5', '2002', '1955', 'GJ-001955', 'Setoran Angs. Barang Mei 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('944', '1', '1', '', '2002-05-06', '5', '2002', '1956', 'GJ-001956', 'Setoran Angs. Barang Mei 02 UPUK', '');
+REPLACE INTO jurnal VALUES('945', '1', '1', '', '2002-05-06', '5', '2002', '1957', 'GJ-001957', 'Setoran Angs. Barang Mei 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('946', '1', '1', '', '2002-05-06', '5', '2002', '1958', 'GJ-001958', 'Setoran Angs. Barang Mei 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('947', '1', '1', '', '2002-05-06', '5', '2002', '1959', 'GJ-001959', 'Setoran Angs. Barang Mei 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('948', '1', '1', '', '2002-05-06', '5', '2002', '1960', 'GJ-001960', 'Setoran Angs. Barang Mei 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('949', '1', '1', '', '2002-04-18', '4', '2002', '1898', 'GJ-001898', 'Setoran Angs Barang April 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('950', '1', '1', '', '2002-04-18', '4', '2002', '1899', 'GJ-001899', 'Setoran angs barang April 02 Div Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('951', '1', '1', '', '2002-05-06', '5', '2002', '1961', 'GJ-001961', 'Penerimaan Kas KBR', '');
+REPLACE INTO jurnal VALUES('952', '1', '1', '', '2002-05-18', '5', '2002', '2002', 'GJ-002002', 'Pengeluaran Kas KBR Mei 02', '');
+REPLACE INTO jurnal VALUES('953', '1', '1', '', '2002-04-18', '4', '2002', '1900', 'GJ-001900', 'Setoran angs.barang April 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('954', '1', '1', '', '2002-04-18', '4', '2002', '1901', 'GJ-001901', 'Setoran angs.barang April 02 PNS', '');
+REPLACE INTO jurnal VALUES('955', '1', '1', '', '2002-05-19', '5', '2002', '2003', 'GJ-002003', 'Penjualan Barang Mei 02', '');
+REPLACE INTO jurnal VALUES('956', '1', '1', '', '2002-05-09', '5', '2002', '1984', 'GJ-001984', 'Penjualan Barang Mei 02 Via Rohimah', '');
+REPLACE INTO jurnal VALUES('957', '1', '1', '', '2002-06-04', '6', '2002', '2018', 'GJ-002018', 'Setoran Simpanan Juni 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('958', '1', '1', '', '2002-06-04', '6', '2002', '2019', 'GJ-002019', 'Setoran Simpanan Juni 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('959', '1', '1', '', '2002-06-04', '6', '2002', '2020', 'GJ-002020', 'Setoran Simpanan Juni 02 DPB', '');
+REPLACE INTO jurnal VALUES('960', '1', '1', '', '2002-04-30', '4', '2002', '1909', 'GJ-001909', 'Penerimaan Kas KBR April 02', '');
+REPLACE INTO jurnal VALUES('961', '1', '1', '', '2002-06-04', '6', '2002', '2021', 'GJ-002021', 'Setoran Simpanan Juni 02 Direksi', '');
+REPLACE INTO jurnal VALUES('962', '1', '1', '', '2002-06-04', '6', '2002', '2022', 'GJ-002022', 'Setoran Simpanan Juni 02 UMM', '');
+REPLACE INTO jurnal VALUES('963', '1', '1', '', '2002-06-04', '6', '2002', '2023', 'GJ-002023', 'Setoran Simpanan Juni 02 B SPI', '');
+REPLACE INTO jurnal VALUES('964', '1', '1', '', '2002-06-04', '6', '2002', '2024', 'GJ-002024', 'Setoran Simpanan Juni 02 BProgram', '');
+REPLACE INTO jurnal VALUES('965', '1', '1', '', '2002-04-30', '4', '2002', '1910', 'GJ-001910', 'Pengeluaran Kas KBR April 02', '');
+REPLACE INTO jurnal VALUES('966', '1', '1', '', '2002-06-04', '6', '2002', '2025', 'GJ-002025', 'Setoran Simpanan Juni 02 B EP L', '');
+REPLACE INTO jurnal VALUES('967', '1', '1', '', '2002-06-04', '6', '2002', '2026', 'GJ-002026', 'Setoran Simpanan Juni 02 B Litbang', '');
+REPLACE INTO jurnal VALUES('968', '1', '1', '', '2002-04-15', '4', '2002', '1885', 'GJ-001885', 'Piutang Barang Bl. April 02', '');
+REPLACE INTO jurnal VALUES('969', '1', '1', '', '2002-06-04', '6', '2002', '2027', 'GJ-002027', 'Setoran Simpanan Juni 02 PUKK', '');
+REPLACE INTO jurnal VALUES('970', '1', '1', '', '2002-06-04', '6', '2002', '2028', 'GJ-002028', 'Setoran Simpanan Juni 02 B SDM', '');
+REPLACE INTO jurnal VALUES('971', '1', '1', '', '2002-06-04', '6', '2002', '2029', 'GJ-002029', 'Setoran Simpanan Juni 02 B Keuangan', '');
+REPLACE INTO jurnal VALUES('972', '1', '1', '', '2002-06-04', '6', '2002', '2030', 'GJ-002030', 'Setoran Simpanan Juni 02 B Umum', '');
+REPLACE INTO jurnal VALUES('973', '1', '1', '', '2002-06-04', '6', '2002', '2031', 'GJ-002031', 'Setoran Simpanan Juni 02 CAPEG', '');
+REPLACE INTO jurnal VALUES('974', '1', '1', '', '2002-06-05', '6', '2002', '2034', 'GJ-002034', 'Setoran Simpanan Juni 02 UPUK', '');
+REPLACE INTO jurnal VALUES('975', '1', '1', '', '2002-06-06', '6', '2002', '2048', 'GJ-002048', 'Setoran Simpanan Juni 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('976', '1', '1', '', '2002-06-06', '6', '2002', '2049', 'GJ-002049', 'Setoran Simpanan Juni 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('977', '1', '1', '', '2002-06-07', '6', '2002', '2052', 'GJ-002052', 'Setoran Simpanan Mei 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('978', '1', '1', '', '2002-06-07', '6', '2002', '2053', 'GJ-002053', 'Setoran Simpanan Juni 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('979', '1', '1', '', '2002-06-10', '6', '2002', '2065', 'GJ-002065', 'Setoran Simpanan Juni 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('980', '1', '1', '', '2002-06-10', '6', '2002', '2066', 'GJ-002066', 'Setoran Simpanan Juni 02 KOP.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('981', '1', '1', '', '2002-04-20', '4', '2002', '1902', 'GJ-001902', 'Piutang Barang Via Rohimah April 02', '');
+REPLACE INTO jurnal VALUES('982', '1', '1', '', '2002-06-10', '6', '2002', '2067', 'GJ-002067', 'Setoran Simpanan Mei 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('983', '1', '1', '', '2002-06-04', '6', '2002', '2032', 'GJ-002032', 'Setoran angs.barang Juni 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('984', '1', '1', '', '2002-06-04', '6', '2002', '2033', 'GJ-002033', 'Setoran angs.barang Juni 02 KOP.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('985', '1', '1', '', '2002-06-05', '6', '2002', '2035', 'GJ-002035', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('986', '1', '1', '', '2002-06-05', '6', '2002', '2036', 'GJ-002036', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('987', '1', '1', '', '2002-06-05', '6', '2002', '2037', 'GJ-002037', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('988', '1', '1', '', '2002-07-05', '7', '2002', '2127', 'GJ-002127', 'Setoran Simpanan Juli 0 2 Direksi', '');
+REPLACE INTO jurnal VALUES('989', '1', '1', '', '2002-07-05', '7', '2002', '2128', 'GJ-002128', 'Setoran Simpanan Juli 02 SPI', '');
+REPLACE INTO jurnal VALUES('990', '1', '1', '', '2002-06-05', '6', '2002', '2038', 'GJ-002038', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('991', '1', '1', '', '2002-07-05', '7', '2002', '2129', 'GJ-002129', 'Setoran Simpanan Juli 02 B.Program', '');
+REPLACE INTO jurnal VALUES('992', '1', '1', '', '2002-06-05', '6', '2002', '2039', 'GJ-002039', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('993', '1', '1', '', '2002-07-05', '7', '2002', '2130', 'GJ-002130', 'Setoran Simpanan Juli 02 Biro EPL', '');
+REPLACE INTO jurnal VALUES('994', '1', '1', '', '2002-06-05', '6', '2002', '2040', 'GJ-002040', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('995', '1', '1', '', '2002-07-05', '7', '2002', '2131', 'GJ-002131', 'Setoran Simpanan Juli 02 Tubel', '');
+REPLACE INTO jurnal VALUES('996', '1', '1', '', '2002-07-05', '7', '2002', '2132', 'GJ-002132', 'Setoran Simpanan Juli 02 Keuangan', '');
+REPLACE INTO jurnal VALUES('997', '1', '1', '', '2002-06-05', '6', '2002', '2041', 'GJ-002041', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('998', '1', '1', '', '2002-06-05', '6', '2002', '2042', 'GJ-002042', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('999', '1', '1', '', '2002-06-05', '6', '2002', '2043', 'GJ-002043', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1000', '1', '1', '', '2002-06-05', '6', '2002', '2044', 'GJ-002044', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1001', '1', '1', '', '2002-06-05', '6', '2002', '2045', 'GJ-002045', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1002', '1', '1', '', '2002-07-05', '7', '2002', '2133', 'GJ-002133', 'Setoran Simpanan Juli 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1003', '1', '1', '', '2002-06-05', '6', '2002', '2046', 'GJ-002046', 'Setoran angs.barang Juni 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1004', '1', '1', '', '2002-06-06', '6', '2002', '2050', 'GJ-002050', 'Setoran angs.barang Juni 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('1005', '1', '1', '', '2002-07-05', '7', '2002', '2134', 'GJ-002134', 'Setoran Simpanan Juli 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1006', '1', '1', '', '2002-07-05', '7', '2002', '2135', 'GJ-002135', 'Setoran Simpanan Juli 02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('1007', '1', '1', '', '2002-07-05', '7', '2002', '2136', 'GJ-002136', 'Setoran Simpanan Juli 02 UML, PUKK & Capeg', '');
+REPLACE INTO jurnal VALUES('1008', '1', '1', '', '2002-07-05', '7', '2002', '2137', 'GJ-002137', 'Setoran Simpanan Juli 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1009', '1', '1', '', '2002-07-05', '7', '2002', '2138', 'GJ-002138', 'Setoran Simpanan Juli 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('1010', '1', '1', '', '2002-06-10', '6', '2002', '2068', 'GJ-002068', 'Setoran angs.barang Juni 02 via Rokhimah ', '');
+REPLACE INTO jurnal VALUES('1011', '1', '1', '', '2002-06-11', '6', '2002', '2074', 'GJ-002074', 'Setoran angs.barang Mei 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('1012', '1', '1', '', '2002-06-11', '6', '2002', '2075', 'GJ-002075', 'Setoran angs.barang Juni 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1013', '1', '1', '', '2002-06-11', '6', '2002', '2076', 'GJ-002076', 'Setoran angs.barang Juni 02 via Odang z', '');
+REPLACE INTO jurnal VALUES('1014', '1', '1', '', '2002-06-12', '6', '2002', '2080', 'GJ-002080', 'Setoran angs.barang Juni 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1015', '1', '1', '', '2002-06-12', '6', '2002', '2081', 'GJ-002081', 'Setoran angs.barang Juni 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1016', '1', '1', '', '2002-06-12', '6', '2002', '2082', 'GJ-002082', 'Setoran angs.barang Juni 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1017', '1', '1', '', '2002-06-12', '6', '2002', '2083', 'GJ-002083', 'Setoran angs.barang Juni 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1018', '1', '1', '', '2002-06-12', '6', '2002', '2084', 'GJ-002084', 'Angs.barang Juni 02 via Odang', '');
+REPLACE INTO jurnal VALUES('1019', '1', '1', '', '2002-06-12', '6', '2002', '2085', 'GJ-002085', 'Setoran angs.barang Juni 02 via Odang', '');
+REPLACE INTO jurnal VALUES('1020', '1', '1', '', '2002-06-12', '6', '2002', '2086', 'GJ-002086', 'Setoran angs.barang Juni 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('1021', '1', '1', '', '2002-06-13', '6', '2002', '2090', 'GJ-002090', 'Setoran Simpanan Juni 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('1022', '1', '1', '', '2002-06-13', '6', '2002', '2091', 'GJ-002091', 'Pengeluaran Kas Juni 02', '');
+REPLACE INTO jurnal VALUES('1023', '1', '1', '', '2002-07-05', '7', '2002', '2139', 'GJ-002139', 'Seteron Simpanan Juli 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1024', '1', '1', '', '2002-07-05', '7', '2002', '2140', 'GJ-002140', 'Setoran Simpanan Juli 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('1025', '1', '1', '', '2002-07-05', '7', '2002', '2141', 'GJ-002141', 'Setoran Simpanan Juli 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1026', '1', '1', '', '2002-07-05', '7', '2002', '2142', 'GJ-002142', 'Setoran Simpanan Juli 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1027', '1', '1', '', '2002-07-05', '7', '2002', '2143', 'GJ-002143', 'Setoran Simpanan Juli 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1028', '1', '1', '', '2002-07-05', '7', '2002', '2144', 'GJ-002144', 'Setoran Simpanan Juli 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1029', '1', '1', '', '2002-07-05', '7', '2002', '2145', 'GJ-002145', 'Setoran Simpanan Juni 02 Koperasi/ CS', '');
+REPLACE INTO jurnal VALUES('1030', '1', '1', '', '2002-07-05', '7', '2002', '2146', 'GJ-002146', 'Setoran Barang Juni 02 Koperasi/ CS', '');
+REPLACE INTO jurnal VALUES('1031', '1', '1', '', '2002-07-10', '7', '2002', '2159', 'GJ-002159', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1032', '1', '1', '', '2002-07-10', '7', '2002', '2160', 'GJ-002160', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1033', '1', '1', '', '2002-07-10', '7', '2002', '2161', 'GJ-002161', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1034', '1', '1', '', '2002-07-10', '7', '2002', '2162', 'GJ-002162', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1035', '1', '1', '', '2002-07-15', '7', '2002', '2182', 'GJ-002182', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1036', '1', '1', '', '2002-07-10', '7', '2002', '2163', 'GJ-002163', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1037', '1', '1', '', '2002-07-10', '7', '2002', '2164', 'GJ-002164', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1038', '1', '1', '', '2002-07-10', '7', '2002', '2165', 'GJ-002165', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1039', '1', '1', '', '2002-07-10', '7', '2002', '2166', 'GJ-002166', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1040', '1', '1', '', '2002-07-10', '7', '2002', '2167', 'GJ-002167', 'Setoran Angs. Barang Juli 02 Kantor Pusat', '');
+REPLACE INTO jurnal VALUES('1041', '1', '1', '', '2002-07-10', '7', '2002', '2168', 'GJ-002168', 'Setoran Angs. Barang Juli 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1042', '1', '1', '', '2002-07-10', '7', '2002', '2169', 'GJ-002169', 'Setoran Angs. Barang Juli 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1043', '1', '1', '', '2002-07-05', '7', '2002', '2147', 'GJ-002147', 'Setoran Simpanan Juli 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1044', '1', '1', '', '2002-07-10', '7', '2002', '2170', 'GJ-002170', 'Setoran Angs. Barang Juli 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('1045', '1', '1', '', '2002-07-05', '7', '2002', '2148', 'GJ-002148', 'Setoran Simpanan Juli 02 Kop. Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1046', '1', '1', '', '2002-07-10', '7', '2002', '2171', 'GJ-002171', 'Setoran Angs. Barang Juli 02 Kop. Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1047', '1', '1', '', '2002-07-15', '7', '2002', '2183', 'GJ-002183', 'Penerimaan Kas KBR Juli 02 ', '');
+REPLACE INTO jurnal VALUES('1048', '1', '1', '', '2002-07-15', '7', '2002', '2184', 'GJ-002184', 'Pengeluaran Kas KBR Juli 02', '');
+REPLACE INTO jurnal VALUES('1049', '1', '1', '', '2002-06-14', '6', '2002', '2092', 'GJ-002092', 'Kelebihan potong angs.barang Juni 02', '');
+REPLACE INTO jurnal VALUES('1050', '1', '1', '', '2002-06-15', '6', '2002', '2093', 'GJ-002093', 'Penerimaan Kas KBR Juni 02', '');
+REPLACE INTO jurnal VALUES('1051', '1', '1', '', '2002-08-05', '8', '2002', '2202', 'GJ-002202', 'Setoran Simpanan Agust 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1052', '1', '1', '', '2002-06-15', '6', '2002', '2094', 'GJ-002094', 'Pengeluaran Kas KBR Juni 02', '');
+REPLACE INTO jurnal VALUES('1053', '1', '1', '', '2002-08-05', '8', '2002', '2203', 'GJ-002203', 'Setoran Simpanan Agust 02 Divus I', '');
+REPLACE INTO jurnal VALUES('1054', '1', '1', '', '2002-08-05', '8', '2002', '2204', 'GJ-002204', 'Setoran Simpanan Agust 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1055', '1', '1', '', '2002-08-06', '8', '2002', '2207', 'GJ-002207', 'Setoran Simpanan Agust 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('1056', '1', '1', '', '2002-08-06', '8', '2002', '2208', 'GJ-002208', 'Setoran Simpanan Agst 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1057', '1', '1', '', '2002-08-06', '8', '2002', '2209', 'GJ-002209', 'Setoran Simpanan Agst 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1058', '1', '1', '', '2002-08-06', '8', '2002', '2210', 'GJ-002210', 'Setoran Simpanan Agst 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1059', '1', '1', '', '2002-08-07', '8', '2002', '2214', 'GJ-002214', 'Setoran Simpanan Agst 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1060', '1', '1', '', '2002-08-07', '8', '2002', '2215', 'GJ-002215', 'Setoran Simpanan Agst 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('1061', '1', '1', '', '2002-08-08', '8', '2002', '2217', 'GJ-002217', 'Setoran Simpanan Agst 02 DPB', '');
+REPLACE INTO jurnal VALUES('1062', '1', '1', '', '2002-08-08', '8', '2002', '2218', 'GJ-002218', 'Setoran Simpanan Agst 02 Direksi', '');
+REPLACE INTO jurnal VALUES('1063', '1', '1', '', '2002-08-08', '8', '2002', '2219', 'GJ-002219', 'Setoran Simpanan Agst 02 UMM', '');
+REPLACE INTO jurnal VALUES('1064', '1', '1', '', '2002-08-08', '8', '2002', '2220', 'GJ-002220', 'Setoran Simpanan Agst 02 SPI', '');
+REPLACE INTO jurnal VALUES('1065', '1', '1', '', '2002-08-08', '8', '2002', '2221', 'GJ-002221', 'Setoran Simpanan Agst 02 B.Program', '');
+REPLACE INTO jurnal VALUES('1066', '1', '1', '', '2002-07-05', '7', '2002', '2149', 'GJ-002149', 'Setoran Simpanan Juli 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1067', '1', '1', '', '2002-08-08', '8', '2002', '2222', 'GJ-002222', 'Setoran Simpanan Agst 02 B.EP&L', '');
+REPLACE INTO jurnal VALUES('1068', '1', '1', '', '2002-07-05', '7', '2002', '2150', 'GJ-002150', 'Setoran Simpanan Juli 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('1069', '1', '1', '', '2002-08-08', '8', '2002', '2223', 'GJ-002223', 'Setoran Simpanan Agst 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('1070', '1', '1', '', '2002-07-05', '7', '2002', '2151', 'GJ-002151', 'Setoran Simpanan Juli 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('1071', '1', '1', '', '2002-08-08', '8', '2002', '2224', 'GJ-002224', 'Setoran Simpanan Agst 02 PUKK', '');
+REPLACE INTO jurnal VALUES('1072', '1', '1', '', '2002-08-08', '8', '2002', '2225', 'GJ-002225', 'Setoran Simpanan Agst 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('1073', '1', '1', '', '2002-08-08', '8', '2002', '2226', 'GJ-002226', 'Setoran Simpanan Agst 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('1074', '1', '1', '', '2002-08-08', '8', '2002', '2227', 'GJ-002227', 'Setoran Simpanan Agst 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('1075', '1', '1', '', '2002-07-05', '7', '2002', '2152', 'GJ-002152', 'Setoran Simpanan Juni 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('1076', '1', '1', '', '2002-08-08', '8', '2002', '2228', 'GJ-002228', 'Setoran Simpanan Agst 02 UML', '');
+REPLACE INTO jurnal VALUES('1077', '1', '1', '', '2002-08-09', '8', '2002', '2229', 'GJ-002229', 'Setoran Simpanan Agst 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('1078', '1', '1', '', '2002-08-09', '8', '2002', '2230', 'GJ-002230', 'Setoran Simpanan Agst 02 Asa Talagasari', '');
+REPLACE INTO jurnal VALUES('1079', '1', '1', '', '2002-08-09', '8', '2002', '2231', 'GJ-002231', 'Setoran Simpanan Juli 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('1080', '1', '1', '', '2002-08-12', '8', '2002', '2233', 'GJ-002233', 'Setoran Simpanan Agst 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('1081', '1', '1', '', '2002-08-12', '8', '2002', '2234', 'GJ-002234', 'Setoran angs.barang Juli 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1082', '1', '1', '', '2002-08-12', '8', '2002', '2235', 'GJ-002235', 'Setoran angs.barang Juli 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1083', '1', '1', '', '2002-08-12', '8', '2002', '2236', 'GJ-002236', 'Setoran angs.barang Juli 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1084', '1', '1', '', '2002-08-12', '8', '2002', '2237', 'GJ-002237', 'Setoran angs.barang Juli 02 PNS', '');
+REPLACE INTO jurnal VALUES('1085', '1', '1', '', '2002-08-12', '8', '2002', '2238', 'GJ-002238', 'Setoran angs.barang Juli 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1086', '1', '1', '', '2002-08-12', '8', '2002', '2239', 'GJ-002239', 'Setoran angs.barang Juli 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1087', '1', '1', '', '2002-08-12', '8', '2002', '2240', 'GJ-002240', 'Setoran angs.barang Juli 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('1088', '1', '1', '', '2002-08-12', '8', '2002', '2241', 'GJ-002241', 'Setoran angs.barang Agst 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1089', '1', '1', '', '2002-08-12', '8', '2002', '2242', 'GJ-002242', 'Setoran angs.barang Agst 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('1090', '1', '1', '', '2002-08-12', '8', '2002', '2243', 'GJ-002243', 'Setoran angs.barang Juli 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('1091', '1', '1', '', '2002-06-20', '6', '2002', '2098', 'GJ-002098', 'Piutang Barang Juni 02 ', '');
+REPLACE INTO jurnal VALUES('1092', '1', '1', '', '2002-08-12', '8', '2002', '2244', 'GJ-002244', 'Setoran angs.barang Agst 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('1093', '1', '1', '', '2002-08-13', '8', '2002', '2249', 'GJ-002249', 'Setoran angs.barang Agst 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1094', '1', '1', '', '2002-08-13', '8', '2002', '2250', 'GJ-002250', 'Setoran angs.barang Agst 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1095', '1', '1', '', '2002-08-13', '8', '2002', '2251', 'GJ-002251', 'Setoran angs.barang Agst 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1096', '1', '1', '', '2002-08-13', '8', '2002', '2252', 'GJ-002252', 'Setoran angs.barang Agst 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1097', '1', '1', '', '2002-08-13', '8', '2002', '2253', 'GJ-002253', 'Setoran angs.barang Agst 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1098', '1', '1', '', '2002-08-13', '8', '2002', '2254', 'GJ-002254', 'Setoran angs.barang Agst 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1099', '1', '1', '', '2002-08-13', '8', '2002', '2255', 'GJ-002255', 'Setoran angs.barang Agst 02 PNS', '');
+REPLACE INTO jurnal VALUES('1100', '1', '1', '', '2002-07-20', '7', '2002', '2187', 'GJ-002187', 'Piutang Barang Juli 02 ', '');
+REPLACE INTO jurnal VALUES('1101', '1', '1', '', '2002-08-14', '8', '2002', '2257', 'GJ-002257', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1102', '1', '1', '', '2002-08-14', '8', '2002', '2258', 'GJ-002258', 'Setoran angs.barang Agst 02 EPL', '');
+REPLACE INTO jurnal VALUES('1103', '1', '1', '', '2002-08-14', '8', '2002', '2259', 'GJ-002259', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1104', '1', '1', '', '2002-08-14', '8', '2002', '2260', 'GJ-002260', 'Setoran angs.barang Agst 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('1105', '1', '1', '', '2002-08-14', '8', '2002', '2261', 'GJ-002261', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1106', '1', '1', '', '2002-08-14', '8', '2002', '2262', 'GJ-002262', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1107', '1', '1', '', '2002-08-14', '8', '2002', '2263', 'GJ-002263', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1108', '1', '1', '', '2002-08-14', '8', '2002', '2264', 'GJ-002264', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1109', '1', '1', '', '2002-08-14', '8', '2002', '2265', 'GJ-002265', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1110', '1', '1', '', '2002-08-14', '8', '2002', '2266', 'GJ-002266', 'Setoran angs.barang Agst 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1111', '1', '1', '', '2002-08-15', '8', '2002', '2273', 'GJ-002273', 'Setoran Simpanan Agst 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1112', '1', '1', '', '2002-08-15', '8', '2002', '2274', 'GJ-002274', 'Setoran Simpanan Agst 02 KOP.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1113', '1', '1', '', '2002-08-15', '8', '2002', '2275', 'GJ-002275', 'Setoran angs.barang Agst 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('1114', '1', '1', '', '2002-08-15', '8', '2002', '2276', 'GJ-002276', 'Setoran angs.barang Agst 02 via Odang', '');
+REPLACE INTO jurnal VALUES('1115', '1', '1', '', '2002-06-21', '6', '2002', '2099', 'GJ-002099', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1116', '1', '1', '', '2002-08-16', '8', '2002', '2283', 'GJ-002283', 'Pengeluaran Kas Agst 02', '');
+REPLACE INTO jurnal VALUES('1117', '1', '1', '', '2002-06-21', '6', '2002', '2100', 'GJ-002100', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1118', '1', '1', '', '2002-06-21', '6', '2002', '2101', 'GJ-002101', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1119', '1', '1', '', '2002-06-21', '6', '2002', '2102', 'GJ-002102', 'Tagihan Bonus Jasa Tenaga Kerja kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1120', '1', '1', '', '2002-06-21', '6', '2002', '2103', 'GJ-002103', 'Tagihan Pakaian Kerja Jastek Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1121', '1', '1', '', '2002-06-21', '6', '2002', '2104', 'GJ-002104', 'Tagihan Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1122', '1', '1', '', '2002-06-21', '6', '2002', '2105', 'GJ-002105', 'Tagihan Perbaikan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1123', '1', '1', '', '2002-06-21', '6', '2002', '2106', 'GJ-002106', 'Tagihan Perawatan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1124', '1', '1', '', '2002-07-25', '7', '2002', '2188', 'GJ-002188', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1125', '1', '1', '', '2002-07-25', '7', '2002', '2189', 'GJ-002189', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1126', '1', '1', '', '2002-07-25', '7', '2002', '2190', 'GJ-002190', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1127', '1', '1', '', '2002-07-25', '7', '2002', '2191', 'GJ-002191', 'Tagihan Cleaning Service Kantor Pusat PJT II ', '');
+REPLACE INTO jurnal VALUES('1128', '1', '1', '', '2002-07-25', '7', '2002', '2192', 'GJ-002192', 'Tagihan Perbaikan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1129', '1', '1', '', '2002-07-25', '7', '2002', '2193', 'GJ-002193', 'Tagihan Perawatan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1130', '1', '1', '', '2002-08-16', '8', '2002', '2284', 'GJ-002284', 'Piutang Barang Agst 02', '');
+REPLACE INTO jurnal VALUES('1131', '1', '1', '', '2002-09-05', '9', '2002', '2305', 'GJ-002305', 'Setoran Simpanan September 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1132', '1', '1', '', '2002-09-05', '9', '2002', '2306', 'GJ-002306', 'Setoran Simpanan September 02 Direksi', '');
+REPLACE INTO jurnal VALUES('1133', '1', '1', '', '2002-09-05', '9', '2002', '2307', 'GJ-002307', 'Setoran Simpanan September 02 UMM', '');
+REPLACE INTO jurnal VALUES('1134', '1', '1', '', '2002-09-05', '9', '2002', '2308', 'GJ-002308', 'Setoran Simpanan September 02 B. SPI', '');
+REPLACE INTO jurnal VALUES('1135', '1', '1', '', '2002-09-05', '9', '2002', '2309', 'GJ-002309', 'Setoran Simpanan September 02 B. Program', '');
+REPLACE INTO jurnal VALUES('1136', '1', '1', '', '2002-09-05', '9', '2002', '2310', 'GJ-002310', 'Setoran Simpanan September 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1137', '1', '1', '', '2002-09-05', '9', '2002', '2311', 'GJ-002311', 'Setoran Simpanan September 02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('1138', '1', '1', '', '2002-09-05', '9', '2002', '2312', 'GJ-002312', 'Setoran Simpanan September 02 PUKK', '');
+REPLACE INTO jurnal VALUES('1139', '1', '1', '', '2002-09-05', '9', '2002', '2313', 'GJ-002313', 'Setoran Simpanan September 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1140', '1', '1', '', '2002-09-05', '9', '2002', '2314', 'GJ-002314', 'Setoran Simpanan September 02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('1141', '1', '1', '', '2002-09-05', '9', '2002', '2315', 'GJ-002315', 'Setoran Simpanan September 02 B. Umum', '');
+REPLACE INTO jurnal VALUES('1142', '1', '1', '', '2002-09-05', '9', '2002', '2316', 'GJ-002316', 'Setoran Simpanan September 02 UML', '');
+REPLACE INTO jurnal VALUES('1143', '1', '1', '', '2002-08-25', '8', '2002', '2292', 'GJ-002292', 'Penerimaan Kas KBR Agustus 02', '');
+REPLACE INTO jurnal VALUES('1144', '1', '1', '', '2002-08-25', '8', '2002', '2293', 'GJ-002293', 'Pengeluaran Kas KBR Agustus 02', '');
+REPLACE INTO jurnal VALUES('1145', '1', '1', '', '2002-09-05', '9', '2002', '2317', 'GJ-002317', 'Piutang Barang September 02', '');
+REPLACE INTO jurnal VALUES('1146', '1', '1', '', '2002-09-05', '9', '2002', '2318', 'GJ-002318', 'Setoran Simpanan September 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1147', '1', '1', '', '2002-09-05', '9', '2002', '2319', 'GJ-002319', 'Setoran Simpanan September 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1148', '1', '1', '', '2002-09-05', '9', '2002', '2320', 'GJ-002320', 'Setoran Simpanan September 02 Pariwisata', '');
+REPLACE INTO jurnal VALUES('1149', '1', '1', '', '2002-09-05', '9', '2002', '2321', 'GJ-002321', 'Setoran Simpanan September 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1150', '1', '1', '', '2002-09-05', '9', '2002', '2322', 'GJ-002322', 'Setoran Simpanan September 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1151', '1', '1', '', '2002-09-05', '9', '2002', '2323', 'GJ-002323', 'Setoran Simpanan September 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('1152', '1', '1', '', '2002-09-05', '9', '2002', '2324', 'GJ-002324', 'Setoran Simpanan September 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1153', '1', '1', '', '2002-09-05', '9', '2002', '2325', 'GJ-002325', 'Setoran Simpanan September 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1154', '1', '1', '', '2002-09-05', '9', '2002', '2326', 'GJ-002326', 'Setoran Simpanan September 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('1155', '1', '1', '', '2002-09-05', '9', '2002', '2327', 'GJ-002327', 'Setoran Simpanan September 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('1156', '1', '1', '', '2002-10-10', '10', '2002', '2405', 'GJ-002405', 'Setoran Simpanan Oktober 02 Pariwisata', '');
+REPLACE INTO jurnal VALUES('1157', '1', '1', '', '2002-10-10', '10', '2002', '2406', 'GJ-002406', 'Setoran Simpanan Oktober 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1158', '1', '1', '', '2002-10-10', '10', '2002', '2407', 'GJ-002407', 'Setoran Simpanan Okt 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1159', '1', '1', '', '2002-10-10', '10', '2002', '2408', 'GJ-002408', 'Setoran Simpanan Oktober 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1160', '1', '1', '', '2002-09-05', '9', '2002', '2328', 'GJ-002328', 'Setoran Tunai Via Rohimah September 02', '');
+REPLACE INTO jurnal VALUES('1161', '1', '1', '', '2002-10-10', '10', '2002', '2409', 'GJ-002409', 'Setoran Simpanan Oktober 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('1162', '1', '1', '', '2002-10-10', '10', '2002', '2410', 'GJ-002410', 'Setoran Simpanan Oktober 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1163', '1', '1', '', '2002-10-10', '10', '2002', '2411', 'GJ-002411', 'Setoran Simpanan Oktober 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1164', '1', '1', '', '2002-10-01', '10', '2002', '2403', 'GJ-002403', 'Setoran Simpanan Oktober 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('1165', '1', '1', '', '2002-10-10', '10', '2002', '2412', 'GJ-002412', 'Setoran Simpanan Okt 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1166', '1', '1', '', '2002-10-10', '10', '2002', '2413', 'GJ-002413', 'Setoran Simpanan Oktober 02 Talagasari ', '');
+REPLACE INTO jurnal VALUES('1167', '1', '1', '', '2002-10-10', '10', '2002', '2414', 'GJ-002414', 'Setoran Simpanan Oktober 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1168', '1', '1', '', '2002-10-10', '10', '2002', '2415', 'GJ-002415', 'Setoran Simpanan Okt 02 Direksi', '');
+REPLACE INTO jurnal VALUES('1169', '1', '1', '', '2002-10-10', '10', '2002', '2416', 'GJ-002416', 'Setoran Simpanan Okt 02 UMM', '');
+REPLACE INTO jurnal VALUES('1170', '1', '1', '', '2002-10-10', '10', '2002', '2417', 'GJ-002417', 'Setoran Simpanan Okt 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('1171', '1', '1', '', '2002-10-10', '10', '2002', '2418', 'GJ-002418', 'Setoran Simpanan Okt 02 B.Program', '');
+REPLACE INTO jurnal VALUES('1172', '1', '1', '', '2002-10-10', '10', '2002', '2419', 'GJ-002419', 'Setoran Simpanan Okt 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('1173', '1', '1', '', '2002-10-10', '10', '2002', '2420', 'GJ-002420', 'Setoran Simpanan Okt 02 PUKK', '');
+REPLACE INTO jurnal VALUES('1174', '1', '1', '', '2002-10-10', '10', '2002', '2421', 'GJ-002421', 'Setoran Simpanan Okt 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('1175', '1', '1', '', '2002-10-10', '10', '2002', '2422', 'GJ-002422', 'Setoran Simpanan Oktober 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1176', '1', '1', '', '2002-10-10', '10', '2002', '2423', 'GJ-002423', 'Setoran Simpanan Okt 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('1177', '1', '1', '', '2002-10-10', '10', '2002', '2424', 'GJ-002424', 'Setoran Simpanan Okt 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('1178', '1', '1', '', '2002-10-10', '10', '2002', '2425', 'GJ-002425', 'Setoran Simpanan Okt 02 UML', '');
+REPLACE INTO jurnal VALUES('1179', '1', '1', '', '2002-10-14', '10', '2002', '2451', 'GJ-002451', 'Setoran Simpanan Okt 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('1180', '1', '1', '', '2002-09-15', '9', '2002', '2381', 'GJ-002381', 'Setoran Simpanan Sept 02 CS/KOP.KBR', '');
+REPLACE INTO jurnal VALUES('1181', '1', '1', '', '2002-10-15', '10', '2002', '2463', 'GJ-002463', 'Setoran Simpanan Juni 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1182', '1', '1', '', '2002-10-10', '10', '2002', '2426', 'GJ-002426', 'Setoran Simpanan Juni 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('1183', '1', '1', '', '2002-10-15', '10', '2002', '2464', 'GJ-002464', 'Setoran Simpanan Sept 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1184', '1', '1', '', '2002-10-21', '10', '2002', '2474', 'GJ-002474', 'Setoran Simpanan Okt 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1185', '1', '1', '', '2002-05-21', '5', '2002', '2004', 'GJ-002004', 'Setoran Simpanan April 02 Kop.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1186', '1', '1', '', '2002-09-23', '9', '2002', '2389', 'GJ-002389', 'Pengeluaran Kas September 02', '');
+REPLACE INTO jurnal VALUES('1187', '1', '1', '', '2002-10-15', '10', '2002', '2465', 'GJ-002465', 'Penerimaan Kas KBR Oktober 02 ', '');
+REPLACE INTO jurnal VALUES('1188', '1', '1', '', '2002-10-15', '10', '2002', '2466', 'GJ-002466', 'Pengeluaran Kas KBR Oktober 02', '');
+REPLACE INTO jurnal VALUES('1189', '1', '1', '', '2002-02-15', '2', '2002', '1727', 'GJ-001727', 'Setoran Simpanan Pebruari 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1190', '1', '1', '', '2002-11-10', '11', '2002', '2505', 'GJ-002505', 'Setoran Simpanan November 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1191', '1', '1', '', '2002-11-10', '11', '2002', '2506', 'GJ-002506', 'Setoran Simpanan November 02 Direksi', '');
+REPLACE INTO jurnal VALUES('1192', '1', '1', '', '2002-11-10', '11', '2002', '2507', 'GJ-002507', 'Setoran Simpanan November 02 UMM', '');
+REPLACE INTO jurnal VALUES('1193', '1', '1', '', '2002-11-10', '11', '2002', '2508', 'GJ-002508', 'Simpanan November 02 B. SPI', '');
+REPLACE INTO jurnal VALUES('1194', '1', '1', '', '2002-11-10', '11', '2002', '2509', 'GJ-002509', 'Setoran Simpanan November 02 B. Program ', '');
+REPLACE INTO jurnal VALUES('1195', '1', '1', '', '2002-11-10', '11', '2002', '2510', 'GJ-002510', 'Setoran Simpanan November 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1196', '1', '1', '', '2002-11-10', '11', '2002', '2511', 'GJ-002511', 'Setoran Simpanan November 02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('1197', '1', '1', '', '2002-11-10', '11', '2002', '2512', 'GJ-002512', 'Setoran Simpanan November 02 PUKK', '');
+REPLACE INTO jurnal VALUES('1198', '1', '1', '', '2002-11-10', '11', '2002', '2513', 'GJ-002513', 'Setoran Simpanan November 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1199', '1', '1', '', '2002-11-10', '11', '2002', '2514', 'GJ-002514', 'Setoran Simpanan November 02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('1200', '1', '1', '', '2002-11-10', '11', '2002', '2515', 'GJ-002515', 'Setoran Simpanan November 02 B. Umum', '');
+REPLACE INTO jurnal VALUES('1201', '1', '1', '', '2002-11-10', '11', '2002', '2516', 'GJ-002516', 'Setoran Simpanan November 02 UML', '');
+REPLACE INTO jurnal VALUES('1202', '1', '1', '', '2002-11-10', '11', '2002', '2517', 'GJ-002517', 'Setoran Simpanan November 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1203', '1', '1', '', '2002-11-10', '11', '2002', '2518', 'GJ-002518', 'Setoran Simpanan November 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1204', '1', '1', '', '2002-11-10', '11', '2002', '2519', 'GJ-002519', 'Setoran Simpanan November 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('1205', '1', '1', '', '2002-11-10', '11', '2002', '2520', 'GJ-002520', 'Setoran Simpanan November 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1206', '1', '1', '', '2002-11-10', '11', '2002', '2521', 'GJ-002521', 'Setoran Simpanan November 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1207', '1', '1', '', '2002-11-10', '11', '2002', '2522', 'GJ-002522', 'Setoran Simpanan November 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1208', '1', '1', '', '2002-11-10', '11', '2002', '2523', 'GJ-002523', 'Setoran Simpanan November 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1209', '1', '1', '', '2002-11-10', '11', '2002', '2524', 'GJ-002524', 'Setoran Simpanan November 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1210', '1', '1', '', '2002-11-10', '11', '2002', '2525', 'GJ-002525', 'Setoran Simpanan November 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('1211', '1', '1', '', '2002-11-10', '11', '2002', '2526', 'GJ-002526', 'Setoran Simpanan November 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('1212', '1', '1', '', '2002-11-11', '11', '2002', '2530', 'GJ-002530', 'Setoran Angs. Barang November 02B. Program', '');
+REPLACE INTO jurnal VALUES('1213', '1', '1', '', '2002-11-11', '11', '2002', '2531', 'GJ-002531', 'Setoran Angs. Barang November 02 Litbang', '');
+REPLACE INTO jurnal VALUES('1214', '1', '1', '', '2002-11-11', '11', '2002', '2532', 'GJ-002532', 'Setoran Angs. Barang November 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1215', '1', '1', '', '2002-11-11', '11', '2002', '2533', 'GJ-002533', 'Setoran Angs. Barang November 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1216', '1', '1', '', '2002-11-11', '11', '2002', '2534', 'GJ-002534', 'Setoran Angs. Barang November 02 Keuangan', '');
+REPLACE INTO jurnal VALUES('1217', '1', '1', '', '2002-11-11', '11', '2002', '2535', 'GJ-002535', 'Setoran Angs. Barang November 02 B. Umum', '');
+REPLACE INTO jurnal VALUES('1218', '1', '1', '', '2002-11-11', '11', '2002', '2536', 'GJ-002536', 'Setoran Angs. Barang November 02 UMM', '');
+REPLACE INTO jurnal VALUES('1219', '1', '1', '', '2002-11-11', '11', '2002', '2537', 'GJ-002537', 'Setoran Angs. Barang November 02 UML', '');
+REPLACE INTO jurnal VALUES('1220', '1', '1', '', '2002-11-11', '11', '2002', '2538', 'GJ-002538', 'Setoran Angs. Barang November 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1221', '1', '1', '', '2002-09-10', '9', '2002', '2333', 'GJ-002333', 'Setoran Angs. Barang September 02 UMM', '');
+REPLACE INTO jurnal VALUES('1222', '1', '1', '', '2002-09-10', '9', '2002', '2334', 'GJ-002334', 'Setoran Angs. Barang September 02 B. SPI', '');
+REPLACE INTO jurnal VALUES('1223', '1', '1', '', '2002-09-10', '9', '2002', '2335', 'GJ-002335', 'Setoran Angs. Barang September 02 B. Program', '');
+REPLACE INTO jurnal VALUES('1224', '1', '1', '', '2002-09-10', '9', '2002', '2336', 'GJ-002336', 'Setoran Angs. Barang September 02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('1225', '1', '1', '', '2002-09-10', '9', '2002', '2337', 'GJ-002337', 'Setoran Angs. Barang September 02 EPL', '');
+REPLACE INTO jurnal VALUES('1226', '1', '1', '', '2002-09-10', '9', '2002', '2338', 'GJ-002338', 'Setoran Angs. Barang September 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1227', '1', '1', '', '2002-09-10', '9', '2002', '2339', 'GJ-002339', 'Setoran Angs. Barang September 02 Keuangan', '');
+REPLACE INTO jurnal VALUES('1228', '1', '1', '', '2002-09-10', '9', '2002', '2340', 'GJ-002340', 'Setoran Angs. Barang September 02 B. Umum', '');
+REPLACE INTO jurnal VALUES('1229', '1', '1', '', '2002-09-10', '9', '2002', '2341', 'GJ-002341', 'Setoran angs. Barang September 02 UML', '');
+REPLACE INTO jurnal VALUES('1230', '1', '1', '', '2002-09-10', '9', '2002', '2342', 'GJ-002342', 'Setoran Angs. Barang september 02 UMM', '');
+REPLACE INTO jurnal VALUES('1231', '1', '1', '', '2002-09-10', '9', '2002', '2343', 'GJ-002343', 'Setoran Angs. Barang September 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1232', '1', '1', '', '2002-09-10', '9', '2002', '2344', 'GJ-002344', 'Setoran Angs. Barang September 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1233', '1', '1', '', '2002-09-10', '9', '2002', '2345', 'GJ-002345', 'Setoran Angs. Barang September 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1234', '1', '1', '', '2002-09-10', '9', '2002', '2346', 'GJ-002346', 'Setoran Angs. Barang September 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1235', '1', '1', '', '2002-09-10', '9', '2002', '2347', 'GJ-002347', 'Setoran Angs. Barang September 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1236', '1', '1', '', '2002-09-10', '9', '2002', '2348', 'GJ-002348', 'Setoran Angs. Barang September 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('1237', '1', '1', '', '2002-09-10', '9', '2002', '2349', 'GJ-002349', 'Setoran Angs. Barang September 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1238', '1', '1', '', '2002-09-20', '9', '2002', '2387', 'GJ-002387', 'Pengeluaran Kas KBR September 02', '');
+REPLACE INTO jurnal VALUES('1239', '1', '1', '', '2002-09-10', '9', '2002', '2350', 'GJ-002350', 'Setoran pengambilan sembako via Rohimah', '');
+REPLACE INTO jurnal VALUES('1240', '1', '1', '', '2002-09-05', '9', '2002', '2329', 'GJ-002329', 'Setoran Simpanan september 02 Kop Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1241', '1', '1', '', '2002-09-10', '9', '2002', '2351', 'GJ-002351', 'Setoran Angs. Barang September 02 Kop/ CS', '');
+REPLACE INTO jurnal VALUES('1242', '1', '1', '', '2002-09-20', '9', '2002', '2388', 'GJ-002388', 'Penerimaan Kas KBR September 02', '');
+REPLACE INTO jurnal VALUES('1243', '1', '1', '', '2002-10-10', '10', '2002', '2427', 'GJ-002427', 'Setoran Angs. Barang Okt   02 B. SPI', '');
+REPLACE INTO jurnal VALUES('1244', '1', '1', '', '2002-10-10', '10', '2002', '2428', 'GJ-002428', 'Setoran Angs. Barang Okt  02 Program', '');
+REPLACE INTO jurnal VALUES('1245', '1', '1', '', '2002-10-10', '10', '2002', '2429', 'GJ-002429', 'Setoran Angs. Barang Okt  02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1246', '1', '1', '', '2002-10-10', '10', '2002', '2430', 'GJ-002430', 'Setoran Angs. Barang Okt  02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('1247', '1', '1', '', '2002-10-10', '10', '2002', '2431', 'GJ-002431', 'Setoran Angs. Barang Okt  02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1248', '1', '1', '', '2002-10-10', '10', '2002', '2432', 'GJ-002432', 'Setoran Angs. Barang Okt  02 Keuangan', '');
+REPLACE INTO jurnal VALUES('1249', '1', '1', '', '2002-10-05', '10', '2002', '2404', 'GJ-002404', 'Setoran Angs. Barang Okt  02 B. Umum', '');
+REPLACE INTO jurnal VALUES('1250', '1', '1', '', '2002-10-10', '10', '2002', '2433', 'GJ-002433', 'Setoran Angs. Barang Okto  02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1251', '1', '1', '', '2002-10-10', '10', '2002', '2434', 'GJ-002434', 'Setoran Angs. Barang Okt  02 UMM', '');
+REPLACE INTO jurnal VALUES('1252', '1', '1', '', '2002-10-10', '10', '2002', '2435', 'GJ-002435', 'Setoran Angs. Barang Okt  02 UML', '');
+REPLACE INTO jurnal VALUES('1253', '1', '1', '', '2002-10-10', '10', '2002', '2436', 'GJ-002436', 'Setoran Angs. Barang Okt  02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1254', '1', '1', '', '2002-10-10', '10', '2002', '2437', 'GJ-002437', 'Setoran Angs. Barang Okt  02 Dapen', '');
+REPLACE INTO jurnal VALUES('1255', '1', '1', '', '2002-10-10', '10', '2002', '2438', 'GJ-002438', 'Setoran Angs. Barang Okt  02 UPUK', '');
+REPLACE INTO jurnal VALUES('1256', '1', '1', '', '2002-10-10', '10', '2002', '2439', 'GJ-002439', 'Setoran Angs. Barang Okt  02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1257', '1', '1', '', '2002-10-10', '10', '2002', '2440', 'GJ-002440', 'Setoran Angs. Barang Okt  02 PNS', '');
+REPLACE INTO jurnal VALUES('1258', '1', '1', '', '2002-11-15', '11', '2002', '2555', 'GJ-002555', 'Setoran Angs. Barang Nopember 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1259', '1', '1', '', '2002-11-15', '11', '2002', '2556', 'GJ-002556', 'Setoran Angs. Barang Nopember 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1260', '1', '1', '', '2002-11-15', '11', '2002', '2557', 'GJ-002557', 'Setoran Angs. Barang Nopember 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1261', '1', '1', '', '2002-11-15', '11', '2002', '2558', 'GJ-002558', 'Setoran Angs. Barang Nopember 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1262', '1', '1', '', '2002-11-15', '11', '2002', '2559', 'GJ-002559', 'Setoran Angs. Barang Nopember 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1263', '1', '1', '', '2002-11-15', '11', '2002', '2560', 'GJ-002560', 'Setoran Angs. Barang Nopember 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1264', '1', '1', '', '2002-11-10', '11', '2002', '2527', 'GJ-002527', 'Setoran Simpanan Nopember 02 Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1265', '1', '1', '', '2002-11-25', '11', '2002', '2567', 'GJ-002567', 'Tagihan Makan Siang Kantor pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1266', '1', '1', '', '2002-11-25', '11', '2002', '2568', 'GJ-002568', 'Tagihan Hidangan Rapat Kantor Pusat  PJT II', '');
+REPLACE INTO jurnal VALUES('1267', '1', '1', '', '2002-11-25', '11', '2002', '2569', 'GJ-002569', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1268', '1', '1', '', '2002-11-25', '11', '2002', '2570', 'GJ-002570', 'Tagihan Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1269', '1', '1', '', '2002-11-25', '11', '2002', '2571', 'GJ-002571', 'Tagihan Perbaikan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1270', '1', '1', '', '2002-09-25', '9', '2002', '2390', 'GJ-002390', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1271', '1', '1', '', '2002-09-25', '9', '2002', '2391', 'GJ-002391', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1272', '1', '1', '', '2002-09-25', '9', '2002', '2392', 'GJ-002392', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1273', '1', '1', '', '2002-09-25', '9', '2002', '2393', 'GJ-002393', 'Tagihan Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1274', '1', '1', '', '2002-09-25', '9', '2002', '2394', 'GJ-002394', 'Tagihan Perbaikan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1275', '1', '1', '', '2002-10-25', '10', '2002', '2476', 'GJ-002476', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1276', '1', '1', '', '2002-10-25', '10', '2002', '2477', 'GJ-002477', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1277', '1', '1', '', '2002-10-25', '10', '2002', '2478', 'GJ-002478', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1278', '1', '1', '', '2002-10-25', '10', '2002', '2479', 'GJ-002479', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1279', '1', '1', '', '2002-10-25', '10', '2002', '2480', 'GJ-002480', 'Tagihan Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1280', '1', '1', '', '2002-10-25', '10', '2002', '2481', 'GJ-002481', 'Tagihan Perbaikan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1281', '1', '1', '', '2002-08-25', '8', '2002', '2294', 'GJ-002294', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1282', '1', '1', '', '2002-08-25', '8', '2002', '2295', 'GJ-002295', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1283', '1', '1', '', '2002-08-25', '8', '2002', '2296', 'GJ-002296', 'Tagihan Jasa Tenaga Kerja Kantor PUsat PJT II', '');
+REPLACE INTO jurnal VALUES('1284', '1', '1', '', '2002-08-25', '8', '2002', '2297', 'GJ-002297', 'Tagihan Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1285', '1', '1', '', '2002-08-25', '8', '2002', '2298', 'GJ-002298', 'Tagihan Perbaikan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1286', '1', '1', '', '2002-11-20', '11', '2002', '2564', 'GJ-002564', 'Penerimaan Kas KBR Nopember 02 ', '');
+REPLACE INTO jurnal VALUES('1287', '1', '1', '', '2002-11-20', '11', '2002', '2565', 'GJ-002565', 'Pengeluaran Kas KBR Nopember 02', '');
+REPLACE INTO jurnal VALUES('1288', '1', '1', '', '2002-11-10', '11', '2002', '2528', 'GJ-002528', 'Setoran Simpanan Nopember 02 Koperasi/CS', '');
+REPLACE INTO jurnal VALUES('1289', '1', '1', '', '2002-11-11', '11', '2002', '2539', 'GJ-002539', 'Setoran Angs. Barang Nopember 02 Koperasi/CS', '');
+REPLACE INTO jurnal VALUES('1290', '1', '1', '', '2002-11-10', '11', '2002', '2529', 'GJ-002529', 'Setoran Simpanan Nopember 02 Koperasi/CS Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1291', '1', '1', '', '2002-11-15', '11', '2002', '2561', 'GJ-002561', 'Setoran Angs. Barang Nopember 02 Koperasi/CS Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1292', '1', '1', '', '2002-12-05', '12', '2002', '2591', 'GJ-002591', 'Setoran Simpanan Desember 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('1293', '1', '1', '', '2002-12-05', '12', '2002', '2592', 'GJ-002592', 'Setoran Simpanan Desember 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1294', '1', '1', '', '2002-12-05', '12', '2002', '2593', 'GJ-002593', 'Setoran Simpanan Desember 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1295', '1', '1', '', '2002-12-04', '12', '2002', '2580', 'GJ-002580', 'Setoran Simpanan Desember 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1296', '1', '1', '', '2002-12-04', '12', '2002', '2581', 'GJ-002581', 'Setoran Simpanan Desember 02 Direksi', '');
+REPLACE INTO jurnal VALUES('1297', '1', '1', '', '2002-12-04', '12', '2002', '2582', 'GJ-002582', 'Setoran Simpanan Desember 02 UMM', '');
+REPLACE INTO jurnal VALUES('1298', '1', '1', '', '2002-12-15', '12', '2002', '2653', 'GJ-002653', 'Setoran Simpanan Desember 02 B. SPI', '');
+REPLACE INTO jurnal VALUES('1299', '1', '1', '', '2002-12-04', '12', '2002', '2583', 'GJ-002583', 'Setoran Simpanan Desember 02 B. Program', '');
+REPLACE INTO jurnal VALUES('1300', '1', '1', '', '2002-12-04', '12', '2002', '2584', 'GJ-002584', 'Setoran Simpanan Desember 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1301', '1', '1', '', '2002-12-04', '12', '2002', '2585', 'GJ-002585', 'Setoran Simpanan Desember 02 Litbang', '');
+REPLACE INTO jurnal VALUES('1302', '1', '1', '', '2002-12-04', '12', '2002', '2586', 'GJ-002586', 'Setoran Simpanan Desember 02 PUKK', '');
+REPLACE INTO jurnal VALUES('1303', '1', '1', '', '2002-12-04', '12', '2002', '2587', 'GJ-002587', 'Setoran Simpanan Desember 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1304', '1', '1', '', '2002-12-04', '12', '2002', '2588', 'GJ-002588', 'Setoran Simpanan Desember 02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('1305', '1', '1', '', '2002-12-04', '12', '2002', '2589', 'GJ-002589', 'Setoran Simpanan Desember 02 B. Umum', '');
+REPLACE INTO jurnal VALUES('1306', '1', '1', '', '2002-12-04', '12', '2002', '2590', 'GJ-002590', 'Setoran Simpanan Desember 02 UML', '');
+REPLACE INTO jurnal VALUES('1307', '1', '1', '', '2002-12-05', '12', '2002', '2594', 'GJ-002594', 'Setoran Simpanan Desember 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('1308', '1', '1', '', '2002-12-05', '12', '2002', '2595', 'GJ-002595', 'Setoran Simpanan Desember 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1309', '1', '1', '', '2002-12-05', '12', '2002', '2596', 'GJ-002596', 'Setoran Simpanan Desember 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1310', '1', '1', '', '2002-12-12', '12', '2002', '2647', 'GJ-002647', 'Setoran Simpanan Desember 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1311', '1', '1', '', '2002-12-05', '12', '2002', '2597', 'GJ-002597', 'Setoran Simpanan Desember 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('1312', '1', '1', '', '2002-12-05', '12', '2002', '2598', 'GJ-002598', 'Setoran Simpanan Desember 02 Talagasari', '');
+REPLACE INTO jurnal VALUES('1313', '1', '1', '', '2002-12-06', '12', '2002', '2610', 'GJ-002610', 'Setoran Angs. Barang Desember 02 Diperbantukan', '');
+REPLACE INTO jurnal VALUES('1314', '1', '1', '', '2002-12-06', '12', '2002', '2611', 'GJ-002611', 'Setoran Angs. Barang Desember 02 B. SPI', '');
+REPLACE INTO jurnal VALUES('1315', '1', '1', '', '2002-12-06', '12', '2002', '2612', 'GJ-002612', 'Setoran Angs. Barang Desember 02 B. Program', '');
+REPLACE INTO jurnal VALUES('1316', '1', '1', '', '2002-12-06', '12', '2002', '2613', 'GJ-002613', 'Setoran Angs. Barang Desember 02 B. Litbang', '');
+REPLACE INTO jurnal VALUES('1317', '1', '1', '', '2002-12-06', '12', '2002', '2614', 'GJ-002614', 'Setoran Angs. Barang Desember 02 B. EPL', '');
+REPLACE INTO jurnal VALUES('1318', '1', '1', '', '2002-12-06', '12', '2002', '2615', 'GJ-002615', 'Setoran Angs. Barang Desember 02 B. SDM', '');
+REPLACE INTO jurnal VALUES('1319', '1', '1', '', '2002-12-06', '12', '2002', '2616', 'GJ-002616', 'Setoran Angs. Barang Desember 02 Tubel 02', '');
+REPLACE INTO jurnal VALUES('1320', '1', '1', '', '2002-12-06', '12', '2002', '2617', 'GJ-002617', 'Setoran  Angs. Barang Desember 02 B. Keuangan', '');
+REPLACE INTO jurnal VALUES('1321', '1', '1', '', '2002-12-06', '12', '2002', '2618', 'GJ-002618', 'Setoran Angs. Barang Desember 02 B. Umum', '');
+REPLACE INTO jurnal VALUES('1322', '1', '1', '', '2002-12-06', '12', '2002', '2619', 'GJ-002619', 'Setoran Angs. Barang Desember 02 UML', '');
+REPLACE INTO jurnal VALUES('1323', '1', '1', '', '2002-12-06', '12', '2002', '2620', 'GJ-002620', 'Setoran Angs. Barang Desember 02 UMM', '');
+REPLACE INTO jurnal VALUES('1324', '1', '1', '', '2002-12-06', '12', '2002', '2621', 'GJ-002621', 'Setoran Angs. Barang Desember 02 PUKK', '');
+REPLACE INTO jurnal VALUES('1325', '1', '1', '', '2002-12-06', '12', '2002', '2622', 'GJ-002622', 'Setoran Angs. Barang Juni 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1326', '1', '1', '', '2002-12-06', '12', '2002', '2623', 'GJ-002623', 'Setoran Angs. Barang Desember 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('1327', '1', '1', '', '2002-12-06', '12', '2002', '2624', 'GJ-002624', 'Setoran Angs. Barang Desember 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1328', '1', '1', '', '2002-12-06', '12', '2002', '2625', 'GJ-002625', 'Setoran Angs. Barang Desember 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1329', '1', '1', '', '2002-12-06', '12', '2002', '2626', 'GJ-002626', 'Setoran Angs. Barang Desember 02 UPUK', '');
+REPLACE INTO jurnal VALUES('1330', '1', '1', '', '2002-12-06', '12', '2002', '2627', 'GJ-002627', 'Setoran Angs. Barang Desember 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1331', '1', '1', '', '2002-12-10', '12', '2002', '2630', 'GJ-002630', 'Setoran Angs. Barang Via Rohimah', '');
+REPLACE INTO jurnal VALUES('1332', '1', '1', '', '2002-12-10', '12', '2002', '2631', 'GJ-002631', 'Setoran Angs. Barang Via Rohimah', '');
+REPLACE INTO jurnal VALUES('1333', '1', '1', '', '2002-12-10', '12', '2002', '2632', 'GJ-002632', 'Setoran Angs. Barang Via Rohimah', '');
+REPLACE INTO jurnal VALUES('1334', '1', '1', '', '2002-12-10', '12', '2002', '2633', 'GJ-002633', 'Setoran Angs. Barang Via Rohimah', '');
+REPLACE INTO jurnal VALUES('1335', '1', '1', '', '2002-12-10', '12', '2002', '2634', 'GJ-002634', 'Setoran Angs. Barang Via Rohimah', '');
+REPLACE INTO jurnal VALUES('1336', '1', '1', '', '2002-12-10', '12', '2002', '2635', 'GJ-002635', 'Setoran Angs. Barang Juni 02 Purwakarta', '');
+REPLACE INTO jurnal VALUES('1337', '1', '1', '', '2002-12-10', '12', '2002', '2636', 'GJ-002636', 'Setoran Simpanan Desember 02 Koperasi/ CS', '');
+REPLACE INTO jurnal VALUES('1338', '1', '1', '', '2002-12-10', '12', '2002', '2637', 'GJ-002637', 'Setoran Angs. Barang Nopember 02 Koperasi/ CS', '');
+REPLACE INTO jurnal VALUES('1339', '1', '1', '', '2002-12-10', '12', '2002', '2638', 'GJ-002638', 'Setoran Simpanan Nopember 02 Koperasi / CS', '');
+REPLACE INTO jurnal VALUES('1340', '1', '1', '', '2002-12-10', '12', '2002', '2639', 'GJ-002639', 'Setoran Angs. Barang  Desember 02 Koperasi / CS', '');
+REPLACE INTO jurnal VALUES('1341', '1', '1', '', '2002-12-10', '12', '2002', '2640', 'GJ-002640', 'Setoran Simpanan Desember 02 Kop. Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1342', '1', '1', '', '2002-12-20', '12', '2002', '2660', 'GJ-002660', 'Penerimaan Kas KBR Desember 02', '');
+REPLACE INTO jurnal VALUES('1343', '1', '1', '', '2002-12-20', '12', '2002', '2661', 'GJ-002661', 'Pengeluaran Kas KBR Desember 02', '');
+REPLACE INTO jurnal VALUES('1344', '1', '1', '', '2002-12-20', '12', '2002', '2662', 'GJ-002662', 'Tagihan Makan Siang Kantor Pusat PJT II Des 02', '');
+REPLACE INTO jurnal VALUES('1345', '1', '1', '', '2002-12-20', '12', '2002', '2663', 'GJ-002663', 'Tagihan Hidangan Rapat Kantor Pusat PJT II Des 02', '');
+REPLACE INTO jurnal VALUES('1346', '1', '1', '', '2002-12-20', '12', '2002', '2664', 'GJ-002664', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II Des 02', '');
+REPLACE INTO jurnal VALUES('1347', '1', '1', '', '2002-12-20', '12', '2002', '2665', 'GJ-002665', 'Tagihan Cleaning Service Kantor Pusat PJT II Des 02', '');
+REPLACE INTO jurnal VALUES('1348', '1', '1', '', '2002-10-20', '10', '2002', '2473', 'GJ-002473', 'Piutang Barang Oktober 02', '');
+REPLACE INTO jurnal VALUES('1349', '1', '1', '', '2002-11-20', '11', '2002', '2566', 'GJ-002566', 'Piutang Barang Nopember 02', '');
+REPLACE INTO jurnal VALUES('1350', '1', '1', '', '2002-12-20', '12', '2002', '2666', 'GJ-002666', 'Piutang Barang Desember 02', '');
+REPLACE INTO jurnal VALUES('1351', '1', '1', '', '2002-01-25', '1', '2002', '1660', 'GJ-001660', 'Koreksi penyesuian', '');
+REPLACE INTO jurnal VALUES('1352', '1', '1', '', '2002-02-05', '2', '2002', '1700', 'GJ-001700', 'Setoran Simpanan Pebruari 02 Dapen', '');
+REPLACE INTO jurnal VALUES('1353', '1', '1', '', '2002-04-25', '4', '2002', '1903', 'GJ-001903', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1354', '1', '1', '', '2002-04-25', '4', '2002', '1904', 'GJ-001904', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1355', '1', '1', '', '2002-04-25', '4', '2002', '1905', 'GJ-001905', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1356', '1', '1', '', '2002-04-25', '4', '2002', '1906', 'GJ-001906', 'Tagihan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1357', '1', '1', '', '2002-04-25', '4', '2002', '1907', 'GJ-001907', 'Tagihan Cleaning Service Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1358', '1', '1', '', '2002-05-25', '5', '2002', '2005', 'GJ-002005', 'Tagihan Makan Siang Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1359', '1', '1', '', '2002-05-25', '5', '2002', '2006', 'GJ-002006', 'Tagihan Hidangan Rapat Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1360', '1', '1', '', '2002-05-25', '5', '2002', '2007', 'GJ-002007', 'Tagihan Jasa Tenaga Kerja Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1361', '1', '1', '', '2002-05-25', '5', '2002', '2008', 'GJ-002008', 'Tagihan Komputer Kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1362', '1', '1', '', '2002-05-25', '5', '2002', '2009', 'GJ-002009', 'Tagihan Cleaning Service kantor Pusat PJT II', '');
+REPLACE INTO jurnal VALUES('1363', '1', '1', '', '2002-03-25', '3', '2002', '1822', 'GJ-001822', 'Setoran Angs. Barang Maret 02 PNS', '');
+REPLACE INTO jurnal VALUES('1364', '1', '1', '', '2002-07-15', '7', '2002', '2185', 'GJ-002185', 'Setoran Angs. Barang Juli 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('1365', '1', '1', '', '2002-12-20', '12', '2002', '2667', 'GJ-002667', 'Set.Simpanan Des 02 via Rokhimah', '');
+REPLACE INTO jurnal VALUES('1366', '1', '1', '', '2002-12-20', '12', '2002', '2668', 'GJ-002668', 'Set.Simpanan Des 02 Div.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1367', '1', '1', '', '2002-12-20', '12', '2002', '2669', 'GJ-002669', 'Set.Barang Des 02 PNS', '');
+REPLACE INTO jurnal VALUES('1368', '1', '1', '', '2002-12-20', '12', '2002', '2670', 'GJ-002670', 'Set.Barang Des 02 K.Pusat', '');
+REPLACE INTO jurnal VALUES('1369', '1', '1', '', '2002-12-20', '12', '2002', '2671', 'GJ-002671', 'Set.Simp.Des 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('1370', '1', '1', '', '2002-11-25', '11', '2002', '2572', 'GJ-002572', 'Set.Barang Nop 02 PNS', '');
+REPLACE INTO jurnal VALUES('1371', '1', '1', '', '2002-05-25', '5', '2002', '2010', 'GJ-002010', 'Setoran. Simp Mei 02 Via Rohimah', '');
+REPLACE INTO jurnal VALUES('1372', '1', '1', '', '2002-10-25', '10', '2002', '2482', 'GJ-002482', 'Set.Barang Okt 02 Div.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1374', '1', '1', '', '2002-07-29', '7', '2002', '2194', 'GJ-002194', 'Tagihan Pakaian Kerja', '');
+REPLACE INTO jurnal VALUES('1375', '1', '1', '', '2002-09-26', '9', '2002', '2395', 'GJ-002395', 'Tagihan Pakaian Kerja', '');
+REPLACE INTO jurnal VALUES('1376', '1', '1', '', '2002-01-01', '1', '2002', '1571', 'GJ-001571', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1377', '1', '1', '', '2002-01-01', '1', '2002', '1572', 'GJ-001572', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1378', '1', '1', '', '2002-01-01', '1', '2002', '1573', 'GJ-001573', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1379', '1', '1', '', '2002-01-01', '1', '2002', '1574', 'GJ-001574', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1380', '1', '1', '', '2002-04-25', '4', '2002', '1908', 'GJ-001908', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1381', '1', '1', '', '2002-12-31', '12', '2002', '2685', 'GJ-002685', 'Persediaan', '');
+REPLACE INTO jurnal VALUES('1382', '1', '1', '', '2002-12-31', '12', '2002', '2686', 'GJ-002686', 'Persediaan', '');
+REPLACE INTO jurnal VALUES('1383', '1', '1', '', '2002-12-31', '12', '2002', '2687', 'GJ-002687', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1384', '1', '1', '', '2002-12-31', '12', '2002', '2688', 'GJ-002688', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1385', '1', '1', '', '2002-12-31', '12', '2002', '2689', 'GJ-002689', '( Koreksi Piutang Barang ) Biaya Admistrasi Dan Umum', '');
+REPLACE INTO jurnal VALUES('1386', '1', '1', '', '2002-12-31', '12', '2002', '2690', 'GJ-002690', '( Koreksi Kurang Membukukan ) Pendapatan Barang', '');
+REPLACE INTO jurnal VALUES('1387', '1', '1', '', '2002-12-31', '12', '2002', '2691', 'GJ-002691', 'Koreksi Penjualan ', '');
+REPLACE INTO jurnal VALUES('1388', '1', '1', '', '2002-12-31', '12', '2002', '2692', 'GJ-002692', 'Piutang tak tertagih', '');
+REPLACE INTO jurnal VALUES('1389', '1', '1', '', '2002-03-31', '3', '2002', '1824', 'GJ-001824', 'Setoran Angs. Barang Koperasi Citarum Hulu Bln. Maret 02', '');
+REPLACE INTO jurnal VALUES('1390', '1', '1', '', '2002-05-31', '5', '2002', '2015', 'GJ-002015', 'Setoran Angs. Barang Koperasi Citarum Hulu Mei 02', '');
+REPLACE INTO jurnal VALUES('1391', '1', '1', '', '2002-06-01', '6', '2002', '2017', 'GJ-002017', 'Setoran Angs. Barang Koperasi Citarum Hulu Juni 02', '');
+REPLACE INTO jurnal VALUES('1392', '1', '1', '', '2002-07-31', '7', '2002', '2195', 'GJ-002195', 'Setoran Angs. Barang Koperasi Citarum Hulu Juli 02', '');
+REPLACE INTO jurnal VALUES('1393', '1', '1', '', '2002-12-31', '12', '2002', '2693', 'GJ-002693', 'Set barang Juni,Agst 02 Pensiun,Div II', '');
+REPLACE INTO jurnal VALUES('1394', '1', '1', '', '2002-01-31', '1', '2002', '1662', 'GJ-001662', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1395', '1', '1', '', '2002-01-31', '1', '2002', '1663', 'GJ-001663', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1396', '1', '1', '', '2002-01-31', '1', '2002', '1664', 'GJ-001664', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1397', '1', '1', '', '2002-01-31', '1', '2002', '1665', 'GJ-001665', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1398', '1', '1', '', '2002-01-31', '1', '2002', '1666', 'GJ-001666', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1399', '1', '1', '', '2002-02-28', '2', '2002', '1744', 'GJ-001744', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1400', '1', '1', '', '2002-02-28', '2', '2002', '1745', 'GJ-001745', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1401', '1', '1', '', '2002-02-28', '2', '2002', '1746', 'GJ-001746', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1402', '1', '1', '', '2002-02-28', '2', '2002', '1747', 'GJ-001747', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1403', '1', '1', '', '2002-02-28', '2', '2002', '1748', 'GJ-001748', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1404', '1', '1', '', '2002-03-31', '3', '2002', '1825', 'GJ-001825', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1405', '1', '1', '', '2002-03-31', '3', '2002', '1826', 'GJ-001826', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1406', '1', '1', '', '2002-03-31', '3', '2002', '1827', 'GJ-001827', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1407', '1', '1', '', '2002-03-31', '3', '2002', '1828', 'GJ-001828', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1408', '1', '1', '', '2002-03-31', '3', '2002', '1829', 'GJ-001829', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1409', '1', '1', '', '2002-12-31', '12', '2002', '2694', 'GJ-002694', 'Beban Penyusutan', '');
+REPLACE INTO jurnal VALUES('1410', '1', '1', '', '2002-04-30', '4', '2002', '1911', 'GJ-001911', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1411', '1', '1', '', '2002-04-30', '4', '2002', '1912', 'GJ-001912', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1412', '1', '1', '', '2002-04-30', '4', '2002', '1913', 'GJ-001913', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1413', '1', '1', '', '2002-12-31', '12', '2002', '2695', 'GJ-002695', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1414', '1', '1', '', '2002-04-30', '4', '2002', '1914', 'GJ-001914', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1415', '1', '1', '', '2002-04-30', '4', '2002', '1915', 'GJ-001915', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1416', '1', '1', '', '2002-04-30', '4', '2002', '1916', 'GJ-001916', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1417', '1', '1', '', '2002-05-30', '5', '2002', '2011', 'GJ-002011', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1418', '1', '1', '', '2002-05-30', '5', '2002', '2012', 'GJ-002012', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1419', '1', '1', '', '2002-05-30', '5', '2002', '2013', 'GJ-002013', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1420', '1', '1', '', '2002-04-30', '4', '2002', '1917', 'GJ-001917', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1421', '1', '1', '', '2002-05-30', '5', '2002', '2014', 'GJ-002014', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1422', '1', '1', '', '2002-06-30', '6', '2002', '2107', 'GJ-002107', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1423', '1', '1', '', '2002-06-30', '6', '2002', '2108', 'GJ-002108', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1424', '1', '1', '', '2002-06-30', '6', '2002', '2109', 'GJ-002109', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1425', '1', '1', '', '2002-06-30', '6', '2002', '2110', 'GJ-002110', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1426', '1', '1', '', '2002-06-30', '6', '2002', '2111', 'GJ-002111', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1427', '1', '1', '', '2002-07-31', '7', '2002', '2196', 'GJ-002196', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1428', '1', '1', '', '2002-07-31', '7', '2002', '2197', 'GJ-002197', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1429', '1', '1', '', '2002-07-31', '7', '2002', '2198', 'GJ-002198', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1430', '1', '1', '', '2002-07-31', '7', '2002', '2199', 'GJ-002199', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1431', '1', '1', '', '2002-07-31', '7', '2002', '2200', 'GJ-002200', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1432', '1', '1', '', '2002-07-31', '7', '2002', '2201', 'GJ-002201', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1433', '1', '1', '', '2002-08-31', '8', '2002', '2299', 'GJ-002299', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1434', '1', '1', '', '2002-08-31', '8', '2002', '2300', 'GJ-002300', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1435', '1', '1', '', '2002-08-31', '8', '2002', '2301', 'GJ-002301', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1436', '1', '1', '', '2002-08-31', '8', '2002', '2302', 'GJ-002302', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1437', '1', '1', '', '2002-08-31', '8', '2002', '2303', 'GJ-002303', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1438', '1', '1', '', '2002-08-31', '8', '2002', '2304', 'GJ-002304', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1439', '1', '1', '', '2002-09-30', '9', '2002', '2397', 'GJ-002397', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1440', '1', '1', '', '2002-09-30', '9', '2002', '2398', 'GJ-002398', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1441', '1', '1', '', '2002-09-30', '9', '2002', '2399', 'GJ-002399', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1442', '1', '1', '', '2002-09-30', '9', '2002', '2400', 'GJ-002400', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1443', '1', '1', '', '2002-09-30', '9', '2002', '2401', 'GJ-002401', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1444', '1', '1', '', '2002-09-30', '9', '2002', '2402', 'GJ-002402', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1445', '1', '1', '', '2002-10-31', '10', '2002', '2484', 'GJ-002484', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1446', '1', '1', '', '2002-10-31', '10', '2002', '2485', 'GJ-002485', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1447', '1', '1', '', '2002-10-31', '10', '2002', '2486', 'GJ-002486', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1448', '1', '1', '', '2002-10-30', '10', '2002', '2483', 'GJ-002483', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1449', '1', '1', '', '2002-11-30', '11', '2002', '2574', 'GJ-002574', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1450', '1', '1', '', '2002-11-30', '11', '2002', '2575', 'GJ-002575', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1451', '1', '1', '', '2002-11-30', '11', '2002', '2576', 'GJ-002576', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1452', '1', '1', '', '2002-11-30', '11', '2002', '2577', 'GJ-002577', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1453', '1', '1', '', '2002-11-30', '11', '2002', '2578', 'GJ-002578', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1454', '1', '1', '', '2002-11-30', '11', '2002', '2579', 'GJ-002579', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1455', '1', '1', '', '2002-12-31', '12', '2002', '2696', 'GJ-002696', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1456', '1', '1', '', '2002-12-31', '12', '2002', '2697', 'GJ-002697', 'Rekening Koran', '');
+REPLACE INTO jurnal VALUES('1457', '1', '1', '', '2002-12-31', '12', '2002', '2698', 'GJ-002698', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1458', '1', '1', '', '2002-12-31', '12', '2002', '2699', 'GJ-002699', 'Tabungan', '');
+REPLACE INTO jurnal VALUES('1459', '1', '1', '', '2002-03-30', '3', '2002', '1823', 'GJ-001823', 'Setoran Simp. Maret 02 Kop. Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1460', '1', '1', '', '2002-12-31', '12', '2002', '2700', 'GJ-002700', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1461', '1', '1', '', '2002-05-31', '5', '2002', '2016', 'GJ-002016', 'Setoran Simpanan Mei 02 Kop. Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('1462', '1', '1', '', '2002-12-31', '12', '2002', '2701', 'GJ-002701', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('1463', '1', '1', '', '2002-12-31', '12', '2002', '2702', 'GJ-002702', 'Penyesuian Pembulatan ', '');
+REPLACE INTO jurnal VALUES('1464', '1', '1', '', '2002-12-31', '12', '2002', '2703', 'GJ-002703', 'Koreksi Setoran Pinjaman UPUK', '');
+REPLACE INTO jurnal VALUES('1465', '1', '1', '', '2002-12-31', '12', '2002', '2704', 'GJ-002704', 'Koreksi Kesalahan Pincatatan GJ001145', '');
+REPLACE INTO jurnal VALUES('1466', '1', '1', '', '2002-12-31', '12', '2002', '2705', 'GJ-002705', 'Biaya Audit', '');
+REPLACE INTO jurnal VALUES('1467', '1', '1', '', '2002-12-31', '12', '2002', '2706', 'GJ-002706', 'Penyesuian', '');
+REPLACE INTO jurnal VALUES('1468', '1', '1', '', '2002-12-31', '12', '2002', '2707', 'GJ-002707', 'Penambahan Modal USP', '');
+REPLACE INTO jurnal VALUES('2361', '2', '1', '', '2002-01-04', '1', '2002', '1576', 'GJ-001576', 'Angs.Januari 2002 SPI', '');
+REPLACE INTO jurnal VALUES('2362', '2', '1', '', '2002-01-04', '1', '2002', '1577', 'GJ-001577', 'Angs.Januari 2002 UMM', '');
+REPLACE INTO jurnal VALUES('2363', '2', '1', '', '2002-01-04', '1', '2002', '1578', 'GJ-001578', 'Angs.Januari 2002 a.n Henu W', '');
+REPLACE INTO jurnal VALUES('2364', '2', '1', '', '2002-01-04', '1', '2002', '1579', 'GJ-001579', 'Angs.Januari 2002 Proglit', '');
+REPLACE INTO jurnal VALUES('2365', '2', '1', '', '2002-01-04', '1', '2002', '1580', 'GJ-001580', 'Angs.Januari 2002 Biro Teknik', '');
+REPLACE INTO jurnal VALUES('2366', '2', '1', '', '2002-01-04', '1', '2002', '1581', 'GJ-001581', 'Angs.Januari 2002 Bangha & PUKK', '');
+REPLACE INTO jurnal VALUES('2367', '2', '1', '', '2002-01-04', '1', '2002', '1582', 'GJ-001582', 'Angs.Januari 2002 B.SDM', '');
+REPLACE INTO jurnal VALUES('2368', '2', '1', '', '2002-01-04', '1', '2002', '1583', 'GJ-001583', 'Angs.Januari 2002 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2369', '2', '1', '', '2002-01-04', '1', '2002', '1584', 'GJ-001584', 'Angs.Januari 2002 B.Umum', '');
+REPLACE INTO jurnal VALUES('2370', '2', '1', '', '2002-01-07', '1', '2002', '1586', 'GJ-001586', 'Angs.Januari 2002 UPUK', '');
+REPLACE INTO jurnal VALUES('2371', '2', '1', '', '2002-01-07', '1', '2002', '1587', 'GJ-001587', 'Angs.Januari 2002 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2372', '2', '1', '', '2002-01-07', '1', '2002', '1588', 'GJ-001588', 'Angs.Desember 2001 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2373', '2', '1', '', '2002-01-07', '1', '2002', '1589', 'GJ-001589', 'Angs.Januari 2002 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2374', '2', '1', '', '2002-01-07', '1', '2002', '1590', 'GJ-001590', 'Angs.Januari 2002 Divisi III', '');
+REPLACE INTO jurnal VALUES('2375', '2', '1', '', '2002-01-09', '1', '2002', '1591', 'GJ-001591', 'Angs.Januari 2002 PLTA', '');
+REPLACE INTO jurnal VALUES('2376', '2', '1', '', '2002-01-09', '1', '2002', '1592', 'GJ-001592', 'Angs.Januari 2002 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2377', '2', '1', '', '2002-01-14', '1', '2002', '1618', 'GJ-001618', 'Angs.Januari 2002 Pensiun', '');
+REPLACE INTO jurnal VALUES('2378', '2', '1', '', '2002-01-14', '1', '2002', '1619', 'GJ-001619', 'Angs.Desember 2001 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2379', '2', '1', '', '2002-01-10', '1', '2002', '1616', 'GJ-001616', 'Pinjaman Januari 2002', '');
+REPLACE INTO jurnal VALUES('2380', '2', '1', '', '2002-01-10', '1', '2002', '1617', 'GJ-001617', 'Beban Pokok Pinjaman Januari 2002', '');
+REPLACE INTO jurnal VALUES('2381', '2', '1', '', '2002-01-14', '1', '2002', '1620', 'GJ-001620', 'Angs.Februari 2002 CS/KOP.KBR', '');
+REPLACE INTO jurnal VALUES('2382', '2', '1', '', '2002-01-14', '1', '2002', '1621', 'GJ-001621', 'Angs.Januari 2002 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2383', '2', '1', '', '2002-01-14', '1', '2002', '1622', 'GJ-001622', 'Angs.Januari 2002 Divisi I', '');
+REPLACE INTO jurnal VALUES('2384', '2', '1', '', '2002-01-14', '1', '2002', '1623', 'GJ-001623', 'Angs.Januari 2002 Divisi II', '');
+REPLACE INTO jurnal VALUES('2385', '2', '1', '', '2002-01-14', '1', '2002', '1624', 'GJ-001624', 'Angs.Januari 2002 PNS', '');
+REPLACE INTO jurnal VALUES('2386', '2', '1', '', '2002-01-14', '1', '2002', '1625', 'GJ-001625', 'Kurang Membukukan Januari 2002 PNS', '');
+REPLACE INTO jurnal VALUES('2387', '2', '1', '', '2002-01-14', '1', '2002', '1626', 'GJ-001626', 'Pemberian Pinjaman ke Kas KBR', '');
+REPLACE INTO jurnal VALUES('2388', '2', '1', '', '2002-02-04', '2', '2002', '1667', 'GJ-001667', 'Angs.Februari 2002 B.SPI', '');
+REPLACE INTO jurnal VALUES('2389', '2', '1', '', '2002-02-04', '2', '2002', '1668', 'GJ-001668', 'Angs.Februari 2002 UMM', '');
+REPLACE INTO jurnal VALUES('2390', '2', '1', '', '2002-02-04', '2', '2002', '1669', 'GJ-001669', 'Angs.Februari 2002 Tenaga Prof. TK I', '');
+REPLACE INTO jurnal VALUES('2391', '2', '1', '', '2002-02-04', '2', '2002', '1670', 'GJ-001670', 'Angs.Februari 2002 B.Program', '');
+REPLACE INTO jurnal VALUES('2392', '2', '1', '', '2002-02-04', '2', '2002', '1671', 'GJ-001671', 'Angs.Februari 2002 B.EP&L', '');
+REPLACE INTO jurnal VALUES('2393', '2', '1', '', '2002-02-04', '2', '2002', '1672', 'GJ-001672', 'Angs.Februari 2002 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2394', '2', '1', '', '2002-02-04', '2', '2002', '1673', 'GJ-001673', 'Angs.Februari 2002 PUKK', '');
+REPLACE INTO jurnal VALUES('2395', '2', '1', '', '2002-02-04', '2', '2002', '1674', 'GJ-001674', 'Angs.Februari 2002 B.SDM', '');
+REPLACE INTO jurnal VALUES('2396', '2', '1', '', '2002-02-04', '2', '2002', '1675', 'GJ-001675', 'Angs.Februari 2002 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2397', '2', '1', '', '2002-02-04', '2', '2002', '1676', 'GJ-001676', 'Angs.Februari 2002 B.Umum', '');
+REPLACE INTO jurnal VALUES('2398', '2', '1', '', '2002-02-05', '2', '2002', '1701', 'GJ-001701', 'Angs.Februari 2002 PNS', '');
+REPLACE INTO jurnal VALUES('2399', '2', '1', '', '2002-02-05', '2', '2002', '1702', 'GJ-001702', 'Kurang Membukukan Februari 2002 PNS', '');
+REPLACE INTO jurnal VALUES('2400', '2', '1', '', '2002-02-05', '2', '2002', '1703', 'GJ-001703', 'Angs.Januari 2002 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2401', '2', '1', '', '2002-02-05', '2', '2002', '1704', 'GJ-001704', 'Angs.Februari 2002 Divisi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2402', '2', '1', '', '2002-02-05', '2', '2002', '1705', 'GJ-001705', 'Angs.Februari 2002 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2403', '2', '1', '', '2002-02-06', '2', '2002', '1706', 'GJ-001706', 'Angs.Februari 2002 UPUK', '');
+REPLACE INTO jurnal VALUES('2404', '2', '1', '', '2002-02-06', '2', '2002', '1707', 'GJ-001707', 'Angs.Februari 2002 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2405', '2', '1', '', '2002-02-06', '2', '2002', '1708', 'GJ-001708', 'Angs.Februari 2002 Pensiun', '');
+REPLACE INTO jurnal VALUES('2406', '2', '1', '', '2002-02-06', '2', '2002', '1709', 'GJ-001709', 'Angs.Februari 2002 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2407', '2', '1', '', '2002-02-06', '2', '2002', '1710', 'GJ-001710', 'Angs.Februari 2002 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2408', '2', '1', '', '2002-02-07', '2', '2002', '1711', 'GJ-001711', 'Angs.Februari 2002 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2409', '2', '1', '', '2002-02-07', '2', '2002', '1712', 'GJ-001712', 'Angs.Februari 2002 Divus III', '');
+REPLACE INTO jurnal VALUES('2410', '2', '1', '', '2002-02-08', '2', '2002', '1713', 'GJ-001713', 'Angs.Februari 2002 Divus I', '');
+REPLACE INTO jurnal VALUES('2411', '2', '1', '', '2002-02-08', '2', '2002', '1714', 'GJ-001714', 'Angs.Februari 2002 Divus II', '');
+REPLACE INTO jurnal VALUES('2425', '2', '1', '', '2002-02-11', '2', '2002', '1715', 'GJ-001715', 'Pinjaman Februari 2002', '');
+REPLACE INTO jurnal VALUES('2426', '2', '1', '', '2002-02-11', '2', '2002', '1716', 'GJ-001716', 'Beban Pokok Februari 2002', '');
+REPLACE INTO jurnal VALUES('2427', '2', '1', '', '2002-01-14', '1', '2002', '1627', 'GJ-001627', 'Pelunasan Januari 2002', '');
+REPLACE INTO jurnal VALUES('2428', '2', '1', '', '2002-01-14', '1', '2002', '1628', 'GJ-001628', 'Provisi Pinjaman Januari 2002', '');
+REPLACE INTO jurnal VALUES('2429', '2', '1', '', '2002-02-12', '2', '2002', '1717', 'GJ-001717', 'Angs.Maret 2002 CS/KOP.KBR', '');
+REPLACE INTO jurnal VALUES('2430', '2', '1', '', '2002-03-04', '3', '2002', '1749', 'GJ-001749', 'Angs.Maret 2002 DPB', '');
+REPLACE INTO jurnal VALUES('2431', '2', '1', '', '2002-03-04', '3', '2002', '1750', 'GJ-001750', 'Angs.Maret 2002 UMM', '');
+REPLACE INTO jurnal VALUES('2432', '2', '1', '', '2002-03-04', '3', '2002', '1751', 'GJ-001751', 'Angs.Maret 2002 B.SPI', '');
+REPLACE INTO jurnal VALUES('2433', '2', '1', '', '2002-03-04', '3', '2002', '1752', 'GJ-001752', 'Angs.Maret 2002 B.Program', '');
+REPLACE INTO jurnal VALUES('2434', '2', '1', '', '2002-03-04', '3', '2002', '1753', 'GJ-001753', 'Angs.Maret 2002 B.EP&L', '');
+REPLACE INTO jurnal VALUES('2435', '2', '1', '', '2002-03-04', '3', '2002', '1754', 'GJ-001754', 'Angs.Maret 2002 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2436', '2', '1', '', '2002-03-04', '3', '2002', '1755', 'GJ-001755', 'Angs.Maret 2002 PUKK', '');
+REPLACE INTO jurnal VALUES('2437', '2', '1', '', '2002-03-04', '3', '2002', '1756', 'GJ-001756', 'Angs.Maret 2002 B.SDM', '');
+REPLACE INTO jurnal VALUES('2438', '2', '1', '', '2002-03-04', '3', '2002', '1757', 'GJ-001757', 'Angs.Maret 2002 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2439', '2', '1', '', '2002-03-04', '3', '2002', '1758', 'GJ-001758', 'Angs.Maret 2002 B.Umum', '');
+REPLACE INTO jurnal VALUES('2440', '2', '1', '', '2002-03-04', '3', '2002', '1759', 'GJ-001759', 'Angs.Maret 2002 CAPEG', '');
+REPLACE INTO jurnal VALUES('2441', '2', '1', '', '2002-03-05', '3', '2002', '1783', 'GJ-001783', 'Angs.Maret 2002 UPUK', '');
+REPLACE INTO jurnal VALUES('2442', '2', '1', '', '2002-03-05', '3', '2002', '1784', 'GJ-001784', 'Angs.Maret 2002 Div.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2443', '2', '1', '', '2002-03-05', '3', '2002', '1785', 'GJ-001785', 'Angs.Maret 2002 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2444', '2', '1', '', '2002-03-05', '3', '2002', '1786', 'GJ-001786', 'Angs.Maret 2002 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2445', '2', '1', '', '2002-03-05', '3', '2002', '1787', 'GJ-001787', 'Angs.Maret 2002 PNS', '');
+REPLACE INTO jurnal VALUES('2446', '2', '1', '', '2002-03-05', '3', '2002', '1788', 'GJ-001788', 'Angs.Maret 2002 Divus III', '');
+REPLACE INTO jurnal VALUES('2447', '2', '1', '', '2002-03-05', '3', '2002', '1789', 'GJ-001789', 'Angs.Maret 2002 Pensiun', '');
+REPLACE INTO jurnal VALUES('2448', '2', '1', '', '2002-03-05', '3', '2002', '1790', 'GJ-001790', 'Angs.Maret 2002 Divus II', '');
+REPLACE INTO jurnal VALUES('2449', '2', '1', '', '2002-03-05', '3', '2002', '1791', 'GJ-001791', 'Angs.Maret 2002 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2450', '2', '1', '', '2002-03-05', '3', '2002', '1792', 'GJ-001792', 'Angs.Maret 2002 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2451', '2', '1', '', '2002-03-06', '3', '2002', '1793', 'GJ-001793', 'Angs.Maret 2002 via bu Lela', '');
+REPLACE INTO jurnal VALUES('2452', '2', '1', '', '2002-03-12', '3', '2002', '1811', 'GJ-001811', 'Angs.April 2002 CS/KOP.KBR', '');
+REPLACE INTO jurnal VALUES('2453', '2', '1', '', '2002-03-11', '3', '2002', '1794', 'GJ-001794', 'Pinjaman Maret 2002', '');
+REPLACE INTO jurnal VALUES('2454', '2', '1', '', '2002-03-11', '3', '2002', '1795', 'GJ-001795', 'Beban Pokok Maret 2002', '');
+REPLACE INTO jurnal VALUES('2455', '2', '1', '', '2002-03-13', '3', '2002', '1812', 'GJ-001812', 'Pelunasan Maret 2002', '');
+REPLACE INTO jurnal VALUES('2456', '2', '1', '', '2002-03-13', '3', '2002', '1813', 'GJ-001813', 'Provisi Maret 2002', '');
+REPLACE INTO jurnal VALUES('2457', '2', '1', '', '2002-04-04', '4', '2002', '1842', 'GJ-001842', 'Angs.April 2002 DPB', '');
+REPLACE INTO jurnal VALUES('2458', '2', '1', '', '2002-04-04', '4', '2002', '1843', 'GJ-001843', 'Angs.April 2002 UMM', '');
+REPLACE INTO jurnal VALUES('2459', '2', '1', '', '2002-04-04', '4', '2002', '1844', 'GJ-001844', 'Angs.April 2002 B.SPI', '');
+REPLACE INTO jurnal VALUES('2460', '2', '1', '', '2002-04-04', '4', '2002', '1845', 'GJ-001845', 'Angs.April 2002 B.Program', '');
+REPLACE INTO jurnal VALUES('2461', '2', '1', '', '2002-04-04', '4', '2002', '1846', 'GJ-001846', 'Angs.April 2002 B.EP&L', '');
+REPLACE INTO jurnal VALUES('2462', '2', '1', '', '2002-04-04', '4', '2002', '1847', 'GJ-001847', 'Angs.April 2002 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2463', '2', '1', '', '2002-04-04', '4', '2002', '1848', 'GJ-001848', 'Angs.April 2002 PUKK', '');
+REPLACE INTO jurnal VALUES('2464', '2', '1', '', '2002-04-04', '4', '2002', '1849', 'GJ-001849', 'Angs.April 2002 B.SDM', '');
+REPLACE INTO jurnal VALUES('2465', '2', '1', '', '2002-04-04', '4', '2002', '1850', 'GJ-001850', 'Angs.April 2002 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2466', '2', '1', '', '2002-04-04', '4', '2002', '1851', 'GJ-001851', 'Angs.April 2002 B.Umum', '');
+REPLACE INTO jurnal VALUES('2467', '2', '1', '', '2002-04-04', '4', '2002', '1852', 'GJ-001852', 'Angs.April 2002 CAPEG', '');
+REPLACE INTO jurnal VALUES('2468', '2', '1', '', '2002-04-05', '4', '2002', '1854', 'GJ-001854', 'Angs.Pinj via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2469', '2', '1', '', '2002-04-08', '4', '2002', '1858', 'GJ-001858', 'Angs.April 2002 Pensiun', '');
+REPLACE INTO jurnal VALUES('2470', '2', '1', '', '2002-04-08', '4', '2002', '1859', 'GJ-001859', 'Angs.April 2002 Divisi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2471', '2', '1', '', '2002-04-08', '4', '2002', '1860', 'GJ-001860', 'Angs.April 2002 PNS', '');
+REPLACE INTO jurnal VALUES('2472', '2', '1', '', '2002-04-08', '4', '2002', '1861', 'GJ-001861', 'Angs.April 2002 Divisi I', '');
+REPLACE INTO jurnal VALUES('2473', '2', '1', '', '2002-04-08', '4', '2002', '1862', 'GJ-001862', 'Angs.April 2002 UPUK', '');
+REPLACE INTO jurnal VALUES('2474', '2', '1', '', '2002-04-08', '4', '2002', '1863', 'GJ-001863', 'Angs.April 2002 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2475', '2', '1', '', '2002-04-09', '4', '2002', '1865', 'GJ-001865', 'Angs.April 2002 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2476', '2', '1', '', '2002-04-10', '4', '2002', '1867', 'GJ-001867', 'Angs.April 2002 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2477', '2', '1', '', '2002-04-11', '4', '2002', '1872', 'GJ-001872', 'Pinjaman April 2002', '');
+REPLACE INTO jurnal VALUES('2478', '2', '1', '', '2002-04-12', '4', '2002', '1878', 'GJ-001878', 'Beban Pokok April 2002', '');
+REPLACE INTO jurnal VALUES('2479', '2', '1', '', '2002-04-12', '4', '2002', '1879', 'GJ-001879', 'Kelebihan potong a.n Nusin S', '');
+REPLACE INTO jurnal VALUES('2480', '2', '1', '', '2002-05-06', '5', '2002', '1962', 'GJ-001962', 'Angs.Mei 2002 B.SPI', '');
+REPLACE INTO jurnal VALUES('2481', '2', '1', '', '2002-05-06', '5', '2002', '1963', 'GJ-001963', 'Angs.Mei 2002 B.Program', '');
+REPLACE INTO jurnal VALUES('2482', '2', '1', '', '2002-05-06', '5', '2002', '1964', 'GJ-001964', 'Angs.Mei 2002 B.EP&L', '');
+REPLACE INTO jurnal VALUES('2483', '2', '1', '', '2002-05-06', '5', '2002', '1965', 'GJ-001965', 'Angs.Mei 2002 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2484', '2', '1', '', '2002-05-06', '5', '2002', '1966', 'GJ-001966', 'Angs.Mei 2002 PUKK', '');
+REPLACE INTO jurnal VALUES('2485', '2', '1', '', '2002-05-06', '5', '2002', '1967', 'GJ-001967', 'Angs.Mei 2002 UMM', '');
+REPLACE INTO jurnal VALUES('2486', '2', '1', '', '2002-05-06', '5', '2002', '1968', 'GJ-001968', 'Angs.Mei 2002 DPB', '');
+REPLACE INTO jurnal VALUES('2487', '2', '1', '', '2002-05-06', '5', '2002', '1969', 'GJ-001969', 'Angs.Mei 2002 B.SDM', '');
+REPLACE INTO jurnal VALUES('2488', '2', '1', '', '2002-05-06', '5', '2002', '1970', 'GJ-001970', 'Angs.Mei 2002 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2489', '2', '1', '', '2002-05-06', '5', '2002', '1971', 'GJ-001971', 'Angs.Mei 2002 B.Umum', '');
+REPLACE INTO jurnal VALUES('2490', '2', '1', '', '2002-05-06', '5', '2002', '1972', 'GJ-001972', 'Angs.Mei 2002 CAPEG', '');
+REPLACE INTO jurnal VALUES('2491', '2', '1', '', '2002-05-07', '5', '2002', '1973', 'GJ-001973', 'Angs.Mei 2002 UPUK', '');
+REPLACE INTO jurnal VALUES('2492', '2', '1', '', '2002-05-07', '5', '2002', '1974', 'GJ-001974', 'Angs.Mei 2002 Div.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2493', '2', '1', '', '2002-05-07', '5', '2002', '1975', 'GJ-001975', 'Angs.Mei 2002 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2494', '2', '1', '', '2002-05-07', '5', '2002', '1976', 'GJ-001976', 'Angs.Mei 2002 Pensiun', '');
+REPLACE INTO jurnal VALUES('2495', '2', '1', '', '2002-05-07', '5', '2002', '1977', 'GJ-001977', 'Angs.Mei 2002 Divisi III', '');
+REPLACE INTO jurnal VALUES('2496', '2', '1', '', '2002-05-07', '5', '2002', '1978', 'GJ-001978', 'Angs.Mei 2002 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2497', '2', '1', '', '2002-05-07', '5', '2002', '1979', 'GJ-001979', 'Angs.Mei 2002 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2498', '2', '1', '', '2002-05-07', '5', '2002', '1980', 'GJ-001980', 'Angs.Mei 2002 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2499', '2', '1', '', '2002-05-07', '5', '2002', '1981', 'GJ-001981', 'Angs.Mei 2002 Divisi II', '');
+REPLACE INTO jurnal VALUES('2500', '2', '1', '', '2002-05-07', '5', '2002', '1982', 'GJ-001982', 'Angs.Mei 2002 Divisi I', '');
+REPLACE INTO jurnal VALUES('2501', '2', '1', '', '2002-05-08', '5', '2002', '1983', 'GJ-001983', 'Angs.Mei 2002 CS/KOP.KBR', '');
+REPLACE INTO jurnal VALUES('2502', '2', '1', '', '2002-05-09', '5', '2002', '1985', 'GJ-001985', 'Angs.April 2002 Divisi II', '');
+REPLACE INTO jurnal VALUES('2503', '2', '1', '', '2002-05-09', '5', '2002', '1986', 'GJ-001986', 'Angs.April 2002 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2504', '2', '1', '', '2002-05-09', '5', '2002', '1987', 'GJ-001987', 'Angs.Maret 2002 Divisi I', '');
+REPLACE INTO jurnal VALUES('2505', '2', '1', '', '2002-05-09', '5', '2002', '1988', 'GJ-001988', 'Angs.April 2002 Divisi III', '');
+REPLACE INTO jurnal VALUES('2506', '2', '1', '', '2002-05-09', '5', '2002', '1989', 'GJ-001989', 'Angs.Mei 2002 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2507', '2', '1', '', '2002-05-10', '5', '2002', '1990', 'GJ-001990', 'Provisi Mei 02', '');
+REPLACE INTO jurnal VALUES('2508', '2', '1', '', '2002-05-10', '5', '2002', '1991', 'GJ-001991', 'Pelunasan Mei 02', '');
+REPLACE INTO jurnal VALUES('2509', '2', '1', '', '2002-05-10', '5', '2002', '1992', 'GJ-001992', 'Pelunasan April 02', '');
+REPLACE INTO jurnal VALUES('2510', '2', '1', '', '2002-09-09', '9', '2002', '2331', 'GJ-002331', 'Angs.Sept 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2511', '2', '1', '', '2002-09-09', '9', '2002', '2332', 'GJ-002332', 'Angs.Sept 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('2512', '2', '1', '', '2002-09-10', '9', '2002', '2352', 'GJ-002352', 'Angs.Sept 02 B.Program', '');
+REPLACE INTO jurnal VALUES('2513', '2', '1', '', '2002-05-14', '5', '2002', '2001', 'GJ-002001', 'Angs.Mei 02 PNS', '');
+REPLACE INTO jurnal VALUES('2514', '2', '1', '', '2002-09-10', '9', '2002', '2353', 'GJ-002353', 'Angs.Sept 02 B.EPL', '');
+REPLACE INTO jurnal VALUES('2515', '2', '1', '', '2002-09-10', '9', '2002', '2354', 'GJ-002354', 'Angs.Sept 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('2516', '2', '1', '', '2002-09-12', '9', '2002', '2368', 'GJ-002368', 'Angs.Sept 02 PNS', '');
+REPLACE INTO jurnal VALUES('2517', '2', '1', '', '2002-09-13', '9', '2002', '2375', 'GJ-002375', 'Angs.Sept 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2518', '2', '1', '', '2002-09-10', '9', '2002', '2355', 'GJ-002355', 'Beban Pokok Sept 02', '');
+REPLACE INTO jurnal VALUES('2519', '2', '1', '', '2002-06-05', '6', '2002', '2047', 'GJ-002047', 'Angs.Juni 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2520', '2', '1', '', '2002-09-13', '9', '2002', '2376', 'GJ-002376', 'Angs.Sept 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2521', '2', '1', '', '2002-06-06', '6', '2002', '2051', 'GJ-002051', 'Angs.Juni 02 UPUK', '');
+REPLACE INTO jurnal VALUES('2522', '2', '1', '', '2002-06-07', '6', '2002', '2054', 'GJ-002054', 'Angs.Juni 02 DPB', '');
+REPLACE INTO jurnal VALUES('2523', '2', '1', '', '2002-09-16', '9', '2002', '2382', 'GJ-002382', 'Angs.Juni 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('2524', '2', '1', '', '2002-06-07', '6', '2002', '2055', 'GJ-002055', 'Angs.Juni 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2525', '2', '1', '', '2002-09-16', '9', '2002', '2383', 'GJ-002383', 'Angs.Juli 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('2526', '2', '1', '', '2002-09-16', '9', '2002', '2384', 'GJ-002384', 'Angs.Agst 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('2527', '2', '1', '', '2002-06-07', '6', '2002', '2056', 'GJ-002056', 'Angs.Juni 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('2528', '2', '1', '', '2002-06-07', '6', '2002', '2057', 'GJ-002057', 'Angs.Juni 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2529', '2', '1', '', '2002-06-07', '6', '2002', '2058', 'GJ-002058', 'Angs.Juni 02 PUKK', '');
+REPLACE INTO jurnal VALUES('2530', '2', '1', '', '2002-06-07', '6', '2002', '2059', 'GJ-002059', 'Angs.Juni 02 UMM', '');
+REPLACE INTO jurnal VALUES('2531', '2', '1', '', '2002-06-07', '6', '2002', '2060', 'GJ-002060', 'Angs.Juni 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('2532', '2', '1', '', '2002-06-07', '6', '2002', '2061', 'GJ-002061', 'Angs.Juni 02 CAPEG', '');
+REPLACE INTO jurnal VALUES('2533', '2', '1', '', '2002-06-10', '6', '2002', '2069', 'GJ-002069', 'Angs.Juni 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2534', '2', '1', '', '2002-06-11', '6', '2002', '2077', 'GJ-002077', 'Angs.Juni 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2535', '2', '1', '', '2002-06-11', '6', '2002', '2078', 'GJ-002078', 'Angs.Mei 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('2536', '2', '1', '', '2002-06-11', '6', '2002', '2079', 'GJ-002079', 'Angs.Juni 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('2537', '2', '1', '', '2002-06-12', '6', '2002', '2087', 'GJ-002087', 'Angs.Juni 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2538', '2', '1', '', '2002-06-12', '6', '2002', '2088', 'GJ-002088', 'Angs.Juni 02 PNS', '');
+REPLACE INTO jurnal VALUES('2539', '2', '1', '', '2002-06-12', '6', '2002', '2089', 'GJ-002089', 'Angs.Juni 02 KOP.KBR', '');
+REPLACE INTO jurnal VALUES('2540', '2', '1', '', '2002-06-10', '6', '2002', '2070', 'GJ-002070', 'Pinjaman Juni 02', '');
+REPLACE INTO jurnal VALUES('2541', '2', '1', '', '2002-06-10', '6', '2002', '2071', 'GJ-002071', 'Beban Pokok Juni 02', '');
+REPLACE INTO jurnal VALUES('2542', '2', '1', '', '2002-06-10', '6', '2002', '2072', 'GJ-002072', 'Provisi Juni 02', '');
+REPLACE INTO jurnal VALUES('2543', '2', '1', '', '2002-06-10', '6', '2002', '2073', 'GJ-002073', 'Pelunasan Juni 02', '');
+REPLACE INTO jurnal VALUES('2544', '2', '1', '', '2002-07-04', '7', '2002', '2112', 'GJ-002112', 'Angs.Juli 02 DPB', '');
+REPLACE INTO jurnal VALUES('2545', '2', '1', '', '2002-07-04', '7', '2002', '2113', 'GJ-002113', 'Angs.Juli 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('2546', '2', '1', '', '2002-07-04', '7', '2002', '2114', 'GJ-002114', 'Angs.Juli 02 B.Program', '');
+REPLACE INTO jurnal VALUES('2547', '2', '1', '', '2002-07-04', '7', '2002', '2115', 'GJ-002115', 'Angs.Juli 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2548', '2', '1', '', '2002-07-04', '7', '2002', '2116', 'GJ-002116', 'Angs.Juli 02 B.EPL', '');
+REPLACE INTO jurnal VALUES('2549', '2', '1', '', '2002-07-04', '7', '2002', '2117', 'GJ-002117', 'Angs.Juli 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('2550', '2', '1', '', '2002-07-04', '7', '2002', '2118', 'GJ-002118', 'Angs.Juli 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2551', '2', '1', '', '2002-07-04', '7', '2002', '2119', 'GJ-002119', 'Angs.Juli 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('2552', '2', '1', '', '2002-07-04', '7', '2002', '2120', 'GJ-002120', 'Angs.Juli 02 PUKK', '');
+REPLACE INTO jurnal VALUES('2553', '2', '1', '', '2002-07-04', '7', '2002', '2121', 'GJ-002121', 'Angs.Juli 02 UMM', '');
+REPLACE INTO jurnal VALUES('2554', '2', '1', '', '2002-07-04', '7', '2002', '2122', 'GJ-002122', 'Angs.Juli 02 UML', '');
+REPLACE INTO jurnal VALUES('2555', '2', '1', '', '2002-07-04', '7', '2002', '2123', 'GJ-002123', 'Angs.Juli 02 CAPEG', '');
+REPLACE INTO jurnal VALUES('2556', '2', '1', '', '2002-07-08', '7', '2002', '2153', 'GJ-002153', 'Angs.Juli 02 UPUK', '');
+REPLACE INTO jurnal VALUES('2557', '2', '1', '', '2002-07-04', '7', '2002', '2124', 'GJ-002124', 'Angs.Juli 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('2558', '2', '1', '', '2002-07-08', '7', '2002', '2154', 'GJ-002154', 'Angs.Juli 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2559', '2', '1', '', '2002-07-08', '7', '2002', '2155', 'GJ-002155', 'Angs.Juli 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('2560', '2', '1', '', '2002-07-08', '7', '2002', '2156', 'GJ-002156', 'Angs.Juli 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2561', '2', '1', '', '2002-07-08', '7', '2002', '2157', 'GJ-002157', 'Angs.Juli 02 PNS', '');
+REPLACE INTO jurnal VALUES('2562', '2', '1', '', '2002-07-09', '7', '2002', '2158', 'GJ-002158', 'Angs.Juli 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2563', '2', '1', '', '2002-07-10', '7', '2002', '2172', 'GJ-002172', 'Angs.Juli 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2564', '2', '1', '', '2002-07-10', '7', '2002', '2173', 'GJ-002173', 'Angs.Juli 02 Divisi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2565', '2', '1', '', '2002-07-10', '7', '2002', '2174', 'GJ-002174', 'Angs.Juli 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('2566', '2', '1', '', '2002-07-11', '7', '2002', '2177', 'GJ-002177', 'Angs.Juli 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2567', '2', '1', '', '2002-07-11', '7', '2002', '2178', 'GJ-002178', 'Angs.Juni 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('2568', '2', '1', '', '2002-01-30', '1', '2002', '1661', 'GJ-001661', 'Kurang membukukan Beban Pokok Jan 02', '');
+REPLACE INTO jurnal VALUES('2569', '2', '1', '', '2002-07-11', '7', '2002', '2179', 'GJ-002179', 'Penambahan Beban Pokok Jan 02', '');
+REPLACE INTO jurnal VALUES('2570', '2', '1', '', '2002-07-11', '7', '2002', '2180', 'GJ-002180', 'Lebih membuku angs.April 02 UPUK', '');
+REPLACE INTO jurnal VALUES('2571', '2', '1', '', '2002-07-12', '7', '2002', '2181', 'GJ-002181', 'Lebih membuku a.n Ace R', '');
+REPLACE INTO jurnal VALUES('2572', '2', '1', '', '2002-07-10', '7', '2002', '2175', 'GJ-002175', 'Pinjaman Juli 02', '');
+REPLACE INTO jurnal VALUES('2573', '2', '1', '', '2002-07-10', '7', '2002', '2176', 'GJ-002176', 'Beban Pokok Juli 02', '');
+REPLACE INTO jurnal VALUES('2574', '2', '1', '', '2002-09-06', '9', '2002', '2330', 'GJ-002330', 'Pelunasan Pinjaman Sept 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2575', '2', '1', '', '2002-09-10', '9', '2002', '2356', 'GJ-002356', 'Angs.Sept 02 DPB', '');
+REPLACE INTO jurnal VALUES('2576', '2', '1', '', '2002-09-10', '9', '2002', '2357', 'GJ-002357', 'Angs.Sept 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('2577', '2', '1', '', '2002-09-10', '9', '2002', '2358', 'GJ-002358', 'Angs.Sept 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2578', '2', '1', '', '2002-09-10', '9', '2002', '2359', 'GJ-002359', 'Angs.Sept 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2579', '2', '1', '', '2002-09-10', '9', '2002', '2360', 'GJ-002360', 'Angs.Sept 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('2580', '2', '1', '', '2002-09-10', '9', '2002', '2361', 'GJ-002361', 'Angs.Sept 02 PUKK', '');
+REPLACE INTO jurnal VALUES('2581', '2', '1', '', '2002-09-10', '9', '2002', '2362', 'GJ-002362', 'Angs.Sept 02 UMM', '');
+REPLACE INTO jurnal VALUES('2582', '2', '1', '', '2002-09-10', '9', '2002', '2363', 'GJ-002363', 'Angs.Sept 02 UML', '');
+REPLACE INTO jurnal VALUES('2583', '2', '1', '', '2002-09-11', '9', '2002', '2367', 'GJ-002367', 'Angs.Sept 02 Koperasi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2584', '2', '1', '', '2002-09-12', '9', '2002', '2369', 'GJ-002369', 'Angs.Sept 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2585', '2', '1', '', '2002-08-05', '8', '2002', '2205', 'GJ-002205', 'Lebih membuku a.n Abas S', '');
+REPLACE INTO jurnal VALUES('2586', '2', '1', '', '2002-08-06', '8', '2002', '2211', 'GJ-002211', 'Pengembalian Pinjaman Juli 02', '');
+REPLACE INTO jurnal VALUES('2587', '2', '1', '', '2002-08-05', '8', '2002', '2206', 'GJ-002206', 'Pengembalian Beban Pokok Juli 02', '');
+REPLACE INTO jurnal VALUES('2588', '2', '1', '', '2002-08-06', '8', '2002', '2212', 'GJ-002212', 'Pelunasan Pinjaman Juli 02', '');
+REPLACE INTO jurnal VALUES('2589', '2', '1', '', '2002-08-06', '8', '2002', '2213', 'GJ-002213', 'Provisi Juli 02', '');
+REPLACE INTO jurnal VALUES('2590', '2', '1', '', '2002-08-07', '8', '2002', '2216', 'GJ-002216', 'Angs.Agst 02 Divisi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2591', '2', '1', '', '2002-07-15', '7', '2002', '2186', 'GJ-002186', 'Angs.Juli 02 KOP.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2592', '2', '1', '', '2002-08-12', '8', '2002', '2245', 'GJ-002245', 'Angs.Juli 02 CS/KOP.KBR', '');
+REPLACE INTO jurnal VALUES('2593', '2', '1', '', '2002-08-12', '8', '2002', '2246', 'GJ-002246', 'Angs.Agst 02 KOP.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2594', '2', '1', '', '2002-08-12', '8', '2002', '2247', 'GJ-002247', 'Angs.Agst 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2595', '2', '1', '', '2002-08-13', '8', '2002', '2256', 'GJ-002256', 'Angs.Agst 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('2596', '2', '1', '', '2002-08-14', '8', '2002', '2267', 'GJ-002267', 'Angs.Agst 02 UPUK', '');
+REPLACE INTO jurnal VALUES('2597', '2', '1', '', '2002-08-14', '8', '2002', '2268', 'GJ-002268', 'Angs.Agst 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2598', '2', '1', '', '2002-08-14', '8', '2002', '2269', 'GJ-002269', 'Angs.Agst 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('2599', '2', '1', '', '2002-08-14', '8', '2002', '2270', 'GJ-002270', 'Angs.Agst 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('2600', '2', '1', '', '2002-08-14', '8', '2002', '2271', 'GJ-002271', 'Angs.Agst 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2601', '2', '1', '', '2002-08-14', '8', '2002', '2272', 'GJ-002272', 'Angs.Agst 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2602', '2', '1', '', '2002-08-15', '8', '2002', '2277', 'GJ-002277', 'Angs.Agst 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2603', '2', '1', '', '2002-08-15', '8', '2002', '2278', 'GJ-002278', 'Angs.Augts 02 Koperasi KBR', '');
+REPLACE INTO jurnal VALUES('2604', '2', '1', '', '2002-08-15', '8', '2002', '2279', 'GJ-002279', 'Provisi Agst 02', '');
+REPLACE INTO jurnal VALUES('2605', '2', '1', '', '2002-08-15', '8', '2002', '2280', 'GJ-002280', 'Pelunasan Agst 02', '');
+REPLACE INTO jurnal VALUES('2606', '2', '1', '', '2002-08-15', '8', '2002', '2281', 'GJ-002281', 'Pinjaman Agst 02', '');
+REPLACE INTO jurnal VALUES('2607', '2', '1', '', '2002-08-15', '8', '2002', '2282', 'GJ-002282', 'Beban Pokok Agst 02', '');
+REPLACE INTO jurnal VALUES('2608', '2', '1', '', '2002-09-12', '9', '2002', '2370', 'GJ-002370', 'Angs.Sept 02 UPUK', '');
+REPLACE INTO jurnal VALUES('2609', '2', '1', '', '2002-09-12', '9', '2002', '2371', 'GJ-002371', 'Angs.Sept 02 Div.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2610', '2', '1', '', '2002-09-12', '9', '2002', '2372', 'GJ-002372', 'Angs.Sept 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('2611', '2', '1', '', '2002-09-12', '9', '2002', '2373', 'GJ-002373', 'Angs.Sept 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('2612', '2', '1', '', '2002-09-12', '9', '2002', '2374', 'GJ-002374', 'Angs.Sept 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('2613', '2', '1', '', '2002-09-13', '9', '2002', '2377', 'GJ-002377', 'Angs.Sept 02 Koperasi KBR', '');
+REPLACE INTO jurnal VALUES('2614', '2', '1', '', '2002-09-10', '9', '2002', '2364', 'GJ-002364', 'Pinjaman Sept 02', '');
+REPLACE INTO jurnal VALUES('2615', '2', '1', '', '2002-09-10', '9', '2002', '2365', 'GJ-002365', 'Provisi Sept 02', '');
+REPLACE INTO jurnal VALUES('2616', '2', '1', '', '2002-09-10', '9', '2002', '2366', 'GJ-002366', 'Pelunasan Sept 02', '');
+REPLACE INTO jurnal VALUES('2617', '2', '1', '', '2002-09-13', '9', '2002', '2378', 'GJ-002378', 'Angs.Sept 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2618', '2', '1', '', '2002-09-13', '9', '2002', '2379', 'GJ-002379', 'Angs.Sept 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2619', '2', '1', '', '2002-09-13', '9', '2002', '2380', 'GJ-002380', 'Angs.Agst 02 PNS', '');
+REPLACE INTO jurnal VALUES('2620', '2', '1', '', '2002-09-16', '9', '2002', '2385', 'GJ-002385', 'Lebih membuku angs.pinjaman Sept 02', '');
+REPLACE INTO jurnal VALUES('2621', '2', '1', '', '2002-09-16', '9', '2002', '2386', 'GJ-002386', 'Angs.Sept 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2622', '2', '1', '', '2002-10-10', '10', '2002', '2441', 'GJ-002441', 'Pinjaman Oktober 02', '');
+REPLACE INTO jurnal VALUES('2623', '2', '1', '', '2002-10-11', '10', '2002', '2443', 'GJ-002443', 'Angs.Oktober-02 UPUK', '');
+REPLACE INTO jurnal VALUES('2624', '2', '1', '', '2002-10-11', '10', '2002', '2444', 'GJ-002444', 'Angs.Oktbr 02 ASA PURWAKARTA', '');
+REPLACE INTO jurnal VALUES('2625', '2', '1', '', '2002-10-11', '10', '2002', '2445', 'GJ-002445', 'Angs.Oktbr 02 DIVUS III', '');
+REPLACE INTO jurnal VALUES('2626', '2', '1', '', '2002-10-10', '10', '2002', '2442', 'GJ-002442', 'Beban Pokok Oktober 02', '');
+REPLACE INTO jurnal VALUES('2627', '2', '1', '', '2002-10-11', '10', '2002', '2446', 'GJ-002446', 'Angs.Oktbr 02 ASA CURUG', '');
+REPLACE INTO jurnal VALUES('2628', '2', '1', '', '2002-10-11', '10', '2002', '2447', 'GJ-002447', 'Angs.Oktbr 02 ASA TARUM', '');
+REPLACE INTO jurnal VALUES('2629', '2', '1', '', '2002-10-11', '10', '2002', '2448', 'GJ-002448', 'Angs.Oktbr 02 DIVUS II', '');
+REPLACE INTO jurnal VALUES('2630', '2', '1', '', '2002-10-11', '10', '2002', '2449', 'GJ-002449', 'Angs.Okt 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('2631', '2', '1', '', '2002-10-11', '10', '2002', '2450', 'GJ-002450', 'Angs.Okt 02 PNS', '');
+REPLACE INTO jurnal VALUES('2632', '2', '1', '', '2002-10-14', '10', '2002', '2452', 'GJ-002452', 'Angs.Okt 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('2633', '2', '1', '', '2002-10-14', '10', '2002', '2453', 'GJ-002453', 'Angs.Okt 02 B.Program', '');
+REPLACE INTO jurnal VALUES('2634', '2', '1', '', '2002-10-14', '10', '2002', '2454', 'GJ-002454', 'Angs.Okt 02 B.EPL', '');
+REPLACE INTO jurnal VALUES('2635', '2', '1', '', '2002-10-14', '10', '2002', '2455', 'GJ-002455', 'Angs.Okt 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2636', '2', '1', '', '2002-10-14', '10', '2002', '2456', 'GJ-002456', 'Angs.Okt 02 PUKK', '');
+REPLACE INTO jurnal VALUES('2637', '2', '1', '', '2002-10-14', '10', '2002', '2457', 'GJ-002457', 'Angs.Okt 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('2638', '2', '1', '', '2002-10-14', '10', '2002', '2458', 'GJ-002458', 'Angs.Okt 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2639', '2', '1', '', '2002-10-14', '10', '2002', '2459', 'GJ-002459', 'Angs.Okt 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('2640', '2', '1', '', '2002-10-14', '10', '2002', '2460', 'GJ-002460', 'Angs.Okt 02 UMM', '');
+REPLACE INTO jurnal VALUES('2641', '2', '1', '', '2002-10-14', '10', '2002', '2461', 'GJ-002461', 'Angs.Okt 02 UML', '');
+REPLACE INTO jurnal VALUES('2642', '2', '1', '', '2002-10-14', '10', '2002', '2462', 'GJ-002462', 'Angs.Okt 02 DPB', '');
+REPLACE INTO jurnal VALUES('2643', '2', '1', '', '2002-10-15', '10', '2002', '2467', 'GJ-002467', 'Angs.Okt 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2644', '2', '1', '', '2002-10-15', '10', '2002', '2468', 'GJ-002468', 'Angs.Okt 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('2645', '2', '1', '', '2002-10-16', '10', '2002', '2469', 'GJ-002469', 'Angs.Okt 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2646', '2', '1', '', '2002-10-17', '10', '2002', '2470', 'GJ-002470', 'Pelunasan Pinj.Okt 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2647', '2', '1', '', '2002-10-18', '10', '2002', '2471', 'GJ-002471', 'Provisi Okt 02', '');
+REPLACE INTO jurnal VALUES('2648', '2', '1', '', '2002-10-18', '10', '2002', '2472', 'GJ-002472', 'Pelunasan Pinj.Okt 02', '');
+REPLACE INTO jurnal VALUES('2649', '2', '1', '', '2002-10-21', '10', '2002', '2475', 'GJ-002475', 'Angs.Okt 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2650', '2', '1', '', '2002-11-06', '11', '2002', '2487', 'GJ-002487', 'Lebih membuku angs.pinj Nop 02', '');
+REPLACE INTO jurnal VALUES('2651', '2', '1', '', '2002-11-06', '11', '2002', '2488', 'GJ-002488', 'Angs.Nop 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('2652', '2', '1', '', '2002-11-06', '11', '2002', '2489', 'GJ-002489', 'Angs.Nop 02 B.Program', '');
+REPLACE INTO jurnal VALUES('2653', '2', '1', '', '2002-11-06', '11', '2002', '2490', 'GJ-002490', 'Angs.Nop 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2654', '2', '1', '', '2002-11-06', '11', '2002', '2491', 'GJ-002491', 'Angs.Nop 02 B.EPL', '');
+REPLACE INTO jurnal VALUES('2655', '2', '1', '', '2002-11-06', '11', '2002', '2492', 'GJ-002492', 'Angs.Nop 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('2656', '2', '1', '', '2002-11-06', '11', '2002', '2493', 'GJ-002493', 'Angs.Nop 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2657', '2', '1', '', '2002-11-06', '11', '2002', '2494', 'GJ-002494', 'Angs.Nop 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('2658', '2', '1', '', '2002-11-06', '11', '2002', '2495', 'GJ-002495', 'Angs.Nop 02 PUKK', '');
+REPLACE INTO jurnal VALUES('2659', '2', '1', '', '2002-11-06', '11', '2002', '2496', 'GJ-002496', 'Angs.Nop 02 UMM', '');
+REPLACE INTO jurnal VALUES('2660', '2', '1', '', '2002-11-06', '11', '2002', '2497', 'GJ-002497', 'Angs.Nop 02 UML', '');
+REPLACE INTO jurnal VALUES('2661', '2', '1', '', '2002-11-06', '11', '2002', '2498', 'GJ-002498', 'Angs.Nop 02 DPB', '');
+REPLACE INTO jurnal VALUES('2662', '2', '1', '', '2002-11-07', '11', '2002', '2499', 'GJ-002499', 'Angs.Nop 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2663', '2', '1', '', '2002-11-07', '11', '2002', '2500', 'GJ-002500', 'Angs.Nop 02 UPUK', '');
+REPLACE INTO jurnal VALUES('2664', '2', '1', '', '2002-11-07', '11', '2002', '2501', 'GJ-002501', 'Angs.Nop 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('2665', '2', '1', '', '2002-11-08', '11', '2002', '2502', 'GJ-002502', 'Angs.Nop 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2666', '2', '1', '', '2002-11-08', '11', '2002', '2503', 'GJ-002503', 'Angs.Nop 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('2667', '2', '1', '', '2002-11-08', '11', '2002', '2504', 'GJ-002504', 'Angs.Okt 02 Divisi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2668', '2', '1', '', '2002-11-11', '11', '2002', '2540', 'GJ-002540', 'Angs.Nop 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2669', '2', '1', '', '2002-11-11', '11', '2002', '2541', 'GJ-002541', 'Angs.Nop 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2670', '2', '1', '', '2002-11-12', '11', '2002', '2542', 'GJ-002542', 'Angs.Nop 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('2671', '2', '1', '', '2002-11-12', '11', '2002', '2543', 'GJ-002543', 'Angs.Nop 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2672', '2', '1', '', '2002-11-12', '11', '2002', '2544', 'GJ-002544', 'Angs.Nop 02 Div.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2673', '2', '1', '', '2002-11-13', '11', '2002', '2545', 'GJ-002545', 'Angs.Okt 02 CS/Koperasi', '');
+REPLACE INTO jurnal VALUES('2674', '2', '1', '', '2002-11-13', '11', '2002', '2546', 'GJ-002546', 'Angs.Pinj Nop 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2675', '2', '1', '', '2002-11-13', '11', '2002', '2547', 'GJ-002547', 'Pinjaman Nopember 02', '');
+REPLACE INTO jurnal VALUES('2676', '2', '1', '', '2002-11-13', '11', '2002', '2548', 'GJ-002548', 'Beban Pokok Pinj.Nop 02', '');
+REPLACE INTO jurnal VALUES('2677', '2', '1', '', '2002-11-13', '11', '2002', '2549', 'GJ-002549', 'Provisi Pinj.Nop 02', '');
+REPLACE INTO jurnal VALUES('2678', '2', '1', '', '2002-11-13', '11', '2002', '2550', 'GJ-002550', 'Pelunasan Pinj.Nop 02', '');
+REPLACE INTO jurnal VALUES('2679', '2', '1', '', '2002-11-14', '11', '2002', '2551', 'GJ-002551', 'Angs.Pinj Nop 02 PNS', '');
+REPLACE INTO jurnal VALUES('2680', '2', '1', '', '2002-11-14', '11', '2002', '2552', 'GJ-002552', 'Angs.Pinj Nop 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('2681', '2', '1', '', '2002-11-14', '11', '2002', '2553', 'GJ-002553', 'Pengembalian Beban Pokok Nop 02', '');
+REPLACE INTO jurnal VALUES('2682', '2', '1', '', '2002-11-14', '11', '2002', '2554', 'GJ-002554', 'Pengembalian Pinjaman Nop 02', '');
+REPLACE INTO jurnal VALUES('2683', '2', '1', '', '2002-11-15', '11', '2002', '2562', 'GJ-002562', 'Pengembalian lebih setor Juni 02 Asa Pwk', '');
+REPLACE INTO jurnal VALUES('2684', '2', '1', '', '2002-11-15', '11', '2002', '2563', 'GJ-002563', 'Pengembalian Set.Barang,Simp.Juni 02 Div.IV', '');
+REPLACE INTO jurnal VALUES('2685', '2', '1', '', '2002-12-05', '12', '2002', '2599', 'GJ-002599', 'Angs.Des 02 DPB', '');
+REPLACE INTO jurnal VALUES('2686', '2', '1', '', '2002-12-05', '12', '2002', '2600', 'GJ-002600', 'Angs.Des 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('2687', '2', '1', '', '2002-12-05', '12', '2002', '2601', 'GJ-002601', 'Angs.Des 02 B.Program', '');
+REPLACE INTO jurnal VALUES('2688', '2', '1', '', '2002-12-05', '12', '2002', '2602', 'GJ-002602', 'Angs.Des 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2689', '2', '1', '', '2002-12-05', '12', '2002', '2603', 'GJ-002603', 'Angs.Des 02 B.EPL', '');
+REPLACE INTO jurnal VALUES('2690', '2', '1', '', '2002-12-05', '12', '2002', '2604', 'GJ-002604', 'Angs.Des 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('2691', '2', '1', '', '2002-12-05', '12', '2002', '2605', 'GJ-002605', 'Angs.Des 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2692', '2', '1', '', '2002-12-05', '12', '2002', '2606', 'GJ-002606', 'Angs.Des 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('2693', '2', '1', '', '2002-12-05', '12', '2002', '2607', 'GJ-002607', 'Angs.Des 02 UML', '');
+REPLACE INTO jurnal VALUES('2694', '2', '1', '', '2002-12-05', '12', '2002', '2608', 'GJ-002608', 'Angs.Des 02 UMM', '');
+REPLACE INTO jurnal VALUES('2695', '2', '1', '', '2002-12-05', '12', '2002', '2609', 'GJ-002609', 'Angs.Des 02 PUKK', '');
+REPLACE INTO jurnal VALUES('2696', '2', '1', '', '2002-12-09', '12', '2002', '2628', 'GJ-002628', 'Angs.Des 02 Divisi IV', '');
+REPLACE INTO jurnal VALUES('2697', '2', '1', '', '2002-12-09', '12', '2002', '2629', 'GJ-002629', 'Angs.Des 02 Divisi I', '');
+REPLACE INTO jurnal VALUES('2698', '2', '1', '', '2002-12-10', '12', '2002', '2641', 'GJ-002641', 'Angs.Des 02 Asa Curug', '');
+REPLACE INTO jurnal VALUES('2699', '2', '1', '', '2002-12-10', '12', '2002', '2642', 'GJ-002642', 'Angs.Des 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('2700', '2', '1', '', '2002-12-10', '12', '2002', '2643', 'GJ-002643', 'Angs.Des 02 Divisi II', '');
+REPLACE INTO jurnal VALUES('2701', '2', '1', '', '2002-12-11', '12', '2002', '2644', 'GJ-002644', 'Angs.Des 02 UPUK', '');
+REPLACE INTO jurnal VALUES('2702', '2', '1', '', '2002-12-11', '12', '2002', '2645', 'GJ-002645', 'Angs.Des 02 Asa Purwakarta', '');
+REPLACE INTO jurnal VALUES('2703', '2', '1', '', '2002-12-11', '12', '2002', '2646', 'GJ-002646', 'Angs.Des 02 Divisi III', '');
+REPLACE INTO jurnal VALUES('2704', '2', '1', '', '2002-12-12', '12', '2002', '2648', 'GJ-002648', 'Pinjaman Des 02', '');
+REPLACE INTO jurnal VALUES('2705', '2', '1', '', '2002-12-12', '12', '2002', '2649', 'GJ-002649', 'Beban Pokok Des 02', '');
+REPLACE INTO jurnal VALUES('2706', '2', '1', '', '2002-12-12', '12', '2002', '2650', 'GJ-002650', 'Provisi Pinj.Des 02', '');
+REPLACE INTO jurnal VALUES('2707', '2', '1', '', '2002-12-12', '12', '2002', '2651', 'GJ-002651', 'Pelunasan Pinj.Des 02', '');
+REPLACE INTO jurnal VALUES('2708', '2', '1', '', '2002-12-13', '12', '2002', '2652', 'GJ-002652', 'Angs.Des 02 via Bu lela', '');
+REPLACE INTO jurnal VALUES('2709', '2', '1', '', '2002-12-16', '12', '2002', '2654', 'GJ-002654', 'Angs.Nop 02 CS/Koperasi', '');
+REPLACE INTO jurnal VALUES('2710', '2', '1', '', '2002-12-17', '12', '2002', '2655', 'GJ-002655', 'Angs.Des 02 CS/Koperasi', '');
+REPLACE INTO jurnal VALUES('2711', '2', '1', '', '2002-12-18', '12', '2002', '2656', 'GJ-002656', 'Angs.Des 02 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('2712', '2', '1', '', '2002-12-18', '12', '2002', '2657', 'GJ-002657', 'Angs.Des 02 Koperasi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2713', '2', '1', '', '2002-12-18', '12', '2002', '2658', 'GJ-002658', 'Penambahan Beban Pokok Juli 02', '');
+REPLACE INTO jurnal VALUES('2714', '2', '1', '', '2002-12-18', '12', '2002', '2659', 'GJ-002659', 'Angs.Des 02 Div.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2715', '2', '1', '', '2002-11-25', '11', '2002', '2573', 'GJ-002573', 'Angs.Nop 02 Kop.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2716', '2', '1', '', '2002-06-17', '6', '2002', '2095', 'GJ-002095', 'Angs.Juni 02 Koperasi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2717', '2', '1', '', '2002-06-07', '6', '2002', '2062', 'GJ-002062', 'Angs.Juni 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('2718', '2', '1', '', '2002-06-07', '6', '2002', '2063', 'GJ-002063', 'Angs.Juni 02 B.Program', '');
+REPLACE INTO jurnal VALUES('2719', '2', '1', '', '2002-06-07', '6', '2002', '2064', 'GJ-002064', 'Angs.Juni 02 B.EPL', '');
+REPLACE INTO jurnal VALUES('2720', '2', '1', '', '2002-06-17', '6', '2002', '2096', 'GJ-002096', 'Angs.Juni 02 Divisi Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2721', '2', '1', '', '2002-06-17', '6', '2002', '2097', 'GJ-002097', 'Angs.Juni 02 Pensiun', '');
+REPLACE INTO jurnal VALUES('2722', '2', '1', '', '2002-05-10', '5', '2002', '1993', 'GJ-001993', 'Provisi April 02', '');
+REPLACE INTO jurnal VALUES('2723', '2', '1', '', '2002-05-10', '5', '2002', '1994', 'GJ-001994', 'Pengembalian Pinjaman April 02', '');
+REPLACE INTO jurnal VALUES('2724', '2', '1', '', '2002-05-10', '5', '2002', '1995', 'GJ-001995', 'Pengembalian Beban Pokok April 02', '');
+REPLACE INTO jurnal VALUES('2725', '2', '1', '', '2002-05-10', '5', '2002', '1996', 'GJ-001996', 'Pinjaman Mei 02', '');
+REPLACE INTO jurnal VALUES('2726', '2', '1', '', '2002-05-10', '5', '2002', '1997', 'GJ-001997', 'Beban Pokok Mei 02', '');
+REPLACE INTO jurnal VALUES('2727', '2', '1', '', '2002-05-10', '5', '2002', '1998', 'GJ-001998', 'Provisi Pinj.Februari 02', '');
+REPLACE INTO jurnal VALUES('2728', '2', '1', '', '2002-05-13', '5', '2002', '2000', 'GJ-002000', 'Lebih membuku angs.pinj Mei 02', '');
+REPLACE INTO jurnal VALUES('2729', '2', '1', '', '2002-05-10', '5', '2002', '1999', 'GJ-001999', 'Pelunasan Feb 02', '');
+REPLACE INTO jurnal VALUES('2730', '2', '1', '', '2002-08-23', '8', '2002', '2672', 'GJ-002672', 'Angs.Agst 02 DPB', '');
+REPLACE INTO jurnal VALUES('2731', '2', '1', '', '2002-08-23', '8', '2002', '2285', 'GJ-002285', 'Angs.Agst 02 UMM', '');
+REPLACE INTO jurnal VALUES('2732', '2', '1', '', '2002-08-23', '8', '2002', '2286', 'GJ-002286', 'Angs.Agst 02 B.SPI', '');
+REPLACE INTO jurnal VALUES('2733', '2', '1', '', '2002-08-23', '8', '2002', '2287', 'GJ-002287', 'Angs.Agst 02 B.Program', '');
+REPLACE INTO jurnal VALUES('2734', '2', '1', '', '2002-08-23', '8', '2002', '2288', 'GJ-002288', 'Angs.Agst 02 B.EPL', '');
+REPLACE INTO jurnal VALUES('2735', '2', '1', '', '2002-08-23', '8', '2002', '2673', 'GJ-002673', 'Angs.Agst 02 B.Litbang', '');
+REPLACE INTO jurnal VALUES('2736', '2', '1', '', '2002-08-23', '8', '2002', '2674', 'GJ-002674', 'Angs.Agst 02 PUKK', '');
+REPLACE INTO jurnal VALUES('2737', '2', '1', '', '2002-08-23', '8', '2002', '2675', 'GJ-002675', 'Angs.Agst 02 UML', '');
+REPLACE INTO jurnal VALUES('2738', '2', '1', '', '2002-08-23', '8', '2002', '2289', 'GJ-002289', 'Angs.Agst 02 B.SDM', '');
+REPLACE INTO jurnal VALUES('2739', '2', '1', '', '2002-08-23', '8', '2002', '2290', 'GJ-002290', 'Angs.Agst 02 B.Keuangan', '');
+REPLACE INTO jurnal VALUES('2740', '2', '1', '', '2002-08-23', '8', '2002', '2291', 'GJ-002291', 'Angs.Agst 02 B.Umum', '');
+REPLACE INTO jurnal VALUES('2741', '2', '1', '', '2002-12-24', '12', '2002', '2676', 'GJ-002676', 'Angs.Des 02 PNS', '');
+REPLACE INTO jurnal VALUES('2742', '2', '1', '', '2002-12-24', '12', '2002', '2677', 'GJ-002677', 'Lebih setor Angs.Agst 02 Div.III', '');
+REPLACE INTO jurnal VALUES('2743', '2', '1', '', '2002-12-24', '12', '2002', '2678', 'GJ-002678', 'Double membuku a.n Yusup D', '');
+REPLACE INTO jurnal VALUES('2744', '2', '1', '', '2002-12-24', '12', '2002', '2679', 'GJ-002679', 'Angs.Juni 02 Asa Tarum', '');
+REPLACE INTO jurnal VALUES('2745', '2', '1', '', '2002-12-24', '12', '2002', '2680', 'GJ-002680', 'Angs.Feb 02 Kop.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2746', '2', '1', '', '2002-12-24', '12', '2002', '2681', 'GJ-002681', 'Angs.April 02 Kop.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2747', '2', '1', '', '2002-12-24', '12', '2002', '2682', 'GJ-002682', 'Angs.Mei 02 Kop.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2748', '2', '1', '', '2002-12-24', '12', '2002', '2683', 'GJ-002683', 'Angs.Okt 02 Kop.Citarum Hulu', '');
+REPLACE INTO jurnal VALUES('2749', '2', '1', '', '2002-12-24', '12', '2002', '2684', 'GJ-002684', 'Penambahan U.M Pinj.Nop 02', '');
+REPLACE INTO jurnal VALUES('2750', '2', '1', '', '2002-01-01', '1', '2002', '1575', 'GJ-001575', 'Sisa Hasil Usaha 2001', '');
+REPLACE INTO jurnal VALUES('2751', '2', '1', '', '2002-09-27', '9', '2002', '2396', 'GJ-002396', 'Piutang a.n Engkun S Div.IV', '');
+REPLACE INTO jurnal VALUES('2752', '2', '1', '', '2002-12-31', '12', '2002', '2708', 'GJ-002708', 'Penyisihan Piutang', '');
+REPLACE INTO jurnal VALUES('2753', '2', '1', '', '2002-12-31', '12', '2002', '2709', 'GJ-002709', 'Piutang Pinjaman', '');
+REPLACE INTO jurnal VALUES('2754', '2', '1', '', '2002-12-31', '12', '2002', '2710', 'GJ-002710', 'Penyesuaian alokasi biaya', '');
+REPLACE INTO jurnal VALUES('2755', '2', '1', '', '2002-12-31', '12', '2002', '2711', 'GJ-002711', 'Modal disetor', '');
+REPLACE INTO jurnal VALUES('4014', '2', '1', '', '2002-06-01', '6', '2002', '3942', 'GJ-003942', 'Nomadsoft Correction', '');
+REPLACE INTO jurnal VALUES('4016', '1', '1', '', '2002-12-31', '12', '2002', '3944', 'GJ-003944', 'Penyesuaian', '');
+REPLACE INTO jurnal VALUES('4020', '1', '1', '', '2002-12-01', '12', '2002', '3948', 'GJ-003948', 'Nomadsoft Correction', '');
+

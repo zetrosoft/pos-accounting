@@ -135,6 +135,17 @@ $(document).ready(function(e) {
 		$('#frm1').attr('action','lap_penjualan');
 		document.frm1.submit();
 	})
+ // penjualan detail
+	$("#okedech").click(function(){
+		show_indicator('xx',1);
+		$('#frm1').attr('action','lap_penjualan_detail');
+		document.frm1.submit();
+	})
+	$("#okedechya").click(function(){
+		show_indicator('xx',1);
+		$('#frm1').attr('action','penjualan_per_konsumen');
+		document.frm1.submit();
+	})
 	$('#posting').click(function(){
 		if(confirm('Periode Posting :\nDari Tanggal : '+$('#dari_tgl').val()+'\nSampai Tanggal : '+$('#sampai_tgl').val()+'\nYakin data akan di posting?')){
 			show_indicator('ListTable',7);

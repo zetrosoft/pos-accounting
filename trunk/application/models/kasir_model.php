@@ -42,6 +42,21 @@ class Kasir_model extends CI_Model {
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
+	function rekap_trans_jual2($where,$group='',$order='order by p.Tanggal'){
+		$sql="select p.Tanggal,p.ID_Anggota,dt.ID_Barang,sum(Jumlah) as Jumlah,dt.Harga,a.Nama,
+			 a.Alamat,a.Kota,a.Catatan,p.ID_Jenis,p.NoUrut,p.Tahun
+			 from inv_penjualan as p
+		     left join inv_penjualan_detail as dt
+			 on dt.ID_Jual=p.ID
+			 right join inv_barang as b
+			 on b.ID=dt.ID_Barang
+			 left join mst_anggota as a
+			 on a.ID=p.ID_Anggota
+			 $where $group $order";
+		//echo $sql;
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
 	function rekap_kreditur($where,$group='',$order=''){
 		$sql="select p.ID,p.ID_Anggota,a.Nama,a.ID_Dept,dt.ID_Barang,sum(Jumlah),dt.Harga,
 			 sum(Jumlah*harga) as Total,p.Cicilan,p.ID_Post,p.ID_Jenis,p.Deskripsi,p.Nomor
@@ -52,6 +67,26 @@ class Kasir_model extends CI_Model {
 			 on b.ID=dt.ID_Barang
 			 left join mst_anggota as a
 			 on a.ID=p.ID_Anggota
+			 $where $group $order";
+		//echo $sql;
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
+	function detail_trans_jual($where,$group='',$order='order by p.Tanggal'){
+		$sql="select dt.ID_Jual,p.Tanggal,dt.ID_Barang,b.Kode,dt.Jumlah,dt.Harga,b.Nama_Barang,s.Satuan,
+			 a.Nama,p.Nomor,j.Jenis_Jual,a.Catatan,a.Alamat,a.Kota,p.Tgl_Cicilan,p.ID_Post,
+			 p.Deskripsi,p.ID_Anggota,p.ID_Jenis,p.NoUrut,p.Tahun
+			 from inv_penjualan as p
+		     left join inv_penjualan_detail as dt
+			 on dt.ID_Jual=p.ID
+			 right join inv_barang as b
+			 on b.ID=dt.ID_Barang
+			 left join inv_barang_satuan as s
+			 on s.ID=b.ID_Satuan
+			 left join mst_anggota as a
+			 on a.ID=p.ID_Anggota
+			 left join inv_penjualan_jenis as j
+			 on j.ID=p.ID_Jenis
 			 $where $group $order";
 		//echo $sql;
 		$data=$this->db->query($sql);
@@ -99,6 +134,11 @@ class Kasir_model extends CI_Model {
 			  order by p.Tanggal";	
 		$data=$this->db->query($sql);
 		return $data->result();
+	}
+	function totaldata($where){
+		$sql="select * from inv_penjualan as p $where";
+		$rs=mysql_query($sql) or die(mysql_error());
+		return mysql_num_rows($rs);	
 	}
 	function get_trans_jurnal($ID){
 		$sql="select t.*,n.Nama,j.Nomor,j.Tanggal from perkiraan as p

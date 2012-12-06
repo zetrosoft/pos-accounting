@@ -9,11 +9,11 @@ panel_multi('klasifikasi','block',false);
 if($all_akuntansi__klass_akun!=''){
 $fld="<input type='hidden' id='ID_A' name='ID_A' value=''>";
 	$zfm->Addinput($fld);
-	$zfm->AddBarisKosong(true);
+	$zfm->AddBarisKosong(false);
 	$zfm->Start_form(true,'frm1');
 	$zfm->BuildForm('klasifikasi',true,'50%');
 	$zfm->BuildFormButton('Simpan','klasifikasi');
-	
+	echo "<br>";
 		$zlb->section('klasifikasi');
 		$zlb->aksi(true);
 		$zlb->Header('100%');

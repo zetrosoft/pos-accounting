@@ -413,7 +413,10 @@ class Master extends CI_Controller {
   function read_dir(){
 	$map= directory_map("./asset/backup_db",false,true);
 	$x=0;$tgl=array();
+	sort($map);
+	reset($map);
 	foreach($map as $index=> $n){
+		if(!preg_match("/\.sql.dll$/", $n)) continue;
 		$x++;
 		$ukuran=filesize("asset/backup_db/".$n);
 		$sise=($ukuran < 10240)?number_format(($ukuran/1024),2)." Kb":number_format(($ukuran/(1024*1000)),2)." Mb";

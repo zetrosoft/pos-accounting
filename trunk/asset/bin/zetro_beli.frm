@@ -150,3 +150,28 @@
 3|&nbsp;&nbsp;&nbsp;Sampai Tanggal,input,text t,sampai_tgl,w35,,
 4|Jenis Barang,select,text n,nm_jenis,S70,,,RD,inv_jenis-nm_jenis-nm_jenis-
 
+[SusunanJual]
+1|Nama_Barang,Nama Barang
+2|Nama,Nama Pelanggan
+3|dt.Tanggal-Nama_Barang,Tanggal Penjualan dan Nama Barang
+4|Nama-Nama_Barang, Nama Pelanggan dan Nama Barang
+5|Jumlah-Nama_Barang,Jumlah dan Nama Barang
+
+[SusunanBeli]
+1|Nama_Barang,Nama Barang
+2|Pemasok,Nama Vendor
+3|dt.Tanggal-Nama_Barang,Tanggal Pembelian dan Nama Barang
+4|Pemasok-Nama_Barang, Nama Vendor dan Nama Barang
+5|Jml_Faktur-Nama_Barang,Jumlah dan Nama Barang
+6|Jumlah,Harga Beli
+
+[SusunanStock]
+1|Nama_Barang,Nama Barang
+2|k.Kategori-Nama_Barang,Kategori dan Nama Barang
+3|ms.stock-Nama_Barang,Stock dan Nama Barang 
+4|sum(ms.harga_beli),Harga Pembelian
+
+[Urutan]
+1|asc,Kecil ke Besar (A-Z)
+2|desc,Besar ke Kecil (Z-A)
+

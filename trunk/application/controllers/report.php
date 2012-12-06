@@ -7,6 +7,7 @@ class Report extends CI_Controller
 		$this->load->model("report_model");
 		$this->load->model("kasir_model");
 		$this->load->helper("print_report");
+		$this->load->model("purch_model");
 		$this->load->model("control_model");
 		$this->load->library("zetro_auth");
 		$this->userid=$this->session->userdata('idlevel');
@@ -59,6 +60,18 @@ class Report extends CI_Controller
 		$this->View('laporan/transaksi/lap_jual');
 
 	}
+	function penjualan_detail(){
+		$this->zetro_auth->menu_id(array('detailpenjualan'));
+		$this->list_data($this->zetro_auth->auth());
+		$this->View('laporan/transaksi/lap_jual_detail');
+	}
+	function penjualan_kon(){
+		$this->zetro_auth->menu_id(array('penjualanperpelanggan'));
+		$this->list_data($this->zetro_auth->auth());
+		$this->View('laporan/transaksi/lap_jual_vendor');
+
+	}
+
 	function lap_penjualan_show(){
 		$data=array();$where='';$n=0;$harga=0;
 		$where=empty($_POST['sampai_tgl'])?
@@ -139,7 +152,60 @@ class Report extends CI_Controller
 			mysql_query($sql) or die(mysql_error());
 			$this->Admin_model->upd_data('inv_penjualan',"set ID_Post='1'","where ID in(".substr($ide,0,-1).")");
 	}
-	
+	function lap_penjualan_detail(){
+		$data=array();$where='';
+		$where=empty($_POST['sampai_tgl'])?
+			   "where p.Tanggal='".tglToSql($_POST['dari_tgl'])."'":
+			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
+		$where.=($this->input->post('kategori')=='')?'':" and b.ID_Kategori='".$this->input->post('kategori')."'";
+		$where.=($this->input->post('id_jenis')=='')?'':" and p.ID_Jenis='".$this->input->post('id_jenis')."'";
+		$where.=" and p.ID_Jenis in('2','3') and Jumlah !='0'";
+		$group="group by p.Tanggal,p.ID_Anggota";
+		$ordby="order by ".$this->input->post('orderby');
+		$ordby.=($this->input->post('urutan')=='')?'':" ".$this->input->post('urutan');
+		$data['dari']		=$this->input->post('dari_tgl');
+		$data['sampai']		=($this->input->post('sampai_tgl')=='')?$this->input->post('dari_tgl'):$this->input->post('sampai_tgl');
+		$data['Kategori']	=($this->input->post('kategori')=='')?'All':rdb('inv_barang_kategori','Kategori','Kategori',"where ID='".$this->input->post('kategori')."'");
+		$data['Jenis']		=($this->input->post('id_jenis')=='')?'All':rdb('inv_barang_jenis','JenisBarang','JenisBarang',"where ID='".$this->input->post('id_jenis')."'");
+		$data['judul']		=rdb('inv_penjualan_jenis','Jenis_Jual','Jenis_Jual',"where ID='".$this->input->post('id_jenis')."'");
+		$tampilan= $this->input->post('show_de');
+		$data['where']=$where;
+		$data['orderby']=$ordby;
+		$data['detail']=$this->input->post('show_de');
+		$data['temp_rec']=$this->kasir_model->rekap_trans_jual2($where,$group,$ordby);
+		//$this->kasir_model->detail_trans_jual($where,$group,$ordby);
+		$data['orient']=($tampilan=='')?'P':'L';
+		$this->zetro_auth->menu_id(array('trans_beli'));
+		$this->list_data($data);
+		$this->View("laporan/transaksi/lap_jual_print_detail");
+	}
+	function penjualan_per_konsumen(){
+		$data=array();$where='';
+		$data['dari']=$this->input->post('dari_tgl');
+		$data['sampai']=$this->input->post('sampai_tgl');
+		$where=empty($_POST['sampai_tgl'])?
+			   "where p.Tanggal='".tglToSql($_POST['dari_tgl'])."'":
+			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
+		$where.=" and p.ID_Anggota='".$this->input->post('ID_Anggota')."' and a.ID_Jenis='1' and Jumlah!='0'";
+		$group="group by dt.ID_Jual";
+		$orderby="order by p.Tanggal";
+		$orderby.=($this->input->post('urutan')=='')?'':' '.$this->input->post('urutan');
+		$data['id_jenis']=rdb('inv_pembelian_jenis','Jenis_Beli','Jenis_Beli',"Where ID='".$this->input->post('jenis_beli')."'");
+		//($this->input->post('show_de')=='')?
+		$data['where']=$where;
+		$data['orderby']=$orderby;
+		$data['temp_rec']=$this->kasir_model->detail_trans_jual($where,$group,$orderby);
+		//$data['temp_rec2']=$this->kasir_model->detail_trans_beli($where,'',$orderby);
+		$data['vendor']=$this->input->post('nm_anggota');
+		$this->zetro_auth->menu_id(array('trans_beli'));
+		$this->list_data($data);
+		$this->View("laporan/transaksi/lap_jual_print_vendor");
+	}
+	function graph_penjualan_data(){
+		$thn=$_POST['thn'];
+		$bln=$_POST['bln'];
+		echo $this->purch_model->penjualan_graph($thn,$bln);	
+	}
 	//transaksi kredit
 	function barang_kredit(){
 		$this->zetro_auth->menu_id(array('rekapbarangkredit'));

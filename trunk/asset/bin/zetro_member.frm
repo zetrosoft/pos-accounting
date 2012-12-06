@@ -137,3 +137,26 @@
 3|Keterangan,,,,,,40%,
 4|Debet,,,,,,15%,
 5|Kredit,,,,,,15%,
+
+[SusunanKredit]
+1|b.Nama_Barang, Nama Barang
+2|a.Nama,Nama Pelanggan
+3|pb.Saldo,Saldo Tagihan
+4|sum(p.jml_pinjaman),Total Tagihan
+5|p.mulai_bayar, Tanggal Jatuh Tempo
+
+[SusunanPlg]
+1|a.Nama,Nama Pelanggan
+2|pb.Saldo,Saldo Tagihan
+3|sum(p.jml_pinjaman),Total Tagihan
+4|p.mulai_bayar, Tanggal Jatuh Tempo
+
+[susunanjual]
+1|a.Nama,Nama Pelanggan
+2|p.Tanggal,Tanggal Penjualan
+3|sum(Jumlah*Harga),Total Penjualan
+
+[susunanbeli]
+1|a.Nama,Nama Vendor
+2|p.Tanggal,Tanggal Pembelian
+3|Harga_Beli,Total Pembelian

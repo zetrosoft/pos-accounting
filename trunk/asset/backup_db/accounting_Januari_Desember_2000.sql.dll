@@ -1,0 +1,483 @@
+REPLACE INTO jurnal VALUES('1492', '2', '1', '', '2000-01-12', '1', '2000', '60', 'GJ-000060', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1493', '2', '1', '', '2000-01-12', '1', '2000', '61', 'GJ-000061', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1494', '2', '1', '', '2000-01-12', '1', '2000', '62', 'GJ-000062', 'Pimjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1495', '2', '1', '', '2000-01-12', '1', '2000', '63', 'GJ-000063', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1496', '2', '1', '', '2000-01-12', '1', '2000', '64', 'GJ-000064', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1497', '2', '1', '', '2000-01-12', '1', '2000', '65', 'GJ-000065', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1498', '2', '1', '', '2000-01-12', '1', '2000', '66', 'GJ-000066', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1499', '2', '1', '', '2000-01-12', '1', '2000', '67', 'GJ-000067', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1500', '2', '1', '', '2000-01-12', '1', '2000', '68', 'GJ-000068', 'Pinjaman Anggota Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1501', '2', '1', '', '2000-01-12', '1', '2000', '69', 'GJ-000069', 'Beban Pinjaman Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1502', '2', '1', '', '2000-01-05', '1', '2000', '21', 'GJ-000021', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1503', '2', '1', '', '2000-01-05', '1', '2000', '22', 'GJ-000022', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1504', '2', '1', '', '2000-01-05', '1', '2000', '23', 'GJ-000023', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1505', '2', '1', '', '2000-01-05', '1', '2000', '24', 'GJ-000024', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1506', '2', '1', '', '2000-01-05', '1', '2000', '25', 'GJ-000025', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1507', '2', '1', '', '2000-01-05', '1', '2000', '26', 'GJ-000026', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1508', '2', '1', '', '2000-01-05', '1', '2000', '27', 'GJ-000027', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1509', '2', '1', '', '2000-01-05', '1', '2000', '28', 'GJ-000028', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1510', '2', '1', '', '2000-01-05', '1', '2000', '29', 'GJ-000029', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1511', '2', '1', '', '2000-01-05', '1', '2000', '30', 'GJ-000030', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1512', '2', '1', '', '2000-01-05', '1', '2000', '31', 'GJ-000031', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1513', '2', '1', '', '2000-01-05', '1', '2000', '32', 'GJ-000032', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1514', '2', '1', '', '2000-01-05', '1', '2000', '33', 'GJ-000033', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1515', '2', '1', '', '2000-01-05', '1', '2000', '34', 'GJ-000034', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1516', '2', '1', '', '2000-01-05', '1', '2000', '35', 'GJ-000035', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1517', '2', '1', '', '2000-01-05', '1', '2000', '36', 'GJ-000036', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1518', '2', '1', '', '2000-01-05', '1', '2000', '37', 'GJ-000037', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1519', '2', '1', '', '2000-01-05', '1', '2000', '38', 'GJ-000038', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1520', '2', '1', '', '2000-01-05', '1', '2000', '39', 'GJ-000039', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1521', '2', '1', '', '2000-01-05', '1', '2000', '40', 'GJ-000040', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1522', '2', '1', '', '2000-01-05', '1', '2000', '41', 'GJ-000041', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1523', '2', '1', '', '2000-01-05', '1', '2000', '42', 'GJ-000042', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1524', '2', '1', '', '2000-01-05', '1', '2000', '43', 'GJ-000043', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1525', '2', '1', '', '2000-01-05', '1', '2000', '44', 'GJ-000044', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1526', '2', '1', '', '2000-01-05', '1', '2000', '45', 'GJ-000045', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1527', '2', '1', '', '2000-01-05', '1', '2000', '46', 'GJ-000046', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1528', '2', '1', '', '2000-01-05', '1', '2000', '47', 'GJ-000047', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1529', '2', '1', '', '2000-01-05', '1', '2000', '48', 'GJ-000048', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1530', '2', '1', '', '2000-01-10', '1', '2000', '58', 'GJ-000058', 'Penerimaan Provisi Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1531', '2', '1', '', '2000-01-05', '1', '2000', '49', 'GJ-000049', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1532', '2', '1', '', '2000-01-05', '1', '2000', '50', 'GJ-000050', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1533', '2', '1', '', '2000-01-05', '1', '2000', '51', 'GJ-000051', 'Angsuran Bulan Januari 2000 Asa Curug', '');
+REPLACE INTO jurnal VALUES('1534', '2', '1', '', '2000-01-05', '1', '2000', '52', 'GJ-000052', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1535', '2', '1', '', '2000-01-05', '1', '2000', '53', 'GJ-000053', 'Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1536', '2', '1', '', '2000-02-10', '2', '2000', '99', 'GJ-000099', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1537', '2', '1', '', '2000-02-10', '2', '2000', '100', 'GJ-000100', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1538', '2', '1', '', '2000-02-10', '2', '2000', '101', 'GJ-000101', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1539', '2', '1', '', '2000-02-10', '2', '2000', '102', 'GJ-000102', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1540', '2', '1', '', '2000-02-10', '2', '2000', '103', 'GJ-000103', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1541', '2', '1', '', '2000-02-10', '2', '2000', '104', 'GJ-000104', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1542', '2', '1', '', '2000-02-10', '2', '2000', '105', 'GJ-000105', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1543', '2', '1', '', '2000-02-10', '2', '2000', '106', 'GJ-000106', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1544', '2', '1', '', '2000-02-10', '2', '2000', '107', 'GJ-000107', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1545', '2', '1', '', '2000-02-10', '2', '2000', '108', 'GJ-000108', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1546', '2', '1', '', '2000-02-10', '2', '2000', '109', 'GJ-000109', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1547', '2', '1', '', '2000-02-10', '2', '2000', '110', 'GJ-000110', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1548', '2', '1', '', '2000-02-10', '2', '2000', '111', 'GJ-000111', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1549', '2', '1', '', '2000-02-10', '2', '2000', '112', 'GJ-000112', 'Pinjaman Anggota Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1550', '2', '1', '', '2000-02-10', '2', '2000', '113', 'GJ-000113', 'Beban Pinjaman Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1551', '2', '1', '', '2000-02-04', '2', '2000', '72', 'GJ-000072', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1552', '2', '1', '', '2000-02-04', '2', '2000', '73', 'GJ-000073', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1553', '2', '1', '', '2000-02-04', '2', '2000', '74', 'GJ-000074', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1554', '2', '1', '', '2000-02-04', '2', '2000', '75', 'GJ-000075', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1555', '2', '1', '', '2000-02-04', '2', '2000', '76', 'GJ-000076', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1556', '2', '1', '', '2000-02-04', '2', '2000', '77', 'GJ-000077', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1557', '2', '1', '', '2000-02-04', '2', '2000', '78', 'GJ-000078', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1558', '2', '1', '', '2000-02-04', '2', '2000', '79', 'GJ-000079', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1559', '2', '1', '', '2000-02-04', '2', '2000', '80', 'GJ-000080', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1560', '2', '1', '', '2000-02-04', '2', '2000', '81', 'GJ-000081', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1561', '2', '1', '', '2000-02-04', '2', '2000', '82', 'GJ-000082', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1562', '2', '1', '', '2000-02-04', '2', '2000', '83', 'GJ-000083', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1563', '2', '1', '', '2000-02-04', '2', '2000', '84', 'GJ-000084', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1564', '2', '1', '', '2000-02-04', '2', '2000', '85', 'GJ-000085', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1565', '2', '1', '', '2000-02-04', '2', '2000', '86', 'GJ-000086', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1566', '2', '1', '', '2000-02-04', '2', '2000', '87', 'GJ-000087', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1567', '2', '1', '', '2000-02-04', '2', '2000', '88', 'GJ-000088', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1568', '2', '1', '', '2000-02-04', '2', '2000', '89', 'GJ-000089', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1569', '2', '1', '', '2000-02-04', '2', '2000', '90', 'GJ-000090', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1570', '2', '1', '', '2000-02-04', '2', '2000', '91', 'GJ-000091', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1571', '2', '1', '', '2000-02-04', '2', '2000', '92', 'GJ-000092', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1572', '2', '1', '', '2000-02-04', '2', '2000', '93', 'GJ-000093', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1573', '2', '1', '', '2000-02-04', '2', '2000', '94', 'GJ-000094', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1574', '2', '1', '', '2000-02-04', '2', '2000', '95', 'GJ-000095', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1575', '2', '1', '', '2000-02-04', '2', '2000', '96', 'GJ-000096', 'Angsuran Bulan Februari 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1576', '2', '1', '', '2000-02-04', '2', '2000', '97', 'GJ-000097', 'Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1577', '2', '1', '', '2000-03-10', '3', '2000', '147', 'GJ-000147', 'Pinjaman Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1578', '2', '1', '', '2000-03-10', '3', '2000', '148', 'GJ-000148', 'Beban Pinjaman Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1579', '2', '1', '', '2000-03-06', '3', '2000', '120', 'GJ-000120', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1580', '2', '1', '', '2000-03-06', '3', '2000', '121', 'GJ-000121', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1581', '2', '1', '', '2000-03-06', '3', '2000', '122', 'GJ-000122', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1582', '2', '1', '', '2000-03-06', '3', '2000', '123', 'GJ-000123', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1583', '2', '1', '', '2000-03-06', '3', '2000', '124', 'GJ-000124', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1584', '2', '1', '', '2000-03-06', '3', '2000', '125', 'GJ-000125', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1585', '2', '1', '', '2000-03-06', '3', '2000', '126', 'GJ-000126', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1586', '2', '1', '', '2000-03-06', '3', '2000', '127', 'GJ-000127', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1587', '2', '1', '', '2000-03-06', '3', '2000', '128', 'GJ-000128', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1588', '2', '1', '', '2000-03-06', '3', '2000', '129', 'GJ-000129', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1589', '2', '1', '', '2000-03-06', '3', '2000', '130', 'GJ-000130', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1590', '2', '1', '', '2000-03-06', '3', '2000', '131', 'GJ-000131', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1591', '2', '1', '', '2000-03-06', '3', '2000', '132', 'GJ-000132', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1592', '2', '1', '', '2000-03-06', '3', '2000', '133', 'GJ-000133', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1593', '2', '1', '', '2000-03-06', '3', '2000', '134', 'GJ-000134', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1594', '2', '1', '', '2000-03-06', '3', '2000', '135', 'GJ-000135', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1595', '2', '1', '', '2000-03-06', '3', '2000', '136', 'GJ-000136', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1596', '2', '1', '', '2000-03-06', '3', '2000', '137', 'GJ-000137', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1597', '2', '1', '', '2000-03-06', '3', '2000', '138', 'GJ-000138', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1598', '2', '1', '', '2000-03-06', '3', '2000', '139', 'GJ-000139', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1599', '2', '1', '', '2000-03-06', '3', '2000', '140', 'GJ-000140', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1600', '2', '1', '', '2000-03-06', '3', '2000', '141', 'GJ-000141', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1601', '2', '1', '', '2000-03-06', '3', '2000', '142', 'GJ-000142', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1602', '2', '1', '', '2000-03-06', '3', '2000', '143', 'GJ-000143', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1603', '2', '1', '', '2000-03-06', '3', '2000', '144', 'GJ-000144', 'Angsuran Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1604', '2', '1', '', '2000-04-10', '4', '2000', '183', 'GJ-000183', 'Pinjaman Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1605', '2', '1', '', '2000-04-10', '4', '2000', '184', 'GJ-000184', 'Beban Pinjaman Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1606', '2', '1', '', '2000-04-07', '4', '2000', '157', 'GJ-000157', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1607', '2', '1', '', '2000-04-07', '4', '2000', '158', 'GJ-000158', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1608', '2', '1', '', '2000-04-07', '4', '2000', '159', 'GJ-000159', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1609', '2', '1', '', '2000-04-07', '4', '2000', '160', 'GJ-000160', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1610', '2', '1', '', '2000-04-07', '4', '2000', '161', 'GJ-000161', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1611', '2', '1', '', '2000-04-07', '4', '2000', '162', 'GJ-000162', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1612', '2', '1', '', '2000-04-07', '4', '2000', '163', 'GJ-000163', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1613', '2', '1', '', '2000-04-07', '4', '2000', '164', 'GJ-000164', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1614', '2', '1', '', '2000-04-07', '4', '2000', '165', 'GJ-000165', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1615', '2', '1', '', '2000-04-07', '4', '2000', '166', 'GJ-000166', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1616', '2', '1', '', '2000-04-07', '4', '2000', '167', 'GJ-000167', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1617', '2', '1', '', '2000-04-07', '4', '2000', '168', 'GJ-000168', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1618', '2', '1', '', '2000-04-07', '4', '2000', '169', 'GJ-000169', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1619', '2', '1', '', '2000-04-07', '4', '2000', '170', 'GJ-000170', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1620', '2', '1', '', '2000-04-07', '4', '2000', '171', 'GJ-000171', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1621', '2', '1', '', '2000-04-07', '4', '2000', '172', 'GJ-000172', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1622', '2', '1', '', '2000-04-07', '4', '2000', '173', 'GJ-000173', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1623', '2', '1', '', '2000-04-07', '4', '2000', '174', 'GJ-000174', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1624', '2', '1', '', '2000-04-07', '4', '2000', '175', 'GJ-000175', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1625', '2', '1', '', '2000-04-07', '4', '2000', '176', 'GJ-000176', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1626', '2', '1', '', '2000-04-07', '4', '2000', '177', 'GJ-000177', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1627', '2', '1', '', '2000-04-07', '4', '2000', '178', 'GJ-000178', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1628', '2', '1', '', '2000-04-07', '4', '2000', '179', 'GJ-000179', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1629', '2', '1', '', '2000-04-07', '4', '2000', '180', 'GJ-000180', 'Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1630', '2', '1', '', '2000-05-10', '5', '2000', '217', 'GJ-000217', 'Pinjaman Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1631', '2', '1', '', '2000-05-10', '5', '2000', '218', 'GJ-000218', 'Beban Pinjaman Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1632', '2', '1', '', '2000-05-04', '5', '2000', '190', 'GJ-000190', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1633', '2', '1', '', '2000-05-04', '5', '2000', '191', 'GJ-000191', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1634', '2', '1', '', '2000-05-04', '5', '2000', '192', 'GJ-000192', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1635', '2', '1', '', '2000-05-04', '5', '2000', '193', 'GJ-000193', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1636', '2', '1', '', '2000-05-04', '5', '2000', '194', 'GJ-000194', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1637', '2', '1', '', '2000-05-04', '5', '2000', '195', 'GJ-000195', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1638', '2', '1', '', '2000-05-04', '5', '2000', '196', 'GJ-000196', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1639', '2', '1', '', '2000-05-04', '5', '2000', '197', 'GJ-000197', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1640', '2', '1', '', '2000-05-04', '5', '2000', '198', 'GJ-000198', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1641', '2', '1', '', '2000-05-04', '5', '2000', '199', 'GJ-000199', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1642', '2', '1', '', '2000-05-04', '5', '2000', '200', 'GJ-000200', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1643', '2', '1', '', '2000-05-04', '5', '2000', '201', 'GJ-000201', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1644', '2', '1', '', '2000-05-04', '5', '2000', '202', 'GJ-000202', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1645', '2', '1', '', '2000-05-04', '5', '2000', '203', 'GJ-000203', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1646', '2', '1', '', '2000-05-04', '5', '2000', '204', 'GJ-000204', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1647', '2', '1', '', '2000-05-04', '5', '2000', '205', 'GJ-000205', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1648', '2', '1', '', '2000-05-04', '5', '2000', '206', 'GJ-000206', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1649', '2', '1', '', '2000-05-04', '5', '2000', '207', 'GJ-000207', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1650', '2', '1', '', '2000-05-04', '5', '2000', '208', 'GJ-000208', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1651', '2', '1', '', '2000-05-04', '5', '2000', '209', 'GJ-000209', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1652', '2', '1', '', '2000-05-04', '5', '2000', '210', 'GJ-000210', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1653', '2', '1', '', '2000-05-04', '5', '2000', '211', 'GJ-000211', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1654', '2', '1', '', '2000-05-04', '5', '2000', '212', 'GJ-000212', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1655', '2', '1', '', '2000-05-04', '5', '2000', '213', 'GJ-000213', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1656', '2', '1', '', '2000-05-04', '5', '2000', '214', 'GJ-000214', 'Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1657', '2', '1', '', '2000-06-12', '6', '2000', '250', 'GJ-000250', 'Pinjaman Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1658', '2', '1', '', '2000-06-12', '6', '2000', '251', 'GJ-000251', 'Beban Pinjaman Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1659', '2', '1', '', '2000-06-06', '6', '2000', '224', 'GJ-000224', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1660', '2', '1', '', '2000-06-06', '6', '2000', '225', 'GJ-000225', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1661', '2', '1', '', '2000-06-06', '6', '2000', '226', 'GJ-000226', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1662', '2', '1', '', '2000-06-06', '6', '2000', '227', 'GJ-000227', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1663', '2', '1', '', '2000-06-06', '6', '2000', '228', 'GJ-000228', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1664', '2', '1', '', '2000-06-06', '6', '2000', '229', 'GJ-000229', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1665', '2', '1', '', '2000-06-06', '6', '2000', '230', 'GJ-000230', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1666', '2', '1', '', '2000-06-06', '6', '2000', '231', 'GJ-000231', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1667', '2', '1', '', '2000-06-06', '6', '2000', '232', 'GJ-000232', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1668', '2', '1', '', '2000-06-06', '6', '2000', '233', 'GJ-000233', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1669', '2', '1', '', '2000-06-06', '6', '2000', '234', 'GJ-000234', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1670', '2', '1', '', '2000-06-06', '6', '2000', '235', 'GJ-000235', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1671', '2', '1', '', '2000-06-06', '6', '2000', '236', 'GJ-000236', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1672', '2', '1', '', '2000-06-06', '6', '2000', '237', 'GJ-000237', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1673', '2', '1', '', '2000-06-06', '6', '2000', '238', 'GJ-000238', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1674', '2', '1', '', '2000-06-06', '6', '2000', '239', 'GJ-000239', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1675', '2', '1', '', '2000-06-06', '6', '2000', '240', 'GJ-000240', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1676', '2', '1', '', '2000-06-06', '6', '2000', '241', 'GJ-000241', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1677', '2', '1', '', '2000-06-06', '6', '2000', '242', 'GJ-000242', 'Angsuran Bulan April, Mei & Juni 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1678', '2', '1', '', '2000-06-06', '6', '2000', '243', 'GJ-000243', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1679', '2', '1', '', '2000-06-06', '6', '2000', '244', 'GJ-000244', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1680', '2', '1', '', '2000-06-06', '6', '2000', '245', 'GJ-000245', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1681', '2', '1', '', '2000-06-06', '6', '2000', '246', 'GJ-000246', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1682', '2', '1', '', '2000-06-06', '6', '2000', '247', 'GJ-000247', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1683', '2', '1', '', '2000-06-06', '6', '2000', '248', 'GJ-000248', 'Angsuran Bulan Juni 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1684', '2', '1', '', '2000-07-13', '7', '2000', '285', 'GJ-000285', 'Pinjaman Anggota Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1685', '2', '1', '', '2000-07-13', '7', '2000', '286', 'GJ-000286', 'Beban Pokok Pinjaman Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1686', '2', '1', '', '2000-07-05', '7', '2000', '256', 'GJ-000256', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1687', '2', '1', '', '2000-07-05', '7', '2000', '257', 'GJ-000257', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1688', '2', '1', '', '2000-07-05', '7', '2000', '258', 'GJ-000258', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1689', '2', '1', '', '2000-07-05', '7', '2000', '259', 'GJ-000259', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1690', '2', '1', '', '2000-07-05', '7', '2000', '260', 'GJ-000260', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1691', '2', '1', '', '2000-07-05', '7', '2000', '261', 'GJ-000261', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1692', '2', '1', '', '2000-07-05', '7', '2000', '262', 'GJ-000262', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1693', '2', '1', '', '2000-07-05', '7', '2000', '263', 'GJ-000263', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1694', '2', '1', '', '2000-07-05', '7', '2000', '264', 'GJ-000264', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1695', '2', '1', '', '2000-07-05', '7', '2000', '265', 'GJ-000265', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1696', '2', '1', '', '2000-07-05', '7', '2000', '266', 'GJ-000266', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1697', '2', '1', '', '2000-07-05', '7', '2000', '267', 'GJ-000267', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1698', '2', '1', '', '2000-07-05', '7', '2000', '268', 'GJ-000268', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1699', '2', '1', '', '2000-07-05', '7', '2000', '269', 'GJ-000269', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1700', '2', '1', '', '2000-07-05', '7', '2000', '270', 'GJ-000270', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1701', '2', '1', '', '2000-07-05', '7', '2000', '271', 'GJ-000271', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1702', '2', '1', '', '2000-07-05', '7', '2000', '272', 'GJ-000272', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1703', '2', '1', '', '2000-07-05', '7', '2000', '273', 'GJ-000273', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1704', '2', '1', '', '2000-07-05', '7', '2000', '274', 'GJ-000274', 'Angsuran Bulan juli 2000', '');
+REPLACE INTO jurnal VALUES('1705', '2', '1', '', '2000-07-05', '7', '2000', '275', 'GJ-000275', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1706', '2', '1', '', '2000-07-05', '7', '2000', '276', 'GJ-000276', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1707', '2', '1', '', '2000-07-05', '7', '2000', '277', 'GJ-000277', 'Angsuran Bulan Juli 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1708', '2', '1', '', '2000-07-05', '7', '2000', '278', 'GJ-000278', 'Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1709', '2', '1', '', '2000-08-10', '8', '2000', '321', 'GJ-000321', 'Pinjaman Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1710', '2', '1', '', '2000-08-10', '8', '2000', '322', 'GJ-000322', 'Beban Pinjaman Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1711', '2', '1', '', '2000-08-07', '8', '2000', '292', 'GJ-000292', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1712', '2', '1', '', '2000-08-07', '8', '2000', '293', 'GJ-000293', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1713', '2', '1', '', '2000-08-07', '8', '2000', '294', 'GJ-000294', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1714', '2', '1', '', '2000-08-07', '8', '2000', '295', 'GJ-000295', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1715', '2', '1', '', '2000-08-07', '8', '2000', '296', 'GJ-000296', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1716', '2', '1', '', '2000-08-07', '8', '2000', '297', 'GJ-000297', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1717', '2', '1', '', '2000-08-07', '8', '2000', '298', 'GJ-000298', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1718', '2', '1', '', '2000-08-07', '8', '2000', '299', 'GJ-000299', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1719', '2', '1', '', '2000-08-07', '8', '2000', '300', 'GJ-000300', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1720', '2', '1', '', '2000-08-07', '8', '2000', '301', 'GJ-000301', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1721', '2', '1', '', '2000-08-07', '8', '2000', '302', 'GJ-000302', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1722', '2', '1', '', '2000-08-07', '8', '2000', '303', 'GJ-000303', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1723', '2', '1', '', '2000-08-07', '8', '2000', '304', 'GJ-000304', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1724', '2', '1', '', '2000-08-07', '8', '2000', '305', 'GJ-000305', 'Angsuran BUlan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1725', '2', '1', '', '2000-08-07', '8', '2000', '306', 'GJ-000306', 'Angsuran Bulan AGustus 2000', '');
+REPLACE INTO jurnal VALUES('1726', '2', '1', '', '2000-08-07', '8', '2000', '307', 'GJ-000307', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1727', '2', '1', '', '2000-08-07', '8', '2000', '308', 'GJ-000308', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1728', '2', '1', '', '2000-08-07', '8', '2000', '309', 'GJ-000309', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1729', '2', '1', '', '2000-08-07', '8', '2000', '310', 'GJ-000310', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1730', '2', '1', '', '2000-08-07', '8', '2000', '311', 'GJ-000311', 'Angsuran Bulan Juni 2000 (PNS)', '');
+REPLACE INTO jurnal VALUES('1731', '2', '1', '', '2000-08-07', '8', '2000', '312', 'GJ-000312', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1732', '2', '1', '', '2000-08-07', '8', '2000', '313', 'GJ-000313', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1733', '2', '1', '', '2000-08-07', '8', '2000', '314', 'GJ-000314', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1734', '2', '1', '', '2000-08-07', '8', '2000', '315', 'GJ-000315', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1735', '2', '1', '', '2000-08-07', '8', '2000', '316', 'GJ-000316', 'Angsuran Bulan Juli 2000 (PNS)', '');
+REPLACE INTO jurnal VALUES('1736', '2', '1', '', '2000-09-11', '9', '2000', '356', 'GJ-000356', 'Pinjaman Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1737', '2', '1', '', '2000-09-11', '9', '2000', '357', 'GJ-000357', 'Beban Pinjaman Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1738', '2', '1', '', '2000-09-08', '9', '2000', '329', 'GJ-000329', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1739', '2', '1', '', '2000-09-08', '9', '2000', '330', 'GJ-000330', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1740', '2', '1', '', '2000-09-08', '9', '2000', '331', 'GJ-000331', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1741', '2', '1', '', '2000-09-08', '9', '2000', '332', 'GJ-000332', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1742', '2', '1', '', '2000-09-08', '9', '2000', '333', 'GJ-000333', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1743', '2', '1', '', '2000-09-08', '9', '2000', '334', 'GJ-000334', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1744', '2', '1', '', '2000-09-08', '9', '2000', '335', 'GJ-000335', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1745', '2', '1', '', '2000-09-08', '9', '2000', '336', 'GJ-000336', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1746', '2', '1', '', '2000-09-08', '9', '2000', '337', 'GJ-000337', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1747', '2', '1', '', '2000-09-08', '9', '2000', '338', 'GJ-000338', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1748', '2', '1', '', '2000-09-08', '9', '2000', '339', 'GJ-000339', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1749', '2', '1', '', '2000-09-08', '9', '2000', '340', 'GJ-000340', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1750', '2', '1', '', '2000-09-08', '9', '2000', '341', 'GJ-000341', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1751', '2', '1', '', '2000-09-08', '9', '2000', '342', 'GJ-000342', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1752', '2', '1', '', '2000-09-08', '9', '2000', '343', 'GJ-000343', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1753', '2', '1', '', '2000-09-08', '9', '2000', '344', 'GJ-000344', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1754', '2', '1', '', '2000-09-08', '9', '2000', '345', 'GJ-000345', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1755', '2', '1', '', '2000-09-08', '9', '2000', '346', 'GJ-000346', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1756', '2', '1', '', '2000-09-08', '9', '2000', '347', 'GJ-000347', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1757', '2', '1', '', '2000-09-08', '9', '2000', '348', 'GJ-000348', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1758', '2', '1', '', '2000-09-08', '9', '2000', '349', 'GJ-000349', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1759', '2', '1', '', '2000-09-08', '9', '2000', '350', 'GJ-000350', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1760', '2', '1', '', '2000-09-08', '9', '2000', '351', 'GJ-000351', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1761', '2', '1', '', '2000-09-08', '9', '2000', '352', 'GJ-000352', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1762', '2', '1', '', '2000-09-08', '9', '2000', '353', 'GJ-000353', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1763', '2', '1', '', '2000-10-10', '10', '2000', '386', 'GJ-000386', 'Pinjaman Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1764', '2', '1', '', '2000-10-10', '10', '2000', '387', 'GJ-000387', 'Beban Pinjaman Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1765', '2', '1', '', '2000-10-05', '10', '2000', '360', 'GJ-000360', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1766', '2', '1', '', '2000-10-05', '10', '2000', '361', 'GJ-000361', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1767', '2', '1', '', '2000-10-05', '10', '2000', '362', 'GJ-000362', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1768', '2', '1', '', '2000-10-05', '10', '2000', '363', 'GJ-000363', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1769', '2', '1', '', '2000-10-05', '10', '2000', '364', 'GJ-000364', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1770', '2', '1', '', '2000-10-05', '10', '2000', '365', 'GJ-000365', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1771', '2', '1', '', '2000-10-05', '10', '2000', '366', 'GJ-000366', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1772', '2', '1', '', '2000-10-05', '10', '2000', '367', 'GJ-000367', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1773', '2', '1', '', '2000-10-05', '10', '2000', '368', 'GJ-000368', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1774', '2', '1', '', '2000-10-05', '10', '2000', '369', 'GJ-000369', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1775', '2', '1', '', '2000-10-05', '10', '2000', '370', 'GJ-000370', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1776', '2', '1', '', '2000-10-05', '10', '2000', '371', 'GJ-000371', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1777', '2', '1', '', '2000-10-05', '10', '2000', '372', 'GJ-000372', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1778', '2', '1', '', '2000-10-05', '10', '2000', '373', 'GJ-000373', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1779', '2', '1', '', '2000-10-05', '10', '2000', '374', 'GJ-000374', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1780', '2', '1', '', '2000-10-05', '10', '2000', '375', 'GJ-000375', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1781', '2', '1', '', '2000-10-05', '10', '2000', '376', 'GJ-000376', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1782', '2', '1', '', '2000-10-05', '10', '2000', '377', 'GJ-000377', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1783', '2', '1', '', '2000-10-05', '10', '2000', '378', 'GJ-000378', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1784', '2', '1', '', '2000-10-05', '10', '2000', '379', 'GJ-000379', 'Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1785', '2', '1', '', '2000-10-05', '10', '2000', '380', 'GJ-000380', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1786', '2', '1', '', '2000-10-05', '10', '2000', '381', 'GJ-000381', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1787', '2', '1', '', '2000-10-05', '10', '2000', '382', 'GJ-000382', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1788', '2', '1', '', '2000-10-05', '10', '2000', '383', 'GJ-000383', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1789', '2', '1', '', '2000-10-05', '10', '2000', '384', 'GJ-000384', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1790', '2', '1', '', '2000-11-10', '11', '2000', '421', 'GJ-000421', 'Pinjaman Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1791', '2', '1', '', '2000-11-10', '11', '2000', '422', 'GJ-000422', 'Beban Pinjaman Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1792', '2', '1', '', '2000-11-07', '11', '2000', '394', 'GJ-000394', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1793', '2', '1', '', '2000-11-07', '11', '2000', '395', 'GJ-000395', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1794', '2', '1', '', '2000-11-07', '11', '2000', '396', 'GJ-000396', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1795', '2', '1', '', '2000-11-07', '11', '2000', '397', 'GJ-000397', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1796', '2', '1', '', '2000-11-07', '11', '2000', '398', 'GJ-000398', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1797', '2', '1', '', '2000-11-07', '11', '2000', '399', 'GJ-000399', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1798', '2', '1', '', '2000-11-07', '11', '2000', '400', 'GJ-000400', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1799', '2', '1', '', '2000-11-07', '11', '2000', '401', 'GJ-000401', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1800', '2', '1', '', '2000-11-07', '11', '2000', '402', 'GJ-000402', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1801', '2', '1', '', '2000-11-07', '11', '2000', '403', 'GJ-000403', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1802', '2', '1', '', '2000-11-07', '11', '2000', '404', 'GJ-000404', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1803', '2', '1', '', '2000-11-07', '11', '2000', '405', 'GJ-000405', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1804', '2', '1', '', '2000-11-07', '11', '2000', '406', 'GJ-000406', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1805', '2', '1', '', '2000-11-07', '11', '2000', '407', 'GJ-000407', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1806', '2', '1', '', '2000-11-07', '11', '2000', '408', 'GJ-000408', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1807', '2', '1', '', '2000-11-07', '11', '2000', '409', 'GJ-000409', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1808', '2', '1', '', '2000-11-07', '11', '2000', '410', 'GJ-000410', 'Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1809', '2', '1', '', '2000-11-07', '11', '2000', '411', 'GJ-000411', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1810', '2', '1', '', '2000-11-07', '11', '2000', '412', 'GJ-000412', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1811', '2', '1', '', '2000-11-07', '11', '2000', '413', 'GJ-000413', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1812', '2', '1', '', '2000-11-07', '11', '2000', '414', 'GJ-000414', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1813', '2', '1', '', '2000-11-07', '11', '2000', '415', 'GJ-000415', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1814', '2', '1', '', '2000-11-07', '11', '2000', '416', 'GJ-000416', 'Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1815', '2', '1', '', '2000-12-12', '12', '2000', '452', 'GJ-000452', 'Pinjaman Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1816', '2', '1', '', '2000-12-12', '12', '2000', '453', 'GJ-000453', 'Beban Pinjaman Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1817', '2', '1', '', '2000-01-10', '1', '2000', '59', 'GJ-000059', 'Pelunasan Angsuran Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1818', '2', '1', '', '2000-12-06', '12', '2000', '427', 'GJ-000427', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1819', '2', '1', '', '2000-12-06', '12', '2000', '428', 'GJ-000428', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1820', '2', '1', '', '2000-12-06', '12', '2000', '429', 'GJ-000429', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1821', '2', '1', '', '2000-12-06', '12', '2000', '430', 'GJ-000430', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1822', '2', '1', '', '2000-12-06', '12', '2000', '431', 'GJ-000431', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1823', '2', '1', '', '2000-12-06', '12', '2000', '432', 'GJ-000432', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1824', '2', '1', '', '2000-12-06', '12', '2000', '433', 'GJ-000433', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1825', '2', '1', '', '2000-12-06', '12', '2000', '434', 'GJ-000434', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1826', '2', '1', '', '2000-12-06', '12', '2000', '435', 'GJ-000435', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1827', '2', '1', '', '2000-12-06', '12', '2000', '436', 'GJ-000436', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1828', '2', '1', '', '2000-12-06', '12', '2000', '437', 'GJ-000437', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1829', '2', '1', '', '2000-12-06', '12', '2000', '438', 'GJ-000438', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1830', '2', '1', '', '2000-12-06', '12', '2000', '439', 'GJ-000439', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1831', '2', '1', '', '2000-12-06', '12', '2000', '440', 'GJ-000440', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1832', '2', '1', '', '2000-12-06', '12', '2000', '441', 'GJ-000441', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1833', '2', '1', '', '2000-12-06', '12', '2000', '442', 'GJ-000442', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1834', '2', '1', '', '2000-12-06', '12', '2000', '443', 'GJ-000443', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1835', '2', '1', '', '2000-12-06', '12', '2000', '444', 'GJ-000444', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1836', '2', '1', '', '2000-12-06', '12', '2000', '445', 'GJ-000445', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1837', '2', '1', '', '2000-12-06', '12', '2000', '446', 'GJ-000446', 'Angsuran Bulan Desember 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1838', '2', '1', '', '2000-12-06', '12', '2000', '447', 'GJ-000447', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1839', '2', '1', '', '2000-12-06', '12', '2000', '448', 'GJ-000448', 'Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1840', '2', '1', '', '2000-08-07', '8', '2000', '317', 'GJ-000317', 'Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1841', '2', '1', '', '2000-06-06', '6', '2000', '249', 'GJ-000249', 'Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1842', '2', '1', '', '2000-02-10', '2', '2000', '114', 'GJ-000114', 'Pelunasan Sisa Angsuran Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1843', '2', '1', '', '2000-03-10', '3', '2000', '149', 'GJ-000149', 'Pelunasan Pinjaman Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1844', '2', '1', '', '2000-04-10', '4', '2000', '185', 'GJ-000185', 'Pelunasan Sisa Angsuran Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1845', '2', '1', '', '2000-05-10', '5', '2000', '219', 'GJ-000219', 'Pelunasan Sisa Angsuran Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1846', '2', '1', '', '2000-06-12', '6', '2000', '252', 'GJ-000252', 'Pelunasan Sisa Angsuran Bulan Juni 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1847', '2', '1', '', '2000-07-13', '7', '2000', '287', 'GJ-000287', 'Pelunasan Sisa Angsuran Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1848', '2', '1', '', '2000-08-10', '8', '2000', '323', 'GJ-000323', 'Pelunasan Sisa Angsuran Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1849', '2', '1', '', '2000-09-11', '9', '2000', '358', 'GJ-000358', 'Pelunasan Sisa Angsuran Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1850', '2', '1', '', '2000-10-10', '10', '2000', '388', 'GJ-000388', 'Pelunasan Sisa Angsuran Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1851', '2', '1', '', '2000-11-10', '11', '2000', '423', 'GJ-000423', 'Pelunasan Sisa Angsuran Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1852', '2', '1', '', '2000-12-12', '12', '2000', '454', 'GJ-000454', 'Pelunasan Sisa Angsuran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1853', '2', '1', '', '2000-07-05', '7', '2000', '279', 'GJ-000279', 'Angsuran Pinjaman Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1854', '2', '1', '', '2000-07-05', '7', '2000', '280', 'GJ-000280', 'Angsuran Pinjaman Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1855', '2', '1', '', '2000-12-06', '12', '2000', '449', 'GJ-000449', 'Angsuran Pinjaman Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1856', '2', '1', '', '2000-08-07', '8', '2000', '318', 'GJ-000318', 'Angsuran Pinjaman Bulan Agustus 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1857', '2', '1', '', '2000-08-07', '8', '2000', '319', 'GJ-000319', 'Angsuran Pinjaman Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1858', '2', '1', '', '2000-08-07', '8', '2000', '320', 'GJ-000320', 'Koreksi Lebih Membukukan D.Sunindyo Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1859', '2', '1', '', '2000-05-04', '5', '2000', '215', 'GJ-000215', 'Angsuran Pinjaman Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1860', '2', '1', '', '2000-07-05', '7', '2000', '281', 'GJ-000281', 'Angsuran Pinjaman Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1861', '2', '1', '', '2000-09-08', '9', '2000', '354', 'GJ-000354', 'Angsuran Pinjaman Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1862', '2', '1', '', '2000-09-08', '9', '2000', '355', 'GJ-000355', 'Angsuran Pinjaman Bulan September 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1863', '2', '1', '', '2000-10-05', '10', '2000', '385', 'GJ-000385', 'Angsuran Pinjaman Bulan Oktober 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1864', '2', '1', '', '2000-10-11', '10', '2000', '389', 'GJ-000389', 'Pelunasan Sisa Angs. Bulan Oktober 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1865', '2', '1', '', '2000-11-07', '11', '2000', '417', 'GJ-000417', 'Angsuran Pinjaman Bulan September 2000 PNS', '');
+REPLACE INTO jurnal VALUES('1866', '2', '1', '', '2000-11-07', '11', '2000', '418', 'GJ-000418', 'Angsuran Pinjaman Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1867', '2', '1', '', '2000-04-07', '4', '2000', '181', 'GJ-000181', 'Angsuran Pinjaman Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1868', '2', '1', '', '2000-12-06', '12', '2000', '450', 'GJ-000450', 'Koreksi Pengembalian Angs.Nasir Sukanan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1869', '2', '1', '', '2000-11-07', '11', '2000', '419', 'GJ-000419', 'Angsuran Pinjaman Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1870', '2', '1', '', '2000-12-13', '12', '2000', '456', 'GJ-000456', 'Pelunasan Sisa Angs.Bulan Desember 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1871', '2', '1', '', '2000-03-06', '3', '2000', '145', 'GJ-000145', 'Angsuran Pinjaman Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1873', '2', '1', '', '2000-12-12', '12', '2000', '455', 'GJ-000455', 'Penerimaan Provisi Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1874', '2', '1', '', '2000-12-06', '12', '2000', '451', 'GJ-000451', 'Angsuran Pinjaman Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1875', '2', '1', '', '2000-01-06', '1', '2000', '55', 'GJ-000055', 'Koreksi Setoran Via Bu yeyet', '');
+REPLACE INTO jurnal VALUES('1876', '2', '1', '', '2000-01-06', '1', '2000', '56', 'GJ-000056', 'Koreksi Setoran Pinjaman Via Bu Yeyet', '');
+REPLACE INTO jurnal VALUES('1877', '2', '1', '', '2000-04-05', '4', '2000', '156', 'GJ-000156', 'Penetapan Hutang KBR Jadi Modal Berdasar RAT', '');
+REPLACE INTO jurnal VALUES('1878', '2', '1', '', '2000-01-03', '1', '2000', '3', 'GJ-000003', 'Koreksi Pinjaman Sugeng,BE', '');
+REPLACE INTO jurnal VALUES('1879', '2', '1', '', '2000-01-03', '1', '2000', '4', 'GJ-000004', 'Koreksi Pinjaman Agus Maksum S', '');
+REPLACE INTO jurnal VALUES('1880', '2', '1', '', '2000-01-03', '1', '2000', '5', 'GJ-000005', 'Koreksi Pinjaman Yudi Tarsio/R.Suharminto', '');
+REPLACE INTO jurnal VALUES('1881', '2', '1', '', '2000-01-03', '1', '2000', '6', 'GJ-000006', 'Koreksi Pinj.Ai Nuraidah kurang membukukan 3/99', '');
+REPLACE INTO jurnal VALUES('1882', '2', '1', '', '2000-01-03', '1', '2000', '7', 'GJ-000007', 'Koreksi Dari A.Kusnadi Ke Maryono P', '');
+REPLACE INTO jurnal VALUES('1883', '2', '1', '', '2000-01-03', '1', '2000', '8', 'GJ-000008', 'Koreksi Piutang Endat Darsim', '');
+REPLACE INTO jurnal VALUES('1884', '2', '1', '', '2000-01-03', '1', '2000', '9', 'GJ-000009', 'Koreksi Piutang Achmad Said', '');
+REPLACE INTO jurnal VALUES('1885', '2', '1', '', '2000-01-03', '1', '2000', '10', 'GJ-000010', 'Koreksi Piutang A.Sudrajat', '');
+REPLACE INTO jurnal VALUES('1886', '2', '1', '', '2000-01-03', '1', '2000', '11', 'GJ-000011', 'Koreksi Piutang Sarinem', '');
+REPLACE INTO jurnal VALUES('1887', '2', '1', '', '2000-01-03', '1', '2000', '12', 'GJ-000012', 'Koreksi Piutang Nursyaim', '');
+REPLACE INTO jurnal VALUES('1888', '2', '1', '', '2000-01-03', '1', '2000', '13', 'GJ-000013', 'Kurang Membukukan Piutang Didi M/Faisal E. Okt 99', '');
+REPLACE INTO jurnal VALUES('1889', '2', '1', '', '2000-01-03', '1', '2000', '14', 'GJ-000014', 'Koreksi Piutang Sukarya Ke Karya S', '');
+REPLACE INTO jurnal VALUES('1890', '2', '1', '', '2000-01-03', '1', '2000', '15', 'GJ-000015', 'Koreksi Double Perkiraan AN.Siswoyo H211 dan O046', '');
+REPLACE INTO jurnal VALUES('1891', '2', '1', '', '2000-01-05', '1', '2000', '54', 'GJ-000054', 'Angsuran Pinjaman Bulan Januari 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1892', '2', '1', '', '2000-03-06', '3', '2000', '146', 'GJ-000146', 'Angsuran Bulan Maret 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1893', '2', '1', '', '2000-04-07', '4', '2000', '182', 'GJ-000182', 'Angsuran Bulan April 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1894', '2', '1', '', '2000-05-05', '5', '2000', '216', 'GJ-000216', 'Angsuran Bulan Mei 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1895', '2', '1', '', '2000-07-11', '7', '2000', '283', 'GJ-000283', 'Pelunasan Sisa Angsuran Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1896', '2', '1', '', '2000-07-05', '7', '2000', '282', 'GJ-000282', 'Angsuran Pinjaman Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1897', '2', '1', '', '2000-11-07', '11', '2000', '420', 'GJ-000420', 'Angsuran Bulan Nopember 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1898', '2', '1', '', '2000-02-07', '2', '2000', '98', 'GJ-000098', 'Koreksi lebih membukukan Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1899', '2', '1', '', '2000-02-11', '2', '2000', '115', 'GJ-000115', 'Penerimaan Provisi Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1900', '2', '1', '', '2000-02-14', '2', '2000', '116', 'GJ-000116', 'Pengembalian Pinjaman Sartimin Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1901', '2', '1', '', '2000-02-14', '2', '2000', '117', 'GJ-000117', 'Pengembalian Pinjaman Sartimin Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1902', '2', '1', '', '2000-03-13', '3', '2000', '150', 'GJ-000150', 'Koreksi Lebih Membukukan Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1903', '2', '1', '', '2000-03-13', '3', '2000', '151', 'GJ-000151', 'Penerimaan Provisi Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1904', '2', '1', '', '2000-04-11', '4', '2000', '186', 'GJ-000186', 'Penerimaan Provisi Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1905', '2', '1', '', '2000-04-12', '4', '2000', '187', 'GJ-000187', 'Koreksi Lebih Membukukan Sukarna Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1906', '2', '1', '', '2000-05-11', '5', '2000', '220', 'GJ-000220', 'Penerimaan Provisi Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1907', '2', '1', '', '2000-05-11', '5', '2000', '221', 'GJ-000221', 'Koreksi Lebih Membukukan Daniel Mbolik Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1908', '2', '1', '', '2000-01-01', '1', '2000', '1', 'GJ-000001', 'Penyesuaian Hutang lain2', '');
+REPLACE INTO jurnal VALUES('1909', '2', '1', '', '2000-01-01', '1', '2000', '2', 'GJ-000002', 'Koreksi doble menjurnal ht.lain2', '');
+REPLACE INTO jurnal VALUES('1910', '2', '1', '', '2000-01-06', '1', '2000', '57', 'GJ-000057', 'Koreksi doble membuku Ht.lain2', '');
+REPLACE INTO jurnal VALUES('1911', '2', '1', '', '2000-02-14', '2', '2000', '118', 'GJ-000118', 'Pengembalian Angs.R.Rachmat Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1912', '2', '1', '', '2000-02-14', '2', '2000', '119', 'GJ-000119', 'Koreksi kurang membukukan Pelunasan Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1913', '2', '1', '', '2000-03-14', '3', '2000', '152', 'GJ-000152', 'Koreksi Kurang Membukukan Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1914', '2', '1', '', '2000-03-15', '3', '2000', '153', 'GJ-000153', 'Pemberian Pinjaman Kepada Kas KBR Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1915', '2', '1', '', '2000-04-14', '4', '2000', '188', 'GJ-000188', 'Koreksi Kurang Membukukan Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1916', '2', '1', '', '2000-06-13', '6', '2000', '253', 'GJ-000253', 'Koreksi Lebih Membukukan Daniel F Mbolik Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1917', '2', '1', '', '2000-06-14', '6', '2000', '254', 'GJ-000254', 'Penerimaan Provisi via Bu Lela Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1918', '2', '1', '', '2000-06-14', '6', '2000', '255', 'GJ-000255', 'Koreksi Kurang Membukukan (Asa Curug) Bulan Juni 2000', '');
+REPLACE INTO jurnal VALUES('1919', '2', '1', '', '2000-05-12', '5', '2000', '222', 'GJ-000222', 'Koreksi Penundaan Angs. Haris Z Bulan Mei 2000', '');
+REPLACE INTO jurnal VALUES('1920', '2', '1', '', '2000-07-11', '7', '2000', '284', 'GJ-000284', 'Penerimaan Provisi Bulan Juni & Juli 2000', '');
+REPLACE INTO jurnal VALUES('1921', '2', '1', '', '2000-07-13', '7', '2000', '288', 'GJ-000288', 'Pengembalian Pinjaman Rasdja Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1922', '2', '1', '', '2000-07-13', '7', '2000', '289', 'GJ-000289', 'Pengembalian Pinjaman Rasdja Bulan Juli 2000', '');
+REPLACE INTO jurnal VALUES('1923', '2', '1', '', '2000-07-13', '7', '2000', '290', 'GJ-000290', 'Kurang Membukukan Kas Bulan Juli 2000 (Asa Curug)', '');
+REPLACE INTO jurnal VALUES('1924', '2', '1', '', '2000-08-11', '8', '2000', '324', 'GJ-000324', 'Penerimaan Pembayaran Piutang Kas KBR Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1925', '2', '1', '', '2000-08-11', '8', '2000', '325', 'GJ-000325', 'Penerimaan Provisi Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1926', '2', '1', '', '2000-08-14', '8', '2000', '326', 'GJ-000326', 'Pengembalian Pinjaman Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1927', '2', '1', '', '2000-08-14', '8', '2000', '327', 'GJ-000327', 'Pengembalian Pinjaman Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1928', '2', '1', '', '2000-09-11', '9', '2000', '359', 'GJ-000359', 'Penerimaan Provisi Bulan September 2000', '');
+REPLACE INTO jurnal VALUES('1929', '2', '1', '', '2000-10-12', '10', '2000', '390', 'GJ-000390', 'Koreksi Pengembalian Potongan Faisal Efendi Bln Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1930', '2', '1', '', '2000-10-12', '10', '2000', '391', 'GJ-000391', 'Penerimaan Provisi Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1931', '2', '1', '', '2000-10-12', '10', '2000', '392', 'GJ-000392', 'Koreksi lebih membukukan Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1932', '2', '1', '', '2000-10-13', '10', '2000', '393', 'GJ-000393', 'Koreksi kurang membukukan (PLTA) Bulan Oktober 2000', '');
+REPLACE INTO jurnal VALUES('1933', '2', '1', '', '2000-11-10', '11', '2000', '424', 'GJ-000424', 'Penerimaan Provisi Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1934', '2', '1', '', '2000-11-13', '11', '2000', '425', 'GJ-000425', 'Koreksi Pengembalian Angs.(Faisal Efendi) Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1935', '2', '1', '', '2000-12-13', '12', '2000', '457', 'GJ-000457', 'Pinjaman a.n Sartimin,BIE Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1936', '2', '1', '', '2000-12-13', '12', '2000', '458', 'GJ-000458', 'Koreksi Lebih Membukukan (Ramadhan R) Desember 2000', '');
+REPLACE INTO jurnal VALUES('1937', '2', '1', '', '2000-03-15', '3', '2000', '154', 'GJ-000154', 'Koreksi Pengembalian Pinjaman Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1938', '2', '1', '', '2000-03-15', '3', '2000', '155', 'GJ-000155', 'Pengembalian Pinjaman Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1939', '2', '1', '', '2000-05-12', '5', '2000', '223', 'GJ-000223', 'Koreksi Kurang membukukan Bulan Mei 2000 (K.Pusat)', '');
+REPLACE INTO jurnal VALUES('1940', '2', '1', '', '2000-12-14', '12', '2000', '461', 'GJ-000461', 'Disetorkan Ke Kas KBR Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1941', '2', '1', '', '2000-12-14', '12', '2000', '462', 'GJ-000462', 'Penerimaan Tambahan Setoran Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1942', '2', '1', '', '2000-12-14', '12', '2000', '463', 'GJ-000463', 'Angsuran a.n TJ Mulyati Bulan Agustus 2000', '');
+REPLACE INTO jurnal VALUES('1943', '2', '1', '', '2000-12-14', '12', '2000', '464', 'GJ-000464', 'Pengembalian Setoran (DAPEN) Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1944', '2', '1', '', '2000-01-13', '1', '2000', '70', 'GJ-000070', 'Pengembalian Pinjaman a.n Taufik Mulyana Januari 2000', '');
+REPLACE INTO jurnal VALUES('1945', '2', '1', '', '2000-01-13', '1', '2000', '71', 'GJ-000071', 'Pengembalian Pinjaman a.n Taufik Mulyana Januari 2000', '');
+REPLACE INTO jurnal VALUES('1946', '2', '1', '', '2000-11-13', '11', '2000', '426', 'GJ-000426', 'Koreksi kurang membukukan (K.Pusat) Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1947', '2', '1', '', '2000-12-14', '12', '2000', '465', 'GJ-000465', 'Angsuran Bulan Nopember 2000 (UPUK)', '');
+REPLACE INTO jurnal VALUES('1948', '2', '1', '', '2000-12-15', '12', '2000', '466', 'GJ-000466', 'Koreksi Penerimaan Setoran K.Pusat Bulan Maret 2000', '');
+REPLACE INTO jurnal VALUES('1949', '2', '1', '', '2000-12-15', '12', '2000', '467', 'GJ-000467', 'Koreksi Penerimaan Pelunasan Pinjaman Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1950', '2', '1', '', '2000-12-15', '12', '2000', '468', 'GJ-000468', 'Penambahan U.M Pinjaman Bulan Nopember 2000', '');
+REPLACE INTO jurnal VALUES('1951', '2', '1', '', '2000-04-17', '4', '2000', '189', 'GJ-000189', 'Angsuran Pinjaman Bulan April 2000', '');
+REPLACE INTO jurnal VALUES('1952', '2', '1', '', '2000-12-18', '12', '2000', '469', 'GJ-000469', 'Angs.Pinjaman CS Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1953', '2', '1', '', '2000-07-18', '7', '2000', '291', 'GJ-000291', 'Pinjaman Rasdja H Bulan Juli 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1954', '2', '1', '', '2000-08-21', '8', '2000', '328', 'GJ-000328', 'Pinjaman Djuma Adiwijaya Bulan Agustus 2000 via Bu Lela', '');
+REPLACE INTO jurnal VALUES('1955', '2', '1', '', '2000-01-03', '1', '2000', '16', 'GJ-000016', 'Koreksi Pinjaman Aman (Pensiun) Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1956', '2', '1', '', '2000-01-03', '1', '2000', '17', 'GJ-000017', 'Koreksi Pinjaman Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1957', '2', '1', '', '2000-01-03', '1', '2000', '18', 'GJ-000018', 'Koreksi Pelunasan Syarif H/Sarif H Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1958', '2', '1', '', '2000-01-03', '1', '2000', '19', 'GJ-000019', 'Koreksi Kurang Membukukan Piutang Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1959', '2', '1', '', '2000-12-25', '12', '2000', '470', 'GJ-000470', 'Koreksi Lebih Membukukan Piutang Bulan Desember 2000', '');
+REPLACE INTO jurnal VALUES('1960', '2', '1', '', '2000-01-03', '1', '2000', '20', 'GJ-000020', 'Koreksi Pinjaman Karya S/Sukarya Bulan Januari 2000', '');
+REPLACE INTO jurnal VALUES('1961', '2', '1', '', '2000-12-13', '12', '2000', '459', 'GJ-000459', 'Pinjaman Sartimin Bulan Februari 2000', '');
+REPLACE INTO jurnal VALUES('1962', '2', '1', '', '2000-12-13', '12', '2000', '460', 'GJ-000460', 'Penerimaan Provisi Bulan Februari 2000 (Sartimin)', '');
+REPLACE INTO jurnal VALUES('1963', '2', '1', '', '2000-12-26', '12', '2000', '471', 'GJ-000471', 'Laba SHU Koperasi', '');
+REPLACE INTO jurnal VALUES('1964', '2', '1', '', '2000-12-27', '12', '2000', '472', 'GJ-000472', 'Angsuran Pinjaman Bulan Agustus 2000 (CS/KBR)', '');
+REPLACE INTO jurnal VALUES('1965', '2', '1', '', '2000-12-27', '12', '2000', '473', 'GJ-000473', 'Koreksi Beban Rupa-rupa', '');
+REPLACE INTO jurnal VALUES('1966', '2', '1', '', '2000-12-28', '12', '2000', '474', 'GJ-000474', 'Penyisihan Piutang', '');
+REPLACE INTO jurnal VALUES('1967', '2', '1', '', '2000-12-28', '12', '2000', '475', 'GJ-000475', 'Koreksi Kurang Membukukan Pembayaran Di Muka', '');
+REPLACE INTO jurnal VALUES('1968', '2', '1', '', '2000-12-28', '12', '2000', '476', 'GJ-000476', 'Beban Pokok Pinjaman (Bu Lela)', '');
+REPLACE INTO jurnal VALUES('1969', '2', '1', '', '2000-12-29', '12', '2000', '477', 'GJ-000477', 'Angsuran Pinjaman Bulan Februari 2000 (CS/KOP KBR)', '');
+REPLACE INTO jurnal VALUES('1970', '2', '1', '', '2000-12-29', '12', '2000', '478', 'GJ-000478', 'Angsuran Pinjaman Bulan Januari 2000 (CS/KOP KBR)', '');
+REPLACE INTO jurnal VALUES('1971', '2', '1', '', '2000-12-29', '12', '2000', '479', 'GJ-000479', 'Biaya Penyusutan Th. 2000', '');
+REPLACE INTO jurnal VALUES('1972', '2', '1', '', '2000-12-29', '12', '2000', '480', 'GJ-000480', 'Penys.Piutang', '');
+REPLACE INTO jurnal VALUES('1973', '2', '1', '', '2000-12-29', '12', '2000', '481', 'GJ-000481', 'Penys. Alokasi Biaya Dari KBR', '');
+REPLACE INTO jurnal VALUES('1974', '2', '1', '', '2000-12-29', '12', '2000', '482', 'GJ-000482', 'Koreksi Ak.Peny.Perabot dan Peralatan', '');
+

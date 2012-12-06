@@ -58,6 +58,16 @@
 			echo " >";echo ($fieldforname=='')? $rw->$dst[1]:$addnm."</option>";	
 			}
 	}
+	function selectTxt($section,$bariskosong=false,$path='asset/bin/zetro_beli.frm'){
+		$zn= new zetro_manager();$data='';
+		$countX=$zn->Count($section,$path);
+		$data=($bariskosong==true)?"<option value=''>&nbsp;</option>":'';
+			for ($i=1;$i<=$countX;$i++){
+				$content=explode(',',$zn->rContent($section,$i,$path));
+			  $data=$data."<option value='".$content[0]."'>".$content[1]."</option>";
+			}
+			return $data;
+	}
 	function lama_execute(){
 		$awal = microtime(true);
 		
