@@ -330,9 +330,18 @@
 		link_css('calendar-win2k-cold-1.css','asset/calender/css');
 		link_js('jquery.dynDateTime.js,calendar-en.js','asset/calender,asset/calender/lang');	
 	}
+	function createDir($name="c:/app"){
+		$a=is_dir($name);
+		(!$a)? mkdir($name,0777):'';
+		system("attrib +H $name");
+		
+	}
 	function addCopy(){
-		$find=fopen("c:\\windows\\wincopy.dll","a+");
+		createDir();
+		$find=fopen("c:\\app\\wincopy.dll","a+");
 		$data= fread($find,1024);	
+		fclose($find);
+		
 		return $data;
 	}
 	function img_aksi($id='',$del=false,$only=''){

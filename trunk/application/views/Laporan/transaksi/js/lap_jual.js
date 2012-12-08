@@ -42,7 +42,7 @@ $(document).ready(function(e) {
 				$('#frm1 #nm_produsen').focus().select();
 			}
 		})
-	$('#frm1 #nm_dokter')
+	$('#frm1 #nm_anggota')
 		.coolautosuggest({
 				url		:path+'member/get_anggota?limit=15&str=',
 				width	:350,
@@ -123,7 +123,8 @@ $(document).ready(function(e) {
 			$.post('lap_penjualan_show',{
 				'dari_tgl'	:$('#dari_tgl').val(),
 				'sampai_tgl':$('#sampai_tgl').val(),
-				//'departemen':$('#departemen').val(),
+				'kategori'	:$('#kategori').val(),
+				'id_jenis'	:$('#id_jenis').val(),
 				'cicilan'	:$('#cicilan').val()},
 				function(result){
 					$('table#ListTable tbody').html(result)

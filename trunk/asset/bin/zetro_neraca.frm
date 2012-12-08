@@ -23,11 +23,11 @@
 6|Total Harga,,,,,,15%,,,25
 
 [rekapjualkredit]
-1|Nama Anggota,,,,,,20%,,,70
-2|Departemen,,,,,,15%,,,60
+1|Nama Anggota,,,,,,20%,,,65
+2|Departemen,,,,,,15%,,,55
 3|Cicilan,,,,,,5%,,,15
-4|Total,,,,,,15%,,,30
-5|Status,,,,,,10%,,,15
+4|Total,,,,,,15%,,,25
+5|Status,,,,,,10%,,,20
 
 [stocklist]
 1|Kode Barang,input,text n,Kode,w50,,15%,,,28,
@@ -71,7 +71,7 @@
 4|Jumlah,,,,,,10%,,,22
 5|Satuan,,,,,,10%,,,18
 6|Harga,,,,,,10%,,,25
-7|Total Harga,,,,,,10%,,,27
+7|Total Harga,,,,,,10%,,,28
 ;8|Keterangan,,,,,,10%,,,30
 
 [detailbelijual]

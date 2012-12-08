@@ -81,7 +81,7 @@ class Zetro_auth extends CI_model
 		}
 	}
 		return $data;
-	// print_r($data);
+	 print_r($data);
 	}
 
 // get data read variable form zetro_*.frm

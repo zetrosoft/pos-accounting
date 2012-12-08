@@ -15,13 +15,13 @@ if($all_rekappenjualantunai!=''){
 	addText(array('Periode :',' s/d ',($posisi=='SW52TWVudQ==')?'Kategori':'',($posisi=='SW52TWVudQ==')?'Jenis':'',''),
 	array("<input type='text' id='dari_tgl' name='dari_tgl' value=''>",
 		  "<input type='text' id='sampai_tgl' name='sampai_tgl' value=''>",
-		  ($posisi=='SW52TWVudQ==')? "<select id='kategori' name='kategori'></select>":'',
-		  ($posisi=='SW52TWVudQ==')? "<select id='id_jenis' name='id_jenis'></select>":'',
+		  ($posisi=='SW52TWVudQ==')? "<select id='kategori' name='kategori'></select>":"<select id='kategori' name='kategori'></select>",
+		  ($posisi=='SW52TWVudQ==')? "<select id='id_jenis' name='id_jenis'></select>":"<select id='id_jenis' name='id_jenis'></select>",
 		  ($posisi=='SW52TWVudQ==')?
 		  "<input type='button' value='OK' id='okelah'/>":
 		  "<input type='button' value='OK' id='view'/>
 		   <input type='button' value='Print' id='okelah'/>
-		  <input type='button' value='Posting' id='posting'/>
+		  
 		  <input type='hidden' value='1' id='jenis_beli' name='jenis_beli'/>"));
 	echo "</form>";
 	echo "</tbody></table>";

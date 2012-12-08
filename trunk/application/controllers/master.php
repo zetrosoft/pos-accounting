@@ -61,7 +61,7 @@ class Master extends CI_Controller {
 		$this->View('master/master_vendor');
 	}
 	function general(){
-		$this->zetro_auth->menu_id(array('kas'));
+		$this->zetro_auth->menu_id(array('dataakun','datageneral'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('master/master_general');
 	}

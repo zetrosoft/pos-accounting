@@ -154,5 +154,12 @@ class Kasir_model extends CI_Model {
 		return $data->result();
 	}
 	
+	function get_tahun($bln=false,$tbl='pembelian'){
+		$sql=($bln==false)?
+		"select distinct(Tahun) as Tahun from inv_$tbl order by Tahun":
+		"select distinct(month(Tanggal)) as Bulan from inv_$tbl order by month(Tanggal)";
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
 	
 }

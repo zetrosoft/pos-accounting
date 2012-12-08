@@ -15,7 +15,7 @@
 		  $a->SetFont('Arial','',10);
 		  //echo $a->getColWidth();
 		  // set lebar tiap kolom tabel transaksi
-		  $a->SetWidths(array(10,70,60,15,30,25));
+		  $a->SetWidths(array(10,65,55,15,25,20));
 		  // set align tiap kolom tabel transaksi
 		  $a->SetAligns(array("C","L","L","C","R","L"));
 		  $a->SetFont('Arial','B',10);
@@ -34,9 +34,10 @@
 		  }
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFillColor(225,225,225);
-		  $a->Cell(155,8,"TOTAL",1,0,'R',true);
-		  $a->Cell(30,8,number_format($harga,2),1,0,'R',true);
-		  $a->Output('application/logs/'.$this->session->userdata('userid').'_rekap_penjualan.pdf','F');
+		  $a->Cell(145,8,"TOTAL",1,0,'R',true);
+		  $a->Cell(25,8,number_format($harga,2),1,0,'R',true);
+		  $a->Cell(20,8,'',1,1,'R',true);
+		  $a->Output('application/logs/'.$this->session->userdata('userid').'_rekap_penjualan_kredit.pdf','F');
 
 //show pdf output in frame
 $path='application/views/laporan';
@@ -44,7 +45,7 @@ $img=" <img src='".base_url()."asset/images/back.png' onclick='js:window.history
 //link_js('auto_sugest.js,lap_beli.js,jquery.fixedheader.js','asset/js,'.$path.'/js,asset/js');
 panel_begin('Print Preview','','Back'.$img);
 ?>
-		  <iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_rekap_penjualan.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>
+		  <iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_rekap_penjualan_kredit.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>
 <?
 panel_end();
 

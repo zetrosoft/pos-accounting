@@ -66,10 +66,16 @@ class Report extends CI_Controller
 		$this->View('laporan/transaksi/lap_jual_detail');
 	}
 	function penjualan_kon(){
-		$this->zetro_auth->menu_id(array('penjualanperpelanggan'));
+		$this->zetro_auth->menu_id(array('penjualanbyanggota'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('laporan/transaksi/lap_jual_vendor');
 
+	}
+
+	function penjualan_graph(){
+		$this->zetro_auth->menu_id(array('grafikpenjualan'));
+		$this->list_data($this->zetro_auth->auth());
+		$this->View('laporan/penjualan_graph');
 	}
 
 	function lap_penjualan_show(){
@@ -88,11 +94,11 @@ class Report extends CI_Controller
 			echo tr().td($n,'center').
 				 td($r->Nama_Barang).
 				 td($r->Kode).
-				 td($r->Jumlah,'right').
+				 td(number_format($r->Jumlah,2),'right').
+				 td($r->Satuan,'left').
 				 td(number_format($r->Harga,2),'right').
-				 td($r->Satuan,'center').
 				 td(number_format(($r->Jumlah*$r->Harga),2),'right').
-				 td(($r->ID_Post=='0')?'unposting':'Posting').
+				 td(/*($r->ID_Post=='0')?'unposting':'Posting'*/).
 				 _tr();
 			$harga	=($harga+($r->Jumlah*$r->Harga));
 		}
@@ -108,7 +114,7 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($this->input->post('kategori')=='')?'':" and b.ID_Kategori='".$this->input->post('kategori')."'";
 		$where.=($this->input->post('id_jenis')=='')?'':" and b.ID_Jenis='".$this->input->post('id_jenis')."'";
-		$where.=" and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
+		$where.=($this->input->post('jenis_beli')=='')?" and p.ID_Jenis='1'": " and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
 		$group="group by concat(dt.harga,dt.ID_Barang)";
 		$ordby="order by trim(b.Nama_Barang)";
 		$data['dari']		=$this->input->post('dari_tgl');
@@ -183,15 +189,17 @@ class Report extends CI_Controller
 		$data=array();$where='';
 		$data['dari']=$this->input->post('dari_tgl');
 		$data['sampai']=$this->input->post('sampai_tgl');
-		$where=empty($_POST['sampai_tgl'])?
-			   "where p.Tanggal='".tglToSql($_POST['dari_tgl'])."'":
-			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
+		$where=($this->input->post('sampai_tgl')=='')?
+			   "where p.Tanggal='".tglToSql($this->input->post('dari_tgl'))."'":
+			   "where p.Tanggal between '".tglToSql($this->input->post('dari_tgl'))."' and '".tglToSql($this->input->post('sampai_tgl'))."'";
+		
 		$where.=" and p.ID_Anggota='".$this->input->post('ID_Anggota')."' and a.ID_Jenis='1' and Jumlah!='0'";
+		$where=($this->input->post('dari_tgl')=='')?
+				"where p.ID_Anggota='".$this->input->post('ID_Anggota')."' and a.ID_Jenis='1' and Jumlah!='0'":$where;
 		$group="group by dt.ID_Jual";
 		$orderby="order by p.Tanggal";
 		$orderby.=($this->input->post('urutan')=='')?'':' '.$this->input->post('urutan');
 		$data['id_jenis']=rdb('inv_pembelian_jenis','Jenis_Beli','Jenis_Beli',"Where ID='".$this->input->post('jenis_beli')."'");
-		//($this->input->post('show_de')=='')?
 		$data['where']=$where;
 		$data['orderby']=$orderby;
 		$data['temp_rec']=$this->kasir_model->detail_trans_jual($where,$group,$orderby);
@@ -226,7 +234,7 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($this->input->post('departemen')=='')?'':" and a.ID_Dept='".$this->input->post('departemen')."'";
 		$where.=($this->input->post('cicilan')=='')?'':" and b.Cicilan='".$this->input->post('cicilan')."'";
-		$where.=" and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
+		$where.=($this->input->post('jenis_beli')=='')? " and p.ID_Jenis!='1'":" and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
 		$group="group by concat(p.ID_Anggota)";
 		$ordby="order by trim(a.Nama)";
 		$data['dari']		=$this->input->post('dari_tgl');
@@ -443,5 +451,38 @@ class Report extends CI_Controller
 			td('<b>'.number_format(((int)$debet-(int)$kredit),2).'</b>','right','kotak list_genap')._tr();
 	}
 
+	function get_tahun(){
+		$data=array();
+		$data=$this->kasir_model->get_tahun(false,'penjualan');
+		foreach($data as $r){
+			$select=($r->Tahun==date('Y'))?'selected':'';
+			echo "<option value='".$r->Tahun."' ".$select.">".$r->Tahun."</option>";
+		}
+	}
+	function get_tahune(){
+		$data=array();
+		$data=$this->kasir_model->get_tahun();
+		foreach($data as $r){
+			$select=($r->Tahun==date('Y'))?'selected':'';
+			echo "<option value='".$r->Tahun."' ".$select.">".$r->Tahun."</option>";
+		}
+	}
+	function get_bulan(){
+		$data=array();
+		$data=$this->kasir_model->get_tahun(true,'penjualan');
+		foreach($data as $r){
+			$select=($r->Bulan==date('m'))?'selected':'';
+			echo "<option value='".$r->Bulan."' ".$select.">".nBulan($r->Bulan)."</option>";
+		}
+	}
+	
+	function graph_cash_data(){
+		$thn=$_POST['thn'];
+		$bln=$_POST['bln'];
+		$pos=$_POST['pos'];
+	   ($pos=='cashflow')?
+	    $this->purch_model->cash_graph($thn,$bln):
+		$this->purch_model->laba_graph($thn,$bln);	
+	}
 }
 ?>
