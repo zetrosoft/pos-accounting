@@ -42,7 +42,7 @@ class Admin extends CI_Controller {
         $this->form_validation->set_rules('username', 'username', 'required|xss_clean');
         $this->form_validation->set_rules('password', 'password', 'required|xss_clean');
         $this->form_validation->set_error_delimiters('', '<br/>');
-		if (no_ser()==addCopy()){
+		//if (no_ser()==addCopy()){
 			if ($this->form_validation->run() == TRUE) 
 			{
 				$username = $this->input->post('username');
@@ -58,7 +58,8 @@ class Admin extends CI_Controller {
 						);
 					}
 					$this->session->set_userdata($session_data);
-					redirect('admin/index');
+					//redirect('admin/index');
+					$this->index();
 				}else{
 					$data['error']="Username or password incorrect please try again";
 					$this->load->view('admin/header');
@@ -68,13 +69,13 @@ class Admin extends CI_Controller {
 			}else{
 				$this->logout();
 			}
-        }else{
+/*        }else{
 					$data['error']="It's ilegal copy, please contact via email to : contact@smarthome-kanz.com and put this code in your email \nKode : ".no_ser();
 					$this->load->view('admin/header');
 					$this->load->view('admin/login',$data);
 					$this->load->view('admin/footer');
 		}
-        
+*/        
     }
     function dashboard() {
         $this->check_logged_in();
@@ -234,6 +235,20 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/header',$data);
 			$this->load->view('admin/dashboard',$data);
 			$this->load->view('admin/footer');
+	}
+	function validity(){
+		$txt=$_POST['ns'];
+		$mac=substr(chunk_split(strtoupper(md5(hash('sha1',no_ser()))),4,'-'),0,-1);
+		if(str_replace('-','',$mac)==str_replace('-','',$txt)){
+			 w_ser(no_ser());
+			 echo "Aktifasi berhasil. terima kasih atas kerjasamanya";
+		}else{
+			echo  "Serial Number yang ada masukan salah Salah";
+		}
+	}
+	function validity_ok(){
+		$data=array('version' =>'');
+		$this->session->unset_userdata($data);
 	}
 }
 ?>

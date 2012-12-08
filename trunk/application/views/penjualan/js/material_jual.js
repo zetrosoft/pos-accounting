@@ -517,7 +517,7 @@ $(document).ready(function(e) {
 			'no_transaksi':id,
 			'tanggal'	  :tgl},
 			function(result){
-				document.location.href=path+'penjualan/index';
+				document.location.href=path+'penjualan/index/?'+result;
 			})
 	}
 	//membuat nomor transaksi otomatis berdasarkan jenis transaksi

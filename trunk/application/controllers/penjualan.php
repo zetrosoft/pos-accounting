@@ -405,7 +405,7 @@ class Penjualan extends CI_Controller{
 		return $bawah;
 	}
 	function re_print(){
-		system("print ".$this->session->userdata('userid')."_slip.txt");
+		system("print c:\\app\\".$this->session->userdata('userid')."_slip.txt");
 		system("close");
 	}
 	//simpan komposisi resep
