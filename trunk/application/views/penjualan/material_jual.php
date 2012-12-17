@@ -1,8 +1,8 @@
 <?php
 $zfm=new zetro_frmBuilder('asset/bin/zetro_beli.frm');
 $zlb=new zetro_buildlist();
-calender();
 $zlb->config_file('asset/bin/zetro_beli.frm');
+calender();
 $path='application/views/penjualan';
 $printer="<img src='".base_url()."asset/images/print.png' id='printsheet' title='Print count sheet'>";
 link_css('autosuggest.css','asset/css');
@@ -45,8 +45,8 @@ if($c_penjualan__index!=''){
 		  	<tr style='display:none'><td width='40%' class='kotak'>Modal</td>
 		  	  	<td class='kotak' id='mdl'></td>
 			</tr>
-		  	<tr><td class='kotak'>PPN 10%</td><td class='kotak' id='xst'>
-		  		<input type='checkbox' id='ppne' disabled>Aktif</td>
+		  	<tr><td class='kotak'><!--PPN 10%--></td><td class='kotak' id='xst'>
+		  		<!--input type='checkbox' id='ppne' disabled>Aktif--></td>
 			</tr>
 			<tr><td colspan='2'>&nbsp;</td></tr>
 			<tr><td colspan='2'><input type='hidden' id='v_ist' value=''></td></tr>
@@ -78,8 +78,8 @@ if($c_penjualan__index!=''){
 		  <table style='border-collapse:collpse'>
 			  <tr align='center'>
 				<td class='kotak' width='80px'>F1<br> Cek Stock</td>
-				<!--td class='kotak' width='80px'>F2<br> Edit Line</td-->
-				<td class='kotak' width='80px'>F4<br> PPN Cek</td>
+				<td class='kotak' width='80px'>F2<br> Re Print Slip</td>
+				<!--td class='kotak' width='80px'>F4<br> PPN Cek</td-->
 			  </tr>
 		  </table>
 	 </td></tr>
@@ -123,8 +123,12 @@ popup_start('canceltrans','Edit Transaksi',850);
 		$zlb->Header('100%');
 	echo "</tbody></table>";
 popup_end();
-popup_start('tranresep','Komposisi Resep',800,600);
-	//$this->load->view('penjualan/material_jual_resep');
+popup_start('tranresep','Re Print Slip',500,600);
+		$zfm->frm_filename('asset/bin/zetro_beli.frm');
+		$zfm->AddBarisKosong(true);
+		$zfm->Start_form(true,'frm9');
+		$zfm->BuildForm('printslip',true,'100%');
+		$zfm->BuildFormButton('Print','prtslip');
 popup_end();
 auto_sugest();
 tab_select('prs');

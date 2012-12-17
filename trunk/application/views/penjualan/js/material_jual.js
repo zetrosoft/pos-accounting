@@ -334,9 +334,8 @@ $(document).ready(function(e) {
 			$('#frm4 input').val('');
 			$('#frm4 input#nm_barang').focus().select();
 			
-		}else if(e.keyCode==113){
-			//button F2
-			$.post('get_total_trans',{
+		}else if(e.keyCode==113){	//button F2
+			/*$.post('get_total_trans',{
 				'no_trans'	:$('#no_transaksi').val(),
 				'table'		:'detail_transaksi',
 				'where'		: new Array('no_transaksi','jenis_transaksi'),
@@ -346,7 +345,32 @@ $(document).ready(function(e) {
 						$('span#s-'+i).hide();
 						$('span#e-'+i).show();	
 					}
+				})*/	
+
+			//$('#nama').val('viewstock');
+			$('#pp-tranresep').css({'left':'28%','top':'25%','height':'auto','z-index':'9998'});
+			$('#lock').show();
+			$('#tgl_jual')
+				.focus().select()
+				.keyup(function(){
+					tanggal(this);
 				})
+				.keypress(function(e){
+					if(e.keyCode==13){
+						$(this).focusout();
+					}
+				})
+				.focusout(function(){
+					$.post('get_no_transaction',{
+						'tanggal' :$(this).val()
+					},function(result){
+						$('#nomor_slip').html(result);
+					})
+				})
+				//.dynDateTime();
+			$('#pp-tranresep').show('slow');
+			$('#frm9 input#tgl_jual').focus().select();
+			
 		}else if(e.keyCode==114){// button F3
 			return false
 		}else if(e.keyCode==115){ //tombol F4 popup komposisi resep show

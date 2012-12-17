@@ -59,6 +59,11 @@
 4|Di Bayar,input,text d,dibayar,w90 angka big,,
 5|Kembali,input,text d,kembalian,w90 angka big,,
 
+[printslip]
+1|Tanggal Transaksi,input,text n,tgl_jual,w35,,,
+2|Nomor Transaksi,select,text n,nomor_slip,S90,,,
+3|Nomor Faktur,input,text n,no_faktur,w50,,,
+
 [kredite]
 1|Sub Total ,input,text d,total_belanja,w90 angka big,,
 2|PPN (10%),input,text d,ppn,w90 angka big,0,
@@ -174,4 +179,5 @@
 [Urutan]
 1|asc,Kecil ke Besar (A-Z)
 2|desc,Besar ke Kecil (Z-A)
+
 

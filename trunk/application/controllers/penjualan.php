@@ -299,6 +299,16 @@ class Penjualan extends CI_Controller{
 		$this->re_print();
 		//$this->index();
 	}
+	function re_print_slip(){
+		$this->zetro_slip->path=$this->session->userdata('userid');
+		$this->zetro_slip->modele('wb');
+		$this->zetro_slip->newline();
+		$this->no_transaksi($_POST['no_transaksi']);
+		$this->tanggal(tgltoSql($_POST['tanggal']));
+		$this->zetro_slip->content($this->struk_header());
+		$this->zetro_slip->create_file();
+		$this->re_print();
+	}
 	function struk_header(){
 		$data=array();
 		$slip="S L I P  P E N J U A L A N";
@@ -641,6 +651,16 @@ class Penjualan extends CI_Controller{
 		$fld	=rdb('mst_anggota','Nama','Nama',"where ID='".$_GET['fld']."'");
 		$data=$this->inv_model->get_bank($str);
 		echo json_encode($data);	
+	}
+	
+	function get_no_transaction(){
+		$data=array();
+		$tgl=empty($_POST['tanggal'])?date('Ymd'):tglToSql($_POST['tanggal']);
+		$data=$this->Admin_model->show_list('inv_penjualan',"where Tanggal ='".$tgl."'");
+		echo "<option value=''>--pilih no faktur--</option>";
+		foreach($data as $r){
+		 echo "<option value='".$r->NoUrut."'>".$r->Nomor."</option>";
+		}
 	}
 }
 ?>

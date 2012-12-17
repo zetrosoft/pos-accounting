@@ -2,8 +2,8 @@
 
 $zfm=new zetro_frmBuilder('asset/bin/zetro_inv.frm');
 $zlb=new zetro_buildlist();
-$section='Barang';
 $zlb->config_file('asset/bin/zetro_inv.frm');
+$section='Barang';
 $path='application/views/warehouse';
 
 link_css('jquery.coolautosuggest.css','asset/css');
