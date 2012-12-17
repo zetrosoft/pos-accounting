@@ -317,7 +317,7 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($_POST['departemen']=='')?'':" and a.ID_Dept='".$_POST['departemen']."'";
 		//$where.=($this->input->post('cicilan')=='')?'':" and b.Cicilan='".$this->input->post('cicilan')."'";
-		$where.=" and p.ID_Jenis!='1' and ID_Post='0'";//.$this->input->post('jenis_beli')."'";
+		$where.=" and p.ID_Jenis!='1' and p.ID_Post='0'";//.$this->input->post('jenis_beli')."'";
 		$group="group by concat(p.ID_Anggota)";
 		$ordby="order by trim(a.Nama)";
 		$ID_Jurnal=rdb('jurnal','ID','ID',"where Nomor='".$_POST['id_jurnal']."'");

@@ -74,7 +74,7 @@ $(document).ready(function(e) {
 	})
 	$('#frm1 #ID_Unit').change(function(){
 		var exst=$('#frm1 #Kode').val();
-	 	$('#frm1 #Kode').val(exst.substr(0,3)+$(this).val()+'00'+exst.substr(6,(exst.length-6)));
+	 	$('#frm1 #Kode').val(exst.substr(0,3)+$(this).val()+'000'+exst.substr(6,(exst.length-6)));
 	})
 	$('#frm1 #ID_LapDetail').change(function(){
 		var ID_Klas		=$('#frm1 #ID_Klas').val();

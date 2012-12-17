@@ -43,6 +43,7 @@ echo "
     </tr>
 </table>
 <hr />";
+echo "<table id='indic'><tbody><tr><td></td></tr></tbody></table>";
 echo "</form>";	
 }else{
 	no_auth();

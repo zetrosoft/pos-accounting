@@ -50,27 +50,32 @@ class Akuntansi extends CI_Controller{
 	}
 	//klasifikasi
 	function set_klass_akun(){
-		$ID			=empty($_POST['ID'])?'':$_POST['ID'];
-		$Kode		=empty($_POST['Kode'])?'':$_POST['Kode'];
-		$Klasifikasi=empty($_POST['Klas'])?'':$_POST['Klas'];
-		$data1	="ID,Kode,Klasifikasi";
+		$data=array();
+		$data['ID']			=empty($_POST['ID'])?'0':$_POST['ID'];
+		$data['Kode']		=empty($_POST['Kode'])?'':$_POST['Kode'];
+		$data['Klasifikasi']=empty($_POST['Klas'])?'':$_POST['Klas'];
+/*		$data1	="ID,Kode,Klasifikasi";
 		$data	="'$ID','$Kode','$Klasifikasi'";
 		$this->akun_model->set_klas_akun($data1,$data);
+*/
+		$this->Admin_model->replace_data('klasifikasi',$data);
 	}
 	
 	function get_klass_akun(){
 		$data=array();$n=0;
 		$data=$this->Admin_model->show_list('Klasifikasi','order by ID,Kode');
 		foreach($data as $row){
-		$n++;
+		$n++;$indepenecies='';
+		$indepenecies=rdb('perkiraan','ID','ID',"where ID_Klas='".$row->ID."'");
 		echo "<tr class='xx' id='".$row->ID."' align='center'>
 			 <td class='kotak'>$n</td>
 			 <td class='kotak'>".$row->Kode."</td>
 			 <td class='kotak' align='left'>".$row->Klasifikasi."</td>
-			 <td class='kotak'>
-			 	<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">
-			 	<!--img src='".base_url()."asset/images/no.png' onClick=\"img_onClick('".$row->ID."','del');\"-->
-			 </td></tr>\n";	
+			 <td class='kotak'>";
+			 echo ($indepenecies=='')?
+			 	"<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">&nbsp;<img src='".base_url()."asset/images/no.png' onClick=\"img_onClick('".$row->ID."','del');\">":
+				"<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">";
+			echo "</td></tr>\n";	
 		}
 	}
 	function get_klas_ID(){
@@ -85,13 +90,15 @@ class Akuntansi extends CI_Controller{
 		$this->View('akuntansi/subklass_akun');
 	}
 	function set_subklass_akun(){
-		$ID				=empty($_POST['ID'])?'':$_POST['ID'];
-		$ID_Klasifikasi	=empty($_POST['ID_Klas'])?'':$_POST['ID_Klas'];
-		$Kode			=empty($_POST['Kode'])?'':$_POST['Kode'];
-		$SubKlasifikasi	=empty($_POST['SubKlas'])?'':$_POST['SubKlas'];
-		$data1	="ID,ID_Klasifikasi,Kode,SubKlasifikasi";
-		$data	="'$ID','$ID_Klasifikasi','$Kode','$SubKlasifikasi'";
-		$this->akun_model->set_subklas_akun($data1,$data);
+		$data=array();
+		$data['ID']				=empty($_POST['ID'])?'0':$_POST['ID'];
+		$data['ID_Klasifikasi']	=empty($_POST['ID_Klas'])?'':$_POST['ID_Klas'];
+		$data['Kode	']		=empty($_POST['Kode'])?'':$_POST['Kode'];
+		$data['SubKlasifikasi']	=empty($_POST['SubKlas'])?'':$_POST['SubKlas'];
+/*		$data['data1	="ID,ID_Klasifikasi,Kode,SubKlasifikasi";
+		$data['data	="'$ID','$ID_Klasifikasi','$Kode','$SubKlasifikasi'";
+		$this->akun_model->set_subklas_akun($data1,$data);*/
+		$this->Admin_model->replace_data('sub_klasifikasi',$data);
 	}
 	function get_subklas_ID(){
 		$ID=empty($_POST['ID'])?'':$_POST['ID'];
@@ -105,16 +112,18 @@ class Akuntansi extends CI_Controller{
 		$data=$this->Admin_model->show_list('Sub_Klasifikasi',"$where order by ID_Klasifikasi,Kode");
 		//print_r($data);
 		foreach($data as $row){
-		$n++;
+		$n++;$indepenecies='';
+		$indepenecies=rdb('perkiraan','ID','ID',"where ID_SubKlas='".$row->ID."'");
 		echo "<tr class='xx' id='".$row->ID."' align='center'>
 			 <td class='kotak'>$n</td>
 			 <td class='kotak' align='left'>".$row->ID_Klasifikasi."-".rdb('Klasifikasi','Klasifikasi','Klasifikasi',"where ID='".$row->ID_Klasifikasi."'")."</td>
 			 <td class='kotak'>".$row->Kode."</td>
 			 <td class='kotak' align='left'>".$row->SubKlasifikasi."</td>
-			 <td class='kotak'>
-			 	<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">
-			 	<!--img src='".base_url()."asset/images/no.png' onClick=\"img_onClick('".$row->ID."','del');\"-->
-			 </td></tr>\n";	
+			 <td class='kotak'>";
+			 echo ($indepenecies=='')?
+			 	"<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">&nbsp;<img src='".base_url()."asset/images/no.png' onClick=\"img_onClick('".$row->ID."','del');\">":
+				"<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">";
+			echo "</td></tr>\n";	
 		}
 	}
 	//departemen
@@ -180,7 +189,8 @@ class Akuntansi extends CI_Controller{
 		$filter	.=empty($_POST['unit_j'])? '': " and ID_Unit='".$_POST['unit_j']."'";
 		$data	=$this->Admin_model->show_list('perkiraan',"where ID_Agt='0' $filter order by ID_Klas,ID_SubKlas,ID_Unit,Kode");
 		foreach($data as $row){
-		$n++;
+		$n++;$independencies='';
+		//$independencies=rdb('transaksi','ID_Perkiraan','count(ID_Perkiraan) as ID_Perkiraan',"where ID_Perkiraan='".$row->ID."'");
 		$kode	 =rdb('Klasifikasi','Kode','Kode',"where ID='".$row->ID_Klas."'");
 		$kode	.=rdb('Sub_Klasifikasi','Kode','Kode',"where ID='".$row->ID_SubKlas."'");
 		$kode	.=rdb('unit_jurnal','Kode','Kode',"where ID='".$row->ID_Unit."'");
@@ -191,10 +201,11 @@ class Akuntansi extends CI_Controller{
 			 <td class='kotak'>".rdb('unit_jurnal','Unit','Unit',"where ID='".$row->ID_Unit."'")."</td>
 			 <td class='kotak' align='left'>".$kode.'00'.$row->Kode."</td>
 			 <td class='kotak' align='left'>".$row->Perkiraan."</td>
-			 <td class='kotak'>
-			 	<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">
-			 	<!--img src='".base_url()."asset/images/no.png' onClick=\"img_onClick('".$row->ID."','del');\"-->
-			 </td></tr>\n";	
+			 <td class='kotak'>";
+			 echo ($independencies=='')?
+			 	"<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">&nbsp;<img src='".base_url()."asset/images/no.png' onClick=\"img_onClick('".$row->ID."','del');\">":
+				"<img src='".base_url()."asset/images/editor.png' onClick=\"img_onClick('".$row->ID."','edit');\">";
+			echo "</td></tr>\n";	
 		}
 	}
 	function get_akun_edit(){
@@ -327,6 +338,7 @@ class Akuntansi extends CI_Controller{
 			$debet	=number_format($row->Debet,2);
 			$kredit	=number_format($row->Kredit,2);
 		}
+		$bisa=(substr($Tanggal,6,4)==date('Y'))?'Y':'T';
  echo "<form id='frm23' name='frm23' method='post' action=''>\n\r
 	   <input type='hidden' name='ID_Jurnal' value='$ID_jurnal' id='ID_Jurnal'>\n\r</form>
 	   <table style='border-collapse:collapse' width='99%' id='j_det'>
@@ -345,6 +357,7 @@ class Akuntansi extends CI_Controller{
 			<td ><input type='text' id='kredit' value='$kredit' readonly class='w90 carix angka'></td>
 		</tr>\n
 		</table>
+		<input type='hidden' id='bisa' value='$bisa'/>
 		<hr>";
 }
  function get_last_jurnal(){ //initailze last jurnal number
@@ -470,7 +483,7 @@ class Akuntansi extends CI_Controller{
 	$data['Debet']			=rdb('transaksi_temp','Debet','Debet',"where ID='$ID'");
 	$data['Kredit']			=rdb('transaksi_temp','Kredit','Kredit',"where ID='$ID'");
 	$data['Keterangan']		=addslashes(rdb('transaksi_temp','Keterangan','Keterangan',"where ID='$ID'"));
-	 echo $this->Admin_model->replace_data('transaksi',$data);
+	 $this->Admin_model->replace_data('transaksi',$data);
 	 $this->Admin_model->upd_data('transaksi_temp',"set ID_Stat='1'","where ID='$ID'");
  }
  function add_balance_jurnal(){
@@ -483,7 +496,7 @@ class Akuntansi extends CI_Controller{
 	$data['Keterangan']		=addslashes($_POST['Keterangan']);
 	$data['urutan']			=($jml_data+1);
 	$datax=$this->Admin_model->replace_data('transaksi',$data);
-	echo ($datax=='1')? "Data berhasil di simpan":"Gagal mohon di check lagi data yang diinput";
+	echo ($datax)? "Data berhasil di simpan":"Gagal mohon di check lagi data yang diinput";
  }
  function hapus_jurnal(){
 	$ID=$_POST['ID'];
@@ -574,6 +587,7 @@ class Akuntansi extends CI_Controller{
 			$debet		=number_format($row->Debet,2);
 			$kredit		=number_format($row->Kredit,2);
 		}
+		$bisa=(substr($Tanggal,6,4)==date('Y'))?'Y':'N';
  echo "<form name='frm22' id='frm22' method='post' action=''>
 		<input type='hidden' name='ID_Jurnal' id='ID_Jurnal' value='$ID_jurnal'>
 	  </form>\n<hr>
@@ -585,14 +599,15 @@ class Akuntansi extends CI_Controller{
 			<td width='5%'>Unit</td>
 			<td width='5%'><input type='text' id='unit' readonly value='$ID_Unit' class='w70 carix'></td>
 			<td width='10%'class='border_l'>Total Debet</td>
-			<td width='10%'><input type='text' id='debet' readonly value='$debet' class='w90 carix angka'></td>
+			<td width='10%'><input type='text' id='debet' readonly value='".$debet."' class='w90 carix angka'></td>
 		</tr>\n
 		<tr><td >Keterangan</td>
 			<td colspan='5'><input type='text' id='Ket' readonly value='$Keterangan' class='w100 carix'></td>
 			<td class='border_l'>Total Kredit</td>
-			<td ><input type='text' id='kredit' value='$kredit' readonly class='w90 carix angka'></td>
+			<td ><input type='text' id='kredit' value='".$kredit."' readonly class='w90 carix angka'></td>
 		</tr>\n
 		</table>
+		<input type='hidden' id='bisa' value='$bisa'/>
 		<hr>";
  }
  function print_detail_jurnal(){

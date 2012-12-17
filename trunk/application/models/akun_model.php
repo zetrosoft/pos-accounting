@@ -101,7 +101,7 @@ class Akun_model extends CI_Model {
 				from transaksi_new 
 				$where
 				group by ID_Jurnal";
-*/		$sql="select j.ID,j.Tanggal,j.ID_Unit,j.Nomor,/*t.Keterangan as Ket,*/j.Keterangan,
+*/		$sql="select j.ID,j.Tanggal,j.ID_Unit,j.Nomor,j.Keterangan as Ket/*,j.Keterangan*/,
 				sum(t.Debet) as Debet, sum(t.Kredit) as Kredit,t.ID_Perkiraan,t.ID_Jurnal
 				from transaksi as t
 				left join jurnal as j

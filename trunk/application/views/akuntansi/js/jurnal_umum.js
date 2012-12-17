@@ -191,10 +191,21 @@ $(document).ready(function(e) {
 			$('#pp-ad_content').show();
 			$('table#bwht').fixedHeader({width:(screen.width-500),height:30})
 			ajax_stop();
+			$('#j_detail #j_hide').show();
 			$('#lock').show();
 		})
 	})
-	//
+/*	$('#pp-ad_content').hide(function(){
+		var today = new Date();
+		var nj=$('#nj').val();
+			$.post('get_detail_jurnal',{'ID':nj,'Tahun':today.getFullYear()},
+					function(result){
+						$('table#sj_content tbody').html(result);
+						//$('div#addcontent').show();	
+						//$('table#sj_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
+					})
+	})
+*/	//
 	$('#jml_bayar')
 		.click(function(){
 			$.post('total_perjurnal',{'ID_jurnal':$('#ID_Jurnal').val()},
@@ -216,11 +227,21 @@ $(document).ready(function(e) {
 		.focusout(function(e) {
            $('#terbilang').hide();
         });
+	//drag div for moving 
+	$('table#lvltbl0').css('cursor','pointer');
+	$('div#pp-ad_content')
+		.draggable().resizable();
 })
 function images_click(id,aksi){
 	var idd=id.split('-');
+	var today=new Date();
 	switch (aksi){
 		case 'edit':
+			if(idd[1]!=today.getFullYear()){
+				$('.nn').hide();
+			}else{
+				$('.nn').show();
+			}
 			show_jurnal_detail(idd[0],idd[1]);
 		break;
 		case 'del':
@@ -241,20 +262,21 @@ function show_jurnal_detail(id,thn){
 	},function (data){
 		$('div#jdete').html('');
 		$('div#jdete').html(data);
-	$.post('get_detail_jurnal',{'ID':id,'Tahun':thn},
-		function(hasil){
-			var w=$('#pp-j_detail').width();
-			var h=$('#pp-j_detail').height();
-			$('#pp-j_detail').css({'top':'15%','left':'8%','width':(screen.width-150),'height':(screen.height-50)});
-			$('table#sj_content tbody').html(hasil);	
-			$('#pp-j_detail').show();
-			$('table#j_dete').fixedHeader({width:(screen.width-186),height:60})
-			$('table#sj_content').fixedHeader({width:(screen.width-186),height:(screen.height-450)})
-			$('table#bwhe').fixedHeader({width:(screen.width-186),height:30})
-				ajax_stop();
-				$('#lock').show();
-		})
+		$.post('get_detail_jurnal',{'ID':id,'Tahun':thn},
+			function(hasil){
+				var w=$('#pp-j_detail').width();
+				var h=$('#pp-j_detail').height();
+				$('#pp-j_detail').css({'top':'15%','left':'8%','width':(screen.width-150),'height':(screen.height-50)});
+				$('table#sj_content tbody').html(hasil);	
+				$('#pp-j_detail').show();
+				$('table#j_dete').fixedHeader({width:(screen.width-186),height:60})
+				$('table#sj_content').fixedHeader({width:(screen.width-186),height:(screen.height-450)})
+				$('table#bwhe').fixedHeader({width:(screen.width-186),height:30})
+					ajax_stop();
+					$('#lock').show();
+			})
 	})
+
 }
 function addtojurnal(id,nj,ids){
 	var today = new Date();
@@ -265,13 +287,13 @@ function addtojurnal(id,nj,ids){
 		//$('#simp table#add_trans tbody').html(hasil);
 		//update tampilan detail jurnal
 		total_KD(nj);
-			$.post('get_detail_jurnal',{'ID':nj,'Tahun':today.getFullYear()},
+/*			$.post('get_detail_jurnal',{'ID':nj,'Tahun':today.getFullYear()},
 					function(result){
 						$('table#sj_content tbody').html(result);
 						//$('div#addcontent').show();	
 						//$('table#sj_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
 					})
-		
+*/		
 		})
 	})
 }
@@ -281,14 +303,15 @@ function hapus_content(id){
 		$.post('hapus_transaksi',{'ID':id},
 			function(result){
 				total_KD($('#nj').val());
-				$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':thn[2]},
+/*				$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':thn[2]},
 						function(hasil){
 							$('table#sj_content tbody').html(hasil);
-							$('div#addcontent').show();	
+							//$('div#addcontent').show();	
 							//$('table#sj_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
 							//$('table#bwh').fixedHeader({width:(screen.width-125),height:30})
-				$('#process').click();
+				
 				});
+*/				$('#process').click();
 			})
 	}
 }
@@ -303,13 +326,13 @@ function edit_content(id){
 			$.post('update_transaksi',{'ID':id,'Debet':jml1,'Kredit':jml2,'hasil':edit},
 			function(result){
 				total_KD($('#nj').val());
-				$.post('get_detail_jurnal',{'ID':$('#nj').val(),'Tahun':thn[2]},
+/*				$.post('get_detail_jurnal',{'ID':$('#nj').val(),'Tahun':thn[2]},
 						function(hasil){
 							$('table#sj_content tbody').html(hasil);
 							$('div#addcontent').show();	
 							$('#process').click();
 						})
-			})
+*/			})
 		}
 }
 function balance_show(){ //show popup balance
@@ -392,7 +415,7 @@ function simpan_ad_content(){
 						//$('table#sj_content').fixedHeader({width:(screen.width-125),height:(screen.height-450)})
 						if($('#fby').val()!=''){$('#process').click();}
 					})
-	})
+/**/	})
 	
 }
 	
@@ -416,13 +439,32 @@ function naikan_posisi(id,id_jurnal){
 			$.post('update_posisi',{'ID':id,'urutan':urutan,'ID_Jurnal':id_jurnal},
 			function(result){
 				total_KD($('#ID_Jurnal').val());
-				$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':$('#Tgl').val().substr(6,4)},
+/*				$.post('get_detail_jurnal',{'ID':$('#ID_Jurnal').val(),'Tahun':$('#Tgl').val().substr(6,4)},
 						function(hasil){
 							$('table#sj_content tbody').html(hasil);
 							$('div#addcontent').show();	
 							//$('#process').click();
 							$('table#shiip tbody').html('');
 						})
-			})
+*/			})
 		}
 }
+function dragable(div){
+var $dragging = null;
+
+    $(document.body).on("mousemove",div, function(e) {
+        if ($dragging) {
+            $dragging.offset({
+                top: e.pageY,
+                left: e.pageX
+            });
+        }
+    });
+    
+    $(document.body).on("mousedown", div, function (e) {
+        $dragging = $(e.target);
+    });
+    
+    $(document.body).on("mouseup",div, function (e) {
+        $dragging = null;
+    });}

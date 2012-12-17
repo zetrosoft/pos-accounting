@@ -33,7 +33,7 @@ $(document).ready(function(e){
 		$('#lokasi').val($(this).val());
 	})
 	$('#oke').click(function(){
-		//ajax_start();
+		show_indicator('indic',1);
 		if($('#lokasi').val()=='3'){
 			$('#frm_j').attr('action','print_neraca_gabungan');	
 		}else{

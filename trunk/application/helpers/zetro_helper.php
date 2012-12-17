@@ -211,21 +211,21 @@
 	?>  <div id='lock<?=$name;?>' class='black_overlay'></div>
         <div id='lock' class='black_overlay'></div>
         <div id='pp-<?=$name;?>' align="center"  style='display:none; background:#CCC; border:5px solid #000; padding:0px; left:0; top:0; width:<?=$width;?>px; max-height:<?=$height;?>px; position:fixed; overflow:auto; z-index:9999'>
-        <table id='lvltbl0' width="100%" style='border-collapse:collapse;'>
-        <tr><td bgcolor="#000" width='3%' ><img src='<?=base_url();?>asset/images/16/address_16.png' /></td>
-        <td colspan=''  bgcolor="#000" class=''>
-        <font style='font-size:14px; font-weight:bold; color:#FFFFFF'><?=$caption;?></font></td>
-        <td bgcolor="#000" align="center" width="10px"><font color="#FFFFFF">
-        <img src="<?=base_url();?>asset/images/no.png" id='<?=$name;?>' onclick="keluar_<?=$name;?>();" class='close' style='cursor:pointer' title="Close"/></font></td></tr>
-        <input type='hidden' value='<?=$name;?>' id='nama' />
-        </table>
-        <script language='javascript'>
-				function keluar_<?=$name;?>(){
-					$('#pp-<?=$name;?>').hide('slow');
-					$('#lock').hide();
-					$('#lock<?=$name;?>').hide();
-				}
-		</script>
+            <table id='lvltbl0' width="100%" style='border-collapse:collapse;'>
+            <tr><td bgcolor="#000" width='3%' ><img src='<?=base_url();?>asset/images/16/address_16.png' /></td>
+            <td colspan=''  bgcolor="#000" class=''>
+            <font style='font-size:14px; font-weight:bold; color:#FFFFFF'><?=$caption;?></font></td>
+            <td bgcolor="#000" align="center" width="10px"><font color="#FFFFFF">
+            <img src="<?=base_url();?>asset/images/no.png" id='<?=$name;?>' onclick="keluar_<?=$name;?>();" class='close' style='cursor:pointer' title="Close"/></font></td></tr>
+            <input type='hidden' value='<?=$name;?>' id='nama' />
+            </table>
+				<script language='javascript'>
+                        function keluar_<?=$name;?>(){
+                            $('#pp-<?=$name;?>').hide('slow');
+                            $('#lock').hide();
+                            $('#lock<?=$name;?>').hide();
+                        }
+                </script>
         <div id='tbl-<?=$name;?>' style='padding:3px; width:95%' align="left">
         <?	
 	}

@@ -5,6 +5,7 @@ $zlb->config_file('asset/bin/zetro_akun.frm');
 $path='application/views/akuntansi';
 calender();
 ($p_listjurnalumum!='')?$oto_p='':$oto_p='none';
+link_js('jquery-ui-1.9.2.custom.min.js','asset/js');
 link_css('jquery.coolautosuggest.css','asset/css');
 link_js('jquery.fixedheader.js,jquery.coolautosuggest.js','asset/js,asset/js');
 link_js('jurnal_umum.js,jquery_terbilang.js',$path.'/js,asset/js');
@@ -88,7 +89,7 @@ echo "<div id='jdete'>\n
 			<table id='shiip' width='100%'><tbody><tr><td>&nbsp;</td></tr></tbody></table></td>
 			<td align='right' style='padding-right:20px'>
 			<!--input type='button' id='reklawan' value='Create Balance' title='tambah perkiraan pembanding'>&nbsp;
-			--><input type='button' id='addtrans' value='Add Transaksi'>&nbsp;
+			--><input type='button' id='addtrans' class='nn' value='Add Transaksi' style='display:;'>&nbsp;
 			<input type='button' id='pdf' value='Cetak' title='cetak laporan'>&nbsp;
 			<input type='button' id='batal' value='Keluar' title='tutup popup'>
 			</td></tr>\n

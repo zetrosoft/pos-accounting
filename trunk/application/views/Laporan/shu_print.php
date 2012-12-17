@@ -69,7 +69,7 @@
 //show pdf output in frame
 $path='application/views/_laporan';
 $img=" <img src='".base_url()."asset/images/back.png' onclick='js:window.history.back();' style='cursor:pointer' title='click for select other filter data'>";
-link_js('auto_sugest.js,lap_beli.js,jquery.fixedheader.js','asset/js,'.$path.'/js,asset/js');
+//link_js('auto_sugest.js,lap_beli.js,jquery.fixedheader.js','asset/js,'.$path.'/js,asset/js');
 panel_begin('Print Preview','','Back'.$img);
 ?>
 		  <iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_rekap_shu.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>

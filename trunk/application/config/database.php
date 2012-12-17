@@ -48,7 +48,12 @@
 | The $active_record variables lets you determine whether or not to load
 | the active record class
 */
-
+/*$env_used = 'default'; //name of your development setting
+if(defined('CIUnit_Version')){
+  $env_used .= '_test';
+}
+$active_group = $env_used;
+*/
 $active_group = 'default';
 $active_record = TRUE;
 
@@ -67,6 +72,8 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+
+//for unit test
 
 
 /* End of file database.php */

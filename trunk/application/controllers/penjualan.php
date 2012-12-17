@@ -278,15 +278,16 @@ class Penjualan extends CI_Controller{
 	
 	//proses print slip penjualan
 	//create data text for print to dotmatrix
-	function no_transaksi($no_trans){
+	function no_transaksi($no_trans=''){
 		$this->no_trans=$no_trans;
 	}
-	function tanggal($tgl){
+	function tanggal($tgl=''){
 		$this->tgl=$tgl;
 	}
 	function redir(){
 		redirect('penjualan/index');
 	}
+	//print slip besar format 1/2 kertas A4
 	function print_slip(){
 		$this->zetro_slip->path=$this->session->userdata('userid');
 		$this->zetro_slip->modele('wb');
@@ -404,6 +405,143 @@ class Penjualan extends CI_Controller{
 			}
 		return $bawah;
 	}
+	//print struk kecil
+	function print_slip_kecil(){
+		$this->zetro_slip->path=$this->session->userdata('userid');
+		$this->zetro_slip->modele('wb');
+		$this->zetro_slip->newline();
+		$this->no_transaksi($_POST['no_transaksi']);
+		$this->tanggal(tgltoSql($_POST['tanggal']));
+		$this->zetro_slip->content($this->struk_header_kecil());
+		$this->zetro_slip->create_file();
+		$this->re_print();
+		//$this->index();
+	}
+	function struk_header_kecil(){
+		$data=array();
+		$no_trans=$this->no_trans;
+		$nfile	='asset/bin/zetro_config.dll';
+		$coy	=$this->zetro_manager->rContent('InfoCo','Name',$nfile);	
+		$address=$this->zetro_manager->rContent('InfoCo','Address',$nfile);
+		$city	=$this->zetro_manager->rContent('InfoCo','Kota',$nfile);
+		$phone	=$this->zetro_manager->rContent('InfoCo','Telp',$nfile);
+		$fax	=$this->zetro_manager->rContent('InfoCo','Fax',$nfile);
+		$tgl	=rdb('inv_penjualan','Tanggal','Tanggal',"where NoUrut='".$no_trans."' and Tanggal='".$this->tgl."'");
+		$Jenis	=rdb('inv_penjualan','ID_Jenis','ID_Jenis',"where NoUrut='".$no_trans."' and Tanggal='".$this->tgl."'");
+		$nJenis	=rdb('inv_penjualan_jenis','Jenis_Jual','Jenis_Jual',"where ID='".$Jenis."'");
+		$no_faktur=rdb('inv_penjualan','Nomor','Nomor',"where NoUrut='".$no_trans."' and Tanggal='".$this->tgl."'");
+		//$data	=$this->Admin_model->show_list('detail_transaksi',"where no_transaksi='$no_trans'");
+		$isine	=array(
+					sepasi(((40-(strlen($coy)+6))/2)).'** '.$coy.' **'.newline(),
+					sepasi(((40-((strlen($address)+strlen(substr($city,0,-5)))))/2)).$address.' '.substr($city,0,-5).newline(),
+					sepasi(((40-((strlen($phone))))/2)).$phone.newline(),
+					sepasi(((40-((strlen($fax))))/2)).$fax.newline(),
+					str_repeat('-',40).newline(),
+					$this->isi_slip_kecil(),
+					($Jenis==1)?$this->struk_data_footer_kecil():$this->struk_data_footer_kecil_kredit()
+					);
+		return $isine;			
+	}
+	function isi_slip_kecil(){
+		$data=array();$content="";$n=0;
+		$this->inv_model->tabel('inv_penjualan_rekap');
+		$data=$this->kasir_model->get_trans_jual($this->no_trans,$this->tgl);
+		 foreach($data as $row){
+			 $n++;
+			 $satuan=rdb('inv_barang_satuan','Satuan','Satuan',"where ID='".
+			 		 rdb('inv_barang','ID_Satuan','ID_Satuan',"where ID='".$row->ID_Barang."'")."'");
+			$nama_barang=rdb('inv_barang','Nama_Barang','Nama_Barang',"where ID='".$row->ID_Barang."'");
+			$content .=$nama_barang.newline().
+					 sepasi((5-strlen($row->Jumlah))).round($row->Jumlah,0).
+					 sepasi((8-strlen($satuan))).$satuan.
+					 sepasi((12-strlen(number_format($row->Harga)))).number_format($row->Harga).
+					 sepasi((15-strlen(number_format(($row->Jumlah *$row->Harga),2)))).number_format(($row->Jumlah *$row->Harga),2).newline();
+		 }
+		 if($n<5){
+			 $content .=newline((5-$n));
+		 }
+		 return $content;
+		 
+	}
+	function struk_data_footer_kecil(){
+		$data=array();$bawah="";$x=0;
+		$nama=rdb('mst_anggota','Nama','Nama',"where ID='".rdb('inv_penjualan','ID_Anggota','ID_Anggota',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'")."'");
+		$urut=rdb('mst_anggota','NoUrut','NoUrut',"where ID='".rdb('inv_penjualan','ID_Anggota','ID_Anggota',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'")."'");
+		$alm =rdb('mst_departemen','Departemen','Departemen',"where ID='".
+				rdb('mst_anggota','Nama','Nama',"where ID='".
+				rdb('inv_penjualan','ID_Anggota','ID_Anggota',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'")."'")."'");
+		$this->inv_model->tabel('inv_pembayaran');
+		$data=$this->inv_model->show_list_1where('no_transaksi',$this->no_trans);
+			foreach($data->result() as $row){
+				$bawah=str_repeat('-',40).newline().
+				'Sub Total'.sepasi((31-strlen(number_format($row->total_belanja,2)))).number_format($row->total_belanja,2).newline(2).
+				'PPN 10%'.sepasi((33-strlen(number_format($row->ppn,2)))).number_format($row->ppn,2).newline().
+				str_repeat('-',40).newline().
+				'Total'.sepasi((35-strlen(number_format($row->total_bayar,2)))).number_format($row->total_bayar,2).newline(2).
+				'Cash'.sepasi((36-strlen(number_format($row->jml_dibayar,2)))).number_format($row->jml_dibayar,2).newline().
+				'Kembali'.sepasi((33-strlen(number_format($row->kembalian,2)))).number_format($row->kembalian,2).newline(2).
+				str_repeat('-',40).newline().
+				'Kasir :'.$row->created_by.' '.$row->doc_date.newline().
+				'Doc No:'.$row->no_transaksi.newline(2).
+				'Terima Kasih '.newline().
+				str_repeat('-',40).newline(2)."Info Promo :".newline();
+				$data=$this->Admin_model->show_list('mst_promo',"where dari_tgl <='".$this->tgl."' and sampai_tgl >='".$this->tgl."' order by ID");
+				foreach($data as $r){
+					$bawah .=chunk_split($r->Keterangan,'37',newline()).newline();
+				}
+			}
+		return $bawah;
+	}
+	function struk_data_footer_kecil_kredit(){
+		$data=array();$bawah="";$x=0;
+		$nama=rdb('mst_anggota','Nama','Nama',"where ID='".rdb('inv_penjualan','ID_Anggota','ID_Anggota',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'")."'");
+		$urut=rdb('mst_anggota','No_Agt','No_Agt',"where ID='".rdb('inv_penjualan','ID_Anggota','ID_Anggota',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'")."'");
+		$alm =rdb('mst_departemen','Title','Title',"where ID='".
+				rdb('mst_anggota','ID_Dept','ID_Dept',"where ID='".
+				rdb('inv_penjualan','ID_Anggota','ID_Anggota',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'")."'")."'");
+		$ncby=rdb('inv_penjualan_jenis','Jenis_Jual','Jenis_Jual',"where ID='".rdb('inv_penjualan','ID_Jenis','ID_Jenis',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'")."'");
+		$bank=rdb('inv_penjualan','Deskripsi','Deskripsi',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'");
+		$rek =rdb('inv_penjualan','ID_Post','ID_Post',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'");
+		$tgir=rdb('inv_penjualan','Tgl_Cicilan','Tgl_Cicilan',"where NoUrut='".$this->no_trans."' and Tanggal='".$this->tgl."'");
+		$this->inv_model->tabel('inv_pembayaran');
+		$data=$this->inv_model->show_list_1where('no_transaksi',$this->no_trans);
+			foreach($data->result() as $row){
+				$bawah=str_repeat('-',40).newline().
+				'Sub Total'.sepasi((31-strlen(number_format($row->total_belanja,2)))).number_format($row->total_belanja,2).newline(2).
+				'PPN 10%'.sepasi((33-strlen(number_format($row->ppn,2)))).number_format($row->ppn,2).newline().
+				str_repeat('-',40).newline().
+				'Total'.sepasi((35-strlen(number_format($row->total_bayar,2)))).number_format($row->total_bayar,2).newline(2).
+				'Uang Muka'.sepasi((31-strlen(number_format($row->jml_dibayar,2)))).number_format($row->jml_dibayar,2).newline().
+				'Saldo'.sepasi((35-strlen(number_format($row->kembalian,2)))).number_format($row->kembalian,2).newline(2).
+				str_repeat('-',40).newline().
+				'Kasir :'.$row->created_by.' '.$row->doc_date.newline().
+				'Doc No:'.$row->no_transaksi.newline(2).
+				'Terima Kasih '.newline().
+				str_repeat('-',40).newline().
+				'No. Anggota'.sepasi((14-strlen('No.Anggota :'))).':'.$urut.newline().
+				'Nama Anggota'.sepasi((14-strlen('Nama Anggota :'))).' :'.$nama.newline().
+				'Departemen'.sepasi((14-strlen('Departemen :'))).' :'.$alm.newline(1).
+				str_repeat('-',40).newline(2)."Info Promo :".newline();
+				$data=$this->Admin_model->show_list('mst_promo',"where dari_tgl <='".$this->tgl."' and sampai_tgl >='".$this->tgl."' order by ID");
+				foreach($data as $r){
+					$bawah .=chunk_split($r->Keterangan,'37',newline()).newline();
+				}
+			}
+		return $bawah;
+	}
+	function promo(){
+		$data=array();$text='Info : ';
+		$data=$this->Admin_model->show_list('mst_promo',"where dari_tgl <='".$this->tgl."' and sampai_tgl >='".$this->tgl."' order by ID");
+		foreach($data as $r){
+			$text .=$r->Keterangan.newline();
+		}
+		$cek=chunk_split($text,'36','<br>');
+		return $cek;
+/*		$nx=explode($cek,'-');
+		for ($i==0;$i<count($nx);$i++){
+			return $nx[$i].newline();	
+		}
+*/	}
 	function re_print(){
 		system("print c:\\app\\".$this->session->userdata('userid')."_slip.txt");
 		system("close");

@@ -65,7 +65,12 @@ class Master extends CI_Controller {
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('master/master_general');
 	}
-	
+	function promo(){
+		$this->create_table_promo();
+		$this->zetro_auth->menu_id(array('informasipromo'));
+		$this->list_data($this->zetro_auth->auth());
+		$this->View('master/master_promo');
+	}
 	function set_config_file($filename){
 		$this->filename=$filename;
 	}
@@ -438,5 +443,60 @@ class Master extends CI_Controller {
 		</scrip>";
 	//echo file_get_contents("asset/backup_db/".$fname);
   
+  }
+  //promo yang akan di cetak distruk
+  
+  function list_promo(){
+	$data=array();$n=0;
+	$data=$this->Admin_model->show_list('mst_promo',"order by sampai_tgl desc");
+	$cek_oto=$this->zetro_auth->cek_oto('c','informasipromo');
+	if($data){
+		foreach($data as $r){
+			$n++;
+			echo tr().td($n,'center').
+				 td($r->Judul).
+				 td(tglfromSql($r->Dari_tgl),'center').
+				 td(tglfromSql($r->Sampai_tgl),'center').
+				 td($r->Keterangan).
+				 td(($cek_oto!='')?img_aksi($r->ID,'del',false):$r->Sratus_promo,'center').
+				_tr();	
+		}
+	}else{
+	 echo tr().td('No Data found','left\' colspan=\'6')._tr();	
+	}
+  }
+  function set_promo(){
+	 $data=array();
+	 $data['ID']=empty($_POST['id'])?'0':$_POST['id'];
+	 $data['Judul']=ucwords(addslashes($_POST['judul']));
+	 $data['Dari_tgl']=tgltoSql($_POST['dari']);
+	 $data['Sampai_tgl']=empty($_POST['sampai'])?tgltoSql($_POST['dari']):tglToSql($_POST['sampai']);
+	 $data['Keterangan']=ucwords(addslashes($_POST['keterangan']));
+	 $this->Admin_model->replace_data('mst_promo',$data);
+  }
+  function edit_promo(){
+	  $data=array();
+		$id=$_POST['id'];
+		$data= $this->Admin_model->show_list('mst_promo',"where ID='".$id."'");
+		echo json_encode($data[0]);
+  }
+  
+  function hapus_promo(){
+	$id=$_POST['id'];
+	$this->Admin_model->hps_data('mst_promo',"where ID='".$id."'");  
+  }
+  function create_table_promo(){
+		$sql="CREATE TABLE IF NOt EXISTS `mst_promo` (
+			`ID` INT(10) NULL AUTO_INCREMENT,
+			`Judul` VARCHAR(150) NULL,
+			`Dari_tgl` DATE NULL,
+			`Sampai_tgl` DATE NULL,
+			`Keterangan` TEXT NULL,
+			`Status_promo` ENUM('Y','N') NULL DEFAULT 'Y',
+			PRIMARY KEY (`ID`)
+		)
+		COLLATE='latin1_swedish_ci'
+		ENGINE=MyISAM;";
+		mysql_query($sql) or die(mysql_error());
   }
 }

@@ -26,6 +26,11 @@ $(document).ready(function(e) {
 			_show_data();
 		})
 	})
+	$(':reset').click(function(){
+		$('input:not(:button)').val('');
+		return false
+	})
+
 });
 
 function _get_ID(){
@@ -33,7 +38,7 @@ function _get_ID(){
 		function(result){
 			var rst=$.parseJSON(result)
 			var newID=rst.ID;
-			$('#ID_A').val(parseFloat(newID)+1);
+			//$('#ID_A').val(parseFloat(newID)+1);
 		})
 }
 function _show_data(){

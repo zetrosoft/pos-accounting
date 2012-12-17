@@ -513,7 +513,7 @@ $(document).ready(function(e) {
 	//setelah proses print selesai lakukan refresh halaman
 	function _print_struk(id,tgl){
 		var path=$('#path').val();
-		$.post('print_slip',{
+		$.post('print_slip_kecil',{
 			'no_transaksi':id,
 			'tanggal'	  :tgl},
 			function(result){

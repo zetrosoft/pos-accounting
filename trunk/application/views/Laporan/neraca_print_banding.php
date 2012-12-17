@@ -128,15 +128,15 @@
 						
 		  	$a->Row(array('            SELISIH ',number_format($Balance2,2),number_format($Balance,2)),false);
 
-		  $a->Output('application/logs/'.$this->session->userdata('userid').'_neraca.pdf','F');
+		  $a->Output('application/logs/'.$this->session->userdata('userid').'_neraca_b.pdf','F');
 
 //show pdf output in frame
 $path='application/views/_laporan';
 $img=" <img src='".base_url()."asset/images/back.png' onclick='js:window.history.back();' style='cursor:pointer' title='click for select other filter data'>";
-link_js('auto_sugest.js,lap_beli.js,jquery.fixedheader.js','asset/js,'.$path.'/js,asset/js');
+//link_js('auto_sugest.js,lap_beli.js,jquery.fixedheader.js','asset/js,'.$path.'/js,asset/js');
 panel_begin('Print Preview','','Back'.$img);
 ?>
-		  <iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_neraca.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>
+		  <iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_neraca_b.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>
 <?
 panel_end();
 

@@ -6,9 +6,9 @@
 
 
 [subklasifikasi]
-1|Klasifikasi,select,text n,ID_Klasifikasi,S70,,20%,RD,klasifikasi-ID-Kode+Klasifikasi-
+1|Klasifikasi,select,text n,ID_Klasifikasi,S70,,30%,RD,klasifikasi-ID-Kode+Klasifikasi-
 2|Kode,input,text n,Kode,w90,,5%
-3|Sub Klasifikasi,input,text n,SubKlasifikasi,w90,,65%
+3|Sub Klasifikasi,input,text n,SubKlasifikasi,w90,,55%
 
 [Departemen]
 1|Kode,input,text n,ID,w10,,5%,

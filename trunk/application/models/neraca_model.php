@@ -66,6 +66,7 @@ class Neraca_model extends CI_Model {
 	}
 	
 	 function build_data($periode){
+		mysql_query("DROP TABLE IF EXISTS `tmp_".$this->user."_transaksi_rekap`") or die(mysql_error());
 		$sql="CREATE TABLE IF NOT EXISTS `tmp_".$this->user."_transaksi_rekap` (
 			`ID` INT(11) NOT NULL AUTO_INCREMENT,
 			`ID_Jurnal` INT(11) NULL DEFAULT NULL,
@@ -74,6 +75,7 @@ class Neraca_model extends CI_Model {
 			`Debet` DOUBLE NULL DEFAULT NULL,
 			`Kredit` DOUBLE NULL DEFAULT NULL,
 			`Keterangan` VARCHAR(100) NULL DEFAULT NULL,
+			`urutan` DOUBLE NULL DEFAULT '0',
 			`ID_P` INT(11) NULL DEFAULT NULL,
 			`ID_Klas` INT(11) NULL DEFAULT NULL,
 			`ID_SubKlas` INT(11) NULL DEFAULT NULL,
@@ -262,64 +264,70 @@ class Neraca_model extends CI_Model {
 	//generate data shu for grafik
 	
 	function data_grap_shu(){
-		
-		$endofdata=rdb("jurnal","Tanggal","Max(Tanggal) as Tanggal");
-		$cek_data=date('dmY',filemtime($this->user.'_graph.xml'));
-	if($cek_data!=date('dmY')){
-		 $this->build_data($endofdata);
-		
-		$xml=fopen($this->user.'_graph.xml','w+');
-		fwrite($xml,"<graph caption='Grafik Sisa Hasil Usaha' subcaption='YTD : ".date('d/m/Y')."' xAxisName='Tahun' yAxisName='SHU' showValues= '1' showLabels='1' showValues='1'>\r\n");
-		//data tahun sebagai categori 			
-     	fwrite($xml,"<categories>\r\n");
-		$trr=mysql_query("select distinct(tahun) as Tahun from tmp_".$this->user."_transaksi_rekap order by Tahun");
-		while($thr=mysql_fetch_object($trr)){
-			fwrite($xml,"<category name='".$thr->Tahun."'/>\r\n");
-		}
-		fwrite($xml,"</categories>\r\n");
-		//end of categories
-		
-		$nm_unit='';
-			$saldoNc=0;$Saldo=0;$saldo=0;
-			$rsg=mysql_query("select ID from unit_jurnal order by ID");
-			while($rwg=mysql_fetch_object($rsg)){
-				$nm_unit=rdb("unit_jurnal","Unit","Unit","where ID='".$rwg->ID."'");
-				//read lap_jenis
-				//create data set
-				$warna=($nm_unit=='KBR')?'DBDC25':'2AD62A';
-				fwrite($xml,"<dataset  seriesName='".$nm_unit."'  color='".$warna."'>\r\n");
-		$rr=mysql_query("select distinct(tahun) as Tahun from tmp_".$this->user."_transaksi_rekap order by Tahun");
-		while($th=mysql_fetch_object($rr)){
-				$saldoNc=0;$saldoNc1=0;
-					$sql="select * from lap_jenis where ID_Head='0' and ID_$nm_unit='1' order by ID_$nm_unit";
-					$rs	=mysql_query($sql) or die($sql.mysql_error());
-						while($row=mysql_fetch_object($rs)){
-							$saldo=0;$saldo1=0;
-							$sql2	="select * from lap_subjenis where ID_Jenis='".$row->ID."' and ID_$nm_unit='1' order by ID_$nm_unit";
-							$rs2	=mysql_query($sql2) or die($sql2.mysql_error());
-							while($row2=mysql_fetch_object($rs2)){
-								$saldoA=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Laporan='1' and ID_Unit='".$rwg->ID."' and ID_LapDetail='".$row2->ID."'");
-								$idCalc=rdb("perkiraan",'ID_Calc','ID_Calc',"where ID_Laporan='1' and ID_Unit='".$rwg->ID."' and ID_LapDetail='".$row2->ID."'");
-								//process total shu akhir periode
-									$sql3="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$this->user."_transaksi_rekap where Tahun='".$th->Tahun."' and ID_Laporan='1' and ID_Unit='".$rwg->ID."' and id_lapdetail='".$row2->ID."'";
-									$rs3=mysql_query($sql3) or die($sql3.mysql_error());
-									while($row3=mysql_fetch_object($rs3)){
-										$Saldo=($idCalc==1)?($saldoA+($row3->debet-$row3->kredit)):($saldoA+($row3->kredit-$row3->debet));
-										$saldoNc=($idCalc==1)?($saldoNc-$Saldo):($saldoNc+$Saldo);
-									}
-							} //end of $row2
-						}// end if $row
-						fwrite($xml,"<set label='".$th->Tahun."' value='".$saldoNc."'/>\r\n");
-				}//end of $rwg
-				//generate XML content file
-				fwrite($xml,"</dataset>\r\n");	
+		$file=$this->user.'_graph.xml';
+		$endofdata=rdb("jurnal","Tanggal","Max(year(Tanggal)-1) as Tanggal");
+		$endofdata.='1231';
+		//$cek_data=date('dmY',filemtime($this->user.'_graph.xml'));
+	//if($cek_data!=date('dmY')){
+		if(!file_exists($file)|| (filemtime($file) < (time()-86400))){
+			$this->build_data($endofdata);
+			$xml=fopen($this->user.'_graph.xml','w+');
 			
-					//fwrite($xml,"<set name='".$th->Tahun.'\' value=\''.$SaldoNc."'/>\r\n");
-					//$n++;
-		} //end of $th
-		/**/
-		fwrite($xml,"</graph>\r\n");
-	}
+			fwrite($xml,"<graph caption='Grafik Sisa Hasil Usaha' subcaption='YTD : ".date('d/m/Y')."' xAxisName='Tahun' yAxisName='SHU' showValues= '1' showLabels='1' showValues='1'>\r\n");
+			
+			//data tahun sebagai categori 			
+			fwrite($xml,"<categories>\r\n");
+			$trr=mysql_query("select distinct(tahun) as Tahun from tmp_".$this->user."_transaksi_rekap order by Tahun");
+			while($thr=mysql_fetch_object($trr)){
+				fwrite($xml,"<category name='".$thr->Tahun."'/>\r\n");
+			}
+			fwrite($xml,"</categories>\r\n");
+			//end of categories
+			
+			$nm_unit='';
+				$saldoNc=0;$Saldo=0;$saldo=0;
+				//baca unit jurnal KBR dan USP
+				$rsg=mysql_query("select ID from unit_jurnal order by ID");
+				while($rwg=mysql_fetch_object($rsg)){
+					$nm_unit=rdb("unit_jurnal","Unit","Unit","where ID='".$rwg->ID."'");
+					//read lap_jenis
+					//create data set
+					$warna=($nm_unit=='KBR')?'DBDC25':'2AD62A';
+					fwrite($xml,"<dataset  seriesName='".$nm_unit."'  color='".$warna."'>\r\n");
+					
+						$rr=mysql_query("select distinct(Tahun) as Tahun from tmp_".$this->user."_transaksi_rekap where Tahun between '2005' and '2011' and ID_Unit='".$rwg->ID."' order by Tahun");
+						while($th=mysql_fetch_object($rr)){
+								$saldoNc=0;$saldoNc1=0;
+									$sql="select * from lap_jenis where ID_Head='0' and ID_".$nm_unit."='1' order by ID_".$nm_unit."";
+									$rs	=mysql_query($sql) or die($sql.mysql_error());
+									while($row=mysql_fetch_object($rs)){
+											$saldo=0;$saldo1=0;
+											$sql2	="select * from lap_subjenis where ID_Jenis='".$row->ID."' and ID_".$nm_unit."='1' order by ID_".$nm_unit."";
+											$rs2	=mysql_query($sql2) or die($sql2.mysql_error());
+											while($row2=mysql_fetch_object($rs2)){
+												$saldoA=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Laporan='1' and ID_Unit='".$rwg->ID."' and ID_LapDetail='".$row2->ID."'");
+												$idCalc=rdb("perkiraan",'ID_Calc','ID_Calc',"where ID_Laporan='1' and ID_Unit='".$rwg->ID."' and ID_LapDetail='".$row2->ID."'");
+												//process total shu akhir periode
+													$sql3="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$this->user."_transaksi_rekap where Tahun='".$th->Tahun."' and ID_Laporan='1' and ID_Unit='".$rwg->ID."' and id_lapdetail='".$row2->ID."'";
+													$rs3=mysql_query($sql3) or die($sql3.mysql_error());
+													while($row3=mysql_fetch_object($rs3)){
+														$Saldo=($idCalc==1)?($saldoA+($row3->debet-$row3->kredit)):($saldoA+($row3->kredit-$row3->debet));
+														$saldoNc=($idCalc==1)?($saldoNc-$Saldo):($saldoNc+$Saldo);
+													} //end of row3
+											} //end of $row2
+									}// end if $row
+									
+										fwrite($xml,"<set label='".$th->Tahun."' value='".$saldoNc."'/>\r\n");
+						}//end of th
+								//generate XML content file
+								fwrite($xml,"</dataset>\r\n");	
+							
+									//fwrite($xml,"<set name='".$th->Tahun.'\' value=\''.$SaldoNc."'/>\r\n");
+									//$n++;
+				} //end of $rwg
+						/**/
+						fwrite($xml,"</graph>\r\n");
+		}//end if
 	}
 	function data_XML(){
 		$n=0;$x=0;

@@ -313,6 +313,10 @@
 					me.hide();
 				}
 			}
+			else if(e.keyCode==27){
+				me.hide();
+				return false
+			}
 			else{
 				// Callback function
 				if(me.onSelected!=null){

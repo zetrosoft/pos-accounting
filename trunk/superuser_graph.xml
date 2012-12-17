@@ -1,0 +1,31 @@
+<graph caption='Grafik Sisa Hasil Usaha' subcaption='YTD : 13/12/2012' xAxisName='Tahun' yAxisName='SHU' showValues= '1' showLabels='1' showValues='1'>
+<categories>
+<category name='2000'/>
+<category name='2001'/>
+<category name='2002'/>
+<category name='2003'/>
+<category name='2004'/>
+<category name='2005'/>
+<category name='2006'/>
+<category name='2007'/>
+<category name='2008'/>
+<category name='2009'/>
+<category name='2010'/>
+<category name='2011'/>
+</categories>
+<dataset  seriesName='KBR'  color='DBDC25'>
+<set label='2005' value='108246248.85'/>
+<set label='2006' value='112980473.43848'/>
+<set label='2007' value='88692022.63'/>
+<set label='2008' value='-140877983'/>
+<set label='2009' value='322207651'/>
+<set label='2010' value='79868891'/>
+<set label='2011' value='149891628'/>
+</dataset>
+<dataset  seriesName='USP'  color='2AD62A'>
+<set label='2005' value='91530120'/>
+<set label='2006' value='92851432'/>
+<set label='2007' value='172558849'/>
+<set label='2008' value='496202169'/>
+<set label='2009' value='507945795'/>
+<set label='2010' value='976702695'/>

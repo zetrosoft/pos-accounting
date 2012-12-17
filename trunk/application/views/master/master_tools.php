@@ -35,7 +35,7 @@ if($all_settingneraca!=''){
 	no_auth();
 }
 panel_multi_end();
-popup_start('headshu','Add Jenis SHU','500','300');
+popup_start('headshu','Add Jenis Neraca','500','300');
 $fld="<input type='hidden' id='ID' val=''/>";
 	$zfm->Addinput($fld);
 	$zfm->AddBarisKosong(true);
@@ -44,7 +44,7 @@ $fld="<input type='hidden' id='ID' val=''/>";
 	$zfm->BuildFormButton('Simpan','add');
 	echo "<i><font color='#000000'> *) Di isi dengan angka 1 jika Ya, 0 jika Tidak</font></i>";
 popup_end();
-popup_start('subshu','Add Sub Jenis SHU','500','350');
+popup_start('subshu','Add Sub Jenis Neraca','500','350');
 $fld="<input type='hidden' id='ID_Sub' val=''/>";
 	$zfm->Addinput($fld);
 	$zfm->AddBarisKosong(true);

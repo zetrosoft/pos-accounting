@@ -27,7 +27,7 @@ $(document).ready(function(e){
 		unlock('#tgl_banding'):lock('#tgl_banding');
 	})
 	$('#oke').click(function(){
-		ajax_start();
+		show_indicator('indic',1);
 		$('#frm_j').attr('action','print_shu');
 		document.frm_j.submit();
 		ajax_stop();

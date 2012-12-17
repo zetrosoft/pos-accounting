@@ -97,3 +97,10 @@
 4|Jumlah,,,,,,10%,,,15
 5|Satuan,,,,,,10%,,,12
 6|Total,,,,,,12%,,,20
+
+[promo]
+1|Judul Promo,input,text,p_judul,w70 upper,,20%
+2|Dari Tanggal,input,text,p_dari,w35,,12%
+3|Sampai Tanggal,input,text,p_sampai,w35,,12%
+4|Keterangan Promo,textarea,text,p_keterangan,T90,,40%
+

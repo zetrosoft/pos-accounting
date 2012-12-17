@@ -36,8 +36,12 @@ $(document).ready(function(e) {
 				$('table#ListTable tbody').html(result);
 				//$('#ID_Klasifikasi').val($(this).val()).select();
 				$('#Kode').val('');$('#SubKlasifikasi').val('')
-				$('table#ListTable').fixedHeader({width:(screen.width-350),height:(screen.height-420)})
+				$('table#ListTable').fixedHeader({width:(screen.width-250),height:(screen.height-420)})
 			})
+	})
+	$(':reset').click(function(){
+		$('input:not(:button)').val('');
+		return false
 	})
 });
 function _get_ID(){
@@ -45,7 +49,7 @@ function _get_ID(){
 		function(result){
 			var rst=$.parseJSON(result)
 			var newID=rst.ID;
-			$('#ID_A').val(parseFloat(newID)+1);
+			//$('#ID_A').val(parseFloat(newID)+1);
 		})
 }
 
@@ -56,7 +60,7 @@ function _show_data(wh){
 			$('table#ListTable tbody').html(result);
 			$('#ID_Klasifikasi').val('').select();
 			$('#Kode').val('');$('#SubKlasifikasi').val('')
-			$('table#ListTable').fixedHeader({width:(screen.width-350),height:(screen.height-420)})
+			$('table#ListTable').fixedHeader({width:(screen.width-250),height:(screen.height-420)})
 		})
 }
 
@@ -81,7 +85,7 @@ function img_onClick(id,tipe){
 				if(confirm('Yakin Data Klasifikasi ini akan dihapus???')){
 					$.post('hapus_akun',{'ID':id,'sumber':'Sub_Klasifikasi'},
 					function(result){
-						var wh ="where ID_Klasifikasi='"+$('#ID_Klasifikasi').val()+"'";
+						var wh ="";//where ID_Klasifikasi='"+$('#ID_Klasifikasi').val()+"'";
 						_show_data(wh)
 					})
 				}

@@ -161,12 +161,18 @@
 ;Admin Menu =======================================================		
 	[Tool]
 	1|User Account|controlpanel/userlist||
+	2|<hr>|x||
+	3|Info Promo|master/promo|||
+	
 		
 		[User Account]
 		1|Add User|adduser|y|zce|
 		2|List User|listuser|y|zev|
 		3|Authorization|authorization|y|zcv|
 
+		[Info Struk]
+		1|Informasi Promo|informasipromo|y|zcev|
+		
 ;===end of admin menu
 ;Acounting Menu ===================================================
 [Accounting]
