@@ -398,7 +398,7 @@ class Akuntansi extends CI_Controller{
 				  <td class='kotak'>".tglfromSql($row->Tanggal)."</td>
 				  <td class='kotak'>".rdb('unit_jurnal','unit','unit',"where ID='".$row->ID_Unit."'")."</td>
 				  <td class='kotak'>".$row->Nomor."</td>
-				  <td class='kotak' align='left'>".$row->Keterangan."</td>
+				  <td class='kotak' align='left'>".$row->Ket."</td>
 				  <td class='kotak' align='right'>".number_format($row->Debet,2)."</td>
 				  <td class='kotak' align='right'>".number_format($row->Kredit,2)."</td>
 				  <td class='kotak' align='right'>". number_format(($row->Debet-$row->Kredit),2)."</td>

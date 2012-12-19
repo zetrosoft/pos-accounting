@@ -1,0 +1,200 @@
+<graph caption='Grafik Penjualan' subcaption='Periode :Desember 2011' xAxisName='Bulan' yAxisName='Value' showValues= '0' showLabels='1' showValues='2'>
+<categories>
+<category name='1'/>
+<category name='2'/>
+<category name='3'/>
+<category name='4'/>
+<category name='5'/>
+<category name='6'/>
+<category name='7'/>
+<category name='8'/>
+<category name='9'/>
+<category name='10'/>
+<category name='11'/>
+<category name='12'/>
+<category name='13'/>
+<category name='14'/>
+<category name='15'/>
+<category name='16'/>
+<category name='17'/>
+<category name='18'/>
+<category name='19'/>
+<category name='20'/>
+<category name='21'/>
+<category name='22'/>
+<category name='23'/>
+<category name='24'/>
+<category name='25'/>
+<category name='26'/>
+<category name='27'/>
+<category name='28'/>
+<category name='29'/>
+<category name='30'/>
+<category name='31'/>
+</categories>
+<dataset seriesName='Tunai' color='1D8BD1'>
+<set name='01'  value='0'/>
+<set name='02'  value='0'/>
+<set name='03'  value='0'/>
+<set name='04'  value='0'/>
+<set name='05'  value='0'/>
+<set name='06'  value='0'/>
+<set name='07'  value='0'/>
+<set name='08'  value='0'/>
+<set name='09'  value='0'/>
+<set name='10'  value='0'/>
+<set name='11'  value='0'/>
+<set name='12'  value='0'/>
+<set name='13'  value='0'/>
+<set name='14'  value='0'/>
+<set name='15'  value='0'/>
+<set name='16'  value='0'/>
+<set name='17'  value='0'/>
+<set name='18'  value='0'/>
+<set name='19'  value='0'/>
+<set name='20'  value='0'/>
+<set name='21'  value='0'/>
+<set name='22'  value='0'/>
+<set name='23'  value='0'/>
+<set name='24'  value='0'/>
+<set name='25'  value='0'/>
+<set name='26'  value='0'/>
+<set name='27'  value='0'/>
+<set name='28'  value='0'/>
+<set name='29'  value='0'/>
+<set name='30'  value='0'/>
+<set name='31'  value='0'/>
+</dataset>
+<dataset seriesName='Kredit' color='F1683C'>
+<set name='01'  value='0'/>
+<set name='02'  value='0'/>
+<set name='03'  value='0'/>
+<set name='04'  value='0'/>
+<set name='05'  value='0'/>
+<set name='06'  value='0'/>
+<set name='07'  value='0'/>
+<set name='08'  value='0'/>
+<set name='09'  value='0'/>
+<set name='10'  value='0'/>
+<set name='11'  value='0'/>
+<set name='12'  value='0'/>
+<set name='13'  value='0'/>
+<set name='14'  value='0'/>
+<set name='15'  value='0'/>
+<set name='16'  value='0'/>
+<set name='17'  value='0'/>
+<set name='18'  value='0'/>
+<set name='19'  value='0'/>
+<set name='20'  value='0'/>
+<set name='21'  value='0'/>
+<set name='22'  value='0'/>
+<set name='23'  value='0'/>
+<set name='24'  value='0'/>
+<set name='25'  value='0'/>
+<set name='26'  value='0'/>
+<set name='27'  value='0'/>
+<set name='28'  value='0'/>
+<set name='29'  value='0'/>
+<set name='30'  value='0'/>
+<set name='31'  value='0'/>
+</dataset>
+<dataset seriesName='Return Kredit' color='2AD62A'>
+<set name='01'  value='0'/>
+<set name='02'  value='0'/>
+<set name='03'  value='0'/>
+<set name='04'  value='0'/>
+<set name='05'  value='0'/>
+<set name='06'  value='0'/>
+<set name='07'  value='0'/>
+<set name='08'  value='0'/>
+<set name='09'  value='0'/>
+<set name='10'  value='0'/>
+<set name='11'  value='0'/>
+<set name='12'  value='0'/>
+<set name='13'  value='0'/>
+<set name='14'  value='0'/>
+<set name='15'  value='0'/>
+<set name='16'  value='0'/>
+<set name='17'  value='0'/>
+<set name='18'  value='0'/>
+<set name='19'  value='0'/>
+<set name='20'  value='0'/>
+<set name='21'  value='0'/>
+<set name='22'  value='0'/>
+<set name='23'  value='0'/>
+<set name='24'  value='0'/>
+<set name='25'  value='0'/>
+<set name='26'  value='0'/>
+<set name='27'  value='0'/>
+<set name='28'  value='0'/>
+<set name='29'  value='0'/>
+<set name='30'  value='0'/>
+<set name='31'  value='0'/>
+</dataset>
+<dataset seriesName='Pemakaian' color='DBDC25'>
+<set name='01'  value='0'/>
+<set name='02'  value='0'/>
+<set name='03'  value='0'/>
+<set name='04'  value='0'/>
+<set name='05'  value='0'/>
+<set name='06'  value='0'/>
+<set name='07'  value='0'/>
+<set name='08'  value='0'/>
+<set name='09'  value='0'/>
+<set name='10'  value='0'/>
+<set name='11'  value='0'/>
+<set name='12'  value='0'/>
+<set name='13'  value='0'/>
+<set name='14'  value='0'/>
+<set name='15'  value='0'/>
+<set name='16'  value='0'/>
+<set name='17'  value='0'/>
+<set name='18'  value='0'/>
+<set name='19'  value='0'/>
+<set name='20'  value='0'/>
+<set name='21'  value='0'/>
+<set name='22'  value='0'/>
+<set name='23'  value='0'/>
+<set name='24'  value='0'/>
+<set name='25'  value='0'/>
+<set name='26'  value='0'/>
+<set name='27'  value='0'/>
+<set name='28'  value='0'/>
+<set name='29'  value='0'/>
+<set name='30'  value='0'/>
+<set name='31'  value='0'/>
+</dataset>
+<dataset seriesName='Rusak / Hilang' color='D2DCDD'>
+<set name='01'  value='0'/>
+<set name='02'  value='0'/>
+<set name='03'  value='0'/>
+<set name='04'  value='0'/>
+<set name='05'  value='0'/>
+<set name='06'  value='0'/>
+<set name='07'  value='0'/>
+<set name='08'  value='0'/>
+<set name='09'  value='0'/>
+<set name='10'  value='0'/>
+<set name='11'  value='0'/>
+<set name='12'  value='0'/>
+<set name='13'  value='0'/>
+<set name='14'  value='0'/>
+<set name='15'  value='0'/>
+<set name='16'  value='0'/>
+<set name='17'  value='0'/>
+<set name='18'  value='0'/>
+<set name='19'  value='0'/>
+<set name='20'  value='0'/>
+<set name='21'  value='0'/>
+<set name='22'  value='0'/>
+<set name='23'  value='0'/>
+<set name='24'  value='0'/>
+<set name='25'  value='0'/>
+<set name='26'  value='0'/>
+<set name='27'  value='0'/>
+<set name='28'  value='0'/>
+<set name='29'  value='0'/>
+<set name='30'  value='0'/>
+<set name='31'  value='0'/>
+</dataset>
+</graph>

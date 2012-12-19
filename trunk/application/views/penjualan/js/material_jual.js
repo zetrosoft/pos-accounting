@@ -347,10 +347,10 @@ $(document).ready(function(e) {
 					}
 				})*/	
 
-			//$('#nama').val('viewstock');
+			$('#nama').val('tranresep');
 			$('#pp-tranresep').css({'left':'28%','top':'25%','height':'auto','z-index':'9998'});
 			$('#lock').show();
-			$('#tgl_jual')
+			$('#frm9 #tgl_jual')
 				.focus().select()
 				.keyup(function(){
 					tanggal(this);
@@ -406,29 +406,42 @@ $(document).ready(function(e) {
 				case 'viewstock':
 					$('#frm4 input').val('');
 					$('#tbl-viewstock table#ListTable tbody').html('');
-					keluar();
+					keluar_viewstock();
 				break;
 				case 'pembayaran':
 					$('#frm3 input:not(:button)').val('');
 					$('#kekata').html('');
-					keluar();
+					keluar_pembayaran();
 				break;
 				case 'editline':
 				keluar();
 				break;
 				case 'canceltrans':
 					//$('#tbl-canceltrans table#ListTable tbody').html('');
-					keluar();
+					keluar_canceltrans();
 				break;
 				case '':
 					$('#frm5 input:not(:button)').val('');
 					$('#kekata').html('');
 					keluar();
 				break;
+				case 'tranresep':
+				    keluar_tranresep();
+				break;
 			}
 				
 		}
 	})
+ //re print slip
+  $('#frm9 #saved-prtslip').click(function(){
+	$.post('re_print_slip',{
+		'tanggal'		:$('#frm9 #tgl_jual').val(),
+		'no_transaksi'	:$('#nomor_slip').val()
+	},function(result){
+		//alert(result);
+		keluar_tranresep();
+	})
+  })
 //end document ready
 })
 

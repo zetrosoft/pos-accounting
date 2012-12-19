@@ -23,11 +23,11 @@
 1|No. Transaksi,,,,,,15%,,
 2|Tanggal,,,,,,10%,,
 ;3|Kode Barang,input,text t,id_barang,w100,,15%
-3|Nama Barang,input,text n,nm_barang,w100 upper,,25%
+3|Nama Barang,input,text n,nm_barang,w100 upper,,24%
 4|Satuan,select,text n,nm_satuan,S100 upper,,8%
 5|Jumlah,input,text d,jml_transaksi,w100 angka,,8%
-6|Harga Beli,input,text d,harga_beli,100 angka,,12%
-7|Sub Total,input,text n,ket_transaksi,w100,,12%
+6|Harga Beli,input,text d,harga_beli,100 angka,,10%
+7|Sub Total,input,text n,ket_transaksi,w100,,10%
 
 [jualan]
 1|No. ID,input,text n,no_transaksi,w50 upper,,10%
@@ -62,7 +62,7 @@
 [printslip]
 1|Tanggal Transaksi,input,text n,tgl_jual,w35,,,
 2|Nomor Transaksi,select,text n,nomor_slip,S90,,,
-3|Nomor Faktur,input,text n,no_faktur,w50,,,
+;3|Nomor Faktur,input,text n,no_faktur,w50,,,
 
 [kredite]
 1|Sub Total ,input,text d,total_belanja,w90 angka big,,

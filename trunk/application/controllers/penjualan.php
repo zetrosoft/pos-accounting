@@ -303,8 +303,10 @@ class Penjualan extends CI_Controller{
 		$this->zetro_slip->path=$this->session->userdata('userid');
 		$this->zetro_slip->modele('wb');
 		$this->zetro_slip->newline();
-		$this->no_transaksi($_POST['no_transaksi']);
-		$this->tanggal(tgltoSql($_POST['tanggal']));
+		$notrans=$_POST['no_transaksi'];
+		$tanggal=tglToSql($_POST['tanggal']);
+		$this->no_transaksi($notrans);
+		$this->tanggal($tanggal);
 		$this->zetro_slip->content($this->struk_header());
 		$this->zetro_slip->create_file();
 		$this->re_print();
