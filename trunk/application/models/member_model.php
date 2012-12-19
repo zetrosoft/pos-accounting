@@ -110,7 +110,7 @@ class Member_model extends CI_Model{
 	$sql="select 
 			concat(k.Kode,sk.Kode,d.Kode,agt.No_Perkiraan) as Kode,
 			p.ID as id_perkiraan,js.id as ID,js.Jenis,p.SaldoAwal,
-			sum(tr.debet) as Debet,sum(tr.Kredit) as Kredit,
+			sum(tr.debet) as Debet,sum(tr.Kredit) as Kredit,js.ID_Calc,
 			((saldoawal+sum(tr.Kredit))-sum(tr.Debet)) as SaldoAkhir
 			from perkiraan as p
 			left join klasifikasi as k
