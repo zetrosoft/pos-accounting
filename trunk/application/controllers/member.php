@@ -53,7 +53,7 @@ class Member extends CI_Controller{
 		if(count($datax)>0){
 			foreach($datax as $row){
 			$n++;//title='Double click for detail view' ondblclick=\"show_member_detail('".$row->ID."');\
-			echo "<tr onclick='' class='xx'>
+			echo "<tr onclick='' class='xx' ondblclick=\"images_click('".$row->ID."','edit');\">
 				 <td width='5%' class='kotak' align='center'>$n</td>
 				 <td width='10%' class='kotak' align='center'>".$row->No_Agt."</td>
 				 <td width='15%' class='kotak' nowrap>".rdb('mst_departemen','Departemen','',"where ID='".$row->ID_Dept."'")."</td>
