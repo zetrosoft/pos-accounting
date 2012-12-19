@@ -36,7 +36,8 @@ addText(array('No. Anggota','Nama Lengkap','Department'),
 		$zlb->icon();
 		$n=0;
 		foreach($transaksi->result() as $trn){
-			$n++;
+			$n++;$sAkhir=0;
+			$sAkhir=($trn->ID_Calc=='1')?($trn->SaldoAwal+$trn->Debet-$trn->Kredit):($trn->SaldoAwal+$trn->Kredit-$trn->Debet);
 			echo "<tr class='xx' id='t-".$trn->ID."' align='center' onclick=\"get_detail_trans('".$trn->ID."');\">
 				  <td class='kotak'>$n</td>
 				  <td class='kotak'>".$trn->Kode."</td>
@@ -44,7 +45,7 @@ addText(array('No. Anggota','Nama Lengkap','Department'),
 				  <td class='kotak' align='right'>".number_format($trn->SaldoAwal,2)."</td>
 				  <td class='kotak' align='right'>".number_format($trn->Debet,2)."</td>
 				  <td class='kotak' align='right'>".number_format($trn->Kredit,2)."</td>
-				  <td class='kotak' align='right'>".number_format($trn->SaldoAkhir,2)."</td>
+				  <td class='kotak' align='right'>".number_format($sAkhir,2)."</td>
 				  </tr>";
 		}
 		echo "</tbody></table><hr>";
