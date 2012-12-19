@@ -26,10 +26,12 @@ echo "</td></tr>
 		<input type='button' id='keluar_b' value='Tutup'></div>";
 panel_multi_end();
 panel_multi('membertrans','block',false);
-addText(array('No. Anggota','Nama Lengkap','Department'),
+addText(array('No. Anggota','Nama Lengkap','Department','','',''),
 		array("<input type='text' id='no_anggota' readonly value='$no_anggota'>",
 			  "<input type='text' id='nm_anggota' readonly value='$nm_anggota'>",
-			  "<input type='text' id='id_department' readonly value='$id_department' size='30'>"));
+			  "<input type='text' id='id_department' readonly value='$id_department' size='30'>",
+			  "","<input type='button' id='cetak' value='Cetak'>",
+				"<input type='button' id='keluar' value='Tutup'>"));
 		$zlb->section('detail');
 		$zlb->aksi(false);
 		$zlb->Header('90%','detail_tbl');
@@ -61,8 +63,6 @@ addText(array('No. Anggota','Nama Lengkap','Department'),
 		<hr>
 		<div id='btn' style='width:90%; border:0px outset #FFF;padding:5px; padding-right:20px' align='right'>
 		<span id='loading' style='display:none'><img src='".base_url()."asset/images/indicator.gif'>Data being process... please wait!</span> &nbsp;&nbsp;
-		<input type='button' id='cetak' value='Cetak'>
-		<input type='button' id='keluar' value='Tutup'>
 		<input type='hidden' id='kunci' value='$kunci' />
 		<input type='hidden' id='kunci_cetak' value='' /></div>";
 panel_multi_end();
