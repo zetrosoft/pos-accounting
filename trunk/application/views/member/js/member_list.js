@@ -33,6 +33,11 @@ $(document).ready(function(e) {
 		var id=$('#ordby').val().replace('undefined,','');
 		$('#dept').change();
 	})
+	$('#carix').keypress(function(e){
+		if(e.keyCode==13){
+			$('#cari').click();
+		}
+	})
 	$('#cari').click(function(){
 		if($('#carix').val().length>0)	$('#dept').change();
 	})

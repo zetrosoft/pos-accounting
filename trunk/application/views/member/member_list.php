@@ -15,10 +15,19 @@ $stat="<select id='stat' name='stat'>
 link_css('style.css','asset/js');
 //link_js('jquery.fcbkcomplete.js','asset/js');
 link_js('jquery.fixedheader.js,member_list.js','asset/js,'.$path.'/js');
-panel_begin('Keanggotaan','','Department :,'.$dept.', &nbsp;&nbsp;Keaktifan :'.$stat,",Total Data : <span id='td'></span>");
+panel_begin('Keanggotaan');
 panel_multi('daftaranggota','block');
 if($all_daftaranggota!=''){
-addText(array('Susun Urutan ','','Cari Berdasarkan Nama :'),
+addText(array('Departemen   ','  Keaktifan','Total Data:',''),
+		array("<select id='dept' name='dept'></select>",
+			  "<select id='stat' name='stat'>
+				<option value='all' selected>Semua</option>
+				<option value='1'>Aktif</option>
+				<option Value='2'>Non Aktif</option>
+				<option Value='3'>Keluar</option>
+				</select>",
+				" <span id='td'></span>",''));
+addText(array('Susun Urutan ','Cari Berdasarkan Nama :','',),
 		array(
 			  "<select id='urutan'>
 				<option value='Nama'>Nama Anggota</option>
@@ -27,10 +36,10 @@ addText(array('Susun Urutan ','','Cari Berdasarkan Nama :'),
 				<option value='id_Dept-Nama'>Department, Nama Anggota</option>
 				<option value='ID_Aktif-Nama'>Keaktifan, Nama Anggota</option>
 				</select>",
-			  "<input type='button' value='Go' id='gon'>",
 			  "<div style='border:1px solid #DDD; background:#FFF'>
 			  <input type='text' id='carix' value='' style='border:none'>
-			  <img src='".base_url()."asset/img/Icon_210.ico' id='cari' style='cursor:pointer'></div>"));
+			  <img src='".base_url()."asset/img/Icon_210.ico' id='cari' style='cursor:pointer'></div>",
+			  "<input type='button' value='Go' id='gon'>"));
 	$n=0;
 		$zlb->section($section);
 		$zlb->aksi(true);
