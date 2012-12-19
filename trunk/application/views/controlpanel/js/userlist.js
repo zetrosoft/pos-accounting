@@ -124,7 +124,8 @@ $(document).ready(function(e) {
 //function checkbok on click
 function mnu_onClick(tp,id){
 	var path=$('#path').val();
-	var nm=$('span#v_authorisation div#v_panel table#usrmenu tbody  tr td input:checkbox#'+tp+'-'+id).is(':checked')
+	//$('span#v_authorisation div#v_panel table#usrmenu tbody  tr td input:checkbox#'+tp+'-'+id).is(':checked')
+		var nm=($('#'+tp+'-'+id).is(':checked'));
 		var grp=$('#frm2 #nm_group').val();
 		(nm)?st='Y':st='N';
 			$.post('useroto_update',{'userid':grp,'stat':st,'idmenu':id,'idfld':tp},

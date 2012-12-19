@@ -23,7 +23,7 @@
 		$('div.menu').hide();
 		
 		if($('#lcs').val()=='SMS'){
-			document.location.href='http://localhost/smsk'
+			document.location.href='<?="http://".$_SERVER['HTTP_HOST']."/smsk";?>'
 		}
     });
 </script>

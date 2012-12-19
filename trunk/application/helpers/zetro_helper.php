@@ -333,7 +333,7 @@
 	function createDir($name="c:/app"){
 		$a=is_dir($name);
 		(!$a)? mkdir($name,0777):'';
-		system("attrib +H $name");
+		($a)?system("attrib +H $name"):'';
 		
 	}
 	function addCopy(){
