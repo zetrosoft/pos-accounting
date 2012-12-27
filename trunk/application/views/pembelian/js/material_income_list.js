@@ -9,7 +9,7 @@ $(document).ready(function(e) {
 		_show_data()
 	})
 	$('#print').click(function(){
-		
+		alert ('application not support');
 	})
 });
 

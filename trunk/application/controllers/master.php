@@ -39,7 +39,7 @@ class Master extends CI_Controller {
 	function tools(){
 		$datax=$this->akun_model->get_neraca_head("='0' order by ID_Head");
 		$data=$this->akun_model->get_neraca_head();
-		$this->zetro_auth->menu_id(array('settingshu','settingneraca'));
+		$this->zetro_auth->menu_id(array('master__tools','settingneraca'));
 		$this->list_data($this->zetro_auth->auth(array('head','shu'),array($data,$datax)));
 		$this->View('master/master_tools');
 	}
@@ -56,7 +56,7 @@ class Master extends CI_Controller {
 		$this->View('master/master_kas_harian');
 	}
 	function vendor(){
-		$this->zetro_auth->menu_id(array('addvendor','listvendor'));
+		$this->zetro_auth->menu_id(array('tambahpemasok','listpemasok'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('master/master_vendor');
 	}
@@ -329,13 +329,13 @@ class Master extends CI_Controller {
   $thn=$_POST['thn'];
   $jenis=$_POST['jenis'];
   if ($jenis=='acc'){
-  $file = fopen("asset/backup_db/accounting_".nBulan($bln).'_'.nBulan($end_bln).'_'.$thn.".sql.dll","w+");
+  $file = fopen("asset\\backup_db\\accounting_".nBulan($bln).'_'.nBulan($end_bln).'_'.$thn.".sql.dll","w+");
 	$where="where (ID_Bulan between '".$bln."' and '".$end_bln."') and Tahun='".$thn."'";
  	$line_count = $this->create_backup_sql($file,'jurnal',$where);
 	$line_count = $this->backup_akun($file,'transaksi',$where);
   }else{
 	  $where="where (month(Tanggal) between '".$bln."' and '".$end_bln."') and year(Tanggal)='".$thn."'";
-	  $file = fopen("asset/backup_db/inventory_".nBulan($bln).'_'.nBulan($end_bln).'_'.$thn.".sql.dll","w+");
+	  $file = fopen("asset\\backup_db\\inventory_".nBulan($bln).'_'.nBulan($end_bln).'_'.$thn.".sql.dll","w+");
 	  	$line_count = $this->create_backup_sql($file,'inv_pembelian',$where);
 		$line_count = $this->backup_akun($file,'inv_pembelian_detail',$where);
 	  	$line_count = $this->create_backup_sql($file,'inv_penjualan',$where);

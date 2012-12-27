@@ -36,7 +36,7 @@ class Member extends CI_Controller{
 		empty($_POST['id_dept'])?$where='':$where="where ID_Dept='".$_POST['id_dept']."'";
 		empty($_POST['ordby'])? $ordby='order by noUrut':$ordby='order by '.$_POST['ordby'];
 		$datax=$this->Admin_model->show_list('mst_anggota',$where.' '.$ordby);
-		$this->zetro_auth->menu_id(array('daftaranggota'));//array('list'),array($datax))
+		$this->zetro_auth->menu_id(array('member__member_list'));//array('list'),array($datax))
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('member/member_list');
 	}

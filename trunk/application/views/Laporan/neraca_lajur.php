@@ -11,7 +11,7 @@ link_js('jquery.fixedheader.js,jquery_terbilang.js','asset/js,asset/js');
 link_js('neraca_lajur.js',$path.'/js');
 panel_begin('Rekapitulasi','','',",,,,<input type='button' class='print' value='Cetak' id='cetak' title='Klik untuk print'>");
 panel_multi('rekapsimpanan','block');
-if($all_laporan__rekap_simpanan!=''){
+if($all_neraca__rekap_simpanan!=''){
 echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 echo "
 <table id='period' style='border-collapse:collapse'>

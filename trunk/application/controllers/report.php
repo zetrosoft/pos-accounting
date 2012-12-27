@@ -448,7 +448,7 @@ class Report extends CI_Controller
 			td('<b>'.number_format($debet,2).'</b>','right','kotak list_genap').
 			td('<b>'.number_format($kredit,2).'</b>','right','kotak list_genap')._tr().
 			tr().td('<b>Balance</b>','right\' colspan=\'5','kotak list_ganjil').
-			td('<b>'.number_format(((int)$debet-(int)$kredit),2).'</b>','right','kotak list_genap')._tr();
+			td('<b>'.number_format(((int)$kredit-(int)$debet),2).'</b>','right','kotak list_genap')._tr();
 	}
 
 	function get_tahun(){

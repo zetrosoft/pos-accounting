@@ -47,7 +47,7 @@ class Neraca extends CI_Controller{
 		$this->View('laporan/neraca_lajur_bener');
 	}
 	function rekap_simpanan(){
-		$this->zetro_auth->menu_id(array('laporan__rekap_simpanan'));
+		$this->zetro_auth->menu_id(array('neraca__rekap_simpanan'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('laporan/neraca_lajur');
 	}

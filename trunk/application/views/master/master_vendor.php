@@ -7,7 +7,7 @@ link_js('master_vendor.js',$path.'/js');
 link_js('jquery.fixedheader.js','asset/js');
 panel_begin('Pemasok');
 panel_multi('tambahpemasok','none',false);
-if($all_addvendor!=''){
+if($all_tambahpemasok!=''){
 	$zfm->AddBarisKosong(true);
 	$zfm->Start_form(true,'frm1');
 	$zfm->BuildForm('produsen',true,'50%');
@@ -18,12 +18,12 @@ if($all_addvendor!=''){
 echo "<table id='xx' width='50%'><tbody></tbody></table>";
 panel_multi_end();
 panel_multi('listpemasok','block',false);
-if($all_listvendor!=''){
+if($all_listpemasok!=''){
 addText(array('Nama Vendor :',''),
 	   array('<input type="text" id="finde" class="cari w100">',
 	   '<input type="button" id="oke" value="Cari">'));
 		$zlb->section('produsen');
-		$zlb->aksi(($e_listvendor!='')?true:false);
+		$zlb->aksi(($e_listpemasok!='')?true:false);
 		$zlb->icon('deleted');
 		$zlb->Header('100%');
 		echo "</tbody></table>";

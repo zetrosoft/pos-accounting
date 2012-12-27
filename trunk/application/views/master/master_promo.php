@@ -6,7 +6,7 @@ $path='application/views/master';
 calender();
 link_js('master_promo.js',$path.'/js');
 link_js('jquery.fixedheader.js','asset/js');
-panel_begin('Info Struk');
+panel_begin('Info Promo');
 panel_multi('informasipromo','block',false);
 if($all_informasipromo!=''){
 	$zfm->AddBarisKosong(false);

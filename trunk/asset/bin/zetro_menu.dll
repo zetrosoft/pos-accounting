@@ -162,7 +162,7 @@
 	[Tool]
 	1|User Account|controlpanel/userlist||
 	2|<hr>|x||
-	3|Info Promo|master/promo|||
+	3|Info Promo|master/promo|y||
 	
 		
 		[User Account]
@@ -170,7 +170,7 @@
 		2|List User|listuser|y|zev|
 		3|Authorization|authorization|y|zcv|
 
-		[Info Struk]
+		[Info Promo]
 		1|Informasi Promo|informasipromo|y|zcev|
 		
 ;===end of admin menu

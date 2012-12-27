@@ -16,8 +16,7 @@ link_css('style.css','asset/js');
 //link_js('jquery.fcbkcomplete.js','asset/js');
 link_js('jquery.fixedheader.js,member_list.js','asset/js,'.$path.'/js');
 panel_begin('Keanggotaan');
-panel_multi('daftaranggota','block');
-if($all_daftaranggota!=''){
+if($all_member__member_list!=''){
 addText(array('Departemen   ','  Keaktifan','Total Data:',''),
 		array("<select id='dept' name='dept'></select>",
 			  "<select id='stat' name='stat'>

@@ -37,7 +37,7 @@ class Stock extends CI_Controller{
 		$this->View('inventory/material_stock');
 	}
 	function stock_barang(){
-		$this->zetro_auth->menu_id(array('stock__stock_barang'));
+		$this->zetro_auth->menu_id(array('liststock'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('warehouse/material_stocklist');
 	}

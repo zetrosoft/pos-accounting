@@ -6,7 +6,7 @@ $path='application/views/master';
 link_js('jquery.fixedheader.js,master_neraca.js,jquery_terbilang.js','asset/js,'.$path.'/js,asset/js');
 panel_begin('Tools');
 panel_multi('settingneraca','block',false);
-if($all_settingneraca!=''){
+if($all_master__tools!=''){
 	addText(array('',''),array("","<input type='button' id='addHead' value='Add Jenis Neraca'>"));
 		$zlb->section('neraca');
 		$zlb->aksi(true);

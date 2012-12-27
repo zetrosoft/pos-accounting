@@ -8,7 +8,7 @@ link_js('material_stocklist.js',$path.'/js');
 calender();
 panel_begin('Persediaan');
 panel_multi('liststock','block',false);
-if($all_stock__stock_barang!=''){
+if($all_liststock!=''){
 	echo "<form id='frm1' name='frm1' method='post' action=''>";
 	addText(array('Kategori','Status','',''),
 			array("<select id='Kategori' name='Kategori'></select>",

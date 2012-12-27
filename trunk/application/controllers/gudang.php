@@ -46,7 +46,7 @@ class Gudang extends CI_Controller {
 	function list_barang(){
 		//tampilkan view list barang
 		//$this->inv_model->auto_data();
-		$this->zetro_auth->menu_id(array('list'));
+		$this->zetro_auth->menu_id(array('gudang__list_barang'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('inventory/material_list');
 	}
@@ -176,7 +176,7 @@ class Gudang extends CI_Controller {
 	}
 	//load view stock history
 	function stock_hist(){
-		$this->zetro_auth->menu_id(array('gudang__stock_history'));
+		$this->zetro_auth->menu_id(array('gudang__stock_hist'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('warehouse/material_stock_history');
 	}

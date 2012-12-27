@@ -10,7 +10,7 @@ link_js('material_stock_hist.js',$path.'/js');
 calender();
 panel_begin('Persediaan');
 panel_multi('liststock','block',false);
-if($all_gudang__stock_history!=''){
+if($all_gudang__stock_hist!=''){
 	echo "<form id='frm1' name='frm1' method='post' action=''>";
 	addText(array('Tanggal','s/d','Jenis Barang','Group by',''),
 			array("<input type='text' id='dari_tgl' name='dari_tgl' value=''>",
