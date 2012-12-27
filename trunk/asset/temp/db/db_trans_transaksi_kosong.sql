@@ -3,12 +3,29 @@
 -- Server version:               5.5.8 - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2012-12-27 11:56:02
+-- Date/time:                    2012-12-27 11:57:48
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+
+-- Dumping structure for table kopkardb.transaksi
+DROP TABLE IF EXISTS `transaksi`;
+CREATE TABLE IF NOT EXISTS `transaksi` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_Jurnal` int(11) DEFAULT NULL,
+  `ID_Perkiraan` int(11) DEFAULT NULL,
+  `ID_Dept` int(11) DEFAULT NULL,
+  `Debet` double DEFAULT NULL,
+  `Kredit` double DEFAULT NULL,
+  `Keterangan` varchar(100) DEFAULT NULL,
+  `urutan` double DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- Data exporting was unselected.
+
 
 -- Dumping structure for table kopkardb.transaksi_del
 DROP TABLE IF EXISTS `transaksi_del`;
