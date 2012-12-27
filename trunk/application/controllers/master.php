@@ -416,7 +416,8 @@ class Master extends CI_Controller {
   }
   
   function read_dir(){
-	$map= get_filenames("./asset/backup_db",false,true);
+	$map=array();
+	$map= directory_map("./asset/backup_db",false,true);
 	$x=0;$tgl=array();
 	sort($map);
 	reset($map);
