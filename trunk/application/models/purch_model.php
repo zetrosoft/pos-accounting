@@ -61,7 +61,7 @@ class Purch_model extends CI_Model {
 	}
 	
 	function pembelian_graph($thn){
-		$xml=fopen($this->user.'_graph_p.xml','w+');
+		$xml=fopen('asset\\upload\\'.$this->user.'_graph_p.xml','w+');
 		fwrite($xml,"<graph caption='Grafik Pembelian' subcaption='Tahun : ".$thn."' xAxisName='Bulan' yAxisName='Value' showValues= '1' showLabels='1' showValues='1'>\r\n");
 		$trr=mysql_query("select distinct(month(Tanggal)) as Bulan from inv_pembelian where year(Tanggal)='".$thn."' order by month(Tanggal)");
 		while($th=mysql_fetch_object($trr)){
@@ -76,7 +76,7 @@ class Purch_model extends CI_Model {
 	
 	function penjualan_graph($thn,$bln){
 		$t_days=cal_days_in_month(CAL_GREGORIAN, $bln, $thn);
-		$xml=fopen($this->user.'_graph_j.xml','w+');
+		$xml=fopen('asset\\upload\\'.$this->user.'_graph_j.xml','w+');
 		fwrite($xml,"<graph caption='Grafik Penjualan' subcaption='Periode :".nBulan($bln)." ".$thn."' xAxisName='Bulan' yAxisName='Value' showValues= '0' showLabels='1' showValues='2'>\r\n");
 		//create category by jenis penjuallan ( tunai,giro,cheque,Kredit,return
 		

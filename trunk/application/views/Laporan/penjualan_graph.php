@@ -38,7 +38,7 @@ function show_graph(id,jenis){
 	var height=(screen.height-330);
 	var width=(screen.width-50);
 		   var chart = new FusionCharts("<?=base_url();?>chart/"+jenis+".swf", "ChartId", width, height);
-		   chart.setDataURL("<?=base_url().$this->session->userdata('userid');?>_graph_j.xml");		
+		   chart.setDataURL("<?=base_url().'asset/upload/'.$this->session->userdata('userid');?>_graph_j.xml");		
 		   chart.render(id);
 }
 
