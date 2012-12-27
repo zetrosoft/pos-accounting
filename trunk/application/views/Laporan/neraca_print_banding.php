@@ -63,7 +63,7 @@
 						}
 					  }
 					}else{
-						$saldo=($idCalc==1)?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
+						$saldo=($rw->id_calc==1)?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
 					}
 					/* end of proces data akhir periode
 					  start process data pembanding
@@ -90,7 +90,7 @@
 						}
 					  }
 					}else{
-						$saldo2=($idCalc==1)?($saldoA+($rw2->debet-$rw2->kredit)):($saldoA+($rw2->kredit-$rw2->debet));
+						$saldo2=($rw2->id_calc==1)?($saldoA+($rw2->debet-$rw2->kredit)):($saldoA+($rw2->kredit-$rw2->debet));
 					}
 					/* end of process data pembanding */
 					
