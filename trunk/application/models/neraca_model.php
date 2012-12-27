@@ -264,7 +264,7 @@ class Neraca_model extends CI_Model {
 	//generate data shu for grafik
 	
 	function data_grap_shu(){
-		$file=$this->user.'_graph.xml';
+		$file=base_url().'asset/uploas/'.$this->user.'_graph.xml';
 		$endofdata=rdb("jurnal","Tanggal","Max(year(Tanggal)-1) as Tanggal");
 		$endofdata.='1231';
 		//$cek_data=date('dmY',filemtime($this->user.'_graph.xml'));
