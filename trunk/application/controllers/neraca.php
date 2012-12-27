@@ -144,7 +144,7 @@ class Neraca extends CI_Controller{
 		$data['users']		=$this->session->userdata('userid');
 		$unite				=$this->input->post('unite');
 		($unite!=3)?$unite	=rdb("unit_jurnal",'Unit','Unit',"where ID='".$unite."'"):$unite='';
-		$unte	=$this->input->post('unite');
+		$unte				=$this->input->post('unite');
 		$periode			=tglToSql($this->input->post('tgl_start'));
 		$data['awal']		=getPrevDays($periode,365);
 		$awal				=getPrevDays($periode,365);

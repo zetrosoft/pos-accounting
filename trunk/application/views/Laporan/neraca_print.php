@@ -30,20 +30,20 @@
 			$a->Row(array($r->Header1),false);  
 			$x=0; $saldoNc=0;$pasiva=0;$aktiva=0;$k=0;$Balance=0;
 			$unite=rdb("unit_jurnal",'Unit','Unit',"where ID='".$unt[0]."'");
-			$ljs=mysql_query("select * from lap_jenis where ID_Head='".$r->ID."' and ID_$unite='1'");
+			$ljs=mysql_query("select * from lap_jenis where ID_Head='".$r->ID."' and ID_".$unite."='1'");
 			while($rjs=mysql_fetch_object($ljs)){
 				$x++;
 				$a->Row(array('    '.$x.". ".$rjs->Jenis),false); 
-				$lsbj="select * from lap_subjenis where ID_$unite='1' /*and ID_Lap='".$r->ID."'*/ and ID_Jenis='".$rjs->ID."' order by NoUrut";
+				$lsbj="select * from lap_subjenis where ID_".$unite."='1' and ID_Jenis='".$rjs->ID."' order by NoUrut";
 				//echo $lsbj;
 				$a->SetFont('Arial','',9);
 				$n=0;$saldoA=0;$saldo=0;$SaldoLj=0;
 				$rs=mysql_query($lsbj) or die(mysql_error());
 				while($rbj=mysql_fetch_object($rs)){
 					$n++;
-					$saldoA=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Laporan='2' and ID_Unit='$unit' and ID_LapDetail='".$rbj->ID."'");
+					$saldoA=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Laporan='2' and ID_Unit='".$unit."' and ID_LapDetail='".$rbj->ID."'");
 					$idCalc=rdb("perkiraan",'ID_Calc','ID_Calc',"where ID_Laporan='2' and ID_Unit='$unit' and ID_LapDetail='".$rbj->ID."'");
-					$ss="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$users."_transaksi_rekap where ID_Laporan='2' and ID_Unit='$unit' and id_lapdetail='".$rbj->ID."'";
+					$ss="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$users."_transaksi_rekap where ID_Laporan='2' and ID_Unit='".$unit."' and id_lapdetail='".$rbj->ID."'";
 					//echo $ss;
 					$rss=mysql_query($ss) or die(mysql_error());
 					$rw=mysql_fetch_object($rss);
@@ -65,7 +65,7 @@
 						}
 					  }
 					}else{
-						$saldo=($idCalc==1)?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
+						$saldo=($rw->id_calc==1)?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
 					}
 					//($saldo<0)?	$a->SetTextColor(237,15,151):	$a->SetTextColor(0);
 					$a->Row(array('            '.$n.". ".$rbj->SubJenis,number_format($saldo,2)),false); 	

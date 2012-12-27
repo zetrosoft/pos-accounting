@@ -25,7 +25,7 @@
 			$x=0; $saldoNc=0;$pasiva=0;$aktiva=0;
 			$unite=rdb("unit_jurnal",'Unit','Unit',"where ID='".$unt[0]."'");
 			($unt[0]==3)?$united='':$united="and ID_$unite='1'";
-			$ljs=mysql_query("select * from lap_jenis where ID_Head='0' $united");
+			$ljs=mysql_query("select * from lap_jenis where ID_Head='0' $united order by ID");
 			//kosongkan tabel shu head
 			mysql_query("truncate table lap_shu_head") or die(mysql_error());
 			//jenis pengelompokan 
@@ -47,7 +47,7 @@
 					//echo $ss;
 					$rss=mysql_query($ss) or die(mysql_error());
 					$rw=mysql_fetch_object($rss);
-					$saldo=($idCalc==1 && $rbj->ID!='61')?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
+					$saldo=($rbj->ID_Calc==1 && $rbj->ID!='61')?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
 					$a->Row(array('            '.$n.".".$rbj->SubJenis,number_format($saldo,2)),false,($saldo<0)?true:false,1); 	
 					$SaldoLj=($SaldoLj+$saldo);
 					$saldoNc=($rbj->ID_Calc==1 && $rbj->ID!='61')?($saldoNc-$saldo):($saldoNc+$saldo);

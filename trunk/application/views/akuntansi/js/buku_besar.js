@@ -135,7 +135,7 @@ function _show_data(jenis){
 			'Stop'	:$("#tgl_stop").val()},
 		function(result){
 			$('table#ListTable tbody').html(result);
-			$('table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-335)})
+			$('table#ListTable').fixedHeader({width:(screen.width-50),height:300})
 		})
 	}
 	if(jenis=='tahun'){
@@ -146,7 +146,7 @@ function _show_data(jenis){
 			'Tahun'	:$('#tahun').val()},
 			function(result){
 				$('table#bbTahunan tbody').html(result);
-				$('table#bbTahunan').fixedHeader({width:(screen.width-30),height:(screen.height-335)})
+				$('table#bbTahunan').fixedHeader({width:(screen.width-50),height:300})
 			})
 	}
 }

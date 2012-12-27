@@ -391,9 +391,9 @@ class Akuntansi extends CI_Controller{
 	 if(count($data)){
 		 foreach($data as $row){
 		 $n++;
-	 	 ($auth_v!='')? $oto="onClick=\"show_jurnal_detail('".$row->ID."');\" title='Click for detail jurnal'":"";
+	 	 ($auth_v!='')? $oto="ondblclick=\"show_jurnal_detail('".$row->ID."','".substr($row->Tanggal,0,4)."');\" title='Click for detail jurnal'":"";
 		 (($row->Debet-$row->Kredit)!=0)? $class='list_genap':$class='';
-			echo "<tr class='xx $class' id='".$row->Nomor."' align='center' >
+			echo "<tr class='xx $class' id='".$row->Nomor."' $oto align='center' >
 				  <td class='kotak'>$n</td>
 				  <td class='kotak'>".tglfromSql($row->Tanggal)."</td>
 				  <td class='kotak'>".rdb('unit_jurnal','unit','unit',"where ID='".$row->ID_Unit."'")."</td>

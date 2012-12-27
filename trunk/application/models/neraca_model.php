@@ -195,24 +195,24 @@ class Neraca_model extends CI_Model {
 		$rs	=mysql_query($sql) or die($sql.mysql_error());
 			while($row=mysql_fetch_object($rs)){
 				$saldo=0;$saldo1=0;
-				$sql2	="select * from lap_subjenis where ID_Jenis='".$row->ID."' and ID_$nm_unit='1' order by NoUrut";
+				$sql2	="select * from lap_subjenis where ID_Jenis='".$row->ID."' and ID_".$nm_unit."='1' order by NoUrut";
 				$rs2	=mysql_query($sql2) or die($sql2.mysql_error());
 				while($row2=mysql_fetch_object($rs2)){
-					$saldoA=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Laporan='1' and ID_Unit='$Unit' and ID_LapDetail='".$row2->ID."'");
-					$idCalc=rdb("perkiraan",'ID_Calc','ID_Calc',"where ID_Laporan='1' and ID_Unit='$Unit' and ID_LapDetail='".$row2->ID."'");
+					$saldoA=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Laporan='1' and ID_Unit='".$Unit."' and ID_LapDetail='".$row2->ID."'");
+					$idCalc=rdb("perkiraan",'ID_Calc','ID_Calc',"where ID_Laporan='1' and ID_Unit='".$Unit."' and ID_LapDetail='".$row2->ID."'");
 					//process total shu akhir periode
-					$sql3="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$this->user."_transaksi_rekap where (Tanggal between '".$tglAwal."' and '".$tglAkhir."') and ID_Laporan='1' and ID_Unit='$Unit' and id_lapdetail='".$row2->ID."'";
+					$sql3="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$this->user."_transaksi_rekap where (Tanggal between '".$tglAwal."' and '".$tglAkhir."') and ID_Laporan='1' and ID_Unit='".$Unit."' and id_lapdetail='".$row2->ID."'";
 					$rs3=mysql_query($sql3) or die($sql3.mysql_error());
 						while($row3=mysql_fetch_object($rs3)){
-							$Saldo=($idCalc==1)?($saldoA+($row3->debet-$row3->kredit)):($saldoA+($row3->kredit-$row3->debet));
+							$Saldo	=($row2->ID_Calc==1)?($saldoA+($row3->debet-$row3->kredit)):($saldoA+($row3->kredit-$row3->debet));
 							$saldoNc=($row2->ID_Calc==1)?($saldoNc-$Saldo):($saldoNc+$Saldo);
 						}
 					//process total shu tahun sebelumnya
-					$sql31="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$this->user."_transaksi_rekap where (Tanggal between '".$tglAwal2."' and '".$tglAkhir2."') and ID_Laporan='1' and ID_Unit='$Unit' and id_lapdetail='".$row2->ID."'";
+					$sql31="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$this->user."_transaksi_rekap where (Tanggal between '".$tglAwal2."' and '".$tglAkhir2."') and ID_Laporan='1' and ID_Unit='".$Unit."' and id_lapdetail='".$row2->ID."'";
 					//echo $sql31;
 					$rs31=mysql_query($sql31) or die($sql31.mysql_error());
 						while($row31=mysql_fetch_object($rs31)){
-							$Saldo1=($idCalc==1)?($saldoA+($row31->debet-$row31->kredit)):($saldoA+($row31->kredit-$row31->debet));
+							$Saldo1	 =($row2->ID_Calc==1)?($saldoA+($row31->debet-$row31->kredit)):($saldoA+($row31->kredit-$row31->debet));
 							$saldoNc1=($row2->ID_Calc==1)?($saldoNc1-$Saldo1):($saldoNc1+$Saldo1);
 						}
 				}
