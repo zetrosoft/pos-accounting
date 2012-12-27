@@ -3,7 +3,7 @@ $zfm=new zetro_frmBuilder('asset/bin/zetro_member.frm');
 $zlb=new zetro_buildlist();
 $zlb->config_file('asset/bin/zetro_member.frm');
 $path='application/views/member';
-link_css('jquery.coolautosuggest.css','asset/js');
+link_css('jquery.coolautosuggest.css','asset/css');
 link_js('jquery.coolautosuggest.js','asset/js');
 link_js('jquery.fixedheader.js','asset/js');
 link_js('member_pinjaman_barang.js',$path."/js");
