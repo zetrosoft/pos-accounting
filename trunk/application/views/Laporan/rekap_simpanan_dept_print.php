@@ -24,7 +24,10 @@
 		  $n=0;$s_pokok=0;$s_wajib=0;$s_kusus=0;
 		  
 		  foreach($temp_rec as $r)
-		  {}
+		  { 
+		  $n++;
+		  $a->Row(array($n,$r->Bulan,'','','',''));
+			  }
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_rekap_simpanan_dept.pdf','F');
 
 //show pdf output in frame

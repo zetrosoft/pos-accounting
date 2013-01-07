@@ -10,17 +10,17 @@ link_js('rekap_simpanan_dept.js',$path.'/js');
 panel_begin('Simpanan/Pinjaman/Piutang');
 panel_multi('rekappiutangbarang','block',false);
 echo "<form name='frm_j' id='frm_j' method='post' action=''>";
-addText(array('Periode','','','Departement','Perkiraan',''),
+addText(array('Periode','',''),
 		array('',"<select id='bln' name='bln' class='s100'></select>",
-				"<select id='thn' name='thn' class='s100'></select>",
-				"<select id='ID_Dept' name='ID_Dept' class='s100'></select>",
-				"<select id='ID_Simpanan' name='ID_Simpanan' class='s100'></select>",
-				"<input type='button' id='okelah' value='OK'>"));
+				"<select id='thn' name='thn' class='s100'></select>"));
+addText(array('Departement'),array("<select id='ID_Dept' name='ID_Dept' class='s100'></select>"));
+addText(array('Perkiraan  '),array("<select id='ID_Simpanan' name='ID_Simpanan' class='s100'></select>"));
+addText(array(nbs(2)),array("<input type='button' id='okelah' value='Process'>"));
 echo "</form>";
+echo "<table id='xx' width='100%'><tbody></tbody></table>";
 
 panel_multi_end();
 panel_end();
-
 
 ?>
 

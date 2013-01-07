@@ -1,6 +1,6 @@
 // JavaScript Document
+var path=$('#path').val();
 $(document).ready(function(e) {
-	var path=$('#path').val();
 	var prs=$('#prs').val();
 	if(prs==''){
 		$('#anggotabaru').removeClass('tab_button');
@@ -65,6 +65,7 @@ $(document).ready(function(e) {
 					})
 			break;
 			case 'c_photo':
+				ab=path.replace('index.php/','');
 				$('img#thumb').attr('src',ab+'uploads/member/no_photo.jpg');
 			break;
 			case 's_photo':

@@ -81,7 +81,7 @@ function _show_data(){
 				$('#v_daftaranggota table#ListTable tbody').html('');	
 				$('#v_daftaranggota table#ListTable tbody').html(result);
 				$('span#td').html(format_number($('#v_daftaranggota table#ListTable tbody tr').length));
-				$('#ListTable').fixedHeader({width:(screen.width-50),height:(screen.height-320)})
+				$('#v_daftaranggota table#ListTable').fixedHeader({width:(screen.width-50),height:(screen.height-350)})
 				//ajax_stop();
 				unlock('#carix');
 			$('#cari').css('opacity','1');

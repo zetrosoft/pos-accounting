@@ -11,6 +11,9 @@ link_js('buku_besar.js',$path.'/js');
 panel_begin('Buku Besar');
 panel_multi('bukubesar','block',false);
 if($all_bukubesar!=''){
+?><table id='xx' style='border-collapse:collapse' width='100%'>
+<tr>
+<td width='40%' class='border_r' valign="top"><?
 echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 	 addText(array('Periode     ',"Per Tanggal",'Dari','s/d'),
 	 		 array('',"<input type='radio' name='periode' id='pertgl' />",
@@ -19,16 +22,16 @@ echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 	 addText(array(nbs(2),"Per Tahun  ",''),
 	 		 array('',"<input type='radio' name='periode' id='pertahun' />  ",
 			 		"<select id='tahun'></select>"));
-	 addText(array('Klasifikasi  ','Sub Klasifikasi'),
-	 		 array("<select id='ID_Klas' class='s100'></select>".nbs(1),
-			 	   "<select id='ID_SubKlas' class='s100'></select>"));
-	 addText(array('Departemen   ','Perkiraan'),
-	 		 array("<select id='ID_Dept' class='s100'></select>",
-			 	   "<select id='ID_Agt' class='s100'></select>"));
+	 addText(array('Klasifikasi    '),array("<select id='ID_Klas' class='s100'></select>"));
+	 addText(array('Sub Klasifikasi'),array("<select id='ID_SubKlas' class='s100'></select>"));
+	 addText(array('Departemen     '),array("<select id='ID_Dept' class='s100'></select>"));
+	 addText(array('Perkiraan      '),array("<select id='ID_Agt' class='s100'></select>"));
 	 addText(array(nbs(2),''),
 	 		 array("<input type='button' id='oke' value='View'>",
 			 	   "<input type='button' id='print' class='' value='Print' alt='Print'>"));
 echo "</form>\n";
+?></td>
+<td width='60%' valign="top"><?
 echo   "<div id='tgl' style='display:none'>\n".		   
 		$zlb->section('bukubesar');
 		$zlb->aksi(false);
@@ -41,7 +44,10 @@ echo   "<div id='tgl' style='display:none'>\n".
 		$zlb->icon();
 		$zlb->Header('100%','bbTahunan');
  echo "</tbody></table></div>";
-		
+?>
+</td></tr>
+</table>
+<?
 }else{
 	no_auth();
 }

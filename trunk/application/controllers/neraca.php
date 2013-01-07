@@ -200,7 +200,9 @@ class Neraca extends CI_Controller{
 		$this->View('laporan/shu_graph');
 	}
 	function graph_shu_data(){
-		$this->neraca_model->data_grap_shu();
+		$thn=(date('Y')-6);
+		//echo $thn;
+		$this->neraca_model->data_grap_shu($thn);
 	}
 	
 //generate data for grafik
@@ -249,14 +251,15 @@ class Neraca extends CI_Controller{
 		$bulan=$this->input->post('bln');
 		$tahun=$this->input->post('thn');
 		$jumHari = cal_days_in_month(CAL_GREGORIAN,$bulan,$tahun);
-		$periode=$bulan.$tahun.$jumHari;
+		$bulan=(strlen($bulan)==1)?'0'.$bulan:$bulan;
+		$periode=$tahun.$bulan.$jumHari;
 		$where="where month(p.Tanggal)='".$bulan."'";
 		$where.="and year(p.Tanggal)='".$tahun."'";
 		$where.=($this->input->post('ID_Dept')=='')?'':" and p.ID_Dept='".$this->input->post('ID_Dept')."'";
 		$where.=" and p.ID_Simpanan='".$this->input->post('ID_Simpanan')."'";
 		//kirim dalam bentuk pdf
 		$data['temp_rec']	=$this->neraca_model->get_rekap_dept($periode,$where);
-		$data['bulan']		=rdb('mst_bulan','Bulan','Bulan',"where ID='".$bulan."'");
+		$data['bulan']		=rdb('mst_bulan','Bulan','Bulan',"where ID='".(int)$bulan."'");
 		$data['tahun']		=$tahun;
 		$data['Dept']		=rdb('mst_departemen','Departemen','Departemen',"where ID='".$this->input->post('ID_Dept')."'");
 		$data['simp']		=rdb('jenis_simpanan','Jenis','Jenis',"where ID='".$this->input->post('ID_Simpanan')."'");

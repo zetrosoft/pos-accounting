@@ -65,7 +65,7 @@ class Neraca_model extends CI_Model {
 		
 	}
 	
-	 function build_data($periode){
+	 function build_data($periode,$f_per=''){
 		mysql_query("DROP TABLE IF EXISTS `tmp_".$this->user."_transaksi_rekap`") or die(mysql_error());
 		$sql="CREATE TABLE IF NOT EXISTS `tmp_".$this->user."_transaksi_rekap` (
 			`ID` INT(11) NOT NULL AUTO_INCREMENT,
@@ -111,6 +111,7 @@ class Neraca_model extends CI_Model {
 		while($row=mysql_fetch_object($rs)){
 		$fist_periode=$row->tgl;
 		}
+		$fist_periode=($f_per!='')?$f_per.'1231':str_replace('-','',$fist_periode);
 		$sql2="replace into tmp_".$this->user."_transaksi_rekap 
 				select t.*,p.*,j.*  from jurnal as j
 				left join transaksi as t
@@ -118,6 +119,7 @@ class Neraca_model extends CI_Model {
 				right join perkiraan as p
 				on p.ID=t.ID_Perkiraan
 				where j.Tanggal between '$fist_periode' and '$periode' order by j.ID";
+		echo $sql2;
 		mysql_query($sql) or die($sql."</br>".mysql_error()."</br>");
 		mysql_query($sql1) or die($sql1."</br>".mysql_error()."</br>");
 		mysql_query($sql2) or die($sql2."</br>".mysql_error()."</br>");
@@ -263,21 +265,21 @@ class Neraca_model extends CI_Model {
 	}
 	//generate data shu for grafik
 	
-	function data_grap_shu(){
-		$file=base_url().'asset/uploas/'.$this->user.'_graph.xml';
-		$endofdata=rdb("jurnal","Tanggal","Max(year(Tanggal)-1) as Tanggal");
+	function data_grap_shu($thn){
+		$file=base_url().'asset/upload/'.$this->user.'_graph.xml';
+		$endofdata=rdb("jurnal","Tanggal","Max(year(Tanggal)) as Tanggal");
 		$endofdata.='1231';
 		//$cek_data=date('dmY',filemtime($this->user.'_graph.xml'));
 	//if($cek_data!=date('dmY')){
 		if(!file_exists($file)|| (filemtime($file) < (time()-86400))){
-			$this->build_data($endofdata);
+			$this->build_data($endofdata,$thn);
 			$xml=fopen('asset\\upload\\'.$this->user.'_graph.xml','w+');
 			
-			fwrite($xml,"<graph caption='Grafik Sisa Hasil Usaha' subcaption='YTD : ".date('d/m/Y')."' xAxisName='Tahun' yAxisName='SHU' showValues= '1' showLabels='1' showValues='1'>\r\n");
+			fwrite($xml,"<graph caption='Grafik Sisa Hasil Usaha' subcaption='YTD : ".date('d/m/Y')."' xAxisName='Tahun' yAxisName='SHU' showLabels='1' showValues='1'>\r\n");
 			
 			//data tahun sebagai categori 			
 			fwrite($xml,"<categories>\r\n");
-			$trr=mysql_query("select distinct(tahun) as Tahun from tmp_".$this->user."_transaksi_rekap and Tahun >'".(date('Y')-6)."' order by Tahun");
+			$trr=mysql_query("select Tahun from tmp_".$this->user."_transaksi_rekap where Tahun >'".$thn."' group by Tahun order by Tahun");
 			while($thr=mysql_fetch_object($trr)){
 				fwrite($xml,"<category name='".$thr->Tahun."'/>\r\n");
 			}
@@ -295,7 +297,7 @@ class Neraca_model extends CI_Model {
 					$warna=($nm_unit=='KBR')?'DBDC25':'2AD62A';
 					fwrite($xml,"<dataset  seriesName='".$nm_unit."'  color='".$warna."'>\r\n");
 					
-						$rr=mysql_query("select distinct(Tahun) as Tahun from tmp_".$this->user."_transaksi_rekap where Tahun >'".(date('Y')-6)."' and ID_Unit='".$rwg->ID."' order by Tahun");
+						$rr=mysql_query("select Tahun from tmp_".$this->user."_transaksi_rekap where Tahun >'".$thn."' and ID_Unit='".$rwg->ID."' group by Tahun order by Tahun");
 						while($th=mysql_fetch_object($rr)){
 								$saldoNc=0;$saldoNc1=0;
 									$sql="select * from lap_jenis where ID_Head='0' and ID_".$nm_unit."='1' order by ID_".$nm_unit."";

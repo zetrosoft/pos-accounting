@@ -18,7 +18,7 @@
 		  $a->SetAligns(array("C","C","C","L","R","R"));
 		  $a->SetFont('Arial','',9);
 		  //$rec = $temp_rec->result();
-		  $n=0;$harga=0;$hgb=0;$hargaj=0;
+		  $n=0;$harga=0;$hgb=0;$hargaj=0;$saldo=0;
 		  foreach($temp_rec->result() as $r)
 		  {
 			$n++;
@@ -28,6 +28,7 @@
 			//sub tlot
 			$harga =($harga+$r->Kredit);
 			$hargaj =($hargaj+$r->Debet);
+			$saldo=($r->ID_Calc==1)?($harga-$hargaj):($hargaj-$harga);
 		  }
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFillColor(225,225,225);
@@ -35,13 +36,13 @@
 		  $a->Cell(28,8,number_format($hargaj,2),1,0,'R',true);
 		  $a->Cell(28,8,number_format($harga,2),1,1,'R',true);
 		  $a->Cell(152,8,"Saldo Akhir",1,0,'R',true);
-		  $a->Cell(28,8,number_format(($harga-$hargaj),2),1,0,'R',true);
+		  $a->Cell(28,8,number_format($saldo,2),1,0,'R',true);
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_saldo_personal.pdf','F');
 
 //show pdf output in frame
 $path='application/views/laporan';
 $img=" <img src='".base_url()."asset/images/back.png' onclick='js:window.history.back();' style='cursor:pointer' title='click for select other filter data'>";
-link_js('auto_sugest.js,lap_beli.js,jquery.fixedheader.js','asset/js,'.$path.'/js,asset/js');
+//link_js('auto_sugest.js,lap_beli.js,jquery.fixedheader.js','asset/js,'.$path.'/js,asset/js');
 panel_begin('Print Preview','','Back'.$img);
 ?>
 		  <iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_saldo_personal.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>

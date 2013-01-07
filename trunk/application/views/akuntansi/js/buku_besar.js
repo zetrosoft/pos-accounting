@@ -76,7 +76,9 @@ $(document).ready(function(e) {
 	})
 	$('#ID_SubKlas').change(function(){
 		$('#ID_Dept').val('').select();
-		$('#ID_Agt').val('').select();
+		$('#ID_Agt')
+		   .val('').select()
+		   .html('')
 		$('table#ListTable tbody').html('')
 	})
 	$('#ID_Dept').change(function(){
@@ -135,7 +137,7 @@ function _show_data(jenis){
 			'Stop'	:$("#tgl_stop").val()},
 		function(result){
 			$('table#ListTable tbody').html(result);
-			$('table#ListTable').fixedHeader({width:(screen.width-50),height:300})
+			$('table#ListTable').fixedHeader({width:(screen.width-400),height:500})
 		})
 	}
 	if(jenis=='tahun'){
@@ -146,7 +148,7 @@ function _show_data(jenis){
 			'Tahun'	:$('#tahun').val()},
 			function(result){
 				$('table#bbTahunan tbody').html(result);
-				$('table#bbTahunan').fixedHeader({width:(screen.width-50),height:300})
+				$('table#bbTahunan').fixedHeader({width:(screen.width-400),height:500})
 			})
 	}
 }

@@ -23,7 +23,7 @@ $(document).ready(function(e){
 		},function(result){
 			
 		})
-*/
+*/	show_indicator('xx',1);
 	$('#frm_j').attr('action','get_rkp_simpan_dept');
 		document.frm_j.submit();
 	})
