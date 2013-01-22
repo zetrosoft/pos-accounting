@@ -250,5 +250,10 @@ class Admin extends CI_Controller {
 		$data=array('version' =>'');
 		$this->session->unset_userdata($data);
 	}
+	
+	function help()
+	{
+		header("Location :".base_url()."asset/help");
+	}
 }
 ?>

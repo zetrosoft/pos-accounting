@@ -13,6 +13,7 @@ panel_begin('Jurnal Umum');
 panel_multi('listjurnalumum','block',false);
 if($all_listjurnalumum!=''){
 echo "<form name='frm_j' id='frm_j' method='post' action=''>";
+addText(array("<input type='button' id='addnew' value='Tambah Jurnal'>"),array(''));
 addText(array('Filter By',"<span id='fltby'></span>",'Unit','',''),
 		array("<select id='fby' name='fby'>
 			   <option value=''>&nbsp;</option>

@@ -167,7 +167,7 @@ class Akun_model extends CI_Model {
 			$data='00'.($data+1);
 		}else if(strlen($data)=='5'){
 			$data='0'.($data+1);
-		}else if(strlen($data)=='6'){
+		}else if(strlen($data)>='6'){
 			$data=($data+1);
 		}
 		return $data.'-'.$IDn;

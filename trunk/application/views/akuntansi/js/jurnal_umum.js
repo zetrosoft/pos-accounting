@@ -24,6 +24,9 @@ $(document).ready(function(e) {
 					$('table#panel tr td.plt').show()
 				}
 	})
+	$('#addnew').click(function(){
+		$('table#panel tr td#addjurnal').click()
+	})
 	$('#fby').val('').select()
 	$('#fby').change(function(){
 		unlock('#process,#cetak')
@@ -72,18 +75,21 @@ $(document).ready(function(e) {
 				'ID_Unit'	:$('#ID_Unit').val()
 			},function(result){
 			$('#v_listjurnalumum #ListTable tbody').html(result)
-			$('span#ttd').html('Total data :'+$('#v_listjurnalumum #ListTable tbody tr').length);
+			$('#result').html('Total data :'+$('#v_listjurnalumum #ListTable tbody tr').length);
 			$('.plt').show();
-			$('table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-335)})
+			$('table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-350)})
 			})
 	})
+	var today=new Date()
+	
 	$('#daritgl').dynDateTime();
 	$('#smptgl').dynDateTime();
 // addjurnal
 	$('#v_addjurnal table#addtxt tr td#c1-2').hide();
 	$('#v_addjurnal table#addtxt tr td#c2-2').hide();
 	$('#noUrut').attr('readonly','readonly')
-	$('#Tanggal').dynDateTime();
+	tglNow('#Tanggal');
+	$('#Tanggal').dynDateTime({range:[today.getFullYear()-1,today.getFullYear()+1]});
 	$('input:radio[name="pilih"]').click(function(){
 		var id=$(this).attr('id');
 			if (id=='new'){

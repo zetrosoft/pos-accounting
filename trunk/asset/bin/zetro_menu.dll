@@ -13,11 +13,13 @@
 6|Help|||
 
 	[Help]
-	1|About|admin/about||
-	2|Back Up Database|master/backup||
-	3|<hr>|x||
-	4|Ganti Password|controlpanel/change_password||
-	5|Log Out|admin/logout||
+	1|Manual Book|admin/help||
+	2|<hr>|x||
+	3|About|admin/about||
+	4|Back Up Database|master/backup||
+	5|<hr>|x||
+	6|Ganti Password|controlpanel/change_password||
+	7|Log Out|admin/logout||
 	;5|TODO|admin/todo|y|
 	
 		[Ganti Password]

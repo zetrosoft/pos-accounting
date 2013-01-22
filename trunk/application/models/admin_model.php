@@ -59,7 +59,7 @@ class Admin_model extends CI_Model
 		return $nom;
 	}
 	public function penomoran($tipe='GR',$table='nomor_transaksi',$field='nomor',$where=''){
-		($where=='')?$where=" where jenis_transaksi='$tipe' order by nomor desc limit 1":$where=$where;
+		($where=='')?$where=" where jenis_transaksi='$tipe' and year(doc_date)='".date('Y')."' order by nomor desc limit 1":$where=$where;
 		$nom=$this->show_single_field($table,$field,$where);
 		$thn=$this->show_single_field($table,"doc_date",$where);
 		if($nom >0 && substr($thn,0,4) ==date('Y')){
