@@ -149,14 +149,15 @@ class Stock extends CI_Controller{
 	}
 	function get_stock(){
 		$data=array();$n=0;
-		$where=empty($_POST['kategori'])?'':"where im.ID_Kategori='".$_POST['kategori']."'";
+		$ktg=($_POST['kategori']=='null')?7:$_POST['kategori'];
+		$where=empty($_POST['kategori'])?'':"where im.ID_Kategori='".$ktg."'";
 		$where.=(empty($_POST['stat']) || $_POST['stat']=='stoked')?'':" and Status='".$_POST['stat']."'";
 		$where.=($_POST['stat']=='stoked')?" and ms.Stock <>'0'":'';
 				
 		$data=$this->report_model->stock_list($where,'stock');
 		foreach($data as $r){
 			$n++;
-			echo tr().td($n,'center').
+			echo tr('xx\' ondblclick="images_click(\''.$r->ID.':'.$r->batch.'\',\'edit\');"').td($n,'center').
 					  td($r->Kode).
 					  td($r->Nama_Barang).
 					  td(rdb('inv_barang_kategori','Kategori','Kategori',"where ID='".$r->ID_Kategori."'")).

@@ -43,7 +43,7 @@ class Report extends CI_Controller
 		$where=empty($_POST['sampai_tgl'])?
 			   "where p.Tanggal='".tglToSql($_POST['dari_tgl'])."'":
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
-		$where.=" and p.ID_Jenis='".$this->input->post('jenis_beli')."' /*and p.ID_Pemasok!='0'*/";
+		$where.=" and p.ID_Jenis='".$this->input->post('jenis_beli')."' /*and p.ID_Pemasok<>'0'*/";
 		$group="group by p.Tanggal,v.Nama";
 		$data['id_jenis']=rdb('inv_pembelian_jenis','Jenis_Beli','Jenis_Beli',"Where ID='".$this->input->post('jenis_beli')."'");
 		$data['temp_rec']=$this->kasir_model->rekap_trans_beli($where,$group);
@@ -114,8 +114,8 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($this->input->post('kategori')=='')?'':" and b.ID_Kategori='".$this->input->post('kategori')."'";
 		$where.=($this->input->post('id_jenis')=='')?'':" and b.ID_Jenis='".$this->input->post('id_jenis')."'";
-		$where.=($this->input->post('jenis_beli')=='')?" and p.ID_Jenis='1'": " and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
-		$group="group by concat(dt.harga,dt.ID_Barang)";
+		$where.=($this->input->post('jenis_beli')=='')?" and p.ID_Jenis='1'": " and p.ID_Jenis<>'1'";//".$this->input->post('jenis_beli')."'";
+		$group="group by concat(dt.harga,dt.ID_Barang,p.ID_Jenis)";
 		$ordby="order by trim(b.Nama_Barang)";
 		$data['dari']		=$this->input->post('dari_tgl');
 		$data['sampai']		=($this->input->post('sampai_tgl')=='')?$this->input->post('dari_tgl'):$this->input->post('sampai_tgl');
@@ -165,7 +165,7 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($this->input->post('kategori')=='')?'':" and b.ID_Kategori='".$this->input->post('kategori')."'";
 		$where.=($this->input->post('id_jenis')=='')?'':" and p.ID_Jenis='".$this->input->post('id_jenis')."'";
-		$where.=" and p.ID_Jenis in('2','3') and Jumlah !='0'";
+		$where.=($this->input->post('id_jenis')=='')?'':" and p.ID_Jenis in('2','3') and Jumlah <>'0'";
 		$group="group by p.Tanggal,p.ID_Anggota";
 		$ordby="order by ".$this->input->post('orderby');
 		$ordby.=($this->input->post('urutan')=='')?'':" ".$this->input->post('urutan');
@@ -175,10 +175,10 @@ class Report extends CI_Controller
 		$data['Jenis']		=($this->input->post('id_jenis')=='')?'All':rdb('inv_barang_jenis','JenisBarang','JenisBarang',"where ID='".$this->input->post('id_jenis')."'");
 		$data['judul']		=rdb('inv_penjualan_jenis','Jenis_Jual','Jenis_Jual',"where ID='".$this->input->post('id_jenis')."'");
 		$tampilan= $this->input->post('show_de');
-		$data['where']=$where;
-		$data['orderby']=$ordby;
-		$data['detail']=$this->input->post('show_de');
-		$data['temp_rec']=$this->kasir_model->rekap_trans_jual2($where,$group,$ordby);
+		$data['where']		=$where;
+		$data['orderby']	=$ordby;
+		$data['detail']		=$this->input->post('show_de');
+		$data['temp_rec']	=$this->kasir_model->rekap_trans_jual2($where,$group,$ordby);
 		//$this->kasir_model->detail_trans_jual($where,$group,$ordby);
 		$data['orient']=($tampilan=='')?'P':'L';
 		$this->zetro_auth->menu_id(array('trans_beli'));
@@ -193,9 +193,9 @@ class Report extends CI_Controller
 			   "where p.Tanggal='".tglToSql($this->input->post('dari_tgl'))."'":
 			   "where p.Tanggal between '".tglToSql($this->input->post('dari_tgl'))."' and '".tglToSql($this->input->post('sampai_tgl'))."'";
 		
-		$where.=" and p.ID_Anggota='".$this->input->post('ID_Anggota')."' and a.ID_Jenis='1' and Jumlah!='0'";
+		$where.=" and p.ID_Anggota='".$this->input->post('ID_Anggota')."' and a.ID_Jenis='1' and Jumlah<>'0'";
 		$where=($this->input->post('dari_tgl')=='')?
-				"where p.ID_Anggota='".$this->input->post('ID_Anggota')."' and a.ID_Jenis='1' and Jumlah!='0'":$where;
+				"where p.ID_Anggota='".$this->input->post('ID_Anggota')."' and a.ID_Jenis='1' and Jumlah<>'0'":$where;
 		$group="group by dt.ID_Jual";
 		$orderby="order by p.Tanggal";
 		$orderby.=($this->input->post('urutan')=='')?'':' '.$this->input->post('urutan');
@@ -210,8 +210,8 @@ class Report extends CI_Controller
 		$this->View("laporan/transaksi/lap_jual_print_vendor");
 	}
 	function graph_penjualan_data(){
-		$thn=$_POST['thn'];
-		$bln=$_POST['bln'];
+		$thn=empty($_POST['thn'])?date('Y'):$_POST['thn'];
+		$bln=empty($_POST['bln'])?date('m'):$_POST['bln'];
 		echo $this->purch_model->penjualan_graph($thn,$bln);	
 	}
 	//transaksi kredit
@@ -234,8 +234,8 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($this->input->post('departemen')=='')?'':" and a.ID_Dept='".$this->input->post('departemen')."'";
 		$where.=($this->input->post('cicilan')=='')?'':" and b.Cicilan='".$this->input->post('cicilan')."'";
-		$where.=($this->input->post('jenis_beli')=='')? " and p.ID_Jenis!='1'":" and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
-		$group="group by concat(p.ID_Anggota)";
+		$where.=($this->input->post('jenis_beli')=='')? " and p.ID_Jenis<>'1'":" and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
+		$group="group by concat(p.ID_Anggota,p.ID_Jenis)";
 		$ordby="order by trim(a.Nama)";
 		$data['dari']		=$this->input->post('dari_tgl');
 		$data['sampai']		=($this->input->post('sampai_tgl')=='')?$this->input->post('dari_tgl'):$this->input->post('sampai_tgl');
@@ -266,7 +266,7 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($_POST['departemen']=='')?'':" and a.ID_Dept='".$_POST['departemen']."'";
 		$where.=($_POST['cicilan']=='')?'':" and b.Cicilan='".$_POST['cicilan']."'";
-		$where.=" and p.ID_Jenis!='1'";//.$this->input->post('jenis_beli')."'";
+		$where.=" and p.ID_Jenis<>'1'";//.$this->input->post('jenis_beli')."'";
 		$group="group by concat(p.ID_Anggota)";
 		$ordby="order by trim(a.Nama)";
 		$data=$this->kasir_model->rekap_kreditur($where,$group,$ordby);
@@ -276,12 +276,13 @@ class Report extends CI_Controller
 				 td(rdb('mst_departemen','Departemen','Departemen',"where ID='".$r->ID_Dept."'")).
 				 td($r->Cicilan,'center').
 				 td(number_format($r->Total,2),'right').
+				 td($r->Jenis_Jual).
 				 td(rdb('inv_posting_status','PostStatus','PostStatus',"where ID='".$r->ID_Post,'center'."'")).
 				 _tr();
 			$harga	=($harga+($r->Total));
 		}
 		echo tr('xx list_genap').td('<b>T O T A L </b>','right\' colspan=\'4').
-			 td('<b>'.number_format($harga,2).'</b>','right').
+			 td('<b>'.number_format($harga,2).'</b>','right').td().
 			 td('&nbsp;').
 			 _tr();
 	}
@@ -292,7 +293,7 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($this->input->post('departemen')=='')?'':" and a.ID_Dept='".$this->input->post('departemen')."'";
 		$where.=($this->input->post('cicilan')=='')?'':" and b.Cicilan='".$this->input->post('cicilan')."'";
-		$where.=" and p.ID_Jenis!='1'";//.$this->input->post('jenis_beli')."'";
+		$where.=" and p.ID_Jenis<>'1'";//.$this->input->post('jenis_beli')."'";
 		$group="group by concat(p.ID_Anggota)";
 		$ordby="order by trim(a.Nama)";
 		$data['dari']		=$this->input->post('dari_tgl');
@@ -317,7 +318,7 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=($_POST['departemen']=='')?'':" and a.ID_Dept='".$_POST['departemen']."'";
 		//$where.=($this->input->post('cicilan')=='')?'':" and b.Cicilan='".$this->input->post('cicilan')."'";
-		$where.=" and p.ID_Jenis!='1' and p.ID_Post='0'";//.$this->input->post('jenis_beli')."'";
+		$where.=" and p.ID_Jenis<>'1' and p.ID_Post='0'";//.$this->input->post('jenis_beli')."'";
 		$group="group by concat(p.ID_Anggota)";
 		$ordby="order by trim(a.Nama)";
 		$ID_Jurnal=rdb('jurnal','ID','ID',"where Nomor='".$_POST['id_jurnal']."'");

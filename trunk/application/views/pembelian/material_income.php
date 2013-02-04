@@ -12,6 +12,7 @@ link_js('material_income.js,jquery_terbilang.js',$path.'/js,asset/js');
 panel_begin('Pembelian');
 panel_multi('inputpembelian','none',false);
 if($c_pembelian__index!=''){
+	addText(array('',''),array('<input type="button" id="baru" value="Baru">','<input type="button" id="tambah" value="Edit/Tambah">'));
 	$zfm->AddBarisKosong(false);
 	$zfm->Start_form(true,'frm1');
 	$zfm->BuildForm('pembelian',false,'60%');
@@ -32,6 +33,8 @@ if($c_pembelian__index!=''){
 panel_multi_end();
 panel_multi('listpembelian','block',false);
 if($all_pembelian__list_beli!=''){
+($c_pembelian__index!='')?
+addText(array("<input type='button' id='addNew' value='Input Pembelian'>"),array('')):'';
 addText(array('Periode Dari','Sampai',''),
 		array("<input type='text' id='dari_tanggal' value='' class='w100'>",
 			  "<input type='text' id='smp_tanggal' value='' class='w100'>",

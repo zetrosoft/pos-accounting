@@ -43,7 +43,7 @@ $(document).ready(function(e) {
 			}
 		})
 	$('#view').click(function(){
-		show_indicator('ListTable',6);
+		show_indicator('ListTable',76);
 			$.post('lap_tagihan_print',{
 				'dari_tgl'	:$('#dari_tgl').val(),
 				'sampai_tgl':$('#sampai_tgl').val(),
@@ -61,6 +61,7 @@ $(document).ready(function(e) {
 	
 	$('#posting').click(function(){
 		var today =new Date();
+		$('table#xx').show();
 		if(confirm('Periode posting di setting \nDari        :'+$('#dari_tgl').val()+'\nSampai :'+$('#sampai_tgl').val()+'\nYakin akan diposting')){
 		  show_indicator('xx',1);
 		  $('table#xx tbody tr td').append('...membuat nomor jurnal');
@@ -86,6 +87,7 @@ $(document).ready(function(e) {
 							$('table#xx tbody tr td').html('posting berhasil');
 							$('#view').click();
 							$('table#xx tbody tr td').html('');
+							$('table#xx').hide();
 						})
 				})
 			})

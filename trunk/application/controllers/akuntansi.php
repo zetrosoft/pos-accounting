@@ -370,9 +370,9 @@ class Akuntansi extends CI_Controller{
 	 $filter	=empty($_POST['filter'])?'':$_POST['filter'];
 	 $daritgl	=empty($_POST['daritgl'])?'':tgltoSql($_POST['daritgl']);
 	 $smptgl	=empty($_POST['smptgl'])?'':tgltoSql($_POST['smptgl']);
-	 $bln		=$_POST['Bln'];
-	 $thn		=$_POST['Thn'];
-	 $unit		=$_POST['ID_Unit'];
+	 $bln		=($_POST['Bln']=='null')?date('m'):$_POST['Bln'];
+	 $thn		=($_POST['Thn']=='null')?date('Y'):$_POST['Thn'];
+	 $unit		=empty($_POST['ID_Unit'])?'all':$_POST['ID_Unit'];
 	 switch($filter){ //pilih filter yang aktif
 		case 'all':
 		($unit=='all')? $where='':$where ="where j.ID_Unit='$unit'";
@@ -403,10 +403,15 @@ class Akuntansi extends CI_Controller{
 				  <td class='kotak' align='right'>".number_format($row->Kredit,2)."</td>
 				  <td class='kotak' align='right'>". number_format(($row->Debet-$row->Kredit),2)."</td>
 				  <td class='kotak' align='center'>";
-				  echo ($auth_e!='')?
-				  ($row->Debet==0 || $row->Kredit==0)?
-				  img_aksi($row->ID.'-'.substr($row->Tanggal,0,4),true):img_aksi($row->ID.'-'.substr($row->Tanggal,0,4)):
-				  img_aksi($row->ID.'-'.substr($row->Tanggal,0,4),true,'del');
+				  if ($auth_e!=''){  //($row->Debet==0 || $row->Kredit==0)?
+					  if($row->isi!=0){
+						echo  img_aksi($row->ID.'-'.substr($row->Tanggal,0,4));
+					  }else{
+						echo  img_aksi($row->ID.'-'.substr($row->Tanggal,0,4),true);
+					  }
+				  }
+				   /*:img_aksi($row->ID.'-'.substr($row->Tanggal,0,4)):
+				  img_aksi($row->ID.'-'.substr($row->Tanggal,0,4),true,'del');*/
 			echo "</td></tr>\n";
 		 }
 	 }else{

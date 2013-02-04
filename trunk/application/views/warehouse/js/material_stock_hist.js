@@ -33,10 +33,20 @@ $(document).ready(function(e) {
 	}
 		document.frm1.submit();
 	})
+	var cb=$('#c_by').val()
+	$('#c_by').change(function(){
+		if($(this).val()=='barang'){
+			$('#carideh').css('display','none')
+			$('#carilah').css('display','')
+		}else{
+			$('#carilah').css('display','none');
+			$('#carideh').css('display','block')
+		}
+	})
 	
-	$('#carilah')
+	$('#carideh')
 		.coolautosuggest({
-			url		:path+'pembelian/get_pemasok?limit=10&str=',
+			url		: path+'pembelian/get_pemasok?limit=10&str=',
 			width	:350,
 			showDescription	:true,
 			onSelected		:function(result){
@@ -55,7 +65,34 @@ $(document).ready(function(e) {
 		.focus(function(){
 			$(this).select();
 		})
+	$('#carilah')
+		.coolautosuggest({
+			url		: path+'inventory/data_material?fld=Nama_Barang&limit=8&str=',
+			width	:350,
+			showDescription	:true,
+			onSelected		:function(result){
+				$('#id_barang').val(result.id_barang);
+				$('#filter').val('ID').select();
+				unlock(':button')
+			}
+		})
+		.focusout(function(){
+		})
+		.keypress(function(e){
+			if(e.which==13){
+				$(this).focusout();
+			}
+		})
+		.focus(function(){
+			$(this).select();
+		})
+	$('#Kategori').change(function(){
+		$('#carilah').val('');
+		$('#id_pemasok').val('')
+		$('#id_barang').val('')
+	})
 })
+
 
 function _show_data(){
 	show_indicator('stoked',8);
@@ -65,10 +102,11 @@ function _show_data(){
 			'dari_tgl'	:$('#dari_tgl').val(),
 			'sampai_tgl':$('#sampai_tgl').val(),
 			'filter'	:$('#filter').val(),
-			'kategori'	:$('#Kategori').val()
+			'kategori'	:$('#Kategori').val(),
+			'id_barang'	:$('#id_barang').val()
 		},function(result){
 			$('table#stoked tbody').html(result)
-			$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-335)})
+			$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-350)})
 		})
 	}else{
 		$.post('get_pemasok_his',{
@@ -79,7 +117,7 @@ function _show_data(){
 			'pemasok'	:$('#id_pemasok').val()
 		},function(result){
 			$('table#stoked tbody').html(result)
-			$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-335)})
+			$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-350)})
 		})
 	}
 }

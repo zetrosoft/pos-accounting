@@ -65,13 +65,23 @@ $(document).ready(function(e) {
 			var h=$('#frm1 #Harga_Beli').val()
 			$('#Total').val(parseFloat(j)*parseFloat(h))
 		})
+	//tambah rusak
+	$('#addnew').click(function(){
+			$('table#panel tr td#addbarangrusak').click()
+	})
+	$('#addnewmutasi').click(function(){
+			$('table#panel tr td#addpemakaian').click()
+	})
 	//simpan pemakaian
 	$('#frm1 #saved-pemakaian').click(function(){
 		_simpan_data('1');
+			$('table#panel tr td#listpemakaian').click()
+
 		$('#frm1 #batal').click()
 	})
 	$('#frm1 #saved-rusak').click(function(){
 		_simpan_data('2');
+		$('table#panel tr td#listbarangrusak').click()
 		$('#frm1 #batal').click();
 	})
 	$('#okelah').click(function(){
@@ -119,6 +129,7 @@ function _simpan_data(id){
 			'id_jenis'	:id
 		},function(result){
 			_update_stock('1',0,'1')
+			//_show_data();
 		})
 }
 function _show_data(id){

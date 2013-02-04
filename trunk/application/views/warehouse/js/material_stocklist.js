@@ -37,6 +37,7 @@ $(document).ready(function(e) {
 		$('#frm1').attr('action','print_stock');
 		document.frm1.submit();
 	})
+	$('#okelah').click()
 })
 
 function _show_data(){
@@ -45,7 +46,7 @@ function _show_data(){
 		'kategori'	: $('#Kategori').val(),
 		'stat'		:$('#Stat').val()},
 	function(result){
-		$('table#stoked tbody').html(result);
+		$('table#stoked tbody').html(result).show();
 		$('table#stoked').fixedHeader({width:(screen.width-30),height:(screen.height-335)})
 	})
 }

@@ -282,7 +282,7 @@ class Inventory extends CI_Controller {
 		foreach($data as $r){
 			$n++;$stock=0;
 			//$stock=rdb('inv_material_stok','stock','sum(stock) as stock',"where id_barang='".$r->ID."'");
-			echo tr('xx','nm-'.$r->ID).td($n,'center').td($r->Kategori,'kotak\' nowrap=\'nowrap' ).td($r->JenisBarang). td(strtoupper($r->Kode)).
+			echo tr('xx','nm-'.$r->ID.'\' ondblclick="upd_barang(\''.$r->ID.'\');"').td($n,'center').td($r->Kategori,'kotak\' nowrap=\'nowrap' ).td($r->JenisBarang). td(strtoupper($r->Kode)).
 				 td(strtoupper($r->Nama_Barang)).td($r->Satuan).
 				 td(number_format($r->stock,2),'right').
 				 td(number_format($r->Harga_Beli,2),'right').

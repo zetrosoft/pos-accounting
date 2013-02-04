@@ -26,6 +26,8 @@ if($all_addpemakaian!=''){
 panel_multi_end();
 panel_multi('listpemakaian','block',false);
 if($all_listpemakaian!=''){
+	($c_addpemakaian!='')?
+	addText(array("<input type='button' id='addnewmutasi' value='Tambah'>"),array('')):'';
 	echo "<form id='frm3' name='frm3' method='post' action=''>";
 	addText(array('Periode','s/d','',''),
 			array("<input type='text' id='dari_tgl' name='dari_tgl' value=''/>",

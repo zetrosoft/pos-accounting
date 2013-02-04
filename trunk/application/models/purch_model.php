@@ -96,7 +96,7 @@ class Purch_model extends CI_Model {
 			fwrite($xml,"<dataset seriesName='".$rw1->Jenis_Jual."' color='".$color[$rw1->ID]."'>\r\n");
 			for($x=1;$x<=$t_days;$x++){
 				$ii=(strlen($x)==1)?"0".$x:$x;
-				$val=rdb('inv_penjualan','Total',"sum(Total) as Total","where ID_Jenis='".$rw1->ID."' and Tanggal='".$thn.$bln.$ii."' order by Tanggal");	
+				$val=rdb('inv_penjualan','Total',"sum(Total) as Total","where ID_Jenis='".$rw1->ID."' and Tanggal='".$thn."-".$bln."-".$ii."' order by Tanggal");	
 				$val=($val=='')?0:$val;
 				fwrite($xml,"<set name='".$ii."'  value='".$val."'/>\r\n");
 			$ii='';

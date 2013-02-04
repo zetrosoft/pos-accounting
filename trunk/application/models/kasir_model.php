@@ -29,7 +29,8 @@ class Kasir_model extends CI_Model {
 		return $data->result();
 	}
 	function rekap_trans_jual($where,$group='',$order='order by p.Tanggal'){
-		$sql="select p.ID,b.Kode,b.Nama_Barang,dt.ID_Barang,sum(Jumlah) as Jumlah,dt.Harga,s.Satuan,p.ID_Post
+		$sql="select p.ID,b.Kode,b.Nama_Barang,dt.ID_Barang,sum(Jumlah) as Jumlah,
+			 dt.Harga,s.Satuan,p.ID_Post,p.ID_Jenis
 		     from inv_penjualan as p
 		     left join inv_penjualan_detail as dt
 			 on dt.ID_Jual=p.ID
@@ -59,7 +60,8 @@ class Kasir_model extends CI_Model {
 	}
 	function rekap_kreditur($where,$group='',$order=''){
 		$sql="select p.ID,p.ID_Anggota,a.Nama,a.ID_Dept,dt.ID_Barang,sum(Jumlah),dt.Harga,
-			 sum(Jumlah*harga) as Total,p.Cicilan,p.ID_Post,p.ID_Jenis,p.Deskripsi,p.Nomor
+			 sum(Jumlah*harga) as Total,p.Cicilan,p.ID_Post,p.ID_Jenis,p.Deskripsi,p.Nomor,
+			 j.Jenis_Jual
 			 from inv_penjualan as p
 		     left join inv_penjualan_detail as dt
 			 on dt.ID_Jual=p.ID
@@ -67,6 +69,8 @@ class Kasir_model extends CI_Model {
 			 on b.ID=dt.ID_Barang
 			 left join mst_anggota as a
 			 on a.ID=p.ID_Anggota
+			 left join inv_penjualan_jenis as j
+			 on j.ID=p.ID_Jenis
 			 $where $group $order";
 		//echo $sql;
 		$data=$this->db->query($sql);
@@ -75,7 +79,7 @@ class Kasir_model extends CI_Model {
 	function detail_trans_jual($where,$group='',$order='order by p.Tanggal'){
 		$sql="select dt.ID_Jual,p.Tanggal,dt.ID_Barang,b.Kode,dt.Jumlah,dt.Harga,b.Nama_Barang,s.Satuan,
 			 a.Nama,p.Nomor,j.Jenis_Jual,a.Catatan,a.Alamat,a.Kota,p.Tgl_Cicilan,p.ID_Post,
-			 p.Deskripsi,p.ID_Anggota,p.ID_Jenis,p.NoUrut,p.Tahun
+			 p.Deskripsi,p.ID_Anggota,p.ID_Jenis,p.NoUrut,p.Tahun,p.ID_Jenis
 			 from inv_penjualan as p
 		     left join inv_penjualan_detail as dt
 			 on dt.ID_Jual=p.ID

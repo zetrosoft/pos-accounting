@@ -11,6 +11,14 @@ $(document).ready(function(e) {
 	$('#print').click(function(){
 		alert ('application not support');
 	})
+  //pembelian baru
+  $('#baru').click(function(){
+	 document.frm1.reset();
+	_generate_nomor('GR','#frm1 input#no_transaksi');
+	$('#no_transaksi').attr('readonly','readonly');
+	tglNow('#tgl_transaksi');  
+	$('#cara_bayar').val('1').select();
+  })
 });
 
 function _show_data(){
@@ -21,7 +29,7 @@ function _show_data(){
 	},function(result){
 		$('#print').removeAttr('disabled');
 		$('table#newTable tbody').html(result);
-		$('table#newTable').fixedHeader({width:(screen.width-30),height:(screen.height-320)});
+		$('table#newTable').fixedHeader({width:(screen.width-50),height:(screen.height-350)});
 	})
 		
 }

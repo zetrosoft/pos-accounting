@@ -54,12 +54,12 @@
 							$x++;
 							$a->Row(array('',$x,$rr2->Kode,
 										  ucwords($rr2->Nama_Barang),
-										  number_format($rr2->Jumlah,2),
+										  ($r2->ID_Jenis=='3')?'-'.number_format($rr2->Jumlah,2):number_format($rr2->Jumlah,2),
 										  $r2->Satuan,
 										  number_format(($rr2->Harga),2),
-										  number_format(($rr2->Harga*$rr2->Jumlah),2)
+										  ($r2->ID_Jenis=='3')?'-'.number_format(($rr2->Harga*$rr2->Jumlah),2):number_format(($rr2->Harga*$rr2->Jumlah),2)
 										  )) ;
-						$hgb= ($r2->ID_Jenis=='5')?($hgb-($rr2->Harga*$rr2->Jumlah)):($hgb+($rr2->Harga*$rr2->Jumlah));
+						$hgb= ($r2->ID_Jenis=='5' || $r2->ID_Jenis=='3')?($hgb-($rr2->Harga*$rr2->Jumlah)):($hgb+($rr2->Harga*$rr2->Jumlah));
 						}
 				}
 			//sub tlot

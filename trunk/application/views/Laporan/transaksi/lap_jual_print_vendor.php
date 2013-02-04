@@ -59,7 +59,7 @@
 			  $a->SetFillColor(242,239,219);
 			  $a->Cell(165,8,"Sub Total",1,0,'R',true);
 			  $a->Cell(28,8,number_format(($harga-$corting),2),1,1,'R',true);
-			  $hgb=($hgb+($harga-$corting));
+			  $hgb=($r->ID_Jenis==3)?($hgb-($harga-$corting)):($hgb+($harga-$corting));
 		  }
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFillColor(225,225,225);

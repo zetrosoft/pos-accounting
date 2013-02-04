@@ -15,9 +15,9 @@
 		  $a->SetFont('Arial','',10);
 		  //echo $a->getColWidth();
 		  // set lebar tiap kolom tabel transaksi
-		  $a->SetWidths(array(10,65,55,15,25,20));
+		  $a->SetWidths(array(10,60,55,10,22,15,15));
 		  // set align tiap kolom tabel transaksi
-		  $a->SetAligns(array("C","L","L","C","R","L"));
+		  $a->SetAligns(array("C","L","L","C","R","C","C"));
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFont('Arial','',9);
 		  //$rec = $temp_rec->result();
@@ -26,17 +26,17 @@
 		  {
 			$n++;
 			$a->Row(array($n,$r->Nama,rdb('mst_departemen','Departemen','Departemen',"where ID='".$r->ID_Dept."'"),
-						  $r->Cicilan,number_format(($r->Total),2),
-						  ($r->ID_Post==1)?'Posting':'none'
+						  $r->Cicilan,($r->ID_Jenis=='3')?'-'.number_format(($r->Total),2):number_format(($r->Total),2),
+						  $r->Jenis_Jual,($r->ID_Post==1)?'Y':'N'
 						  ));
 			//sub tlot
-			$harga	=($harga+($r->Total));
+			$harga	=($r->ID_Jenis==3)?($harga-($r->Total)):($harga+($r->Total));
 		  }
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFillColor(225,225,225);
-		  $a->Cell(145,8,"TOTAL",1,0,'R',true);
-		  $a->Cell(25,8,number_format($harga,2),1,0,'R',true);
-		  $a->Cell(20,8,'',1,1,'R',true);
+		  $a->Cell(135,8,"TOTAL",1,0,'R',true);
+		  $a->Cell(22,8,number_format($harga,2),1,0,'R',true);
+		  $a->Cell(30,8,'',1,1,'R',true);
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_rekap_penjualan.pdf','F');
 
 //show pdf output in frame

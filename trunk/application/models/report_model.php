@@ -24,7 +24,7 @@ class Report_model extends CI_Model {
 			 	left join inv_material as im
 				on im.nm_barang=dt.nm_barang
 				$where";
-		echo $sql;
+		//echo $sql;
 		
 		return ($rpt=='No')?$sql:$this->db->query($sql);
 	}

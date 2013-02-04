@@ -26,6 +26,8 @@ if($all_addbarangrusak!=''){
 panel_multi_end();
 panel_multi('listbarangrusak','block',false);
 if($all_listbarangrusak!=''){
+	($c_addbarangrusak!='')?
+	addText(array("<input type='button' id='addnew' value='Tambah'>"),array('')):'';
 	echo "<form id='frm3' name='frm3' method='post' action=''>";
 	addText(array('Periode','s/d','',''),
 			array("<input type='text' id='dari_tgl' name='dari_tgl' value=''/>",

@@ -549,11 +549,7 @@ class Penjualan extends CI_Controller{
 		}
 		$cek=chunk_split($text,'36','<br>');
 		return $cek;
-/*		$nx=explode($cek,'-');
-		for ($i==0;$i<count($nx);$i++){
-			return $nx[$i].newline();	
-		}
-*/	}
+	}
 	function re_print(){
 		system("print c:\\app\\".$this->session->userdata('userid')."_slip.txt");
 		system("close");

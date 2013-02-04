@@ -33,7 +33,7 @@ addText(array('Filter By',"<span id='fltby'></span>",'Unit','',''),
 			   <option value='2'>USP</option>
 			   </select>",
 			   "<input type='button' id='process' value='OK'>",
-			   "<input type='button' class='' style='display:$oto_p' value='Cetak' id='cetak' title='Klik untuk print'>",
+			   "<input type='button' class='' style='display:' value='Cetak' id='cetak' title='Klik untuk print'>",
 			   ));
 echo "</form>";			   
 		$zlb->section('jurnal');

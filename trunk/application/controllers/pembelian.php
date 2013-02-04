@@ -93,10 +93,11 @@ class Pembelian extends CI_Controller{
 	}
 	/*simpan data detail transaksi*/
 	function set_detail_pembelian(){
-		$data=array();$rcord=0;$tot_bel=0;$find_batch='';
+		$data=array();$rcord=0;$tot_bel=0;$find_batch='';$count_batch=0;
 		$id_beli=rdb('inv_pembelian','ID','ID',"where NoUrut='".$_POST['no_trans']."' and Tanggal='".tgltoSql($_POST['tanggal'])."'");
 		$id_barang=rdb('inv_barang','ID','ID',"where Nama_Barang='".$_POST['nm_barang']."'");
 		$find_batch=rdb('inv_material_stok','batch','batch',"where id_barang='".$id_barang."' and harga_beli='".$_POST['harga_beli']."'");
+		$count_batch=rdb('inv_material_stok','batch','count(batch) as batch',"where id_barang='".$id_barang."' and harga_beli='".$_POST['harga_beli']."'");
 		$tot_bel=rdb('inv_pembelian','ID_Bayar','ID_Bayar',"where NoUrut='".$_POST['no_trans']."' and Tanggal='".tgltoSql($_POST['tanggal'])."'");
 		$data['tanggal']	=tgltoSql($_POST['tanggal']);
 		$data['id_beli']	=$id_beli;
@@ -105,11 +106,15 @@ class Pembelian extends CI_Controller{
 		$data['Jumlah']		=$_POST['jumlah'];
 		$data['Harga_Beli']	=$_POST['harga_beli'];
 		$data['ID_Satuan']	=$_POST['id_satuan'];
-		$data['batch']		=($find_batch=='' || $find_batch==NULL)?date('yz').'-'.rand(0,9):$find_batch;
+		$data['batch']		=($find_batch=='' || $find_batch==NULL)?date('yzdm').'-'.($count_batch+1):$find_batch;
 		$data['Keterangan']	=$_POST['keterangan'];
 		$data['Bulan']		=substr($_POST['tanggal'],3,2);	
 		$data['Tahun']		=substr($_POST['tanggal'],6,4);	
+		$harga_jual			=empty($_POST['harga_jual'])?'0':$_POST['harga_jual'];
 		$this->Admin_model->replace_data('inv_pembelian_detail',$data);
+		//update harga jual
+		$this->Admin_model->upd_data('inv_barang',"set harga_jual='".$harga_jual."'","where Nama_Barang='".$_POST['nm_barang']."'");
+		//update total pembelian
 		$this->Admin_model->upd_data('inv_pembelian',"set ID_Bayar='".($tot_bel+$_POST['keterangan'])."'","where NoUrut='".$_POST['no_trans']."' and Tanggal='".tgltoSql($_POST['tanggal'])."'");
 		echo rdb('inv_pembelian_detail','ID','ID',"order by ID desc limit 1");
 	}
@@ -161,12 +166,13 @@ class Pembelian extends CI_Controller{
 			$data=$this->Admin_model->show_list('inv_pembelian_detail',"where ID_Beli='$id_beli' order by ID");
 			foreach ($data as $r){
 				$n++;
+				$harga_jual=rdb('Inv_barang','harga_jual','harga_jual',"where ID='".$r->ID_Barang."'");
 				echo tr().td($n,'center').
-						  td(rdb('inv_barang','Kode','Kode',"where ID='".$r->ID_Barang."'")).
 						  td(rdb('inv_barang','Nama_Barang','Nama_Barang',"where ID='".$r->ID_Barang."'")).
 						  td(rdb('inv_barang_satuan','Satuan','Satuan',"where ID='".$r->ID_Satuan."'")).
 						  td(number_format($r->Jml_Faktur,2),'right').
 						  td(number_format($r->Harga_Beli,2),'right').
+						  td(number_format($harga_jual,2),'right').
 						  td(number_format(($r->Jml_Faktur*$r->Harga_Beli),2),'right').
 						  td("<img src='".base_url()."asset/images/no.png' title='Hapus transaksi' onclick=\"image_click('".$r->ID."','del');\">","center").
 					 _tr();

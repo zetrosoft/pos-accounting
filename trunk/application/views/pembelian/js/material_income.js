@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function(e) {
 	var path=$('#path').val();
-	$('#frm2').hide();
+	//$('#frm2').hide();
 	$('#dt-1').hide();
 	if($('#trans_new').val()==''){
 		_generate_nomor('GR','#frm1 input#no_transaksi');
@@ -36,7 +36,7 @@ $(document).ready(function(e) {
 			}
 	});
 	tabField(); //fungsi ganti ke focus ke field berikutnya jika tombol enter di tekan
-	
+	_show_list();
 	//show data pembelian dengan no_transaksi yang tampil
 	
 	//pemasok auto suggest
@@ -133,6 +133,23 @@ $(document).ready(function(e) {
 		.focusout(function(){
 			$('#terbilang').hide();
 		})
+	$('#1__harga_jual')
+		.focus().select()
+		.keyup(function(){
+			terbilang(this)
+		})
+		.focusout(function(){
+			$('#terbilang').hide();
+		})
+		
+	$('#1__ket_transaksi')
+		.keypress(function(e){
+			if(e.which==13)
+			{
+				//_simpan_header_pembelian();
+			}
+			
+		})
 	$('img').click(function(){
 		var id=$(this).attr('id');
 		var cl=$(this).attr('class');
@@ -141,6 +158,9 @@ $(document).ready(function(e) {
 			
 			break;	
 		}
+	})
+	$('#addNew').click(function(){
+		$('table#panel tr td#inputpembelian').click()
 	})
 })
 /* jumlah total harga beli
@@ -207,6 +227,7 @@ function _simpan_detail_pembelian(){
 		'id_satuan'	:$('#frm2 #1__nm_satuan').val(),
 		'jumlah'	:$('#frm2 #1__jml_transaksi').val(),
 		'harga_beli':$('#frm2 #1__harga_beli').val(),
+		'harga_jual':$('#frm2 #1__harga_jual').val(),
 		'keterangan':$('#frm2 #1__ket_transaksi').val()
 	},function(result){
 		$.post('get_detail_trans',{'id':$.trim(result)},

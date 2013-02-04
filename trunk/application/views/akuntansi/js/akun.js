@@ -15,6 +15,9 @@ $(document).ready(function(e) {
 					$('#frm1 :reset').click();
 				}
 	})
+	$('#addnew').click(function(){
+		$('table#panel tr td#addperkiraan').click();
+	})
 	unlock('select')
 	_show_data(''); //generate data klasifikasi
 	$('#klas').html("<option value=''>Semua</option>");
@@ -45,7 +48,7 @@ $(document).ready(function(e) {
 	$('#frm2 :reset').click(function(){
 		keluar_akun();
 	})
-	$('#frm1 :reset').click(function(){
+	$('#frm1 button:reset').click(function(){
 		$('#frm1 #addData').html('');
 	})
 	//form add perkiraan
@@ -121,7 +124,8 @@ $(document).ready(function(e) {
 		},function(result){
 			if($.trim(result)=='1'){
 				$('#frm1 :reset').click();
-				
+				$('table#panel tr td#perkiraan').click();
+				$('#result').html('Data berhasil disimpan').show().fadeOut(5000)
 			}
 		})
 	})
@@ -150,6 +154,7 @@ $(document).ready(function(e) {
 		},function(result){
 			if($.trim(result)=='1'){
 				$('#frm2 :reset').click();
+				$('#result').html('Data berhasil diupdate').show().fadeOut(5000)
 			}
 		})
 	})

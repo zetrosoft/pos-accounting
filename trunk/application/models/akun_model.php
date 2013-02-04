@@ -102,13 +102,14 @@ class Akun_model extends CI_Model {
 				$where
 				group by ID_Jurnal";
 */		$sql="select j.ID,j.Tanggal,j.ID_Unit,j.Nomor,j.Keterangan as Ket/*,j.Keterangan*/,
-				sum(t.Debet) as Debet, sum(t.Kredit) as Kredit,t.ID_Perkiraan,t.ID_Jurnal
+				sum(t.Debet) as Debet, sum(t.Kredit) as Kredit,t.ID_Perkiraan,t.ID_Jurnal,
+				count(t.ID) as isi
 				from transaksi as t
-				left join jurnal as j
+				right join jurnal as j
 				on j.ID=t.ID_Jurnal
 				$where
 				group by j.ID";
-		///echo $sql;
+		//echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}

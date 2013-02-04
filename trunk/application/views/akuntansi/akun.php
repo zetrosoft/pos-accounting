@@ -19,6 +19,7 @@ panel_multi_end();
 panel_multi('perkiraan','block',false);
 if($all_perkiraan!=''){
 $klas='';
+($c_addperkiraan!='')?addText(array("<input type='button' id='addnew' value='Tambah Perkiraan'>"),array('')):'';
 addText(array('Klasifikasi','Sub Klasifikasi','Unit'),
 		array("<select id='klas' class='S00'></select>",
 			  "<select id='subklas'></select>",
@@ -33,7 +34,7 @@ addText(array('Klasifikasi','Sub Klasifikasi','Unit'),
 }
 panel_multi_end();
 panel_end();
-popup_start('akun','Edit Perkiraan','700');
+popup_start('akun','Edit Perkiraan','600');
 if($e_perkiraan!=''){
 	$zfm->AddBarisKosong(true,'b');
 	$zfm->Start_form(true,'frm2');

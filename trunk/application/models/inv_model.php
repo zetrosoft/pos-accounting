@@ -108,7 +108,7 @@ class Inv_model extends CI_Model {
 	function get_nm_material($str,$limit,$fld,$dest=''){
 		$data=array();
 		$where=($dest=='')?'':$dest;
-		$sql="select * from inv_barang where $fld like '".$str."%' $where order by nama_barang limit $limit";	
+		$sql="select * from inv_barang where $fld like '".$str."%' or kode ='".$str."' $where order by nama_barang limit $limit";	
 		//echo $sql;
 		($dest=='')?$dest='Nama_Barang':$dest=$dest;
 		$rw= mysql_query($sql) or die(mysql_error());

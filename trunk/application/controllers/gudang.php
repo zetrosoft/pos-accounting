@@ -46,7 +46,7 @@ class Gudang extends CI_Controller {
 	function list_barang(){
 		//tampilkan view list barang
 		//$this->inv_model->auto_data();
-		$this->zetro_auth->menu_id(array('gudang__list_barang'));
+		$this->zetro_auth->menu_id(array('gudang__list_barang','tambahbarang'));
 		$this->list_data($this->zetro_auth->auth());
 		$this->View('inventory/material_list');
 	}
@@ -228,11 +228,14 @@ class Gudang extends CI_Controller {
 	//stock history
 	function get_stock_his(){
 		$data=array();$n=0;$where='';
-		$where=empty($_POST['sampai_tgl'])?"where Tanggal  between '". tglToSql($_POST['dari_tgl'])."' and '". tglToSql($_POST['dari_tgl'])."'":
-				"where Tanggal  between '". tglToSql($_POST['dari_tgl'])."' and '". tglToSql($_POST['sampai_tgl'])."'";
+		//$where=empty($_POST['sampai_tgl'])?"where Tanggal  between '". tglToSql($_POST['dari_tgl'])."' and '". tglToSql($_POST['dari_tgl'])."'":
+	//			"where Tanggal  between '". tglToSql($_POST['dari_tgl'])."' and '". tglToSql($_POST['sampai_tgl'])."'";
 		$filter=" group by ".$_POST['filter'];
 		$kategori=empty($_POST['kategori'])?'':"where ID_Kategori='".$_POST['kategori']."'";
-		$data=$this->Admin_model->show_list('inv_barang',$kategori.' order by Nama_Barang');
+		$kategori.=empty($_POST['id_barang'])?'':" and ID='".$_POST['id_barang']."'";
+		$where =empty($_POST['kategori'])?str_replace('and ','where ',$kategori):$kategori;
+		$data=$this->Admin_model->show_list('inv_barang',$where.' order by Nama_Barang');
+		echo $where;
 		foreach($data as $r){
 			$n++;$stokAwalT=0;$stokAwalO=0;
 			$masuk=0;$keluar=0;

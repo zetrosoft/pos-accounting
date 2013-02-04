@@ -167,7 +167,7 @@ $(document).ready(function(e) {
 					function(result){
 						$('#v_listbarang table#ListTable tbody').html(result);
 						$('#bawahan').html("<b>&bull;&bull;&bull; Total record :"+$('#v_listbarang table#ListTable tbody tr').length+"");
-						$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-345)});
+						$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-385)});
 						$('#bawahan').show();
 					})
 				})
@@ -333,7 +333,7 @@ $(document).ready(function(e) {
 	
 	//click filter by
 	$('#plh').change(function(){
-		show_indicator('ListTable','10');
+		show_indicator('ListTable',11);
 		$('plh_cari').val('')
 		$.post(path+'inventory/show_list',{
 			'id'		:$(this).val(),
@@ -344,12 +344,12 @@ $(document).ready(function(e) {
 		function(result){
 			$('#v_listbarang table#ListTable tbody').html(result);
 			$('#bawahan').html("<b>&bull;&bull;&bull; Total record :"+$('#v_listbarang table#ListTable tbody tr').length+"");
-			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-345)});
+			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-385)});
 			$('#bawahan').show();
 		})
 	})
 	$('#plh_jenis').change(function(){
-		show_indicator('ListTable','10');
+		show_indicator('ListTable',11);
 		$('plh_cari').val('')
 		$.post(path+'inventory/show_list',{
 			'id'		:$('#plh').val(),
@@ -360,12 +360,12 @@ $(document).ready(function(e) {
 		function(result){
 			$('#v_listbarang table#ListTable tbody').html(result);
 			$('#bawahan').html("<b>&bull;&bull;&bull; Total record :"+$('#v_listbarang table#ListTable tbody tr').length+"");
-			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-355)});
+			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-385)});
 			$('#bawahan').show();
 		})
 	})
 	$('#plh_stat').change(function(){
-		show_indicator('ListTable','10');
+		show_indicator('ListTable',11);
 		$.post(path+'inventory/show_list',{
 			'id'		:$('#plh').val(),
 			'id_jenis'	:$('#plh_jenis').val(),
@@ -375,14 +375,14 @@ $(document).ready(function(e) {
 		function(result){
 			$('#v_listbarang table#ListTable tbody').html(result);
 			$('#bawahan').html("<b>&bull;&bull;&bull; Total record :"+$('#v_listbarang table#ListTable tbody tr').length+"");
-			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-355)});
+			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-385)});
 			$('#bawahan').show();
 		})
 	})
 	$('#plh_cari')
 	.keyup(function(){
 		if($(this).val().length >2){
-			show_indicator('ListTable','10');
+			show_indicator('ListTable',11);
 			$.post(path+'inventory/show_list',{
 				'id'		:$('#plh').val(),
 				'id_jenis'	:$('#plh_jenis').val(),
@@ -392,7 +392,7 @@ $(document).ready(function(e) {
 			function(result){
 				$('#v_listbarang table#ListTable tbody').html(result);
 				$('#bawahan').html("<b>&bull;&bull;&bull; Total record :"+$('#v_listbarang table#ListTable tbody tr').length+"");
-				$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-355)});
+				$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-385)});
 				$('#bawahan').show();
 			})
 		}
@@ -440,6 +440,11 @@ $(document).ready(function(e) {
 		$('#frm9 #stoklimit')
 			.focusout(function(){$(':button').focus()})
 			.keypress(function(e){if(e.which==13){$(this).focusout();}})
+	//addnew button click
+	$('#addnew').click(function(){
+		document.location.href=''+path+'gudang/index'
+	})
+	
 });
 
  //update data_material dari daftar barang
@@ -586,7 +591,7 @@ function on_clicked(id,fld,frm){
 
 function _show_first(id){
 	var path=$('#path').val()
-		show_indicator('ListTable','10');
+		show_indicator('ListTable',11);
 		$('plh_cari').val('')
 		$.post(path+'inventory/show_list',{
 			'id'		:id,
@@ -597,7 +602,8 @@ function _show_first(id){
 		function(result){
 			$('#v_listbarang table#ListTable tbody').html(result);
 			$('#bawahan').html("<b>&bull;&bull;&bull; Total record :"+$('#v_listbarang table#ListTable tbody tr').length+"");
-			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-345)});
+			$('#v_listbarang table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-385)});
 			$('#bawahan').show();
 		})
 }
+

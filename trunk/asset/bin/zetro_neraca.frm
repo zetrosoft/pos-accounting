@@ -23,11 +23,12 @@
 6|Total Harga,,,,,,15%,,,25
 
 [rekapjualkredit]
-1|Nama Anggota,,,,,,20%,,,65
+1|Nama Anggota,,,,,,20%,,,60
 2|Departemen,,,,,,15%,,,55
-3|Cicilan,,,,,,5%,,,15
-4|Total,,,,,,15%,,,25
-5|Status,,,,,,10%,,,20
+3|Ccl,,,,,,5%,,,10
+4|Total,,,,,,15%,,,22
+5|Status,,,,,,10%,,,15
+6|Posting,,,,,,10%,,,15
 
 [stocklist]
 1|Kode Barang,input,text n,Kode,w50,,15%,,,28,

@@ -12,12 +12,13 @@
 6|Jenis Pembelian,select,text n,cara_bayar,S50,,5%,RD,inv_pembelian_jenis-ID-Jenis_Beli-,
 
 [pembelianlist]
-1|Kode Barang,input,text t,id_barang,w100,,15%
-2|Nama Barang,input,text n,nm_barang,w100 upper,,30%
-3|Satuan,select,text n,nm_satuan,S100 upper,,12%
-4|Jumlah,input,text d,jml_transaksi,w100 angka,,12%
-5|Harga Beli/Satuan,input,text d,harga_beli,100 angka,,12%
-6|Total Harga,input,text n,ket_transaksi,w100 angka,,15%
+
+1|Nama Barang,input,text n,nm_barang,w100 upper,,30%
+2|Satuan,select,text n,nm_satuan,S100 upper,,12%
+3|Jumlah,input,text d,jml_transaksi,w100 angka,,12%
+4|Harga Beli/Satuan,input,text d,harga_beli,100 angka,,12%
+5|Harga Jual,input,text t,harga_jual,w100 angka,,15%
+6|T.Harga Beli,input,text n,ket_transaksi,w100 angka,,15%
 
 [lappembelian]
 1|No. Transaksi,,,,,,15%,,
