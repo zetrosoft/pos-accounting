@@ -202,7 +202,7 @@ class Neraca extends CI_Controller{
 		($this->input->post('unite')==3)?
 		$this->View("laporan/shu_print_gabungan"):
 		$this->View("laporan/shu_print");
-		//$this->output->enable_profiler();
+		
 	}
 	function graph_shu(){
 		//$this->neraca_model->data_grap_shu();
@@ -212,7 +212,7 @@ class Neraca extends CI_Controller{
 	}
 	function graph_shu_data(){
 		$thn=(date('Y')-6);
-		//echo $thn;
+		$this->neraca_model->neraca_unit();
 		$this->neraca_model->data_grap_shu($thn);
 	}
 	
@@ -263,13 +263,20 @@ class Neraca extends CI_Controller{
 		$tahun=$this->input->post('thn');
 		$jumHari = cal_days_in_month(CAL_GREGORIAN,$bulan,$tahun);
 		$bulan=(strlen($bulan)==1)?'0'.$bulan:$bulan;
-		$periode=$tahun.$bulan.$jumHari;
-		$where="where month(p.Tanggal)='".$bulan."'";
-		$where.="and year(p.Tanggal)='".$tahun."'";
-		$where.=($this->input->post('ID_Dept')=='')?'':" and p.ID_Dept='".$this->input->post('ID_Dept')."'";
-		$where.=" and p.ID_Simpanan='".$this->input->post('ID_Simpanan')."'";
+		$periode=$tahun.'-'.$bulan.'-'.$jumHari;
+		$where2="where year(p.Tanggal) <'".$tahun."'";
+		//$where="where month(p.Tanggal)='".$bulan."'";
+		$where ="where year(p.Tanggal)='".$tahun."'";
+		$where.=($this->input->post('ID_Dept')=='')?"and p.ID_Dept<>'0'":" and p.ID_Dept='".$this->input->post('ID_Dept')."'";
+		$where.=($this->input->post('ID_Simpanan')=='')?"and p.ID_Simpanan<>'0'":" and p.ID_Simpanan='".$this->input->post('ID_Simpanan')."'";
+		$where2.=($this->input->post('ID_Dept')=='')?"and p.ID_Dept<>'0'":" and p.ID_Dept='".$this->input->post('ID_Dept')."'";
+		$where2.=($this->input->post('ID_Simpanan')=='')?"and p.ID_Simpanan<>'0'":" and p.ID_Simpanan='".$this->input->post('ID_Simpanan')."'";
+		$groupby="group by month(p.Tanggal),p.ID_Simpanan";
+		$groupby2="group by p.ID_Simpanan";
 		//kirim dalam bentuk pdf
-		$data['temp_rec']	=$this->neraca_model->get_rekap_dept($periode,$where);
+		$this->neraca_model->neraca_unit();
+		$data['temp_rec']	=$this->neraca_model->get_rekap_dept($periode,$where,$groupby);
+		$data['saldoawal']	=$this->neraca_model->get_saldo_awal($where2,$groupby2);
 		$data['bulan']		=rdb('mst_bulan','Bulan','Bulan',"where ID='".(int)$bulan."'");
 		$data['tahun']		=$tahun;
 		$data['Dept']		=rdb('mst_departemen','Departemen','Departemen',"where ID='".$this->input->post('ID_Dept')."'");
@@ -277,6 +284,7 @@ class Neraca extends CI_Controller{
 		$this->zetro_auth->menu_id(array('trans_beli'));
 		$this->list_data($data);
 		$this->View("laporan/rekap_simpanan_dept_print");
+		//$this->output->enable_profiler();
 	}
 	function rekap_departemen(){
 		

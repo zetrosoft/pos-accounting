@@ -40,15 +40,30 @@ class Neraca_model extends CI_Model {
 		$data=$this->db->query($sdata);
 		return $data->result();
 	}
-	function get_rekap_dept($periode,$where){
-		$this->build_data($periode);
+	function get_last_data(){
+		return rdb("tmp_".$this->user."_transaksi_rekap",'tanggal','max(year(tanggal)) as tanggal');
+	}
+	function get_rekap_dept($periode,$where,$groupby=''){
+		$last_data=$this->get_last_data();
+		($last_data<substr($periode,0,4))?$this->build_data($periode):'';
+		//echo $this->get_last_data().'='.$periode;
 		$sql="select n.Bulan,Sum(Debet) as Debet, Sum(Kredit) as Kredit 
 			from tmp_".$this->user."_transaksi_rekap as p
 			left join mst_bulan as n
 			on n.ID=month(p.Tanggal)
 			$where
-			group by p.ID_Dept";
+			$groupby";
 		//echo $sql;
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
+	
+	function get_saldo_awal($where,$groupby='')
+	{
+		$sql="select (Sum(Kredit)-Sum(Debet)) as Saldo 
+			from tmp_".$this->user."_transaksi_rekap as p
+			$where
+			$groupby";
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
@@ -66,7 +81,7 @@ class Neraca_model extends CI_Model {
 	}
 	function neraca_unit($unit='')
 	{
-		$this->unite=($unit=='' || $unit=='undefined')?'':" and j.ID_Unit='".$unit."'";	
+		$this->unite=($unit=='')?'':" and j.ID_Unit='".$unit."'";	
 	}
 	 function build_data($periode,$f_per=''){
 		mysql_query("DROP TABLE IF EXISTS `tmp_".$this->user."_transaksi_rekap`") or die(mysql_error());
