@@ -140,7 +140,7 @@ class Neraca_model extends CI_Model {
 				right join perkiraan as p
 				on p.ID=t.ID_Perkiraan
 				where j.Tanggal between '$fist_periode' and '$periode' ".$this->unite. " order by j.ID";
-		//echo $sql2;
+		echo $sql2;
 		mysql_query($sql) or die($sql."</br>".mysql_error()."</br>");
 		mysql_query($sql1) or die($sql1."</br>".mysql_error()."</br>");
 		mysql_query($sql2) or die($sql2."</br>".mysql_error()."</br>");
