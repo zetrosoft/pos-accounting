@@ -55,6 +55,7 @@ class Neraca extends CI_Controller{
 		//bukan neraca lajur tetapi laporan rekap simpanan anggota per departemen
 		$data=array();$n=0;
 		$periode=tglToSql($_POST['periode']);
+		$this->neraca_model->neraca_unit();
 		$data=$this->neraca_model->get_rekap_data($periode);
 		//return $data;
 		foreach($data as $row){
@@ -83,6 +84,7 @@ class Neraca extends CI_Controller{
 		$where.=($akun=='')?'':" and ID_Simpanan='".$akun."'";
 		$where.=($filter=='thn')?" and Tahun='".$tahun."'":" and (Tanggal between '".$periode."' and '".$tgl_stop."')"; 
 		$prdd=($filter=='thn')? $tahun.'1231':$tgl_stop;
+		$this->neraca_model->neraca_unit();
 		$datax=$this->neraca_model->get_nc_lajure($prdd,$where);
 
 		foreach($datax as $r){
@@ -109,19 +111,20 @@ class Neraca extends CI_Controller{
 	
 	function print_neraca_lajur(){
 		$data=array();
-		$tgl_start=($this->input->post('tgl_start')=='')?'':$this->input->post('tgl_start');
-		$periode=($this->input->post('tgl_stop')=='')?$tgl_start:$this->input->post('tgl_stop');
-		$id_dept=$this->input->post('ID_Dept');
-		$ID_Stat=($this->input->post('ID_Stat')=='')?'':$this->input->post('ID_Stat');
-		$akun	=($this->input->post('ID_Perkiraan')=='')?'':$this->input->post('ID_Perkiraan');
-		$tahun	=($this->input->post('tahun')=='')?'':$this->input->post('tahun');
-		$filter	=$this->input->post('filper');
-		$where =" and ID_Dept='".$id_dept."'";
-		$where.=($akun=='')?'':" and ID_Simpanan='".$akun."'";
-		$where.=($filter=='thn')?" and Tahun='".$tahun."'":" and (Tanggal between '".tglToSql($tgl_start)."' and '".tglToSql($periode)."')"; 
+		$tgl_start	=($this->input->post('tgl_start')=='')?''		:$this->input->post('tgl_start');
+		$periode	=($this->input->post('tgl_stop')=='')?$tgl_start:$this->input->post('tgl_stop');
+		$id_dept	=$this->input->post('ID_Dept');
+		$ID_Stat	=($this->input->post('ID_Stat')=='')?''			:$this->input->post('ID_Stat');
+		$akun		=($this->input->post('ID_Perkiraan')=='')?''	:$this->input->post('ID_Perkiraan');
+		$tahun		=($this->input->post('tahun')=='')?''			:$this->input->post('tahun');
+		$filter		=$this->input->post('filper');
+		$where 		=" and ID_Dept='".$id_dept."'";
+		$where		.=($akun=='')?'':" and ID_Simpanan='".$akun."'";
+		$where		.=($filter=='thn')?" and Tahun='".$tahun."'":" and (Tanggal between '".tglToSql($tgl_start)."' and '".tglToSql($periode)."')"; 
 		$prdd=($filter=='thn')? $tahun.'1231':tglToSql($periode);
 		$data['dept']=rdb('mst_departemen','Departemen','Departemen',"where ID='".$id_dept."'");
 		$data['tanggal']=($filter=='thn')?$tahun: $tgl_start.' s/d '.$periode;
+		$this->neraca_model->neraca_unit();
 		$data['temp_rec']=$this->neraca_model->get_nc_lajure($prdd,$where);
 		$this->zetro_auth->menu_id(array('trans_beli'));
 		$this->list_data($data);
@@ -131,6 +134,7 @@ class Neraca extends CI_Controller{
 	function print_lap_pdf(){
 		$data['tanggal']=$this->input->post('tgl_start');
 		$periode=tglToSql($this->input->post('tgl_start'));
+		$this->neraca_model->neraca_unit();
 		$data['temp_rec']=$this->neraca_model->get_rekap_data($periode);
 		$this->zetro_auth->menu_id(array('trans_beli'));
 		$this->list_data($data);
@@ -148,6 +152,7 @@ class Neraca extends CI_Controller{
 		$periode			=tglToSql($this->input->post('tgl_start'));
 		$data['awal']		=getPrevDays($periode,365);
 		$awal				=getPrevDays($periode,365);
+		$this->neraca_model->neraca_unit($unte);
 		$this->neraca_model->build_data($periode);
 		$this->neraca_model->tmp_balance();
 		$this->neraca_model->generate_shu($awal,$periode,$unte);
@@ -166,9 +171,13 @@ class Neraca extends CI_Controller{
 		$periode			=tglToSql($this->input->post('tgl_start'));
 		$data['awal']		=getPrevDays($periode,365);
 		$awal				=getPrevDays($periode,365);
+		$this->neraca_model->neraca_unit();
 		$this->neraca_model->build_data($periode);
 		$this->neraca_model->tmp_balance();
 		$this->neraca_model->generate_shu($awal,$periode,$unte);
+		$this->neraca_model->periode($periode);
+		$this->neraca_model->generate_data('1');
+		$this->neraca_model->generate_data('2');
 		//$data['temp_rec']	=$this->neraca_model->neraca_kalkulasi($periode,$unite);
 		$this->zetro_auth->menu_id(array('trans_beli'));
 		$this->list_data($data);
@@ -186,12 +195,14 @@ class Neraca extends CI_Controller{
 		$data['akhir']		=$this->input->post('tgl_stop');
 		$data['users']		=$this->session->userdata('userid');
 		$periode			=tglToSql($this->input->post('tgl_stop'));
+		$this->neraca_model->neraca_unit();
 		$this->neraca_model->build_data($periode);
 		$this->zetro_auth->menu_id(array('trans_beli'));
 		$this->list_data($data);
 		($this->input->post('unite')==3)?
 		$this->View("laporan/shu_print_gabungan"):
 		$this->View("laporan/shu_print");
+		//$this->output->enable_profiler();
 	}
 	function graph_shu(){
 		//$this->neraca_model->data_grap_shu();
