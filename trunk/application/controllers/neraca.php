@@ -124,6 +124,7 @@ class Neraca extends CI_Controller{
 		$prdd=($filter=='thn')? $tahun.'1231':tglToSql($periode);
 		$data['dept']=rdb('mst_departemen','Departemen','Departemen',"where ID='".$id_dept."'");
 		$data['tanggal']=($filter=='thn')?$tahun: $tgl_start.' s/d '.$periode;
+		$data['akun']=rdb('jenis_simpanan','jenis','jenis',"where ID='".$akun."'");
 		$this->neraca_model->neraca_unit();
 		$data['temp_rec']=$this->neraca_model->get_nc_lajure($prdd,$where);
 		$this->zetro_auth->menu_id(array('trans_beli'));
