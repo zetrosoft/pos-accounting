@@ -24,20 +24,10 @@ $(document).ready(function(e) {
 					$('table#panel tr td.plt').show()
 				}
 	})
-	var today=new Date()
-
 	$('#addnew').click(function(){
 		$('table#panel tr td#addjurnal').click()
 	})
-	$('#fby').val('bln').select()
-	//tampilan baru langsung buka bulan dan tahun existing
-	$.post('get_bulan',{'id':''},function(result){$('#Bln').html(result).val(today.getMonth()+1).select})
-	$.post('get_tahun',{'id':''},function(result){$('#Thn').html(result).val(today.getFullYear()).select()})
-	$('span#bybln').show();	$('span#bytgl').hide();
-		unlock('#process')
-		$('span#fltby').html($('#fby option:selected').text()+' :');
-	_show_data();
-   //----------------------------------------------------------
+	$('#fby').val('').select()
 	$('#fby').change(function(){
 		unlock('#process,#cetak')
 		$('span#fltby').html($('#fby option:selected').text()+' :');
@@ -72,8 +62,25 @@ $(document).ready(function(e) {
 	})
 	//OK button click
 	$('#process').click(function(){
-		_show_data()
+		var path=$('#path').val().replace('index.php/','');
+		var ajax="<tr><td class='kotak' colspan='9'>Data being processed, please wait...<img src='"+path+"asset/img/indicator.gif'></td></tr>";
+		$('#v_listjurnalumum #ListTable').show();
+		$('#v_listjurnalumum #ListTable tbody').html(ajax)
+		$.post('get_list_jurnal',{
+				'filter'	:$('#fby').val(),
+				'daritgl'	:$('#daritgl').val(),
+				'smptgl'	:$('#smptgl').val(),
+				'Bln'		:$('#Bln').val(),
+				'Thn'		:$('#Thn').val(),
+				'ID_Unit'	:$('#ID_Unit').val()
+			},function(result){
+			$('#v_listjurnalumum #ListTable tbody').html(result)
+			$('#result').html('Total data :'+$('#v_listjurnalumum #ListTable tbody tr').length);
+			$('.plt').show();
+			$('table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-350)})
+			})
 	})
+	var today=new Date()
 	
 	$('#daritgl').dynDateTime();
 	$('#smptgl').dynDateTime();
@@ -166,8 +173,6 @@ $(document).ready(function(e) {
 	$('#pp-j_detail #batal').click(function(){
 		$('#pp-j_detail').hide('slow');
 		$('#lock').hide();
-		$('table#panel tr td#listjurnalumum').click()
-
 	})
 	$('#pp-j_detail #pdf').click(function(){
 		$('#frm22').attr('action','print_detail_jurnal');
@@ -419,27 +424,7 @@ function simpan_ad_content(){
 /**/	})
 	
 }
-function _show_data()
-{
-		var path=$('#path').val().replace('index.php/','');
-		var ajax="<tr><td class='kotak' colspan='9'>Data being processed, please wait...<img src='"+path+"asset/img/indicator.gif'></td></tr>";
-		$('#v_listjurnalumum #ListTable').show();
-		$('#v_listjurnalumum #ListTable tbody').html(ajax)
-		$.post('get_list_jurnal',{
-				'filter'	:$('#fby').val(),
-				'daritgl'	:$('#daritgl').val(),
-				'smptgl'	:$('#smptgl').val(),
-				'Bln'		:$('#Bln').val(),
-				'Thn'		:$('#Thn').val(),
-				'ID_Unit'	:$('#ID_Unit').val()
-			},function(result){
-			$('#v_listjurnalumum #ListTable tbody').html(result)
-			$('#result').html('Total data :'+$('#v_listjurnalumum #ListTable tbody tr').length);
-			$('.plt').show();
-			$('table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-350)})
-			})
 	
-}
 function total_KD(id){
 	$.post('get_total_KD',{
 		'ID_jurnal'	:id,
