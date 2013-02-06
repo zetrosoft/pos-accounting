@@ -203,6 +203,7 @@ class Neraca extends CI_Controller{
 		($this->input->post('unite')==3)?
 		$this->View("laporan/shu_print_gabungan"):
 		$this->View("laporan/shu_print");
+		$this->output->enable_profiler();
 		
 	}
 	function graph_shu(){
@@ -285,7 +286,6 @@ class Neraca extends CI_Controller{
 		$this->zetro_auth->menu_id(array('trans_beli'));
 		$this->list_data($data);
 		$this->View("laporan/rekap_simpanan_dept_print");
-		//$this->output->enable_profiler();
 	}
 	function rekap_departemen(){
 		

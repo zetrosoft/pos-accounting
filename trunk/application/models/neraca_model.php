@@ -11,8 +11,7 @@ class Neraca_model extends CI_Model {
 		 //$this->user=$user;	
 	}
 	function get_rekap_data($periode){
-		$last_data=$this->get_last_data();
-		($last_data<substr($periode,0,4))?$this->build_data($periode):'';
+		$this->build_data($periode);
 		$this->drop_data();
 		mysql_query("truncate table v_".$this->user."_neraca_lajur");
 		$sql="select t.ID_Dept,d.Departemen,js.ID,js.Jenis,sum(debet) as debet, sum(kredit) as kredit,t.ID_Calc
@@ -46,8 +45,7 @@ class Neraca_model extends CI_Model {
 	}
 	function get_rekap_dept($periode,$where,$groupby=''){
 		$data=array();
-		$last_data=$this->get_last_data();
-		($last_data<substr($periode,0,4))?$this->build_data($periode):'';
+		$this->build_data($periode);
 		//echo $this->get_last_data().'='.$periode;
 		$sql="select n.Bulan,Sum(Debet) as Debet, Sum(Kredit) as Kredit 
 			from tmp_".$this->user."_transaksi_rekap as p
@@ -70,8 +68,7 @@ class Neraca_model extends CI_Model {
 		return $data->result();
 	}
 	function get_nc_lajure($periode,$where=''){
-		$last_data=$this->get_last_data();
-		($last_data<substr($periode,0,4))?$this->build_data($periode):'';
+		$this->build_data($periode);
 		$sql="select ID_P,ID_Agt,ID_Klas,ID_SubKlas,ID_Unit,ID_Dept,ID_Simpanan,ID_Calc,sum(kredit) as Kredit,sum(debet) as Debet
 			  from tmp_".$this->user."_transaksi_rekap 
 			  where id_agt not in('0') $where
@@ -87,7 +84,7 @@ class Neraca_model extends CI_Model {
 		$this->unite=($unit=='')?'':" and j.ID_Unit='".$unit."'";	
 	}
 	 function build_data($periode,$f_per=''){
-		mysql_query("DROP TABLE IF EXISTS `tmp_".$this->user."_transaksi_rekap`") or die(mysql_error());
+		//mysql_query("DROP TABLE IF NOT EXISTS `tmp_".$this->user."_transaksi_rekap`") or die(mysql_error());
 		$sql="CREATE TABLE IF NOT EXISTS `tmp_".$this->user."_transaksi_rekap` (
 			`ID` INT(11) NOT NULL AUTO_INCREMENT,
 			`ID_Jurnal` INT(11) NULL DEFAULT NULL,
@@ -127,15 +124,16 @@ class Neraca_model extends CI_Model {
 		COLLATE='latin1_swedish_ci'
 		ENGINE=MyISAM";
 		mysql_query($sql) or die($sql."</br>".mysql_error()."</br>");
+		//get last data
 		$ls_data=$this->get_last_data();
 		$sql1="truncate table tmp_".$this->user."_transaksi_rekap";
-		//get last data
 		$sql3="select min(tanggal) as tgl from jurnal";
+		$prd=explode('-',$ls_data);
 		$rs=mysql_query($sql3);
 		while($row=mysql_fetch_object($rs)){
 		$fist_periode=$row->tgl;
 		}
-		$fist_periode=(substr($ls_data,0,4)>=(date('Y')-1))?substr($ls_data,0,4).'-12-31':str_replace('-','',$fist_periode);
+		$fist_periode=($ls_data=='')?$fist_periode:($prd[0]-1).'-01-01';
 		$sql2="replace into tmp_".$this->user."_transaksi_rekap 
 				select t.*,p.*,j.*  from jurnal as j
 				left join transaksi as t
@@ -143,7 +141,7 @@ class Neraca_model extends CI_Model {
 				right join perkiraan as p
 				on p.ID=t.ID_Perkiraan
 				where j.Tanggal between '$fist_periode' and '$periode' ".$this->unite. " order by j.ID";
-		//echo $sql2;
+		echo $sql2;
 		($ls_data=='')?mysql_query($sql1) or die($sql1."</br>".mysql_error()."</br>"):'';
 		mysql_query($sql2) or die($sql2."</br>".mysql_error()."</br>");
 	}
