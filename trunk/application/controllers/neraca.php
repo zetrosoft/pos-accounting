@@ -203,7 +203,7 @@ class Neraca extends CI_Controller{
 		($this->input->post('unite')==3)?
 		$this->View("laporan/shu_print_gabungan"):
 		$this->View("laporan/shu_print");
-		$this->output->enable_profiler();
+		//$this->output->enable_profiler();
 		
 	}
 	function graph_shu(){
