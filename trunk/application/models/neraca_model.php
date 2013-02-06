@@ -44,6 +44,7 @@ class Neraca_model extends CI_Model {
 		return rdb("tmp_".$this->user."_transaksi_rekap",'tanggal','max(year(tanggal)) as tanggal');
 	}
 	function get_rekap_dept($periode,$where,$groupby=''){
+		$data=array();
 		$last_data=$this->get_last_data();
 		($last_data<substr($periode,0,4))?$this->build_data($periode):'';
 		//echo $this->get_last_data().'='.$periode;
