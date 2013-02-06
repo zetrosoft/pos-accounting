@@ -365,7 +365,7 @@ class Neraca_model extends CI_Model {
 	}
 
 //===================================kalkukasi neraca gabungan============================
-function generate_table()
+function generate_table($unit)
 {
 	$sql="CREATE TABLE IF NOT EXISTS `tmp_".$this->user."_gabungan` (
 			`ID` INT(10) NOT NULL AUTO_INCREMENT,
@@ -383,11 +383,11 @@ function generate_table()
 	mysql_query($sql) or die($sql.mysql_error());
 	$sql1="Replace into tmp_".$this->user."_gabungan (ID_Jenis,LapJenis)
 		   (select ID,SubJenis from lap_subjenis order by ID)";
-	mysql_query($sql1) or die(mysql_error());
+	($unit==1)?mysql_query($sql1) or die(mysql_error()):'';
 }
 function generate_data($unit)
 {
-		($unit=='1')?$this->generate_table():'';
+		$this->generate_table();
 		$this->neraca_calc($unit);
 }
 function periode($periode)
