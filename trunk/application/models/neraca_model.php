@@ -11,7 +11,8 @@ class Neraca_model extends CI_Model {
 		 //$this->user=$user;	
 	}
 	function get_rekap_data($periode){
-		$this->build_data($periode);
+		$last_data=$this->get_last_data();
+		($last_data<substr($periode,0,4))?$this->build_data($periode):'';
 		$this->drop_data();
 		mysql_query("truncate table v_".$this->user."_neraca_lajur");
 		$sql="select t.ID_Dept,d.Departemen,js.ID,js.Jenis,sum(debet) as debet, sum(kredit) as kredit,t.ID_Calc
@@ -54,7 +55,7 @@ class Neraca_model extends CI_Model {
 			on n.ID=month(p.Tanggal)
 			$where
 			$groupby";
-		//echo $sql;
+		echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
@@ -69,7 +70,8 @@ class Neraca_model extends CI_Model {
 		return $data->result();
 	}
 	function get_nc_lajure($periode,$where=''){
-		$this->build_data($periode);
+		$last_data=$this->get_last_data();
+		($last_data<substr($periode,0,4))?$this->build_data($periode):'';
 		$sql="select ID_P,ID_Agt,ID_Klas,ID_SubKlas,ID_Unit,ID_Dept,ID_Simpanan,ID_Calc,sum(kredit) as Kredit,sum(debet) as Debet
 			  from tmp_".$this->user."_transaksi_rekap 
 			  where id_agt not in('0') $where
