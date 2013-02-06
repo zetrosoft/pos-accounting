@@ -126,13 +126,16 @@ class Neraca_model extends CI_Model {
 		)
 		COLLATE='latin1_swedish_ci'
 		ENGINE=MyISAM";
+		mysql_query($sql) or die($sql."</br>".mysql_error()."</br>");
+		$ls_data=$this->get_last_data();
 		$sql1="truncate table tmp_".$this->user."_transaksi_rekap";
+		//get last data
 		$sql3="select min(tanggal) as tgl from jurnal";
 		$rs=mysql_query($sql3);
 		while($row=mysql_fetch_object($rs)){
 		$fist_periode=$row->tgl;
 		}
-		$fist_periode=($f_per!='')?$f_per.'-12-31':str_replace('-','',$fist_periode);
+		$fist_periode=(substr($ls_data,0,4)>=(date('Y')-1))?substr($ls_data,0,4).'-12-31':str_replace('-','',$fist_periode);
 		$sql2="replace into tmp_".$this->user."_transaksi_rekap 
 				select t.*,p.*,j.*  from jurnal as j
 				left join transaksi as t
@@ -140,9 +143,8 @@ class Neraca_model extends CI_Model {
 				right join perkiraan as p
 				on p.ID=t.ID_Perkiraan
 				where j.Tanggal between '$fist_periode' and '$periode' ".$this->unite. " order by j.ID";
-		echo $sql2;
-		mysql_query($sql) or die($sql."</br>".mysql_error()."</br>");
-		mysql_query($sql1) or die($sql1."</br>".mysql_error()."</br>");
+		//echo $sql2;
+		($ls_data=='')?mysql_query($sql1) or die($sql1."</br>".mysql_error()."</br>"):'';
 		mysql_query($sql2) or die($sql2."</br>".mysql_error()."</br>");
 	}
 	
