@@ -285,7 +285,8 @@
 	6|Rekap Penjualan Kredit|report/penjualan_kredit||
 	7|<hr>|x|
 	8|Tagihan Kredit|report/tagihan_kredit||
-	;9|Pembayaran Kredit|||
+	9|<hr>|x|
+	10|Persediaan|stock/stock_barang|y|zevp||
 	
 		[Tagihan Kredit]
 		1|Tagihan Kredit|tagihankredit|y|zvp|
