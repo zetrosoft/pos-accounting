@@ -54,14 +54,18 @@
 					 }else if($rbj->ID=='35'){
 						if($unt[0]==2){
 						$shu12=rdb("tmp_".$users."_total_shu","saldo2","saldo2","where unit='".$unt[0]."'");
-						$saldo=($shu12);
+							if( substr($periode,0,4)<='2001'){
+								$saldo=($shu12);
+							}else{
+								$saldo='0';
+							}
 						}else{
-						 if( substr($periode,0,4)<='2001'){
-							$SHU_T_lalu=rdb("tmp_".$users."_transaksi_rekap",'SalDone','(sum(Kredit)-sum(Debet)) as SalDone',"where ID_Laporan='2' and ID_Unit='$unit' and id_lapdetail='35'");
-							$saldo=$SHU_T_lalu;  
-						 }else{
-							$saldo='0';
-						 }
+							 if( substr($periode,0,4)<='2001'){
+								$SHU_T_lalu=rdb("tmp_".$users."_transaksi_rekap",'SalDone','(sum(Kredit)-sum(Debet)) as SalDone',"where ID_Laporan='2' and ID_Unit='$unit' and id_lapdetail='35'");
+								$saldo=$SHU_T_lalu;  
+							 }else{
+								$saldo='0';
+							 }
 						}
 					  }
 					}else{

@@ -48,7 +48,7 @@ class Neraca_model extends CI_Model {
 			on n.ID=month(p.Tanggal)
 			$where
 			group by p.ID_Dept";
-		echo $sql;
+		//echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
@@ -64,7 +64,10 @@ class Neraca_model extends CI_Model {
 				return $data->result();
 		
 	}
-	
+	function neraca_unit($unit='')
+	{
+		$this->unite=($unit=='' || $unit=='undefined')?'':" and j.ID_Unit='".$unit."'";	
+	}
 	 function build_data($periode,$f_per=''){
 		mysql_query("DROP TABLE IF EXISTS `tmp_".$this->user."_transaksi_rekap`") or die(mysql_error());
 		$sql="CREATE TABLE IF NOT EXISTS `tmp_".$this->user."_transaksi_rekap` (
@@ -111,15 +114,15 @@ class Neraca_model extends CI_Model {
 		while($row=mysql_fetch_object($rs)){
 		$fist_periode=$row->tgl;
 		}
-		$fist_periode=($f_per!='')?$f_per.'1231':str_replace('-','',$fist_periode);
+		$fist_periode=($f_per!='')?$f_per.'-12-31':str_replace('-','',$fist_periode);
 		$sql2="replace into tmp_".$this->user."_transaksi_rekap 
 				select t.*,p.*,j.*  from jurnal as j
 				left join transaksi as t
 				on t.ID_Jurnal=j.ID
 				right join perkiraan as p
 				on p.ID=t.ID_Perkiraan
-				where j.Tanggal between '$fist_periode' and '$periode' order by j.ID";
-		echo $sql2;
+				where j.Tanggal between '$fist_periode' and '$periode' ".$this->unite. " order by j.ID";
+		//echo $sql2;
 		mysql_query($sql) or die($sql."</br>".mysql_error()."</br>");
 		mysql_query($sql1) or die($sql1."</br>".mysql_error()."</br>");
 		mysql_query($sql2) or die($sql2."</br>".mysql_error()."</br>");
@@ -342,6 +345,96 @@ class Neraca_model extends CI_Model {
 		}
 		fwrite($xml,"</graph>\r\n");
 	}
-	
+
+//===================================kalkukasi neraca gabungan============================
+function generate_table()
+{
+	$sql="CREATE TABLE IF NOT EXISTS `tmp_".$this->user."_gabungan` (
+			`ID` INT(10) NOT NULL AUTO_INCREMENT,
+			`ID_Jenis` INT(10) NOT NULL ,
+			`LapJenis` VARCHAR(150) NULL,
+			`KBR` DOUBLE NULL DEFAULT '0',
+			`USP` DOUBLE NULL DEFAULT '0',
+			`Periode` VARCHAR(50) NULL,
+			INDEX `ID` (`ID`),
+			PRIMARY KEY (`ID_Jenis`)
+		)
+		COLLATE='latin1_swedish_ci'
+		ENGINE=MyISAM;
+		";	
+	mysql_query($sql) or die($sql.mysql_error());
+	$sql1="Replace into tmp_".$this->user."_gabungan (ID_Jenis,LapJenis)
+		   (select ID,SubJenis from lap_subjenis order by ID)";
+	mysql_query($sql1) or die(mysql_error());
+}
+function generate_data($unit)
+{
+		($unit=='1')?$this->generate_table():'';
+		$this->neraca_calc($unit);
+}
+function periode($periode)
+{
+	$this->periode=$periode;	
+}
+function neraca_calc($kbr)
+{
+		  $xx=0;
+		  $sql=mysql_query("select * from lap_head order by ID");
+		  while($r=mysql_fetch_object($sql)){
+			$xx++;
+			$x=0; $saldoNc=0;$pasiva=0;$aktiva=0;$k=0;$Balance=0;
+			$unite=rdb("unit_jurnal",'Unit','Unit',"where ID='".$kbr."'");
+			$ljs=mysql_query("select * from lap_jenis where ID_Head='".$r->ID."' and ID_".$unite."='1'");
+			while($rjs=mysql_fetch_object($ljs)){
+				$x++;
+				$lsbj="select * from lap_subjenis where ID_".$unite."='1' and ID_Jenis='".$rjs->ID."' order by NoUrut";
+				//echo $lsbj;
+				$n=0;$saldoA=0;$SaldoLj=0;
+				$rs=mysql_query($lsbj) or die(mysql_error());
+				while($rbj=mysql_fetch_object($rs)){
+					$n++;$saldo=0;
+					$saldoA=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Laporan='2' and ID_Unit='".$kbr."' and ID_LapDetail='".$rbj->ID."'");
+					$idCalc=rdb("perkiraan",'ID_Calc','ID_Calc',"where ID_Laporan='2' and ID_Unit='".$kbr."' and ID_LapDetail='".$rbj->ID."'");
+					$ss="select id_calc,sum(debet) as debet,sum(kredit) as kredit from tmp_".$this->user."_transaksi_rekap where ID_Laporan='2' and ID_Unit='".$kbr."' and id_lapdetail='".$rbj->ID."'";
+					//echo $ss;
+					$rss=mysql_query($ss) or die(mysql_error());
+					$rw=mysql_fetch_object($rss);
+					if($rbj->ID=='35' ||$rbj->ID=='36'){ //  
+					  if($rbj->ID=='36'){
+						$shu1=rdb("tmp_".$this->user."_total_shu","saldo","saldo","where unit='".$kbr."'");
+						$saldo=($shu1);
+					 }else if($rbj->ID=='35'){
+						if($kbr==2){
+						$shu12=rdb("tmp_".$this->user."_total_shu","saldo2","saldo2","where unit='".$kbr."'");
+							if( substr($this->periode,0,4)<='2001'){
+								$saldo=($shu12);
+							}else{
+								$saldo='0';
+							}
+						}else{
+							 if( substr($this->periode,0,4)<='2001'){
+								$SHU_T_lalu=rdb("tmp_".$this->user."_transaksi_rekap",'SalDone','(sum(Kredit)-sum(Debet)) as SalDone',"where ID_Laporan='2' and ID_Unit='".$kbr."' and id_lapdetail='35'");
+								$saldo=$SHU_T_lalu;  
+							 }else{
+								$saldo='0';
+							 }
+						}
+					  }
+					}else{
+						$saldo=($rw->id_calc==1)?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
+					}
+					//($saldo<0)?	$a->SetTextColor(237,15,151):	$a->SetTextColor(0);
+					$SaldoLj=($SaldoLj+$saldo);
+					$nc="Update tmp_".$this->user."_gabungan
+						 set ".$unite."='".$saldo."',periode='".$this->periode."' where
+						 ID_Jenis='".$rbj->ID."'";
+					//echo $nc;
+					mysql_query($nc) or die(mysql_error());
+					//$Balance=($rbj->ID_Calc==1)?($Balance+$saldo):($Balance-$saldo);
+				}
+			}
+		  }
+}	
+/* end of class neraca model */
 }
 ?>

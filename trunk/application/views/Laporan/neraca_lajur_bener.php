@@ -13,51 +13,30 @@ panel_begin('Neraca Lajur','','',",,,,<input type='button' class='print' value='
 panel_multi('neracalajur','block',false);
 if($all_neracalajur!=''){
 echo "<form name='frm_j' id='frm_j' method='post' action=''>";
-echo "
-<table id='period' style='border-collapse:collapse'>
-	<tr><td width='70px'>Periode :</td>
-    	<td width='20px'><input type='radio' name='periode' id='pertgl' value='tgl'/></td>
-        <td width='70px'>Per Tanggal</td>
-        <td width='100px'><input type='text' id='tgl_start' name='tgl_start' class='w100' value='' /></td>
-        <td width='20px'>s/d</td>
-        <td width='100px'><input type='text' id='tgl_stop' name='tgl_stop' class='w100' value='' /></td>
-        <td style='border-right:2px dotted #FFF' width='15px'></td>
-        <td width='10px'>&nbsp;</td>
-        <td width='80px'>Departemen</td>
-        <td width='220px'><select id='ID_Dept' name='ID_Dept'  class='S100'>";
-		dropdown("mst_departemen",'ID','Departemen',"where ID not in('0','1') order by Kode");
-	echo "</select></td>
-        <td width='5px'>&nbsp;</td>
-        <td width='90px'>Status Anggota</td>
-        <td width='150px'><select id='ID_Stat' name='ID_Stat' class='S100'>
+
+addText(array('Periode    :','Per Tanggal','s/d'),
+		array("<input type='radio' name='periode' id='pertgl' value='tgl'/>",
+			  "<input type='text' id='tgl_start' name='tgl_start' class='w100' value='' />",
+			  "<input type='text' id='tgl_stop' name='tgl_stop' class='w100' value='' />"));
+addText(array(nbs(2),'Per Tahun  ',''),
+		array("<input type='radio' name='periode' id='pertahun' value='thn' />",
+			  "<select id='tahun' name='tahun'></select>",
+			  ""));
+addText(array('Departemen  '.nbs()),array("<select id='ID_Dept' name='ID_Dept'  class='S100'></select>"));
+addText(array('Perkiraan   '.nbs()),array("<select id='ID_Perkiraan' name='ID_Perkiraan' class='S100'></select>"));
+addText(array('Status Anggota    '),array("<select id='ID_Stat' name='ID_Stat' class='S100'>
 		<option value=''>Semua</option>
 		<option value='1'>Aktif</option>
 		<option value='13'>Aktif + Non Aktif</option>
-		</select></td>
-    </tr>
-	<tr><td>&nbsp;</td>
-    	<td><input type='radio' name='periode' id='pertahun' value='thn' /></td>
-        <td>Per Tahun</td>
-        <td><select id='tahun' name='tahun'></select></td>
-        <td>&nbsp;</td>
-        <td><input type='button' id='oke' value='OK'></td>
-        <td style='border-right:2px dotted #FFF' width='15px'></td>
-        <td >&nbsp;</td>
-        <td >Perkiraan</td>
-        <td colspan='4'><select id='ID_Perkiraan' name='ID_Perkiraan' class='S100'>
-		<option value=''>Semua</option>";
-		dropdown('jenis_simpanan','ID','Jenis',"order by ID");
-		echo "</select><input type='hidden' id='filper' value='' name='filper' /></td>
-    </tr>
-</table>
-<hr />";
-
+		</select><input type='hidden' id='filper' value='' name='filper' />"));
+addText(array(nbs(3)),array("<input type='button' id='oke' value='Process'>"));
 echo "</form>";	
-		$zlb->section('Neraca Lajur');
-		$zlb->aksi(false);
-		$zlb->Header('99%');
-		$zlb->icon();
-		echo "</tbody></table>";
+
+		//$zlb->section('Neraca Lajur');
+		//$zlb->aksi(false);
+		//$zlb->Header('99%');
+		//$zlb->icon();
+		//echo "</tbody></table>";
 
 }else{
 	no_auth();
@@ -65,3 +44,9 @@ echo "</form>";
 panel_multi_end();
 panel_end();
 ?>
+<script language="javascript">
+$(document).ready(function(e) {
+    $('#ID_Dept').html("<? dropdown("mst_departemen",'ID','Departemen',"where ID not in('0','1') order by Kode") ?>");
+	$('#ID_Perkiraan').html("<option value=''>Semua</option><? dropdown('jenis_simpanan','ID','Jenis',"order by ID");?>");
+});
+</script>
