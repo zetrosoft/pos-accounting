@@ -69,15 +69,33 @@ class Neraca_model extends CI_Model {
 	}
 	function get_nc_lajure($periode,$where=''){
 		$this->build_data($periode);
-		$sql="select ID_P,ID_Agt,ID_Klas,ID_SubKlas,ID_Unit,ID_Dept,ID_Simpanan,ID_Calc,sum(kredit) as Kredit,sum(debet) as Debet
-			  from tmp_".$this->user."_transaksi_rekap 
-			  where id_agt not in('0') $where
-			  group by concat(id_simpanan,id_agt)
-			  order by concat(id_agt,ID_Klas,ID_SubKlas,ID_Unit,ID_Dept)";
+		$sql="select t.ID_P,t.ID_Agt,t.ID_Klas,t.ID_SubKlas,t.ID_Unit,t.ID_Dept,t.ID_Simpanan,t.ID_Calc,sum(kredit) as Kredit,sum(debet) as Debet
+			  from mst_anggota as a
+			  left join tmp_".$this->user."_transaksi_rekap as t
+			  on t.id_agt=a.ID
+			  where t.id_agt not in('0')and $where
+			  group by concat(t.id_simpanan,t.id_agt)
+			  order by concat(a.nama,t.id_agt,t.ID_Klas,t.ID_SubKlas,t.ID_Unit,t.ID_Dept)";
 			// echo $sql;
 				$data=$this->db->query($sql);
 				return $data->result();
 		
+	}
+	function saldo_sebelum($akun,$tahun,$calc)
+	{
+		$saldo=0;
+		$sql=($calc==2)?
+		"select (sum(kredit)-sum(debet)) as saldo from tmp_superuser_transaksi_rekap 
+		 where id_perkiraan='$akun' and year(tanggal) <'$tahun'":
+		 "select (sum(debet)-sum(kredit)) as saldo from tmp_superuser_transaksi_rekap 
+			  where id_perkiraan='$akun' and year(tanggal) <'$tahun'";
+			// echo $sql;
+				$data=$this->db->query($sql);
+				foreach($data->result() as $r)
+				{
+					$saldo=$r->saldo;
+				}
+			return $saldo;
 	}
 	function neraca_unit($unit='')
 	{
@@ -133,7 +151,7 @@ class Neraca_model extends CI_Model {
 		while($row=mysql_fetch_object($rs)){
 		$fist_periode=$row->tgl;
 		}
-		$fist_periode=($ls_data=='')?$fist_periode:($prd[0]-1).'-01-01';
+		$fist_periode=($ls_data=='')?$fist_periode:($prd[0]-1).'0101';
 		$sql2="replace into tmp_".$this->user."_transaksi_rekap 
 				select t.*,p.*,j.*  from jurnal as j
 				left join transaksi as t

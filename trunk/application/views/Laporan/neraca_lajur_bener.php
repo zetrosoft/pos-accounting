@@ -22,9 +22,9 @@ addText(array(nbs(2),'Per Tahun  ',''),
 		array("<input type='radio' name='periode' id='pertahun' value='thn' />",
 			  "<select id='tahun' name='tahun'></select>",
 			  ""));
-addText(array('Departemen  '.nbs()),array("<select id='ID_Dept' name='ID_Dept'  class='S100'></select>"));
-addText(array('Perkiraan   '.nbs()),array("<select id='ID_Perkiraan' name='ID_Perkiraan' class='S100'></select>"));
-addText(array('Status Anggota    '),array("<select id='ID_Stat' name='ID_Stat' class='S100'>
+addText(array('Departemen  '.nbs()),array("<select id='ID_Dept' name='ID_Dept'  class='s100'></select>"));
+addText(array('Perkiraan   '.nbs()),array("<select id='ID_Perkiraan' name='ID_Perkiraan' class='s100'></select>"));
+addText(array('Status Anggota    '),array("<select id='ID_Stat' name='ID_Stat' class='s100'>
 		<option value=''>Semua</option>
 		<option value='1'>Aktif</option>
 		<option value='13'>Aktif + Non Aktif</option>

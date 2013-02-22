@@ -6,8 +6,8 @@
 		  $a->setKriteria("transkip");
 		  $a->setNama("LAPORAN NERACA LAJUR ");
 		  $a->setSection("Neraca Lajur");
-		  $a->setFilter(array($tanggal,$dept));
-		  $a->setReferer(array('Periode','Departemen'));
+		  $a->setFilter(array($tanggal,$dept,($akun=='')?"All":$akun));
+		  $a->setReferer(array('Periode','Departemen','Perkiraan'));
 		  $a->setFilename('asset/bin/zetro_neraca.frm');
 		  $a->AliasNbPages();
 		  $a->AddPage("P","A4");
@@ -22,10 +22,12 @@
 		  $a->SetFont('Arial','',9);
 		  //$rec = $temp_rec->result();
 		  $n=0;$s_pokok=0;$s_wajib=0;$s_kusus=0;$s_akhir=0;
-		  
+		  $saldoawal=0;$saldosbl=0;
 		foreach($temp_rec as $r){
 			$n++;
 			$saldoawal=rdb("perkiraan",'SaldoAwal','sum(SaldoAwal) as SaldoAwal',"where ID_Agt='".$r->ID_Agt."' and ID_Dept='".$r->ID_Dept."' and ID_Simpanan='".$r->ID_Simpanan."'");
+			$saldosbl=$this->neraca_model->saldo_sebelum($r->ID_P,$thn,$r->ID_Calc);
+			$saldoawal=($saldoawal+$saldosbl);
 			$kode=rdb('klasifikasi','Kode','Kode',"where ID='".$r->ID_Klas."'");
 			$kode.=rdb('sub_klasifikasi','Kode','Kode',"where ID='".$r->ID_SubKlas."'");
 			$kode.=rdb('unit_jurnal','Kode','Kode',"where ID='".$r->ID_Dept."'");
@@ -34,8 +36,8 @@
 			$simp=rdb('jenis_simpanan','Jenis','Jenis',"where ID='".$r->ID_Simpanan."'");
 			$saldo=($r->ID_Calc=='2')?($r->Kredit-$r->Debet):($r->Debet-$r->Kredit);
 			$a->Row(array($n,$kode,rdb('mst_anggota','Nama','Nama',"where ID='".$r->ID_Agt."'")." - ".$simp,
-						number_format($saldoawal,2),number_format($r->Debet,2),number_format($r->Kredit,2),
-						number_format($saldoawal+$saldo,2)
+						number_format($saldoawal,0),number_format($r->Debet,0),number_format($r->Kredit,0),
+						number_format($saldoawal+$saldo,0)
 						)
 						);
 			$s_pokok=($s_pokok+$saldoawal);

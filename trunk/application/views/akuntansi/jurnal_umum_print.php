@@ -10,11 +10,11 @@
 		  $a->setFilter(array($tanggal,$ID_Unit));
 		  $a->setReferer(array('Periode','Unit'));
 		  $a->AliasNbPages();
-		  $a->AddPage("L","A4");
+		  $a->AddPage("P","A4");
 	
 		  $a->SetFont('Arial','',10);
 		  // set lebar tiap kolom tabel transaksi
-		  $a->SetWidths(array(10,25,15,25,112,32,32,25));
+		  $a->SetWidths(array(10,18,10,20,60,25,25,25));
 		  // set align tiap kolom tabel transaksi
 		  $a->SetAligns(array("C","C","C","C","L","R","R","R","R"));
 		  $a->SetFont('Arial','B',10);
@@ -29,19 +29,19 @@
 						  rdb('unit_jurnal','unit','unit',"where ID='".$r->ID_Unit."'"),
 						  $r->Nomor,
 						  $r->Ket,
-						  number_format($r->Debet,2),
-						  number_format($r->Kredit,2),
-						  number_format(($r->Debet-$r->Kredit),2)));
+						  number_format($r->Debet,0),
+						  number_format($r->Kredit,0),
+						  number_format(($r->Debet-$r->Kredit),0)));
 				$s_pokok=($s_pokok+$r->Debet);
 				$s_wajib=($s_wajib+$r->Kredit);
 				
 		  }/**/
 		  $a->SetFont('Arial','B',9);
 		  $a->SetFillColor(225,225,225);
-		  $a->Cell(187,8,"TOTAL",1,0,'R',true);
-		  $a->Cell(32,8,number_format($s_pokok,2),1,0,'R',true);
-		  $a->Cell(32,8,number_format($s_wajib,2),1,0,'R',true);
-		  $a->Cell(25,8,number_format(($s_pokok-$s_wajib),2),1,0,'R',true);
+		  $a->Cell(118,8,"TOTAL",1,0,'R',true);
+		  $a->Cell(25,8,number_format($s_pokok,0),1,0,'R',true);
+		  $a->Cell(25,8,number_format($s_wajib,0),1,0,'R',true);
+		  $a->Cell(25,8,number_format(($s_pokok-$s_wajib),0),1,0,'R',true);
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_list_jurnal.pdf','F');
 
 //show pdf output in frame

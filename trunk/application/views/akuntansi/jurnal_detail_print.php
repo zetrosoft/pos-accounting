@@ -10,11 +10,11 @@
 		  $a->setReferer(array('Tanggal','Nomor Jurnal','Keterangan','Unit'));
 		  $a->setFilter(array($Tanggal,$NoJurnal,$Keterangan,$ID_Unit));
 		  $a->AliasNbPages();
-		  $a->AddPage("L","A4");
+		  $a->AddPage("P","A4");
 	
 		  $a->SetFont('Arial','',10);
 		  // set lebar tiap kolom tabel transaksi
-		  $a->SetWidths(array(10,25,90,31,31,90));
+		  $a->SetWidths(array(10,25,60,25,25,50));
 		  // set align tiap kolom tabel transaksi
 		  $a->SetAligns(array("C","C","L","R","R","L"));
 		  $a->SetFont('Arial','B',10);
@@ -36,10 +36,10 @@
 		  }/**/
 		  $a->SetFont('Arial','B',9);
 		  $a->SetFillColor(225,225,225);
-		  $a->Cell(125,8,"TOTAL",1,0,'R',true);
-		  $a->Cell(31,8,number_format($s_pokok,2),1,0,'R',true);
-		  $a->Cell(31,8,number_format($s_wajib,2),1,0,'R',true);
-		  $a->Cell(90,8,'',1,0,'R',true);
+		  $a->Cell(95,8,"TOTAL",1,0,'R',true);
+		  $a->Cell(25,8,number_format($s_pokok,2),1,0,'R',true);
+		  $a->Cell(25,8,number_format($s_wajib,2),1,0,'R',true);
+		  $a->Cell(50,8,'',1,0,'R',true);
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_d_jurnal.pdf','F');
 
 //show pdf output in frame

@@ -43,12 +43,12 @@
 6|Saldo Akhir,,,,,,,,,12
 
 [jurnal]
-1|Tanggal,,,,,,8%,,,25
-2|Unit,,,,,,5%,,,15
-3|No. Jurnal,,,,,,8%,,,25
-4|Keterangan,,,,,,25%,,,112
-5|Debet,,,,,,12%,,,32
-6|Kredit,,,,,,12%,,,32
+1|Tanggal,,,,,,8%,,,18
+2|Unit,,,,,,5%,,,10
+3|No. Jurnal,,,,,,8%,,,20
+4|Keterangan,,,,,,25%,,,60
+5|Debet,,,,,,12%,,,25
+6|Kredit,,,,,,12%,,,25
 7|Balance,,,,,,15%,,,25
 
 [newjurnal]
@@ -60,10 +60,10 @@
 ;array(10,25,90,31,31,90)
 [addcontent]
 1|Kode,,,,,,8%,,,25
-2|Perkiraan,,,,,,25%,,,90
-3|Debet,,,,,,10%,,,31
-4|Kredit,,,,,,10%,,,31
-5|Keterangan,,,,,,20%,,,90
+2|Perkiraan,,,,,,25%,,,60
+3|Debet,,,,,,10%,,,25
+4|Kredit,,,,,,10%,,,25
+5|Keterangan,,,,,,20%,,,50
 
 [balance]
 1|No. Jurnal,input,text n,ID_Jurnale,w35,,,

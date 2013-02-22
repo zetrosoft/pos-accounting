@@ -11,7 +11,14 @@ class Admin extends CI_Controller {
 		$this->zm='asset/bin/zetro_menu.dll';
 	}
     function index() {
-		$this->cek_db_user();
+		if($this->session->userdata('login')!=TRUE){
+			$this->cek_db_user();
+		}else{
+		$data['login']=$this->session->userdata('login');
+				$this->load->view('admin/header');
+				$this->load->view('admin/home',$data);
+				$this->load->view('admin/footer');
+		}
 	}
 	function about(){
 		$data['serial']=(no_ser()==addCopy())? 

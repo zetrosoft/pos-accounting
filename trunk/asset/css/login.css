@@ -11,13 +11,14 @@
 	height: auto;
 	margin-top: -8em; /*16em;set to a negative number 1/2 of your height*/
 	margin-left: -13em; /*set to a negative number 1/2 of your width*/
-	border: 1px solid #7F5F00;
+	border: 3px solid #FFCB2D;
 	background-color: #f3f3f3;
+	border-radius:8px;
 }
 
 #H0{
 	background:url(../img/login.png) no-repeat left #FFCB2D;
-	border-bottom:1px solid #7F5F00;
+	border-bottom:1px solid #FFCB2D;
 	font-size:large;
 	font-weight:bolder;
 	color:#7F5F00;	

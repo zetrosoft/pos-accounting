@@ -47,14 +47,14 @@
 					$KBR=rdb('tmp_'.$users.'_gabungan','KBR','KBR',"where ID_Jenis='".$rbj->ID."'");
 					$USP=rdb('tmp_'.$users.'_gabungan','usp','usp',"where ID_Jenis='".$rbj->ID."'");
 					$a->Row(array('            '.$n.". ".$rbj->SubJenis,
-						number_format($KBR,2),
-						number_format($USP,2),
-						number_format(($KBR+$USP),2)),false); 	
+						number_format($KBR,0),
+						number_format($USP,0),
+						number_format(($KBR+$USP),0)),false); 	
 					$saldoA=($saldoA+$KBR);
 					$saldo2=($saldo2+$USP);
 				}
 					$a->SetFont('Arial','I',9);
-					$a->Row(array('            TOTAL '.$rjs->Jenis,number_format($saldoA,2),number_format($saldo2,2),number_format(($saldoA+$saldo2),2)),false);
+					$a->Row(array('            TOTAL '.$rjs->Jenis,number_format($saldoA,0),number_format($saldo2,0),number_format(($saldoA+$saldo2),0)),false);
 					$a->SetFont('Arial','',9);
 					$a->ln(2);
 				    $saldoNc=($saldoNc+$saldoA);
@@ -62,7 +62,7 @@
 			}
 			//$a->ln(1);
 			$a->SetFont('Arial','B',9);
-			$a->Row(array('            TOTAL '.$r->Header1,number_format($saldoNc,2),number_format($saldoNc2,2),number_format(($saldoNc+$saldoNc2),2)),false);
+			$a->Row(array('            TOTAL '.$r->Header1,number_format($saldoNc,0),number_format($saldoNc2,0),number_format(($saldoNc+$saldoNc2),0)),false);
 			$a->SetFont('Arial','',9);
 		  }
 		   $a->Output('application/logs/'.$this->session->userdata('userid').'_neraca_gab.pdf','F');

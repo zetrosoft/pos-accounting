@@ -118,13 +118,14 @@ class Neraca extends CI_Controller{
 		$akun		=($this->input->post('ID_Perkiraan')=='')?''	:$this->input->post('ID_Perkiraan');
 		$tahun		=($this->input->post('tahun')=='')?''			:$this->input->post('tahun');
 		$filter		=$this->input->post('filper');
-		$where 		=" and ID_Dept='".$id_dept."'";
-		$where		.=($akun=='')?'':" and ID_Simpanan='".$akun."'";
+		$where 		=" t.ID_Dept='".$id_dept."'";
+		$where		.=($akun=='')?'':" and t.ID_Simpanan='".$akun."'";
 		$where		.=($filter=='thn')?" and Tahun='".$tahun."'":" and (Tanggal between '".tglToSql($tgl_start)."' and '".tglToSql($periode)."')"; 
 		$prdd=($filter=='thn')? $tahun.'1231':tglToSql($periode);
 		$data['dept']=rdb('mst_departemen','Departemen','Departemen',"where ID='".$id_dept."'");
 		$data['tanggal']=($filter=='thn')?$tahun: $tgl_start.' s/d '.$periode;
 		$data['akun']=rdb('jenis_simpanan','jenis','jenis',"where ID='".$akun."'");
+		$data['thn']=($filter=='thn')?$tahun:substr($tgl_start,6,4);
 		$this->neraca_model->neraca_unit();
 		$data['temp_rec']=$this->neraca_model->get_nc_lajure($prdd,$where);
 		$this->zetro_auth->menu_id(array('trans_beli'));

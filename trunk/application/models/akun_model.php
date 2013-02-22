@@ -313,10 +313,10 @@ class Akun_model extends CI_Model {
 		return $data->result();
 	}
 	function buku_besar_byDate($Perkiraan,$start,$stop){
-		$sql="select Tanggal,Ket as Keterangan,Nomor,sum(kredit) as Kredit, sum(debet) as Debet
+		$sql="select Tanggal,Keterangan,Nomor,sum(kredit) as Kredit, sum(debet) as Debet
 			  from transaksi_new where tanggal between '$start' and '$stop' and
 			  ID_Perkiraan='$Perkiraan' group by ID_Jurnal order by Nomor,tanggal";
-			//echo $sql;
+			echo $sql;
 			$data=$this->db->query($sql);
 			return $data->result();
 	}
