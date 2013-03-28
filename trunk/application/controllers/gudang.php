@@ -120,6 +120,7 @@ class Gudang extends CI_Controller {
 				 td(img_aksi($r->ID,true),'center').
 				_tr();
 		}
+		dataNotFound($data,10);
 	}
 	function print_pemakaian(){
 		$data	=array();
@@ -253,6 +254,7 @@ class Gudang extends CI_Controller {
 				 td(number_format((($stokAwalT-$stokAwalO)+$masuk-$keluar),2),'right').
 				 _tr();
 		}
+		$dataNotFound($data,8);
 	}
 	function get_stock_his_print(){
 		$data=array();
@@ -297,6 +299,7 @@ class Gudang extends CI_Controller {
 					 _tr();
 			}
 		}
+		dataNotFound($data,8);
 	}
 	function get_pemasok_his_print(){
 		$data=array();

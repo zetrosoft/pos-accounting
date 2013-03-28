@@ -7,7 +7,12 @@ $(document).ready(function(e) {
 		_generate_nomor('GR','#frm1 input#no_transaksi');
 	}
 	//lock('#no_transaksi');
-	$('#no_transaksi').attr('readonly','readonly');
+	$('#no_transaksi')
+		//.attr('readonly','readonly');
+		.focusout(function(){
+			get_detail($(this).val())
+			_show_list();
+		})
 	//lock tanggal jika user bukan level adminstrator /superuser
 	if($('#aktif_user').val()>2){
 		lock('#tgl_transaksi');
@@ -335,4 +340,18 @@ function _generate_nomor(tipe,field){
 		$('#trans_new').val('add');	
 		_show_list();
 	})
+}
+
+function get_detail(id)
+{
+	$.post('get_detail_header',{'id':id},
+		function(result){
+			var r=$.parseJSON(result);
+			$('#frm1 #tgl_transaksi').val(tglFromSql(r.Tanggal));
+			$('#frm1 #faktur_transaksi').val(r.Nomor);
+			$('#frm1 #nm_produsen').val(r.Deskripsi);
+			$('#frm1 #cara_bayar').val(r.ID_Jenis).select;
+			$('#id_pemasoke').val(r.ID_Pemasok);
+			$('#total_beli').val(r.ID_Bayar)
+		})
 }

@@ -11,10 +11,10 @@ link_js('buku_besar.js',$path.'/js');
 panel_begin('Buku Besar');
 panel_multi('bukubesar','block',false);
 if($all_bukubesar!=''){
-?><table id='xx' style='border-collapse:collapse' width='100%'>
+/*?><table id='xx' style='border-collapse:collapse' width='100%'>
 <tr>
-<td width='40%' class='border_r' valign="top"><?
-echo "<form name='frm_j' id='frm_j' method='post' action=''>";
+<td width='100%' class='border_r' valign="top"><?
+*/echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 	 addText(array('Periode     ',"Per Tanggal",'Dari','s/d'),
 	 		 array('',"<input type='radio' name='periode' id='pertgl' />",
 			 		"<input type='text' id='tgl_start' class='w100' value='' />",
@@ -30,8 +30,9 @@ echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 	 		 array("<input type='button' id='oke' value='View'>",
 			 	   "<!--input type='button' id='print' class='' value='Print' alt='Print'-->"));
 echo "</form>\n";
-?></td>
-<td width='60%' valign="top"><?
+/*?></td>
+</tr><td>
+<td width='100%' valign="top"><?*/
 echo   "<div id='tgl' style='display:none'>\n".		   
 		$zlb->section('bukubesar');
 		$zlb->aksi(false);
@@ -44,11 +45,11 @@ echo   "<div id='tgl' style='display:none'>\n".
 		$zlb->icon();
 		$zlb->Header('100%','bbTahunan');
  echo "</tbody></table></div>";
-?>
+/*?>
 </td></tr>
 </table>
 <?
-}else{
+*/}else{
 	no_auth();
 }
 panel_multi_end();
@@ -60,7 +61,7 @@ terbilang();
 <input type='hidden' id='filper' value=''  />
 <script language="javascript">
 $(document).ready(function(e) {
-    	$('#ID_Klas').html("<? dropdown('Klasifikasi','ID','Klasifikasi','','');?>");
+    	$('#ID_Klas').html("<? dropdown('klasifikasi','ID','Klasifikasi','','');?>");
     	$('#ID_Dept').html("<? dropdown('mst_departemen','ID','Departemen','','');?>");
 
 });

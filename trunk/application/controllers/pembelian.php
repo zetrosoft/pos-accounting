@@ -132,6 +132,13 @@ class Pembelian extends CI_Controller{
 		$data=$this->inv_model->get_detail_trans($ID);
 		echo json_encode($data[0]);
 	}
+	function get_detail_header()
+	{
+		$data=array();
+		$ID=$_POST['id'];
+		$data=$this->inv_model->get_header_pembelian($ID);
+		echo json_encode($data[0]);
+	}
 	function hapus_header(){
 		$datax=array();
 		$ID=$_POST['ID'];
@@ -204,8 +211,8 @@ class Pembelian extends CI_Controller{
 			if(count($datax)!=0){
 			$n++;
 			echo tr('xx list_genap').td($n.nbs(3),'center').td($r->Nomor,'center').td(tglfromSql($r->Tanggal),'center').
-					  td('Pemasok : '.strtoupper(rdb('mst_anggota','Nama','Nama',"where ID='".$r->ID_Pemasok."'")),'left\' colspan=\'3\'').
-					  td(rdb('inv_pembelian_jenis','Jenis_Beli','Jenis_Beli',"where ID='".$r->ID_Jenis."'")).
+					  td('Pemasok : '.strtoupper(rdb('mst_anggota','Nama','Nama',"where ID='".$r->ID_Pemasok."'")),'left\' colspan=\'2\'').
+					  td(rdb('inv_pembelian_jenis','Jenis_Beli','Jenis_Beli',"where ID='".$r->ID_Jenis."'"),'left\' colspan=\'2\'').
 					  td('<b>'.number_format($r->ID_Bayar,2).'</b>','right').
 					  td(($authe!='')?(count($datax)!=0)?'':img_aksi($r->ID,true,'del'):'','center').
 				 _tr();
@@ -223,6 +230,7 @@ class Pembelian extends CI_Controller{
 					 _tr();	
 			}
 		}
+		dataNotFound($data,9);
 	}
 	//return pembelian
 	function set_retur_beli(){

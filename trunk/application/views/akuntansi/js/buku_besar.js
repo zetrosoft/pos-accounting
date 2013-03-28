@@ -34,6 +34,7 @@ $(document).ready(function(e) {
 					$('table#panel tr td.plt').show()
 				}
 	})
+
 /* ---end penanganan tab---*/
 // filter by periode
 	$('input:radio[name="periode"]').click(function(){
@@ -93,6 +94,7 @@ $(document).ready(function(e) {
 		   })
 	})
 	$('#ID_Agt').change(function(){
+		
 		if($('#filper').val()=='pertgl'){
 			_show_data('tgl');
 		}else{
@@ -103,6 +105,7 @@ $(document).ready(function(e) {
 	
 	$('#oke').click(function(){
 		if($('#ID_Agt').val()!=null){
+		$('.content').scrollTop(250)
 			if($('#filper').val()=='pertgl'){
 				_show_data('tgl');
 			}else{
@@ -137,7 +140,8 @@ function _show_data(jenis){
 			'Stop'	:$("#tgl_stop").val()},
 		function(result){
 			$('table#ListTable tbody').html(result);
-			$('table#ListTable').fixedHeader({width:(screen.width-400),height:500})
+			$('table#ListTable').fixedHeader({width:(screen.width-50),height:500})
+			$('.content').scrollTop(300)
 		})
 	}
 	if(jenis=='tahun'){
@@ -148,7 +152,8 @@ function _show_data(jenis){
 			'Tahun'	:$('#tahun').val()},
 			function(result){
 				$('table#bbTahunan tbody').html(result);
-				$('table#bbTahunan').fixedHeader({width:(screen.width-400),height:500})
+				$('table#bbTahunan').fixedHeader({width:(screen.width-50),height:500})
+				$('.content').scrollTop(300)
 			})
 	}
 }

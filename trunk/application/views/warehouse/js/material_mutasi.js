@@ -140,7 +140,7 @@ function _show_data(id){
 			'id_jenis'	:id
 		},function(result){
 			$('table#ListTable tbody').html(result);
-			$('table#ListTable').fixedHeader({width:(screen.width-30),height:(screen.height-335)})
+			$('table#ListTable').fixedHeader({width:(screen.width-50),height:(screen.height-350)});
 		})
 }
 

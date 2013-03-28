@@ -19,7 +19,7 @@
 		 // $a->SetWidths(array(10,25,60,20,15,25));
 		  $a->SetWidths(array(10,28,52,25,15,20,20,15));
 		  // set align tiap kolom tabel transaksi
-		  $a->SetAligns(array("C","C","L","L","R","L","R","L"));
+		  $a->SetAligns(array("C","L","L","L","R","L","R","L"));
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFont('Arial','',9);
 		  //$rec = $temp_rec->result();
@@ -32,7 +32,7 @@
 						 rdb('inv_barang_kategori','Kategori','Kategori',"where ID='".$r->ID_Kategori."'"),
 						 number_format($r->stock,0),
 						 rdb('inv_barang_satuan','Satuan','Satuan',"where ID='".$r->ID_Satuan."'"),
-						 number_format($r->harga_beli,2),
+						 ($r->harga_beli==null||$r->harga_beli=='0')?number_format($r->Harga_Beli,2):number_format($r->harga_beli,2),
 						 $r->Status
 						  ));
 		  }

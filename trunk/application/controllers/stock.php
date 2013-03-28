@@ -53,6 +53,7 @@ class Stock extends CI_Controller{
 				td($row->expired,'center').
 				_tr();	
 		}
+		dataNotFound($data,6);
 	}
 	
 	function get_bacth(){
@@ -149,11 +150,18 @@ class Stock extends CI_Controller{
 	}
 	function get_stock(){
 		$data=array();$n=0;
-		$ktg=($_POST['kategori']=='null')?7:$_POST['kategori'];
-		$where=empty($_POST['kategori'])?'':"where im.ID_Kategori='".$ktg."'";
-		$where.=(empty($_POST['stat']) || $_POST['stat']=='stoked')?'':" and Status='".$_POST['stat']."'";
+		$ktg=(empty($_POST['kategori'])||$_POST['kategori']=='null')?'':$_POST['kategori'];
+		$stt=(empty($_POST['stat']))?'':$_POST['stat'];
+		if($stt=='stoked')
+		{
+			$where="where ms.Stock<>'0'";
+		}else{
+			$where=(empty($_POST['stat']))?"where Status <>''":"where Status='".$_POST['stat']."'";
+		}
+		$where.=($ktg=='')?'':"and im.ID_Kategori='".$ktg."'";
+		/*$where.=(empty($_POST['stat']) || $_POST['stat']!='stoked')?'':" and Status='".$_POST['stat']."'";
 		$where.=($_POST['stat']=='stoked')?" and ms.Stock <>'0'":'';
-				
+		*/		
 		$data=$this->report_model->stock_list($where,'stock');
 		foreach($data as $r){
 			$n++;
@@ -163,11 +171,12 @@ class Stock extends CI_Controller{
 					  td(rdb('inv_barang_kategori','Kategori','Kategori',"where ID='".$r->ID_Kategori."'")).
 					  td(number_format($r->stock,2),'right').
 					  td(rdb('inv_barang_satuan','Satuan','Satuan',"where ID='".$r->ID_Satuan."'")).
-					  td(number_format($r->harga_beli,2),'right').
+					  td(($r->harga_beli==null||$r->harga_beli=='0')?number_format($r->Harga_Beli,2):number_format($r->harga_beli,2),'right').
 					  td($r->Status).
 					  td(img_aksi($r->ID.':'.$r->batch),'center').
 				 _tr();	 
 		}
+		dataNotFound($data,10);
 	}
 	function print_stock(){
 		$data=array();$n=0;

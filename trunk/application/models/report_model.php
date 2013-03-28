@@ -33,7 +33,7 @@ class Report_model extends CI_Model {
 			case "stock":	
 			$sql="select im.ID_Kategori,im.ID,im.ID_Satuan,im.Nama_Barang,im.Kode,
 				  sum(ms.stock) as stock,im.Status,s.Satuan,k.Kategori,
-				  sum(ms.harga_beli) as harga_beli,ms.batch
+				  sum(ms.harga_beli) as harga_beli,ms.batch,im.*
 				  from inv_barang as im
 				  left join inv_material_stok as ms
 				  on ms.id_barang=im.ID

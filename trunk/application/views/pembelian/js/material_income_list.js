@@ -8,7 +8,9 @@ $(document).ready(function(e) {
     $('#okelah').click(function(){
 		_show_data()
 	})
-	$('#print').click(function(){
+	$('#print')
+		.hide()
+		.click(function(){
 		alert ('application not support');
 	})
   //pembelian baru

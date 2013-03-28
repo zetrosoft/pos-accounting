@@ -374,4 +374,12 @@
 		}
 	echo $data;
 	}
+
+	function dataNotFound($data,$kol='2')
+	{
+		if(!$data)
+		{
+			echo tr().td('Data not found...','left\' colspan=\''.$kol.'')._tr();
+		}
+	}
 //}

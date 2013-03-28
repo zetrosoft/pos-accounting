@@ -12,10 +12,10 @@ link_js('buku_besar.js,jquery_terbilang.js',$path.'/js,asset/js');
 panel_begin('Buku Besar','',',',",,,,<input type='button' class='print' style='display:$oto_p' value='Cetak' id='cetak' title='Klik untuk print'>");
 panel_multi('bukubesar','block',false);
 if($all_bukubesar!=''){
-?><table id='xx' style='border-collapse:collapse' width='100%'>
+/*?><table id='xx' style='border-collapse:collapse' width='100%'>
 <tr>
 <td width='40%' class='border_r' valign="top"><?
-echo "<form name='frm_j' id='frm_j' method='post' action=''>";
+*/echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 /*	 addText(array('Periode     ',"Per Tanggal",'Dari','s/d'),
 	 		 array('',"<input type='radio' name='periode' id='pertgl' />",
 			 		"<input type='text' id='tgl_start' class='w100' value='' />",
@@ -29,11 +29,11 @@ echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 	 addText(array('Perkiraan      '),array("<select id='ID_Agt' class='s100'></select>"));
 	 addText(array(nbs(2),''),
 	 		 array("<input type='button' id='oke' value='View'>",
-			 	   "<input type='button' id='print' class='' value='Print' alt='Print'>"));
+			 	   "<!--input type='button' id='print' class='' value='Print' alt='Print'-->"));
 echo "</form>\n";
-?></td>
+/*?></td>
 <td width='60%' valign="top"><?
-echo "<div id='tgl' style='display:none'>";		   
+*/echo "<div id='tgl' style='display:none'>";		   
 		$zlb->section('bukubesar');
 		$zlb->aksi(false);
 		$zlb->Header('100%');
@@ -46,11 +46,11 @@ echo "<div id='tgl' style='display:none'>";
 		$zlb->Header('100%','bbTahunan');
 		$zlb->icon();
 		echo "</tbody></table></div>";
-?>
+/*?>
 </td></tr>
 </table>
 <?
-}else{
+*/}else{
 	no_auth();
 }
 panel_multi_end();

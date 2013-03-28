@@ -254,6 +254,12 @@ class Inv_model extends CI_Model {
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
+	function get_header_pembelian($notrans)
+	{
+		$sql="select * from inv_pembelian where NoUrut='".$notrans."'";
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
 	function get_detail_trans($id){
 		$sql="select b.Nama_Barang,s.ID,pd.Jumlah,pd.Harga_Beli,pd.batch,pd.ID_Satuan
 			  from inv_pembelian_detail as pd

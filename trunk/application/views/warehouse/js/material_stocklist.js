@@ -41,9 +41,9 @@ $(document).ready(function(e) {
 })
 
 function _show_data(){
-	show_indicator('stoked',10);
+	show_indicator('stoked',9);
 	$.post('get_stock',{
-		'kategori'	: $('#Kategori').val(),
+		'kategori'	:$('#Kategori').val(),
 		'stat'		:$('#Stat').val()},
 	function(result){
 		$('table#stoked tbody').html(result).show();
