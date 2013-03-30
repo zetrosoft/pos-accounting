@@ -6,7 +6,6 @@ $path='application/views/warehouse';
 link_css('jquery.coolautosuggest.css','asset/css');
 link_js('jquery.coolautosuggest.js','asset/js');
 link_js('jquery.fixedheader.js','asset/js');
-link_js('material_stock_hist.js',$path.'/js');
 calender();
 panel_begin('Persediaan');
 panel_multi('liststock','block',false);
@@ -51,3 +50,7 @@ $(document).ready(function(e) {
 
 
 </script>
+
+<?
+link_js('material_stock_hist.js',$path.'/js');
+?>

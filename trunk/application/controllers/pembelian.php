@@ -137,7 +137,7 @@ class Pembelian extends CI_Controller{
 		$data=array();
 		$ID=$_POST['id'];
 		$data=$this->inv_model->get_header_pembelian($ID);
-		echo json_encode($data[0]);
+		echo ($data)?json_encode($data[0]):json_encode($data);
 	}
 	function hapus_header(){
 		$datax=array();

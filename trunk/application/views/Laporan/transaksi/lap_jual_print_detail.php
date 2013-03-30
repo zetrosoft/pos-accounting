@@ -16,9 +16,9 @@
 		  $a->SetFont('Arial','',10);
 		  //echo $a->getColWidth();
 		  // set lebar tiap kolom tabel transaksi
-		  $a->SetWidths(array(10,20,20,50,25,18,25,25,25));
+		  $a->SetWidths(array(10,20,20,50,20,15,25,30));
 		  // set align tiap kolom tabel transaksi
-		  $a->SetAligns(array("R","C","C","L","R","L","R","R","R"));
+		  $a->SetAligns(array("R","C","C","L","R","L","R","R"));
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFont('Arial','',9);
 		  $dataz=array();$datax=array();
@@ -30,7 +30,7 @@
 			$a->SetFillColor(210,210,010);	
 			$a->Cell(10,8,$n,1,0,'C',true);
 			$a->Cell(90,8,($r->Nama!='')?$r->Nama:'PELANGGAN',1,0,'L',true);
-			$a->Cell(93,8,$r->Catatan." ".$r->Alamat." ".$r->Kota,1,1,"L",true);
+			$a->Cell(90,8,$r->Catatan." ".$r->Alamat." ".$r->Kota,1,1,"L",true);
 			$a->SetFont('Arial','',9);
 			$ID_P=" and p.ID_Anggota='".$r->ID_Anggota."' group by dt.ID_Jual";
 			$orderby.=",p.Tanggal";
@@ -43,8 +43,8 @@
 					$a->Cell(10,8,$nn,1,0,'R',true);
 					$a->cell(20,8,tglfromSql($r2->Tanggal),1,0,'C',true);
 					$a->cell(20,8,$r2->Nomor,1,0,'C',true);
-					$a->Cell(75,8,($r2->ID_Jenis=='1' || $r2->ID_Jenis=='5')?$r2->Jenis_Jual:$r2->Jenis_Jual." : ".$r2->ID_Post." - ".$r2->Deskripsi,1,0,"L",true);
-					$a->Cell(68,8,($r2->ID_Jenis=='1' || $r2->ID_Jenis=='5')?"":"Jatuh Tempo  Tanggal : ".tglfromSql($r2->Tgl_Cicilan),1,1,'L',true);
+					$a->Cell(70,8,($r2->ID_Jenis=='1' || $r2->ID_Jenis=='5')?$r2->Jenis_Jual:$r2->Jenis_Jual." : ".$r2->ID_Post." - ".$r2->Deskripsi,1,0,"L",true);
+					$a->Cell(70,8,($r2->ID_Jenis=='1' || $r2->ID_Jenis=='5')?"":"Jatuh Tempo  Tanggal : ".tglfromSql($r2->Tgl_Cicilan),1,1,'L',true);
 					
 					$a->SetFont('Arial','',9);
 
@@ -52,7 +52,7 @@
 					$dataz=$this->kasir_model->detail_trans_jual($where,$Grp,$orderby);
 						foreach($dataz as $rr2){
 							$x++;
-							$a->Row(array('',$x,$rr2->Kode,
+							$a->Row(array('',$x,''/*$rr2->Kode*/,
 										  ucwords($rr2->Nama_Barang),
 										  ($r2->ID_Jenis=='3')?'-'.number_format($rr2->Jumlah,2):number_format($rr2->Jumlah,2),
 										  $r2->Satuan,
@@ -68,20 +68,20 @@
 			if ($hargaj!=0){
 			  $a->SetFont('Arial','I',10);
 			  $a->SetFillColor(242,239,219);
-			  $a->Cell(168,8,"Potongan",1,0,'R',true);
-			  $a->Cell(25,8,number_format($hargaj,2),1,1,'R',true);
+			  $a->Cell(160,8,"Potongan",1,0,'R',true);
+			  $a->Cell(30,8,number_format($hargaj,2),1,1,'R',true);
 			}
 			  $a->SetFont('Arial','B',10);
 			  $a->SetFillColor(242,239,219);
-			  $a->Cell(168,8,"Sub Total",1,0,'R',true);
-			  $a->Cell(25,8,number_format(($hgb-$hargaj),2),1,1,'R',true);
+			  $a->Cell(160,8,"Sub Total",1,0,'R',true);
+			  $a->Cell(30,8,number_format(($hgb-$hargaj),2),1,1,'R',true);
 			  //grand total
 			}
 			
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFillColor(225,225,225);
-		  $a->Cell(($detail=='')?112:168,8,"GRAND TOTAL",1,0,'R',true);
-		  $a->Cell(($detail=='')?30:25,8,number_format($harga,2),1,0,'R',true);
+		  $a->Cell(($detail=='')?112:160,8,"GRAND TOTAL",1,0,'R',true);
+		  $a->Cell(($detail=='')?30:30,8,number_format($harga,2),1,0,'R',true);
 		  ($detail!='')?'':
 		  $a->Cell(40,8,'',1,0,'R',true);
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_rekap_pembelian.pdf','F');

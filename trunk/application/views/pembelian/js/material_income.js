@@ -17,7 +17,8 @@ $(document).ready(function(e) {
 	if($('#aktif_user').val()>2){
 		lock('#tgl_transaksi');
 	}else{
-		unlock('#tgl_transaksi')
+		unlock('#tgl_transaksi');
+		$('#tgl_transaksi').dynDateTime();
 	}
 	tglNow('#tgl_transaksi');
 	$('#cara_bayar').val('1').select();

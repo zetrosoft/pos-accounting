@@ -4,9 +4,9 @@ $zlb=new zetro_buildlist();
 $zlb->config_file('asset/bin/zetro_neraca.frm');
 $path='application/views/warehouse';
 link_js('jquery.fixedheader.js','asset/js');
-link_js('material_stocklist.js',$path.'/js');
 calender();
-panel_begin('Persediaan');
+$st=(empty($_GET['prs']))?'Persediaan':'Sediaan';
+panel_begin($st);
 panel_multi('liststock','block',false);
 if($all_liststock!=''){
 	echo "<form id='frm1' name='frm1' method='post' action=''>";
@@ -50,3 +50,6 @@ $(document).ready(function(e) {
 
 
 </script>
+<?php
+link_js('material_stocklist.js',$path.'/js');
+?>

@@ -558,17 +558,18 @@ class Akuntansi extends CI_Controller{
 	 $bln		=$this->input->post('Bln');
 	 $thn		=$this->input->post('Thn');
 	 $unit		=$this->input->post('ID_Unit');
-	 switch($filter){
-		case 'all':
-		($unit=='all')? $where='':$where ="where ID_Unit='$unit'";
-		break;
-		case 'tgl':
-		($unit=='all')? $where="where j.Tanggal between '$daritgl' and '$smptgl'":$where ="where j.Tanggal between '$daritgl' and '$smptgl' and j.ID_Unit='$unit'";
-		break;
-		case 'bln':
-		($unit=='all')? $where="where j.ID_Bulan='$bln' and j.Tahun='$thn'":$where="where j.ID_Bulan='$bln' and j.Tahun='$thn' and j.ID_Unit='$unit'";
-		break;
-	 }
+		 switch($filter)
+		 {
+			case 'all':
+			($unit=='all')? $where='':$where ="where ID_Unit='$unit'";
+			break;
+			case 'tgl':
+			($unit=='all')? $where="where j.Tanggal between '$daritgl' and '$smptgl'":$where ="where j.Tanggal between '$daritgl' and '$smptgl' and j.ID_Unit='$unit'";
+			break;
+			case 'bln':
+			($unit=='all')? $where="where j.ID_Bulan='$bln' and j.Tahun='$thn'":$where="where j.ID_Bulan='$bln' and j.Tahun='$thn' and j.ID_Unit='$unit'";
+			break;
+		 }
 		$data['tanggal']=($this->input->post('daritgl')=='')? nBulan($this->input->post('Bln')).' '.$this->input->post('Thn'):$this->input->post('daritgl').' s/d '.$this->input->post('smptgl');
 		$data['ID_Unit']=($this->input->post('ID_Unit')=='all')? "Gabungan":rdb('unit_jurnal','unit','unit',"where ID='".$this->input->post('ID_Unit')."'");
 		$data['temp_rec']=$this->akun_model->get_jurnal($where);
@@ -707,15 +708,37 @@ class Akuntansi extends CI_Controller{
 			$ip_temp=$toAkun;
 			$id_Calc=$this->Admin_model->show_single_field('perkiraan','id_calc',"where ID='$ip_temp'");
 		}
-		$datax	=$this->akun_model->get_saldo_awal($ip_temp);
-		foreach($datax as $sa){
+		$datax	=($ID_Simp != '4' && 
+				 $ID_Simp != '18' && 
+				 $ID_Simp != '19' &&
+				 $ID_Simp != '28')? 
+				 $this->akun_model->get_saldo_awal($ip_temp):
+				 $this->akun_model->get_saldo_simpanan($ip_temp,$tahun);
+		//saldo awal
+		foreach($datax as $sa)
+		{
 			$saldo_awal=$sa->saldoawal;
 		}
+
+		$datanex=$this->akun_model->get_saldo_awal($ip_temp);
+		foreach($datanex as $dx)
+		{
+			$saldo_awal=($saldo_awal+$dx->saldoawal);
+		}
+
+		/*$datax	=$this->akun_model->get_saldo_awal($ip_temp);
+		foreach($datax as $sa)
+		{
+			$saldo_awal=$sa->saldoawal;
+		}
+		*/
 		$datane=$this->akun_model->get_saldo_akhir($ip_temp," and Tanggal < '".$mulai."'");
-		foreach ($datane as $d){
+		foreach ($datane as $d)
+		{
 			$saldoAwal=($id_Calc==1)? ($d->Debet-$d->Kredit):($d->Kredit-$d->Debet);	
 		}
 		$saldo_awal=($saldo_awal+$saldoAwal);
+
 		echo "<tr class='xx list_genap'>
 			  <td class='kotak' align='center'>&bull;&bull;&bull;</td>
 			  <td class='kotak' colspan='3'>Saldo Awal</td>
@@ -771,8 +794,10 @@ class Akuntansi extends CI_Controller{
 				 $ID_Simp != '19' &&
 				 $ID_Simp != '28')? $akun:/**/
 				 $this->akun_model->get_nomor_akun("where ID_Agt='$akun' and id_subklas='$ID_Simp'");
-			if(is_array($toAkun)){
-				foreach($toAkun as $t){
+			if(is_array($toAkun))
+			{
+				foreach($toAkun as $t)
+				{
 					$ip_temp=$t->ID;
 					$id_Calc=$t->ID_Calc;
 				}
@@ -786,15 +811,19 @@ class Akuntansi extends CI_Controller{
 				 $ID_Simp != '28')? 
 				 $this->akun_model->get_saldo_awal($ip_temp):
 				 $this->akun_model->get_saldo_simpanan($ip_temp,$tahun);
-		foreach($datax as $sa){
+		//saldo awal
+		foreach($datax as $sa)
+		{
 			$saldo_awal=$sa->saldoawal;
 		}
 		$datanex=$this->akun_model->get_saldo_awal($ip_temp);
-		foreach($datanex as $dx){
+		foreach($datanex as $dx)
+		{
 			$saldo_awal=($saldo_awal+$dx->saldoawal);
 		}
 		$datane=$this->akun_model->get_saldo_akhir($ip_temp," and tahun < '".$tahun."'");
-		foreach ($datane as $d){
+		foreach ($datane as $d)
+		{
 			$saldoAwal=($id_Calc==1)? ($d->Debet-$d->Kredit):($d->Kredit-$d->Debet);	
 		}
 		$saldo_awal=($saldo_awal+$saldoAwal);
@@ -805,21 +834,30 @@ class Akuntansi extends CI_Controller{
 			  <td class='kotak' align='right'><b>".number_format($saldo_awal,2)."</b></td>
 			  </tr>";
 		$saldo=$saldo_awal;
-		$data=$this->akun_model->buku_besar_byTahun($ip_temp,$tahun);
-			foreach($data as $r){
-				$n++;
+		for ($i=1;$i<=12;$i++)
+		{
+			$n++;$debet=0;$kredit=0;
+			$data=$this->akun_model->buku_besar_byTahun($ip_temp,$tahun,$i);
+			foreach($data as $r)
+			{
+				
 				$saldo =($id_Calc==2)?($saldo+$r->Kredit)-($r->Debet):($saldo+$r->Debet)-($r->Kredit);
-				echo "<tr class='xx'>
-					  <td class='kotak' align='center'>$n</td>
-					  <td class='kotak'>".nBulan($r->ID_Bulan)."</td>
-					  <td class='kotak' align='right'>".number_format($r->Debet,2)."</td>	
-					  <td class='kotak' align='right'>".number_format($r->Kredit,2)."</td>	
-					  <td class='kotak' align='right'>".number_format($saldo,2)."</td>
-					  </tr>";	
+				$debet=$r->Debet;
+				$kredit=$r->Kredit;
 				$t_kredit	=($t_kredit+$r->Kredit);
 				$t_debet	=($t_debet+$r->Debet);
 			}
-		
+				echo "<tr class='xx'>
+					  <td class='kotak' align='center'>$n</td>
+					  <td class='kotak'>".nBulan($i)."</td>
+					  <td class='kotak' align='right'>".number_format($debet,2)."</td>	
+					  <td class='kotak' align='right'>".number_format($kredit,2)."</td>	
+					  <td class='kotak' align='right'>".number_format($saldo,2)."</td>
+					  </tr>";	
+			//}
+					
+		}
+
 			$saldo_akhir=($id_Calc==2)? ($saldo_awal+$t_kredit-$t_debet):($saldo_awal+$t_debet-$t_kredit);
 			if($n>=1){
 				echo "<tr class='list_genap'>
@@ -831,14 +869,18 @@ class Akuntansi extends CI_Controller{
 					  </tr>";
 			}
 	}
-	function dropdown_subklas(){
+
+	function dropdown_subklas()
+	{
 		$ID=$_POST['ID_Klas']	;
 		dropdown('sub_klasifikasi','ID','SubKlasifikasi',"where ID_Klasifikasi='$ID'");
 	}
-	function dropdown_tahun(){
+	function dropdown_tahun()
+	{
 		dropdown('jurnal','distinct(Tahun) as Tahun','Tahun',"order by Tahun",date('Y'));	
 	}
-	function dropdown_agt(){
+	function dropdown_agt()
+	{
 		$ID_Dept=$_POST['ID_Dept']	;
 		$ID_Simp=$_POST['ID_SubKlas'];
 		$ID_Klas=$_POST['ID_Klas'];
@@ -855,8 +897,73 @@ class Akuntansi extends CI_Controller{
 			echo "<option value='".$rs->ID."'>".$rs->Kode."-".$rs->Nama."</option>";	
 		}
 	}
+	//print out buku besar
+	function bukubesar_tahunan_print()
+	{
+		$datapdf=array();
+		$data=array(); $n=0;$saldo=0;$toAkun='';
+		$saldo_awal=0;$datane=array();$saldoAwal=0;
+		$t_kredit=0;$t_debet=0;$ip_temp='';$datanex=array();
+		$akun	=$_POST['ID_P'];
+		$ID_Simp=$_POST['ID_SubKlas'];
+		$tahun	=$_POST['Tahun'];
+		$toAkun	=($ID_Simp != '4' && 
+				 $ID_Simp != '17' && 
+				 $ID_Simp != '18' && 
+				 $ID_Simp != '19' &&
+				 $ID_Simp != '28')? $akun:/**/
+				 $this->akun_model->get_nomor_akun("where ID_Agt='$akun' and id_subklas='$ID_Simp'");
+			if(is_array($toAkun))
+			{
+				foreach($toAkun as $t)
+				{
+					$ip_temp=$t->ID;
+					$id_Calc=$t->ID_Calc;
+				}
+			}else{
+				$ip_temp=$toAkun;
+				$id_Calc=$this->Admin_model->show_single_field('perkiraan','id_calc',"where ID='$ip_temp'");
+			}
+		$datax	=($ID_Simp != '4' && 
+				 $ID_Simp != '18' && 
+				 $ID_Simp != '19' &&
+				 $ID_Simp != '28')? 
+				 $this->akun_model->get_saldo_awal($ip_temp):
+				 $this->akun_model->get_saldo_simpanan($ip_temp,$tahun);
+		//saldo awal
+		foreach($datax as $sa)
+		{
+			$saldo_awal=$sa->saldoawal;
+		}
+		$datanex=$this->akun_model->get_saldo_awal($ip_temp);
+		foreach($datanex as $dx)
+		{
+			$saldo_awal=($saldo_awal+$dx->saldoawal);
+		}
+		$datane=$this->akun_model->get_saldo_akhir($ip_temp," and tahun < '".$tahun."'");
+		foreach ($datane as $d)
+		{
+			$saldoAwal=($id_Calc==1)? ($d->Debet-$d->Kredit):($d->Kredit-$d->Debet);	
+		}
+		$datapdf['saldo_awal']	=($saldo_awal+$saldoAwal);
+		$datapdf['tahun']		=$tahun;
+		$datapdf['akun']		=empty($_POST['akun'])?'':$_POST['akun'];
+		$datapdf['ip_temp']		=$ip_temp;
+		$datapdf['id_Calc']		=$id_Calc;
+		//$datapdf['']
+		$this->load->view('laporan/bukubesar_tahunan_print',$datapdf);
+
+	}
+
+	function bukubesar_print_tgl()
+	{
+
+
+	}
 	//function for update urutan in transaksi table, only one time run
-	function run_once(){
+	//don't run bellow code if not sure
+	function run_once()
+	{
 		$x=0;
 		$sql="select * from jurnal where /*id between '707' and '1000' and*/ tahun='2002' order by id limit 400,500";
 		$rs=mysql_query($sql) or die(mysql_error());

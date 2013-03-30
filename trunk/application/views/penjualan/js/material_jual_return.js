@@ -87,15 +87,15 @@ $(document).ready(function(e) {
 											'id_material'	:result.id_barang},
 											function(data){
 												var jm=$.parseJSON(data);
-												if($.trim(jm.stock)=='0'||jm.stock==null){
+												/*if($.trim(jm.stock)=='0'||jm.stock==null){
 													if(confirm('Stock '+result.data+' = 0 (Kosong)\nTransaksi akan dilanjutkan?')){
 														$('table#inform tr td#ist').html((jm.satuan==null)?'0 '+result.nm_satuan:'0 '+jm.satuan)
 													}else{
 														_kosongkan_field(id[0]);
 													}
-												}else{
+												}else{*/
 												$('table#inform tr td#ist').html(jm.stock+'  '+jm.satuan)
-												}
+												//}
 												$.post(path+'stock/get_bacth',{
 													'id_barang':result.id_barang},
 													function(res){
@@ -204,11 +204,11 @@ $(document).ready(function(e) {
 				$('#stat_sim').val(frm);
 				$('#nama').val(prs);
 				$('#pp-'+prs).css({'left':'28%','top':t_pos});
-				$(frm+' #total_belanja').val(format_number($('#prs').val()))
-				$(frm+' #total_bayar').val(format_number(parseInt(tb)+parseInt(ppn)))
+				$(frm+' #total_belanja').val(($('#prs').val()))
+				$(frm+' #total_bayar').val((parseInt(tb)+parseInt(ppn)))
 				$('#jmlbayar').val(parseInt(tb)+parseInt(ppn))
 				$('#jmlbayar').terbilang({'awalan':'Total Bayar :','output_div':'kekata','akhiran':'rupiah'})
-				$(frm+' #ppn').val(format_number(ppn.toFixed(0)));
+				$(frm+' #ppn').val((ppn.toFixed(0)));
 			/*	$('#lock').show();
 				$('#pp-'+prs).show('slow');
 				$('#frm5 #kembalian').val(parseInt(tb)+parseInt(ppn));
@@ -532,7 +532,7 @@ $(document).ready(function(e) {
 	//setelah proses print selesai lakukan refresh halaman
 	function _print_struk(id,tgl){
 		var path=$('#path').val();
-		$.post('print_slip',{
+		$.post('print_slip_kecil',{
 			'no_transaksi':id,
 			'tanggal'	  :tgl},
 			function(result){

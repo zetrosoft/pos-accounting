@@ -260,13 +260,13 @@ class Akun_model extends CI_Model {
 			return $data->result();
 	}
 	function get_head_bk(){
-	$dql="select j.ID_Bulan,p.SaldoAwal,sum(debet),sum(kredit)
+	$dql="SELECT j.ID_Bulan,p.SaldoAwal,sum(debet),sum(kredit)
 		from transaksi as t,jurnal as j,perkiraan as p
 		where t.ID_Perkiraan=p.ID and t.ID_Jurnal=j.ID and
 			 j.Tahun='2002' and 
 			 concat(p.ID_Klas,p.ID_SubKlas,p.ID_Agt)='319120'
 		group by j.ID_Bulan";
-		"select a.Nama,p.saldoawal,sum(kredit),sum(debet)
+		"SELECT a.Nama,p.saldoawal,sum(kredit),sum(debet)
 		from transaksi as t
 		left join 
 			(select * from jurnal as j where tanggal < '2005-01-01') j
@@ -296,13 +296,13 @@ class Akun_model extends CI_Model {
 	}
 	
 	function get_saldo_awal($perkiraan){
-		$sql="select saldoawal from perkiraan where ID='$perkiraan'";	
+		$sql="SELECT saldoawal from perkiraan where ID='$perkiraan'";	
 		//echo $sql;
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
 	function get_saldo_akhir($perkiraan,$endDate){
-		$sql="select sum(debet) as Debet, sum(kredit) as Kredit
+		$sql="SELECT sum(debet) as Debet, sum(kredit) as Kredit
 			  from jurnal as j
 			  left join transaksi as t
 			  on t.ID_Jurnal=j.ID
@@ -313,17 +313,19 @@ class Akun_model extends CI_Model {
 		return $data->result();
 	}
 	function buku_besar_byDate($Perkiraan,$start,$stop){
-		$sql="select Tanggal,Keterangan,Nomor,sum(kredit) as Kredit, sum(debet) as Debet
+		$sql="SELECT Tanggal,Keterangan,Nomor,sum(kredit) as Kredit, sum(debet) as Debet
 			  from transaksi_new where tanggal between '$start' and '$stop' and
 			  ID_Perkiraan='$Perkiraan' group by ID_Jurnal order by Nomor,tanggal";
-			echo $sql;
+			//echo $sql;
 			$data=$this->db->query($sql);
 			return $data->result();
 	}
-	function buku_besar_byTahun($Perkiraan,$tahun){
-	$sql="select ID_Bulan, sum(debet) as Debet, sum(kredit) as Kredit
-		  from transaksi_new where ID_Perkiraan='$Perkiraan' and tahun='$tahun'
-		  group by ID_Bulan order by ID_Bulan";	
+	function buku_besar_byTahun($Perkiraan,$tahun,$bln='')
+	{
+		$bulan=($bln=='')?'':" and ID_Bulan='".$bln."'";
+		$sql="SELECT ID_Bulan, sum(debet) as Debet, sum(kredit) as Kredit
+			  from transaksi_new where ID_Perkiraan='".$Perkiraan."' and tahun='".$tahun."' ".$bulan."
+			  group by ID_Bulan order by ID_Bulan";	
 			//echo $sql;
 			$data=$this->db->query($sql);
 			return $data->result();

@@ -133,14 +133,14 @@ function _simpan_data(id){
 		})
 }
 function _show_data(id){
-	show_indicator('ListTable',10);
+	show_indicator('ListTable',8);
 		$.post('get_pemakaian',{
 			'dari_tgl'	:$('#dari_tgl').val(),
 			'sampai_tgl':$('#sampai_tgl').val(),
 			'id_jenis'	:id
 		},function(result){
 			$('table#ListTable tbody').html(result);
-			$('table#ListTable').fixedHeader({width:(screen.width-50),height:(screen.height-350)});
+			//$('table#ListTable').fixedHeader({width:(screen.width-50),height:(screen.height-350)});
 		})
 }
 

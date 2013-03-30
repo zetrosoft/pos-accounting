@@ -34,7 +34,6 @@ $(document).ready(function(e) {
 					$('table#panel tr td.plt').show()
 				}
 	})
-
 /* ---end penanganan tab---*/
 // filter by periode
 	$('input:radio[name="periode"]').click(function(){
@@ -94,7 +93,6 @@ $(document).ready(function(e) {
 		   })
 	})
 	$('#ID_Agt').change(function(){
-		
 		if($('#filper').val()=='pertgl'){
 			_show_data('tgl');
 		}else{
@@ -105,7 +103,6 @@ $(document).ready(function(e) {
 	
 	$('#oke').click(function(){
 		if($('#ID_Agt').val()!=null){
-		$('.content').scrollTop(250)
 			if($('#filper').val()=='pertgl'){
 				_show_data('tgl');
 			}else{
@@ -113,7 +110,9 @@ $(document).ready(function(e) {
 			}
 		}
 	})
-	
+	$('#printer').click(function(){
+		($('#filper').val()=='pertgl')?	_print_data('tgl'):_print_data('tahun');
+	})
 })
 function cek_attr(){
  if($('#ID_Klas').val()		!='' && 
@@ -125,7 +124,7 @@ function cek_attr(){
 		
 }
 function _show_data(jenis){
-	//menampiklan data buku besar berdasarkab kriteria / filter yang di pilih
+	//menampiklan data buku besar berdasarkan kriteria / filter yang di pilih
  	var akun=$('#ID_Klas').val()+
  			 $('#ID_SubKlas').val()+
 			 $('#ID_Dept').val()+
@@ -140,8 +139,9 @@ function _show_data(jenis){
 			'Stop'	:$("#tgl_stop").val()},
 		function(result){
 			$('table#ListTable tbody').html(result);
-			$('table#ListTable').fixedHeader({width:(screen.width-50),height:500})
-			$('.content').scrollTop(300)
+			$('table#ListTable').fixedHeader({width:(screen.width-50),height:500});
+			$('.content').scrollTop(245);
+			$('#printer').show();
 		})
 	}
 	if(jenis=='tahun'){
@@ -152,14 +152,44 @@ function _show_data(jenis){
 			'Tahun'	:$('#tahun').val()},
 			function(result){
 				$('table#bbTahunan tbody').html(result);
-				$('table#bbTahunan').fixedHeader({width:(screen.width-50),height:500})
-				$('.content').scrollTop(300)
+				$('table#bbTahunan').fixedHeader({width:(screen.width-50),height:500});
+				$('.content').scrollTop(245);
+				$('#printer').show();
 			})
 	}
 }
-function _get_tahun(){
+function _get_tahun()
+{
 	$.post('dropdown_tahun',{'ID':''},
 	function(result){
 		$('#tahun').html(result);
 	})
+}
+
+function _print_data(id)
+{
+	switch(id)
+	{
+		case 'tgl':
+			alert('under process')
+		break;
+		case 'tahun':
+		ajax_start();
+		$.post('bukubesar_tahunan_print',{
+			'ID_SubKlas':$('#ID_SubKlas').val(),
+			'ID_P'	:$('#ID_Agt').val(),
+			'Tahun'	:$('#tahun').val(),
+			'akun'	:$('#ID_Agt option:selected').text()},
+			function(result){
+				$('#pp-print_prev')
+					.css({'top':'5%','left':'10%'})
+					.show();
+				$('#tbl-print_prev').css({'height':'550px','overflow':'auto'})
+                $('#lock').show();
+                $('#lockprint_prev').show();
+                ajax_stop();
+            })
+		break;
+	}
+
 }

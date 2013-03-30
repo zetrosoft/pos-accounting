@@ -72,19 +72,19 @@
 						$saldo=($rw->id_calc==1)?($saldoA+($rw->debet-$rw->kredit)):($saldoA+($rw->kredit-$rw->debet));
 					}
 					//($saldo<0)?	$a->SetTextColor(237,15,151):	$a->SetTextColor(0);
-					$a->Row(array('            '.$n.". ".$rbj->SubJenis,number_format($saldo,2)),false); 	
+					$a->Row(array('            '.$n.". ".$rbj->SubJenis,number_format($saldo,0)),false); 	
 					$SaldoLj=($SaldoLj+$saldo);
 					//$Balance=($rbj->ID_Calc==1)?($Balance+$saldo):($Balance-$saldo);
 				}
 					$a->SetFont('Arial','B',9);
-					$a->Row(array('            TOTAL '.$rjs->Jenis,number_format($SaldoLj,2)),false);
+					$a->Row(array('            TOTAL '.$rjs->Jenis,number_format($SaldoLj,0)),false);
 					$a->SetFont('Arial','',9);
 					$a->ln(2);
 				    $saldoNc=($saldoNc+$SaldoLj);
 			}
 			//$a->ln(1);
 			$a->SetFont('Arial','B',9);
-			$a->Row(array('            TOTAL '.$r->Header1,number_format($saldoNc,2)),false);
+			$a->Row(array('            TOTAL '.$r->Header1,number_format($saldoNc,0)),false);
 			$a->SetFont('Arial','',9);
 			$ap=($xx==1)?
 				"insert into tmp_".$users."_neraca_balance (unit,periode,".$r->Header2.")
@@ -96,7 +96,7 @@
 		  }
 		   $Balance=rdb("tmp_".$users."_neraca_balance","saldo","(Pasiva-Aktiva) as saldo",
 		   				"where periode='".tglToSql($periode)."' and unit='".$unt[0]."'");
-		  	$a->Row(array('            SELISIH ',number_format($Balance,2)),false);
+		  	$a->Row(array('            SELISIH ',number_format($Balance,0)),false);
 
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_neraca.pdf','F');
 

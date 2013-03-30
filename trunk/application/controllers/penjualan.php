@@ -163,10 +163,10 @@ class Penjualan extends CI_Controller{
 		$data=array();
 		$data['no_transaksi']	=$_POST['no_transaksi'];
 		$data['total_belanja']	=$_POST['total_belanja'];
-		$data['ppn']			=$_POST['ppn'];	
-		$data['total_bayar']	=$_POST['total_bayar'];	
-		$data['jml_dibayar']	=$_POST['dibayar'];	
-		$data['kembalian']		=$_POST['kembalian'];
+		$data['ppn']			=empty($_POST['ppn'])?'0':$_POST['ppn'];	
+		$data['total_bayar']	=empty($_POST['total_bayar'])?'0':$_POST['total_bayar'];	
+		$data['jml_dibayar']	=empty($_POST['dibayar'])?'0':$_POST['dibayar'];	
+		$data['kembalian']		=empty($_POST['kembalian'])?'0':$_POST['kembalian'];
 		//$data['terbilang']		=$_POST['terbilang'];
 		$data['created_by']	=$this->session->userdata('userid');
 		//$this->update_material_stock($_POST['no_transaksi'],tgltoSql($_POST['tanggal']));//update stock
@@ -190,6 +190,7 @@ class Penjualan extends CI_Controller{
 		$data=$this->Admin_model->show_list('inv_penjualan_detail',"where ID_Jual='".rdb('inv_penjualan','ID','ID',"where NoUrut='".$ntran."' and Tanggal='". $tgl."'")."'");
 		$id_br=rdb('inv_penjualan_detail','ID_Barang','ID_Barang',"where ID_Jual='".rdb('inv_penjualan','ID','ID',"where NoUrut='".$ntran."' and Tanggal='". $tgl."'")."'");
 		foreach($data as $r){
+		$bt='';
 		$bath=$this->inv_model->get_detail_stocked($id_br,'desc');
 			foreach($bath as $w){
 				$bt=$w->batch;
@@ -200,7 +201,7 @@ class Penjualan extends CI_Controller{
 			$end_stock=($first_stock-abs($jumlah));
 			$end_stock=($end_stock<0)? 0:$end_stock;
 			$datax['id_barang']	=$r->ID_Barang;
-			$datax['nm_barang']	=rdb('inv_barang','Nama_Barang','Nama_Barang',"where ID='".$r->ID_Barang."'");
+			$datax['nm_barang']	=addslashes(rdb('inv_barang','Nama_Barang','Nama_Barang',"where ID='".$r->ID_Barang."'"));
 			$datax['batch']		=$bt;
 			$datax['stock']		=$end_stock;
 			$datax['harga_beli']=empty($hgb)?'0':$hgb;
@@ -213,14 +214,15 @@ class Penjualan extends CI_Controller{
 	
 	function return_stock($ntran,$tgl){
 		$data=array();$first_stock=0;$end_stock=0;$datax=array();$hgb=0;
-		$data=$this->Admin_model->show_list('inv_penjualan_detail',"where ID_Jual='".rdb('inv_penjualan','ID','ID',"where NoUrut='".$ntran."' and Tanggal='". $tgl."'")."'");
+		$id_jual=rdb('inv_penjualan','ID','ID',"where NoUrut='".$ntran."' and Tanggal='". $tgl."'");
+		$data=$this->Admin_model->show_list('inv_penjualan_detail',"where ID_Jual='".$id_jual."'");
 		//print_r($data);
 		foreach($data as $r){
 			$hgb=rdb('inv_material_stok','harga_beli','harga_beli',"where id_barang='".$r->ID_Barang."' and batch='".$r->Batch."'");
 			$first_stock=rdb('inv_material_stok','stock','stock',"where id_barang='".$r->ID_Barang."' and batch='".$r->Batch."'");
 			$end_stock=($first_stock+(abs($r->Jumlah)));
 			$datax['id_barang']	=$r->ID_Barang;
-			$datax['nm_barang']	=rdb('inv_barang','Nama_Barang','Nama_Barang',"where ID='".$r->ID_Barang."'");
+			$datax['nm_barang']	=addslashes(rdb('inv_barang','Nama_Barang','Nama_Barang',"where ID='".$r->ID_Barang."'"));
 			$datax['batch']		=$r->Batch;
 			$datax['stock']		=$end_stock;
 			$datax['harga_beli']=empty($hgb)?'0':$hgb;
@@ -419,14 +421,14 @@ class Penjualan extends CI_Controller{
 	}
 	//print struk kecil
 	function print_slip_kecil(){
-		$this->zetro_slip->path=$this->session->userdata('userid');
 		$this->zetro_slip->modele('wb');
+		$this->zetro_slip->path=$this->session->userdata('userid');
 		$this->zetro_slip->newline();
 		$this->no_transaksi($_POST['no_transaksi']);
 		$this->tanggal(tgltoSql($_POST['tanggal']));
 		$this->zetro_slip->content($this->struk_header_kecil());
 		$this->zetro_slip->create_file();
-		$this->re_print();
+		//$this->re_print();
 		//$this->index();
 	}
 	function struk_header_kecil(){
@@ -499,7 +501,7 @@ class Penjualan extends CI_Controller{
 				str_repeat('-',40).newline(2)."Info Promo :".newline();
 				$data=$this->Admin_model->show_list('mst_promo',"where dari_tgl <='".$this->tgl."' and sampai_tgl >='".$this->tgl."' order by ID");
 				foreach($data as $r){
-					$bawah .=chunk_split($r->Keterangan,'37',newline()).newline();
+					$bawah .=chunk_split($r->Keterangan,40,newline()).newline();
 				}
 			}
 		return $bawah;
@@ -536,7 +538,7 @@ class Penjualan extends CI_Controller{
 				str_repeat('-',40).newline(2)."Info Promo :".newline();
 				$data=$this->Admin_model->show_list('mst_promo',"where dari_tgl <='".$this->tgl."' and sampai_tgl >='".$this->tgl."' order by ID");
 				foreach($data as $r){
-					$bawah .=chunk_split($r->Keterangan,'37',newline()).newline();
+					$bawah .=chunk_split($r->Keterangan,'40',newline()).newline();
 				}
 			}
 		return $bawah;
@@ -607,13 +609,13 @@ class Penjualan extends CI_Controller{
 		$akun=rdb('perkiraan','ID','ID',"where ID_Agt='$id_anggota' and ID_Simpanan='4'");
 		if($akun==''){
 			//update database perkiraan
-			_update_perkiraan($id_anggota,'4');	
+			$this->_update_perkiraan($id_anggota,'4');	
 		}
 		$data['ID_Perkiraan']	=rdb('perkiraan','ID','ID',"where ID_Agt='$id_anggota' and ID_Simpanan='4'");
 		$data['ID_Unit']		=rdb('jenis_simpanan','ID_Unit','ID_Unit',"where ID='4'");
 		$data['ID_Klas']		=rdb('jenis_simpanan','ID_Klasifikasi','ID_Klasifikasi',"where ID='4'");
 		$data['ID_SubKlas']		=rdb('jenis_simpanan','ID_SubKlas','ID_SubKlas',"where ID='4'");
-		$data['ID_Dept']		=rdb('mst_anggota','ID_Dept','ID_Dept',"where ID='".$id_anggota."'");
+		$data['ID_Dept']		=($id_anggota=='0')?'0':rdb('mst_anggota','ID_Dept','ID_Dept',"where ID='".$id_anggota."'");
 		if($ket==''){
 			$data['Debet']		=$total;//rdb('inv_penjualan','Total','Total',"where ID_Anggota='".$id_anggota."' and NoUrut='".$this->no_trans."'");
 		}else{

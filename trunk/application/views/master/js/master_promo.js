@@ -23,16 +23,21 @@ $(document).ready(function(e) {
 		_update_data();
 	})
 	$('#p_keterangan')
+		.attr({'cols':'40','rows':'2'})
 		.keyup(function(e){
 			var a=$(this).val()
 			$('#fmrTable tr#4 td#c34')
 				.html(a.length)
 				.attr('valign','top');
-		   if(Math.floor((a.length/37))==1){
+			var line=a.split(/\r|\r\n|\n/)
+			var count=line.length;
+		   if((a.length/40)==count){
+			//alert('Silahkan tekan enter untuk melanjutkan');
 			$(this).val(a+'\n');
 		   }
+
 		})
-		.attr('cols','40')
+		
 	$('#frm2 :reset').click(function(){
 		keluar_v_detail();
 	})

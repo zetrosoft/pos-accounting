@@ -29,7 +29,7 @@ if($all_bukubesar!=''){
 	 addText(array('Perkiraan      '),array("<select id='ID_Agt' class='s100'></select>"));
 	 addText(array(nbs(2),''),
 	 		 array("<input type='button' id='oke' value='View'>",
-			 	   "<!--input type='button' id='print' class='' value='Print' alt='Print'-->"));
+			 	   "<input type='button' id='printer' class='' value='Print' alt='Print'>"));
 echo "</form>\n";
 /*?></td>
 <td width='60%' valign="top"><?

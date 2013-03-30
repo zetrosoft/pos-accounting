@@ -11,11 +11,16 @@ panel_begin('Rekap Pembelian');
 panel_multi('rekappembelian','block',false);
 if($all_rekappembelian!=''){
 	echo "<form id='frm1' name='frm1' method='post' action=''>";
-	addText(array('Periode :',' s/d ','Jenis Pembelian',''),
+	addText(array('Periode :',' s/d ','Jenis Pembelian'),
 	array("<input type='text' id='dari_tgl' name='dari_tgl' value=''>",
 		  "<input type='text' id='sampai_tgl' name='sampai_tgl' value=''>",
-		  "<select id='jenis_beli' name='jenis_beli'></select>",
-		  "<input type='button' value='OK' id='okelah'>"));
+		  "<select id='jenis_beli' name='jenis_beli'></select>"));
+	addText(array('Sort by :',''),
+			array("<select id='sortby' name='sortby'>
+					<option value='p.Tanggal'>Tanggal Pembelian</option>
+					<option value='v.nama'>Nama Pemasok</option>\
+					</select>",
+					"<input type='button' value='OK' id='okelah'>"));
 	echo "</form>";
 	echo "</tbody></table>";
 	echo "<table id='xx' width='100%'><tbody><tr><td>&nbsp;</td></tr></tbody></table>";

@@ -70,10 +70,10 @@ class Neraca_model extends CI_Model {
 	function get_nc_lajure($periode,$where=''){
 		$this->build_data($periode);
 		$sql="select t.ID_P,t.ID_Agt,t.ID_Klas,t.ID_SubKlas,t.ID_Unit,t.ID_Dept,t.ID_Simpanan,t.ID_Calc,sum(kredit) as Kredit,sum(debet) as Debet
-			  from mst_anggota as a
-			  left join tmp_".$this->user."_transaksi_rekap as t
-			  on t.id_agt=a.ID
-			  where t.id_agt not in('0')and $where
+			  from tmp_".$this->user."_transaksi_rekap as t
+			  left join mst_anggota as a
+			  on a.ID=t.id_agt
+			  where t.id_agt not in('0') $where
 			  group by concat(t.id_simpanan,t.id_agt)
 			  order by concat(a.nama,t.id_agt,t.ID_Klas,t.ID_SubKlas,t.ID_Unit,t.ID_Dept)";
 			// echo $sql;

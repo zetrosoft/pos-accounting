@@ -3,6 +3,8 @@ $(document).ready(function(e) {
     var path=$('#path').val();
     $('#liststock').removeClass('tab_button');
 	$('#liststock').addClass('tab_select');
+    $('#persediaan').removeClass('tab_button');
+	$('#persediaan').addClass('tab_select');
 	$('table#panel tr td').click(function(){
 		var id=$(this).attr('id');
 			if(id!=''){

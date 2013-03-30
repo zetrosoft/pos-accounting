@@ -15,7 +15,7 @@
 		  $a->SetFont('Arial','',10);
 		  //echo $a->getColWidth();
 		  // set lebar tiap kolom tabel transaksi
-		  $a->SetWidths(array(10,60,30,20,18,25,25));
+		  $a->SetWidths(array(10,60,30,20,15,25,28));
 		  // set align tiap kolom tabel transaksi
 		  $a->SetAligns(array("C","L","L","R","L","R","R"));
 		  $a->SetFont('Arial','B',10);
@@ -40,11 +40,11 @@
 		  }
 		  $a->SetFont('Arial','B',10);
 		  $a->SetFillColor(225,225,225);
-		  $a->Cell(100,8,"TOTAL",1,0,'R',true);
-		  $a->Cell(20,8,/*number_format($jml,2)*/'',1,0,'R',true);
-		  $a->Cell(18,8,'',1,0,'C',true);
-		  $a->Cell(25,8,/*number_format($hargaj,2)*/'',1,0,'R',true);
-		  $a->Cell(25,8,number_format($harga,2),1,0,'R',true);
+		  $a->Cell(160,8,"TOTAL",1,0,'R',true);
+		  //$a->Cell(20,8,/*number_format($jml,2)*/'',1,0,'R',true);
+		  //$a->Cell(15,8,'',1,0,'C',true);
+		 // $a->Cell(25,8,/*number_format($hargaj,2)*/'',1,0,'R',true);
+		  $a->Cell(28,8,number_format($harga,2),1,0,'R',true);
 		  $a->Output('application/logs/'.$this->session->userdata('userid').'_rekap_penjualan.pdf','F');
 
 //show pdf output in frame

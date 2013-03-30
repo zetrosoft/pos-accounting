@@ -185,7 +185,7 @@ class Stock extends CI_Controller{
 		$where.=($this->input->post('Stat')=='stoked')?" and ms.Stock <>'0'":'';
 				
 		$data['kategori']=rdb('inv_barang_kategori','Kategori','Kategori',"where ID='".$this->input->post('Kategori')."'");
-		$data['status']	 =$this->input->post('Stat');
+		$data['status']	 =($this->input->post('Stat')=='stoked')?'Stocked':$this->input->post('Stat');
 		$data['temp_rec']=$this->report_model->stock_list($where,'stock');
 			$this->zetro_auth->menu_id(array('trans_beli'));
 			$this->list_data($data);

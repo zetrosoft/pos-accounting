@@ -26,7 +26,7 @@ class zetro_slip{
 	function create_file($nm=true){
 		$name='c:/app';
 		createDir($name);
-		$newfile=fopen('c:\\app\\'.$this->path.'_slip.txt',$this->model);
+		$newfile=fopen('c:\\app\\'.$this->path.'_slip_kbr.txt','wb');
 		if ($nm==true){ fwrite($newfile,$this->newline());}
 		foreach($this->isifile as $data){
 		fwrite($newfile,$data);

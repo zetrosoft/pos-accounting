@@ -472,7 +472,7 @@ class Master extends CI_Controller {
 	 $data['Judul']=ucwords(addslashes($_POST['judul']));
 	 $data['Dari_tgl']=tgltoSql($_POST['dari']);
 	 $data['Sampai_tgl']=empty($_POST['sampai'])?tgltoSql($_POST['dari']):tglToSql($_POST['sampai']);
-	 $data['Keterangan']=ucwords(addslashes($_POST['keterangan']));
+	 $data['Keterangan']=addslashes(str_replace('\n','',$_POST['keterangan']));
 	 $this->Admin_model->replace_data('mst_promo',$data);
   }
   function edit_promo(){

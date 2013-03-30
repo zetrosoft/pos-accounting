@@ -251,7 +251,7 @@ function Footer(){
   if($this->kriteria=='faktur'){
   $this->Cell(150,10,'Berlaku sebagai faktur pajak sesuai Peraturan Menkeu No. 38/PMK.03/2010',0,0,'L');
   }else{
-  $this->Cell(0,10,'Print Date :'.date('d F Y'),0,0,'C');
+  //$this->Cell(0,10,'Print Date :'.date('d F Y'),0,0,'C');
   }
   $this->Cell(0,10,'Page '.$this->PageNo().' of {nb}',0,0,'R');
 }

@@ -45,8 +45,9 @@ class Report extends CI_Controller
 			   "where p.Tanggal between '".tglToSql($_POST['dari_tgl'])."' and '".tglToSql($_POST['sampai_tgl'])."'";
 		$where.=" and p.ID_Jenis='".$this->input->post('jenis_beli')."' /*and p.ID_Pemasok<>'0'*/";
 		$group="group by p.Tanggal,v.Nama";
+		$orderby="order by ".$this->input->post('sortby');
 		$data['id_jenis']=rdb('inv_pembelian_jenis','Jenis_Beli','Jenis_Beli',"Where ID='".$this->input->post('jenis_beli')."'");
-		$data['temp_rec']=$this->kasir_model->rekap_trans_beli($where,$group);
+		$data['temp_rec']=$this->kasir_model->rekap_trans_beli($where,$group,$orderby);
 		
 		$this->zetro_auth->menu_id(array('trans_beli'));
 		$this->list_data($data);
@@ -236,7 +237,7 @@ class Report extends CI_Controller
 		$where.=($this->input->post('cicilan')=='')?'':" and b.Cicilan='".$this->input->post('cicilan')."'";
 		$where.=($this->input->post('jenis_beli')=='')? " and p.ID_Jenis<>'1'":" and p.ID_Jenis='".$this->input->post('jenis_beli')."'";
 		$group="group by concat(p.ID_Anggota,p.ID_Jenis)";
-		$ordby="order by trim(a.Nama)";
+		$ordby="order by concat(trim(a.Nama),a.ID_Dept)";
 		$data['dari']		=$this->input->post('dari_tgl');
 		$data['sampai']		=($this->input->post('sampai_tgl')=='')?$this->input->post('dari_tgl'):$this->input->post('sampai_tgl');
 		$data['Kategori']	=($this->input->post('departemen')=='')?'All':rdb('mst_departemen','Departemen','Departemen',"where ID='".$this->input->post('departemen')."'");

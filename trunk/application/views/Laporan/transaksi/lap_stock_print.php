@@ -7,7 +7,7 @@
 		  $a->setKriteria("transkip");
 		  $a->setNama("STOCK BARANG");
 		  $a->setSection("stocklist");
-		  $a->setFilter(array($kategori ,$status));
+		  $a->setFilter(array($kategori,$status));
 		  $a->setReferer(array('Kategori','Status'));
 		  $a->setFilename($nfile);
 		  $a->AliasNbPages();

@@ -13,7 +13,7 @@ panel_multi('bukubesar','block',false);
 if($all_bukubesar!=''){
 /*?><table id='xx' style='border-collapse:collapse' width='100%'>
 <tr>
-<td width='100%' class='border_r' valign="top"><?
+<td width='40%' class='border_r' valign="top"><?
 */echo "<form name='frm_j' id='frm_j' method='post' action=''>";
 	 addText(array('Periode     ',"Per Tanggal",'Dari','s/d'),
 	 		 array('',"<input type='radio' name='periode' id='pertgl' />",
@@ -28,12 +28,11 @@ if($all_bukubesar!=''){
 	 addText(array('Perkiraan      '),array("<select id='ID_Agt' class='s100'></select>"));
 	 addText(array(nbs(2),''),
 	 		 array("<input type='button' id='oke' value='View'>",
-			 	   "<!--input type='button' id='print' class='' value='Print' alt='Print'-->"));
-echo "</form>\n";
-/*?></td>
-</tr><td>
-<td width='100%' valign="top"><?*/
-echo   "<div id='tgl' style='display:none'>\n".		   
+			 	   "<input type='button' id='printer' class='' style='display:none' value='Print' alt='Print'>"));
+/*echo "</form>\n";
+?></td>
+<td width='60%' valign="top"><?
+*/echo   "<div id='tgl' style='display:none'>\n".		   
 		$zlb->section('bukubesar');
 		$zlb->aksi(false);
 		$zlb->icon();
@@ -53,6 +52,11 @@ echo   "<div id='tgl' style='display:none'>\n".
 	no_auth();
 }
 panel_multi_end();
+popup_start('print_prev','Print Preview',850,600);
+?>
+	  <iframe src="<?=base_url();?>application/logs/<?=$this->session->userdata('userid');?>_bukubesar_tahunan.pdf" height="100%" width="100%" frameborder="0" allowtransparency="1"></iframe>
+<?
+popup_end();
 panel_end();
 loading_ajax();
 terbilang();
@@ -61,7 +65,7 @@ terbilang();
 <input type='hidden' id='filper' value=''  />
 <script language="javascript">
 $(document).ready(function(e) {
-    	$('#ID_Klas').html("<? dropdown('klasifikasi','ID','Klasifikasi','','');?>");
+    	$('#ID_Klas').html("<? dropdown('Klasifikasi','ID','Klasifikasi','','');?>");
     	$('#ID_Dept').html("<? dropdown('mst_departemen','ID','Departemen','','');?>");
 
 });

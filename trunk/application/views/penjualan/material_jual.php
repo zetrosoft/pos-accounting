@@ -79,7 +79,7 @@ if($c_penjualan__index!=''){
 			  <tr align='center'>
 				<td class='kotak' width='80px'>F1<br> Cek Stock</td>
 				<td class='kotak' width='80px'>F2<br> Re Print Slip</td>
-				<!--td class='kotak' width='80px'>F4<br> PPN Cek</td-->
+				<td class='kotak' width='80px'>F4<br> Edit</td>
 			  </tr>
 		  </table>
 	 </td></tr>

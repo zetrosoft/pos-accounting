@@ -106,7 +106,7 @@ function _show_data(){
 			'id_barang'	:$('#id_barang').val()
 		},function(result){
 			$('table#stoked tbody').html(result)
-			$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-350)})
+			//$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-350)})
 		})
 	}else{
 		$.post('get_pemasok_his',{
@@ -117,7 +117,7 @@ function _show_data(){
 			'pemasok'	:$('#id_pemasok').val()
 		},function(result){
 			$('table#stoked tbody').html(result)
-			$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-350)})
+			//$('table#stoked').fixedHeader({width:(screen.width-50),height:(screen.height-350)})
 		})
 	}
 }

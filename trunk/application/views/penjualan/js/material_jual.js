@@ -374,26 +374,9 @@ $(document).ready(function(e) {
 		}else if(e.keyCode==114){// button F3
 			return false
 		}else if(e.keyCode==115){ //tombol F4 popup komposisi resep show
-			($('#ppne').is(':checked'))?
-				$('#ppne').removeAttr('checked'):
-				$('#ppne').attr('checked','checked');
-			return false
-			//tidak di fungsikan
-			var id=focusID.split('__')
-			if($('#frm2 input#'+id[0]+'__nm_barang').val()=='RESEP DOKTER'){;
-				$('#nama').val('tranresep');
-				$('#pp-tranresep').css({'left':'10%','top':'8%'});
-				$('#lock').show();
-				$('#pp-tranresep').show('slow');
-				$.post('resep',{'id':''},
-					function(result){
-						$('#tbl-tranresep').html(result)
-						$('#frm5 #no_resep').focus().select();
-						$('#frm10 #no_trans').val($('#frm1 #no_transaksi').val());
-						tglNow('#frm5 #tgl_resep');
-					})
-			}
-			
+			prompt('Masukan baris yang akan di edit','Alert','',function(r){
+
+			})
 		}else if(e.keyCode==116){ //mematikan tombol f5
 			return false
 		}else if(e.keyCode==122){//mematikan tombol f11
@@ -552,7 +535,8 @@ $(document).ready(function(e) {
 		var path=$('#path').val();
 		$.post('print_slip_kecil',{
 			'no_transaksi':id,
-			'tanggal'	  :tgl},
+			'tanggal'	  :tgl
+		},
 			function(result){
 				document.location.href=path+'penjualan/index';
 			})

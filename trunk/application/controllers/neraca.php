@@ -118,7 +118,7 @@ class Neraca extends CI_Controller{
 		$akun		=($this->input->post('ID_Perkiraan')=='')?''	:$this->input->post('ID_Perkiraan');
 		$tahun		=($this->input->post('tahun')=='')?''			:$this->input->post('tahun');
 		$filter		=$this->input->post('filper');
-		$where 		=" t.ID_Dept='".$id_dept."'";
+		$where 		=" and t.ID_Dept='".$id_dept."'";
 		$where		.=($akun=='')?'':" and t.ID_Simpanan='".$akun."'";
 		$where		.=($filter=='thn')?" and Tahun='".$tahun."'":" and (Tanggal between '".tglToSql($tgl_start)."' and '".tglToSql($periode)."')"; 
 		$prdd=($filter=='thn')? $tahun.'1231':tglToSql($periode);

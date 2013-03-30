@@ -6,6 +6,8 @@ $zlb->config_file($file);
 $path='application/views/warehouse';
 calender();
 link_css('jquery.coolautosuggest.css','asset/css');
+link_js('jquery.coolautosuggest.js','asset/js');
+link_js('jquery.fixedheader.js','asset/js');
 panel_begin('Pemakaian');
 panel_multi('addpemakaian','none',false);
 if($all_addpemakaian!=''){
@@ -53,7 +55,5 @@ popup_start('pakai','Edit Pemakaian',550);
 popup_end();
 echo "<input type='hidden' value='1' id='aksine' />";
 panel_end();
-link_js('jquery.coolautosuggest.js','asset/js');
-link_js('jquery.fixedheader.js','asset/js');
 link_js('material_mutasi.js',$path.'/js');
 ?>
